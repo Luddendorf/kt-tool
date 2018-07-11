@@ -2,3 +2,45 @@
 Built-in function constructors
 
 var a = new Number(3); // Number {[[PrimitiveValue]]: 3}
+
+// We can do:
+a.toFixed(2)  // "3.00"
+
+var a = new String("Denis");
+
+String.prototype.indexOf('o');    // -1
+
+String.prototype.indexOf("De");   // -1
+
+a.indexOf("e"); // 1
+
+a // String {0: "D", 1: "e", 2: "n", 3: "i", 4: "s", length: 4,
+isLengthGreaterThan: function, [[PrimitiveValue]]: "John"}
+
+"John".length; // 4
+
+var a = new Date("3/1/2015")
+
+// Sun Mar 01 2015 00:00:00
+
+
+// we add new property to the prototype function constructor and now all have this new feature
+String.prototype.isLengthGreaterThan = function(limit) {
+   return this.length > limit;
+   
+   }
+  
+  console.log("Denis".isLengthGreaterThan(3));
+   
+ Number.prototype.isPositive = function() {
+     return this > 0;
+   }
+ 
+ 3.isPositive() // UncaughtError: Unexpected token ILLEGAL
+ 
+ var a = new Number(3);
+ 
+ a.isPositive();  // true
+ 
+ 
+ 
