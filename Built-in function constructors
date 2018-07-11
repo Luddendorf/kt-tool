@@ -1,0 +1,4 @@
+
+Built-in function constructors
+
+var a = new Number(3); // Number {[[PrimitiveValue]]: 3}
