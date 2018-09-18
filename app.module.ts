@@ -96,8 +96,11 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   
   allowNewServer = false;
+  serverName = 'TestServer';
   
   serverCreationStatus = 'No server was created.';
+  
+  serverCreated = false;
   
   constructor() {
     setTimeout(() => {
@@ -108,18 +111,43 @@ export class ServersComponent implements OnInit {
   ngOnInit() {}
   
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created';
+    
+    this.serverCreated = true;
+    this.serverCreationStatus = 'Server was created. Name is ' + this.serverName;
+  }
+  
+  onUpdateServerName(event: any) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
   
 }
 
 // servers.component.html //
+
+<label>Server Name</label>
+<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"/>
+      
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
+      
+<p>{{ serverName }}</p>      
+      
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click)="onCreateServer()"
 >Add Server</button>
 <!--
 <p [innerText]="allowNewServer"> /* {{ allowNewServer }} */</p> -->
+
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+
+<ng-template #noServer><p>No server was created!</p></ng-template>
+
 <app-server></app-server>
 <app-server></app-server>
 
@@ -128,6 +156,12 @@ h3 {
   color: darkblue;
 }
 
-
+//  app-turn-green.directive.ts //
+@Directive({
+   selector: '[appTurnGreen]'
+})
+export class TurnGreenDirective {
+    
+}
 
 
