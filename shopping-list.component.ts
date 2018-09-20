@@ -1,4 +1,4 @@
-import { Directive, ElementRefб HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
@@ -7,15 +7,68 @@ import { Directive, ElementRefб HostListener } from '@angular/core';
    constructor(el: ElementRef) {
      el.nativeElement.style.backgroundColor = 'yellow';
    }
- }
- 
- export class BoldDirective {
-   constructor(private 
    
+   @Input('appHighlight') hightlightColor: string;
+   
+   @HostListener('mouseleave') onMouseLeave() {
+     this.highlight(null); 
    }
    
+   private highlight(color: string) {
+      this.el.nativeElement.style.backgroundColor = color; 
+   }
+ }
+ 
+// app.component.html ////
+<p appHighLight highlightColor="color">Highlighted in yellow</p>
+<p appHigLight [highlightColor]="orange">Hightlighted in orange</p>
+
+<p [appHighlight]="color">Highlight me!</p>
+
+
+ export class BoldDirective {
+   constructor(private element: ElementRef, private renderer: Renderer2) {
+    
+     this.renderer.setStyle(this.element.nativeElement, "cursor", "pointer");
+   }
+   
+   @HostListener("mouseenter") onMouseEnter() {
+      this.setFontWeight("bold"); 
+   }
+   
+   @HostListener("mouseleave") onMouseLeave() {
+      this.setFontWeight("normal"); 
+   }
+   
+   private setFontWeight(val: string) {
+     this.renderer.setStyle(this.element.nativeElement, "font-weight", val); 
+   }
    
  }
+ servers = [];
+
+onRemoveServer(id: number) {
+   const position = id + 1;
+   this.servers.splice(position, 1);
+}
+// child.component.ts ///////
+@Component({
+  selector: 'child-comp',
+  template: '<input [ngModel]="userName" (ngModelChange)="onNameChange($event)" />
+})
+
+export class ChildComponent {
+  
+  @Input() userName: string;
+  @Output() userNameChange = new EventEmitter<string>();
+  
+  onNameChange(model: string) {
+    
+    this.userName = model;
+    this.userNameChange.emit(model);
+  }
+
+
  
 
 
@@ -88,6 +141,137 @@ export class ShoppingListComponent implements OnInit {
     
 </div>
 </div>
+
+///  cockpit.component.ts  ///////
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
+export class CockpitComponent implements OnInit {
+  
+  @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  @Output('bpCreated') blueCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  
+  // newServerName = '';
+  // newServerContent = '';
+  
+  @ViewChild('serverContentInput') serverContentInput: ElementRef;
+  
+  
+  onAddServer(nameInput: HTMLInputElement) {
+    
+    console.log(this.serverContentInput);
+    
+    this.serverCreated.emit({serverName: nameInput.value,
+                             serverContent: this.serverContentInput.nativeElement.value});
+  }
+  
+  onAddBlueprint(nameInput: HTMLInputElement) {
+     this.blueCreated.emit({serverName: nameInput.value,
+                            serverContent: this.serverContentInput.nativeElement.value});
+  }
+  
+}
+
+///  cockpit.component.html  ///////
+<div class="row">
+  <div class="col-xs-10">
+    
+    <p>Add new Servers or blueprints!</p>
+
+    <label>Server Name</label>
+  <!--  <input type="text" class="form-control" [(ngModel)]="newServerName"> -->
+    
+    <input type="text"
+           class="form-control"
+           #serverNameInput>
+      
+    <label>Server Content</label>
+    <input type="text"
+           class="form-control"
+           #serverContentInput>
+      
+    <br>
+      
+    <button class="btn btn-primary"
+            (click)="onAddServer(serverNameInput)">Add Server</button>
+    <button class="btn btn-primary"
+            (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
+    
+  </div>
+</div>
+
+// server-element.component.ts /////////
+import { Component, OnInit, Input } from '@angular/core';
+
+@Component({
+  selector:
+  templateUrl:
+  styleUrls:
+  encapsulation: ViewEncapsulation.Emulated        ///None, Native
+})
+
+  export class ServerElementComponent implements OnInit {
+    
+     @Input('srvElement') element: {type: string, name: string, content: string};
+    
+    
+  }
+
+
+// server-element.component.html /////////
+<div class="panel panel-default">
+  <div class="panel-heading">{{ element.name }}</div>
+  <div class="panel-body">
+    <p>
+     <strong *ngIf="element.type === 'server'"
+             style="color: red">{{ element.content }}</strong>
+     <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+    </p>
+  </div>
+</div>
+
+// app.component.ts /////////
+export class AppComponent {
+  serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test'}];
+  
+  onServerAdded(servertData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    })
+  }
+  
+  onBlueAdded(blueData: {serverName: string, serverContent: string}) {
+     this.serverElements.push({
+       type: 'blueprint',
+       name: blueData.serverName,
+       content: blueData.serverContent
+     });
+  }
+}
+
+
+// app.component.html ////////
+<div class="container">
+ <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (bpCreated)="onBlueAdded($event)"
+></app-cockpit>
+ <hr>
+  <div class="row">
+  <div class="col-xs-12">
+    <app-server-element
+      *ngFor="let serverElement of serverElements"
+      [srvElement]="serverElement"
+      ></app-server-element>
+  </div>
+  </div>
+
+</div>
+
+
+
+
 
 
 
