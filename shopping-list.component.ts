@@ -203,7 +203,7 @@ export class CockpitComponent implements OnInit {
 
 // server-element.component.ts /////////
 import { Component, OnInit, Input, ViewIncapsulation, OnChanges,
-         SimpleChanges } from '@angular/core';
+         SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector:
@@ -212,10 +212,18 @@ import { Component, OnInit, Input, ViewIncapsulation, OnChanges,
   encapsulation: ViewEncapsulation.Emulated        ///None, Native
 })
 
-  export class ServerElementComponent implements OnInit, OnChanges {
+  export class ServerElementComponent implements OnInit, OnChanges, DoCheck,
+  AfterContentInit, AfterContentChecked,
+  AfterViewInit, AfterViewChecked {
     
      @Input('srvElement') element: {type: string, name: string, content: string};
-     
+     @Input() name: string;
+    
+    @ViewChildren(JokeComponent) jokeViewChildren: QueryList<JokeComponent>;
+    @ViewChild('header') headerEl: ElementRef;
+    
+    @ContentChild(JokeComponent) jokeContentChild: JokeComponent;
+    
     
     constructor() {
       console.log('Constructor called!');
@@ -230,12 +238,37 @@ import { Component, OnInit, Input, ViewIncapsulation, OnChanges,
       console.log('ngOnInit called!');
     }
     
+    ngDoCheck() {
+      console.log('ngDoCheck called!');
+    }
+    
+    ngAfterContentInit() {
+      console.log('ngAfterContentInit called!');
+      
+      ${this.jokeContentChild};
+    }
+    
+    ngAfterContentChecked() {
+       console.log('ngAfterContentChecked called!');
+    }
+    
+    ngAfterViewInit() {
+      console.log('ngAfterViewInit called');
+      ${this.jokeViewChild};
+      
+      this.headerEl.nativeElement.textContent = "Best Joke machine!";
+    }
+    
+    ngAfterViewChecked() {
+      console.log('ngAfterViewChecked called');
+    }
   }
 
 
 // server-element.component.html /////////
 <div class="panel panel-default">
-  <div class="panel-heading">{{ element.name }}</div> -->
+  <!-- <div class="panel-heading">{{ element.name }}</div> -->
+  <div class="panel-heading">{{ name }}</div>
   <div class="panel-body">
     <ng-content></ng-content>
 
@@ -263,7 +296,11 @@ export class AppComponent {
   }
   
   onChangeFirst() {
-     
+     this.serverElements[0].name = 'Changed!';
+  }
+  
+  onDestroyFirst() {
+      this.serverElements.splice(0, 1);
   }
   
 }
@@ -279,6 +316,10 @@ export class AppComponent {
   <div class="row">
   <div class="col-xs-12">
     
+    <button class="btn btn-danger"
+            (click)="onDestroyFirst()"
+    >Destroy first Component</button>
+    
     <button class="btn btn-primary"
             (click)="onChangeFirst()"
       >Change first Element</button>
@@ -286,6 +327,7 @@ export class AppComponent {
     <app-server-element
       *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
+      [name]="serverElement.name"
       >
     
 <p>
