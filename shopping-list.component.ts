@@ -215,6 +215,7 @@ import { Component, OnInit, Input, ViewIncapsulation, OnChanges,
   export class ServerElementComponent implements OnInit, OnChanges {
     
      @Input('srvElement') element: {type: string, name: string, content: string};
+     
     
     constructor() {
       console.log('Constructor called!');
@@ -234,7 +235,7 @@ import { Component, OnInit, Input, ViewIncapsulation, OnChanges,
 
 // server-element.component.html /////////
 <div class="panel panel-default">
-  <div class="panel-heading">{{ element.name }}</div>
+  <div class="panel-heading">{{ element.name }}</div> -->
   <div class="panel-body">
     <ng-content></ng-content>
 
@@ -260,6 +261,11 @@ export class AppComponent {
        content: blueData.serverContent
      });
   }
+  
+  onChangeFirst() {
+     
+  }
+  
 }
 
 
@@ -272,7 +278,11 @@ export class AppComponent {
  <hr>
   <div class="row">
   <div class="col-xs-12">
-    <button>Change first Element</button>
+    
+    <button class="btn btn-primary"
+            (click)="onChangeFirst()"
+      >Change first Element</button>
+
     <app-server-element
       *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
