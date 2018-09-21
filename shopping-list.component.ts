@@ -160,12 +160,14 @@ export class CockpitComponent implements OnInit {
     
     console.log(this.serverContentInput);
     
-    this.serverCreated.emit({serverName: nameInput.value,
+    this.serverCreated
+      .emit({serverName: nameInput.value,
                              serverContent: this.serverContentInput.nativeElement.value});
   }
   
   onAddBlueprint(nameInput: HTMLInputElement) {
-     this.blueCreated.emit({serverName: nameInput.value,
+     this.blueCreated
+       .emit({serverName: nameInput.value,
                             serverContent: this.serverContentInput.nativeElement.value});
   }
   
@@ -200,7 +202,8 @@ export class CockpitComponent implements OnInit {
 </div>
 
 // server-element.component.ts /////////
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewIncapsulation, OnChanges,
+         SimpleChanges } from '@angular/core';
 
 @Component({
   selector:
@@ -209,10 +212,22 @@ import { Component, OnInit, Input } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated        ///None, Native
 })
 
-  export class ServerElementComponent implements OnInit {
+  export class ServerElementComponent implements OnInit, OnChanges {
     
      @Input('srvElement') element: {type: string, name: string, content: string};
     
+    constructor() {
+      console.log('Constructor called!');
+    }
+    
+    ngOnChanges(changes: SimpleChanges) {
+      console.log('ngOnChanges called!');
+      console.log(changes);
+    }
+    
+    ngOnInit() {
+      console.log('ngOnInit called!');
+    }
     
   }
 
@@ -221,11 +236,8 @@ import { Component, OnInit, Input } from '@angular/core';
 <div class="panel panel-default">
   <div class="panel-heading">{{ element.name }}</div>
   <div class="panel-body">
-    <p>
-     <strong *ngIf="element.type === 'server'"
-             style="color: red">{{ element.content }}</strong>
-     <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-    </p>
+    <ng-content></ng-content>
+
   </div>
 </div>
 
@@ -260,15 +272,30 @@ export class AppComponent {
  <hr>
   <div class="row">
   <div class="col-xs-12">
+    <button>Change first Element</button>
     <app-server-element
       *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
-      ></app-server-element>
+      >
+    
+<p>
+  <strong *ngIf="serverElement.type === 'server'"
+           style="...">{{ serverElement.content }}</strong>
+  <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+</p>
+    
+    </app-server-element>
   </div>
   </div>
 
 </div>
 
+
+ngOnChanges ngOnChanges
+
+ngOnInit ngDoCheck ngAfterContentInit ngAfterContentChecked ngAfterViewInit
+
+ngOnChanges ngOnInit ngDoCheck
 
 
 
