@@ -1,0 +1,52 @@
+//- doctype html
+//- html
+//- 	head
+//- 		link(rel="stylesheet" href="style.css")
+//- 		style.
+//- 			p {
+//- 				color: red;
+//- 				text-decoration: underline;
+//- 			}
+//- 	body
+//- 		h1#pageTitle Page Title goes here!
+//- 		p.big-para.
+//- 			Here is some text for
+//- 			my big paragraph
+//- 		p.big-para.
+//- 			Here is some more text
+//- 			for my big paragraph
+//- 		.display-box
+//- 		#uniqueDiv
+//- 		input(type="password" name="inpPwd" data-js=`${ 1 > 2 ? "OK" : "NOT OK" }`)
+//- 		- const myClasses = ["class1", "class2", "class3"];
+//- 		div.my__magic(class=myClasses)
+//- 		-const myStyles = {"color": "red", "background-color": "blue"};
+//- 		div(style=myStyles)
+
+//- 		- const myAttributes = {"src": "myPhoto.png", "alt": "This is my photo"};
+//- 		img&attributes(myAttributes)
+		
+
+//- 		input(type="text" disabled=true)
+//- 		p(style="text-align: center; text-transform: uppercase;") These are my thoughts.
+
+//- 		- const pStyles = {"text-align": "center", "text-transform": "uppercase"};
+//- 		p(style=pStyles) The story has become a legend.
+
+doctype html
+html(lang="en-EN")
+	head
+	body
+		include modules/header
+		h1 For/Each Loop
+		h3 Search a run
+		//- - var test = [1,2,3];
+		//- ul
+		//- 	each entry in test;
+		//- 		li= entry
+		//- ul
+		//- 	each val in [1, 2, 3, 4, 5]
+		//- 		li=val
+		include index2
+		include modules/attributes/attribute
+		

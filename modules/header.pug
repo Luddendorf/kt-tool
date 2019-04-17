@@ -1,0 +1,97 @@
+//- header
+	.header
+		nav
+			ul.header__list
+				li
+					a(href="#") link 1
+				li
+					a(href="#") link 2
+				li
+					a(href="#") link 3!
+				li
+					a(href="#") link 4
+
+//- div
+	h1 Seven Eleven
+	ul
+		li Socks
+		li Balls
+	p.
+		We have a wide variety of goods.
+
+//- div
+//- 	p My story
+//- 	p Your story
+
+//- div(class="movie-card", id="ocean-11")
+//- 	h1(class="movie-title") Ocean's 11
+//- 	img(src="/img/ocean-11.png", class="movie-poster")
+//- 	ul(class="genre-list")
+//- 		li Comedy
+//- 		li Thriller
+
+//- - var x = 5;
+//- div
+//- 	ul
+
+
+
+
+//- mixin thumbnail(imageName, caption)
+//- 	div.thumbnail
+//- 		img(src="/img/#{imageName}.jpg")
+//- 		h4.image-caption= caption
+
+//- +thumbnail("ocean-eleven", "Danny Ocean makes an elevator pitch.")
+//- +thumbnail("pirates", "Introducing Captain Jack Sparrow!")
+
+//- - var movieList = [
+//-    {
+//-    	title: "Ocean's Eleven",
+//- 		cast: ["Julia Roberts", "George Clooney"],
+//- 		genres: ["Comedy", "Thriller"],
+//- 		posterImage: "/img/oceans-eleven",
+//- 		imdbURL: "http://www.imdb.com/title/tt0240772/",
+//- 		rating: 7
+//- 	}];
+
+//- mixin movie-card(movie)
+//- 	div.movie-card
+//- 		h2.movie-title= movie.title
+//- 		img.movie-poster(src=movie.posterImage)
+//- 		h3 cast
+//- 		ul.cast
+//- 			each actor in movie.cast
+//- 				li= actor
+//- 		div.rating
+//- 			if movie.rating > 5
+//- 					img(src="img/thumbs-up")
+//- 			else
+//- 					img(src="img/thumbs-down")
+//- 			ul.genre
+//- 				each genre in movie.genres
+//- 					li= genre
+
+//- for movie in movieList
+//- 	+movie-card(movie)
+
+//- mixin movie-card(movie)
+//- 	div.movie-card
+//- 		h2.movie-title= movie.title
+//- 		img.movie-poster(src=movie.posterImage)
+//- 		h3 Cast
+//- 		ul.cast
+//- 			each actor in movie.cast
+//- 				li= actor
+//- 		div.rating
+//- 			if movie.rating > 5
+//- 				img(src="img/thumbs-up")
+//- 			else
+//- 				img(src="img/thumbs-down")
+//- 			ul.genre
+//- 				each genre in movie.genres
+//- 					li= genre
+
+//- // we call our mixin
+//- for movie in movieList
+//- 	+movie-card(movie)
