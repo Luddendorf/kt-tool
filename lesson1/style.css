@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Conv_angsaz";
+  src: url("fonts/angsaz.eot");
+  src: local("☺"), url("fonts/angsaz.woff") format("woff"),
+    url("fonts/angsaz.ttf") format("truetype"),
+    url("fonts/angsaz.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Conv_angsaz";
+}
+
+iframe {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+}
+#main-form {
+  border: 1px solid green;
+  width: 500px;
+  height: 500px;
+}
+img {
+  width: 25%;
+  height: 25%;
+}
