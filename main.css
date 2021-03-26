@@ -1,0 +1,53 @@
+
+
+/*html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}  */
+
+
+
+
+@font-face {
+  font-family: 'New Tegomin';
+  src: local('New Tegomin'),
+    url("/fonts/Roboto-Black.ttf"); 
+}
+
+body {  
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+textarea {
+  margin-left: 20px;
+}
+
+input {
+  margin-left: 20px;
+}
+
+.select {
+  
+  margin-top: 20px;
+}
+
+
+button {
+  margin-top: 20px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
