@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="main.css">
+  <script src="script.js"></script>
   <title>Stanislav Lukyanenko Lesson 1</title>
 </head>
 
@@ -16,14 +17,28 @@
   <form action="#" class="form">
     <input type="text" placeholder="Имя: " class="form-item">
     <textarea name="text" id="" cols="20" rows="10" placeholder="Подробности" class="form-item"></textarea>
-    <h3 class="form-item">Выберите страну:</h3>
+    <div class="form-item study">
+      <label for="checkbox">Высшее образование (нет):</label>
+      <input class="checkbox" type="checkbox" name="checkbox">
+    </div>
+    <div class="form-item">
+      <input type="radio" id="BSUIR" name="university" value="BSUIR">
+      <label for="BSUIR">БГУИР</label><br>
+      <input type="radio" id="BSU" name="university" value="BSU">
+      <label for="BSU">БГУ</label><br>
+      <input type="radio" id="BNTU" name="university" value="BNTU">
+      <label for="BNTU">БНТУ</label><br>
+      <input type="radio" id="other" name="university" value="other">
+      <label for="other">Другой университет</label><br>
+    </div>
+    <h3 class="form-item">Какими языками владеете:</h3>
     <div class="form-item">
       <input type="checkbox" checked id="item1" name="item1" value="Belarus">
-      <label for="item1">Беларусь</label><br>
+      <label for="item1">Английский</label><br>
       <input type="checkbox" id="item2" name="item2" value="Russia">
-      <label for="item2">Россия</label><br>
+      <label for="item2">Русский</label><br>
       <input type="checkbox" id="item3" name="item3" value="Ukraine">
-      <label for="item3">Украина</label>
+      <label for="item3">Белорусский</label>
     </div>
     <select name="select" i d="profession" size="5" class="form-item">
       <option disabled>Выберите направление: </option>
@@ -41,6 +56,7 @@
   <img src="https://hhcdn.ru/ichameleon/160386.jpg" alt="andersen">
   <h1>Сегодня ANDERSEN</h1>
   <p>Дружная команда разработчиков, архитекторов, специалистов по сопровождению и поддержке, тестировщиков, бизнес-аналитиков и менеджеров проектов.</p>
+  <div>
 </body>
 
 </html>
