@@ -109,3 +109,15 @@ h1{
   background: rgb(33,147,90);
   box-shadow: 0 3px rgb(33,147,90) inset;
 }
+
+.received__text{
+  position: relative;
+  top: -290px;
+  left: 230px;
+  font-size:60px;
+}
+
+.up__text{
+  transform: scale(2);
+  margin-top: 15%;
+}

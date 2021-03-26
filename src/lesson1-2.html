@@ -6,31 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <title>Клебеко Владислав Lesson 1 Вторая страница</title>
 </head>
 
-<body>
+<body id="main__body2">
 
 <h1 class="line__background">Вторая страница</h1>
 
-<div class="main centre">
-  <form action="lesson1.html" class="send__form" method="post">
+<div class="main centre" id="main2">
+  <form action="index.html" class="send__form" id="form2">
 
-    <p><b>Ваше имя:</b><br>
-      <label>
-        <input type="text" name="name">
-      </label>
+    <label for="fname">Ваше имя:</label><br>
+    <input type="text" id="name-child" name="fname"><br><br>
 
     <p><b>Подробности:</b></p>
     <label>
-      <textarea rows="10" cols="45" name="text"></textarea>
+      <textarea id="teaxtarea-child"  rows="10" cols="45" name="text"></textarea>
     </label>
     <div>
       <input type="reset"class="button__reset" value="Сброс">
-      <a href="lesson1.html"><input type="submit" class="button__send" value="Отправить дальше"></a>
+      <a href="index.html"><input type="submit" class="button__send" value="Отправить дальше"></a>
     </div>
   </form>
 </div>
-
+<script src="./lesson1-2.js"></script>
 </body>
 </html>
