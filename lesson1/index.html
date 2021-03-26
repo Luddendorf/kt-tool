@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Lesson1</title>
+</head>
+<body>
+  <h1><p>This is the main HTML page</p></h1>
+  <div class="wrapper">
+    
+    <div class="form-wrapper">
+      
+      <form class="form" action="">
+        <input id="main-input" type="text" name="name" placeholder="Имя" />
+        <textarea  id="text-input" name="extra-info"
+          
+          cols="30"
+          rows="10"
+          placeholder="Подробности"
+          
+        ></textarea>
+        <input id="main-submit" type="button" value="Отправить дальше" />
+
+      </form>
+      <iframe id="myIFrame" class= "frame" src="./frame.html" width="400" height="400">
+        Your browser does not support iframes!
+      </iframe>
+    </div>
+    
+
+   <div class="button-wrapper">
+      <img src="./src/Mickey_M.jpg" alt="Oh, okay!">
+      <div class="buttons">
+        <input type="radio" id="batman" name="superhero" value="batman" />
+        <label for="batman">Batman</label><br />
+        <input type="radio" id="superman" name="superhero" value="superman" />
+        <label for="superman">Superman</label><br />
+        <input type="radio" id="ironman" name="superhero" value="ironman" />
+        <label for="ironman">Ironman</label><br />
+        <input class="checkbox" type="checkbox" name="checkbox"/>
+        <label for="checkbox">Checkbox</label>
+      </div>
+      
+      
+
+    </div>
+
+      
+
+  </div>
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>
