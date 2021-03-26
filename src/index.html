@@ -2,13 +2,99 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="main.css">
+    <title>Ерошенко Владимир Lesson 1</title>
 </head>
 
 <body>
+    <div class="container ">
+        <div class="form_val">
+            <div class="headText">
+                <img src="./Cq7ldqxWIAAuLYF.jpg" alt="">
+                <h1>Форма Parent</h1>
+                <p>Данная форма содержит iframe</p>
+                <form action="./lesson1-2.html" id="formP" method="get" target="area">
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                    <p>Что вы изучаете?</p>
+                    <div id="radioButtons">
+                        <input type="radio" name="radio" id="radio">
+                        <label for="PHP">PHP</label>
+                        <input type="radio" name="radio" id="cplus">
+                        <label for="cplus"></label>C++</label>
+                        <input type="radio" name="radio" id="bitrix">
+                        <label for="bitrix"></label>Битрикс</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="check" id="check" onchange="checkEnable()"> Нет, я изучаю JS
+                    </div>
+                    <div> <textarea name="details" id="details" cols="50" rows="5" placeholder="Подробности"></textarea></div>
+                    <div class="buttonsPanel">
+                        <button type="submit">Отправить дальше</button>
+                        <button type="reset" onclick="localStorage.clear();">Сбросить</button>
+                    </div>
+            </div>
+            </form>
+            <hr>
+            <div>
+                <iframe src="./lesson1-2.html" width="1500px" height="1500px" style="pointer-events: none;" name="area"></iframe>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./iFrame.js">
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ерошенко Владимир Lesson 1</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form_val">
+            <div class="headText">
+                <h1>Форма Parent</h1>
+                <p>Данная форма содержит iframe</p>
+                <form action="./index2.html" method="get" id="formP" target="area">
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                    <div id="radioButtons">
+                        <input type="radio" name="radio" id="radio">
+                        <label for="PHP">PHP</label>
+                        <input type="radio" name="radio" id="cplus">
+                        <label for="cplus"></label>C++</label>
+                        <input type="radio" name="radio" id="bitrix">
+                        <label for="bitrix"></label>Битрикс</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="check" id="check" onchange="checkEnable()">Нет, я изучаю JS
+                    </div>
+                    <textarea name="details" id="details" cols="30" rows="10" placeholder="Подробности"></textarea>
+                    <button type="submit" id='sbm'>Отправить дальше</button>
+                    <button type="reset">Сбросить</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <iframe src="./index2.html" width="500px" height="500px" style="pointer-events: none;" name="area"></iframe>
+    <script src="./iFrame.js">
+    </script>
 </body>
 
 </html>
