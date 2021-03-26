@@ -2,12 +2,10 @@ let submit = document.querySelector('#form1');
 
 submit.addEventListener('submit', () => {
   let name = document.querySelector('#fname-parent').value;
-  let newName = name.replace(/отД:/g, '');
   let textArea = document.querySelector('#teaxtarea-parent').value;
-  let newTextArea = textArea.replace(/отД:/g, '');
 
-  localStorage.setItem('parentName', newName);
-  localStorage.setItem('parentText',newTextArea);
+  localStorage.setItem('parentName', name);
+  localStorage.setItem('parentText',textArea);
 })
 
 window.addEventListener('load', () => {
