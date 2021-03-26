@@ -5,12 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1 Вторая страница</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Клебеко Владислав Lesson 1 Вторая страница</title>
 </head>
 
 <body>
-	<h1>Вторая страница</h1>
-	<a href="./lesson1.html">Ссылка на 1-ю страницу для Lesson1</a>
-</body>
 
+<h1 class="line__background">Вторая страница</h1>
+
+<div class="main centre">
+  <form action="lesson1.html" class="send__form" method="post">
+
+    <p><b>Ваше имя:</b><br>
+      <label>
+        <input type="text" name="name">
+      </label>
+
+    <p><b>Подробности:</b></p>
+    <label>
+      <textarea rows="10" cols="45" name="text"></textarea>
+    </label>
+    <div>
+      <input type="reset"class="button__reset" value="Сброс">
+      <a href="lesson1.html"><input type="submit" class="button__send" value="Отправить дальше"></a>
+    </div>
+  </form>
+</div>
+
+</body>
 </html>

@@ -5,10 +5,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Владислав Клебеко Lesson 1</title>
 </head>
 
 <body>
+
+<h1 class="line__background">Первая страница</h1>
+
+<div class="main__position">
+  <div class="main">
+    <form action="lesson1-2.html" class="send__form" method="post">
+
+      <p><b>Ваше имя:</b><br>
+        <label>
+          <input type="text" name="name">
+        </label>
+
+      <p><b>Подробности:</b></p>
+      <label>
+        <textarea rows="10" cols="45" name="text"></textarea>
+      </label>
+      <div>
+        <input type="reset" class="button__reset" value="Сброс">
+        <a href="lesson1-2.html"><input type="submit" class="button__send" value="Отправить дальше"></a>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="lunch__block">
+    <form>
+      <p>Обед?</p>
+      <p><input type="checkbox" value="Чай">Чай</p>
+      <p><input type="checkbox" value="Пюрэшка">Пюрэшка</p>
+      <p><input type="checkbox" value="Котлетка">Котлетка</p>
+      <p><input type="checkbox" value="Суп">Суп</p>
+      <p><input type="checkbox" value="Хлеб">Хлеб</p>
+    </form>
+  </div>
+
+  <div class="menu__select" >
+    <select name="item">
+      <option value="bun">Булочка
+      <option value="coffee">Кофе
+      <option value="milk">Молоко
+      <option value="cocoa">Какао
+      <option value="juice">Сок
+    </select>
+  </div>
+
+</div>
+<iframe class="video" src="https://www.youtube.com/embed/wFLrk_5-S7A"></iframe>
 </body>
 
 </html>
