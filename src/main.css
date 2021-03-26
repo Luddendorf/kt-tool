@@ -1,3 +1,6 @@
+@import "reset.css";
+@import "normalize.css";
+
 html {
   box-sizing: border-box;
   font-size: 100%;
