@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parent__container container">
+      <div class="wrapper">
+        <div class="info__wrapper">
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+            alt=""
+          />
+          <h1 class="title">Parent form</h1>
+          <p class="subtitle">This is parent form</p>
+        </div>
+        <form class="form child__form" name="form">
+          <input type="text" name="userName" id="userName" placeholder="Имя" />
+          <textarea
+            name="userMessage"
+            id="userMessage"
+            cols="30"
+            rows="4"
+            placeholder="Подробности"
+          ></textarea>
+          <button type="submit">Отправить дальше</button>
+          <button type="reset">Сбросить данные</button>
+        </form>
+        <div>
+          <select>
+            <option>select 1</option>
+            <option>select 2</option>
+          </select>
+          <input type="checkbox" name="option1" />
+          <input type="radio" name="option1" id="" />
+          <input type="radio" name="option1" id="" />
+          <input type="radio" name="option1" id="" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
