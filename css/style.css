@@ -1,0 +1,30 @@
+form{
+	width: 320px;
+	border: 1px solid gray;
+	padding: 15px
+}
+
+.mainBlock{
+	display:inline-block;
+	vertical-align:top;
+}
+
+.innerPage{
+	display:inline-block;
+	vertical-align:top;
+}
+
+textarea{
+	white-space: pre-wrap;
+}
+
+.entire-webpage{
+        zoom: 2;
+        -moz-transform: scale(2);
+        -o-transform: scale(2);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(2);
+        -webkit-transform-origin: 0 0;
+        transform: scale(2); 
+        transform-origin: 0 0; 
+}

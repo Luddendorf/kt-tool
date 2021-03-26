@@ -1,0 +1,65 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewpoint" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<meta name="description" content="page in page">
+		<title>Page in page</title>
+		<link rel="stylesheet" href="css/style.css">	
+		<script type="text/javascript" src="indexOnLoad.js"></script>
+		<script type='text/javascript' src='mainHandleSubmit.js'></script>
+		<script type='text/javascript' src='handleCheckbox.js'></script>
+	</head>
+
+	<body>
+	
+		<div id='framePlace'>
+
+		</div>
+
+		<div id='mainBlock' class="mainBlock">
+			<h1>Main Page</h1>
+				
+		</div>
+
+		<div>
+			<h1>Other components</h1>
+			<select name="select">
+				<option value="red" selected>Red</option>
+				<option value="green">Green</option>
+				<option value="blue">Blue</option>
+			</select>
+			<button onclick="alert('Simple button')">Button</button>
+			<input id="checkbox" type="checkbox"
+				onchange="handleCheckbox()"
+			 value="checkbox"><label for="checkbox">checkbox</label>
+			<p>Paragraph</p>
+			<img src="image.png" alt="A"><br/>
+			<button type='button'>Submit</button>
+			
+			Radio:
+			<input type='radio' name='radio' id='radio1'>
+			<input type='radio' name='radio' id='radio2'>
+			<input type='radio' name='radio' id='radio3'>
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- form tatrger  add scripts how
+onsubmit="handleSubmit()" / onsubmit="handleSubmit"
+tolko 1 script na window.onload
+-->
