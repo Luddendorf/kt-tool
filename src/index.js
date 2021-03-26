@@ -1,3 +1,4 @@
+import './normalize.css';
 import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";

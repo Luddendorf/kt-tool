@@ -1,0 +1,34 @@
+ @font-face {
+  font-family: 'Lato', sans-serif;
+  src: url('./fonts/Lato-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+* {
+  font-family: 'Lato', sans-serif;
+} 
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+img {
+  width: 100px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  margin-top: 10px;
+}
+
+.border {
+  padding: 15px;
+}
+
