@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    font-family: "Roboto" !important;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+h1, p {
+    font-style: italic;
+    text-align: center;
+}
+
+hr {
+    text-align: center;
+    width: 200px;
+}
+
+.main {
+    position: relative;
+    margin: 20px 20px;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.main__item-wrapper {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main__item {
+    width: 200px;
+    height: 200px;
+}
+
+button {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#main-form {
+    position: inherit;
+    width: 400px;
+    margin: 40px auto;
+}
+
+#main-input {
+    display: block;
+    height: 100%;
+    margin-bottom: 5px;
+    margin: 2px auto;
+}
+
+textarea {
+    display: block;
+    height: 100%;
+    resize: none;
+    margin: 5px auto;
+}
+
+#main-submit {
+    display: block;
+    margin: 5px auto;
+}
+

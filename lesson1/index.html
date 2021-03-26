@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Lesson</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <h1>Hello from JS</h1>
+            <hr>
+            <p>Hello from HTML</p>
+            <div class="main__item-wrapper">
+                <div class="main__item">
+                    <select size="1">
+                        <option value="none" hidden="">Do you know JS</option>
+                        <option value="1">yes</option>
+                        <option value="2">no</option>
+                        <option value="2">maybe</option>
+                        <option value="2">prefer not to answer</option>
+                    </select>
+                    <button>Click me</button>
+                </div>
+                <div class="main__item">
+                    <img src="https://www.imgonline.com.ua/examples/photo-mosaic-3.jpg" width="200" height="200" alt="picture">
+                   
+                </div>
+                <div class="main__item">  
+                    <form action="">
+                        <input type="text" name="text" id="form">
+                        <button type="reset">Clear</button>
+                        <button type="submit">Submit</button>
+                    </form>  
+                </div>
+                <div class="main__item">
+                    <label for="radiobuttons">Disable radio buttons</label>
+                    <input type="checkbox" name="checkbox" id="radiobuttons">
+                    <hr>
+                    <input name="skills" type="radio" value="javascript">Javascript</p>
+                    <input name="skills" type="radio" value="html"> HTML</p>
+                    <input name="skills" type="radio" value="css" checked> CSS</p>
+                </div>
+            </div> 
+            <div class="main__form">
+                <form id="main-form" name="main" action="">
+                    <input id="main-input" type="text" size="28" name="name" placeholder="Имя" />
+                    <textarea name="extra-info" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                    <input id="main-submit" type="button" value="Submit"/>
+            </div> 
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
