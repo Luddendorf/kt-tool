@@ -1,17 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
+
     const checkbox = document.querySelector('.checkbox')
     const radio = document.querySelectorAll('.radio')
 
-    const disableRadio = () => {
+    checkbox.addEventListener('change', event => {
+        const target = event.target
         radio.forEach(item => {
-            if (checkbox.checked) {
+            if (target.checked) {
                 item.disabled = true
             } else {
                 item.disabled = false
             }
-        })
-    }
-
-    checkbox.addEventListener('click', disableRadio)
-        
+        })      
+    })
 })
