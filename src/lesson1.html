@@ -5,12 +5,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1</title>
+  <link rel="stylesheet" href="main.css">
+  <title>Stanislav Lukyanenko Lesson 1</title>
 </head>
 
 <body>
 	<h1>Первая страница</h1>
-	<a href="./lesson1-2.html">Ссылка на 2-ю страницу для Lesson1</a>
+	<a href="./lesson1-2.html" class="link">Ссылка на 2-ю страницу для Lesson1</a>
+  <h2>Заполните информацию о себе:</h2>
+  <form action="#" class="form">
+    <input type="text" placeholder="Имя: " class="form-item">
+    <textarea name="text" id="" cols="20" rows="10" placeholder="Подробности" class="form-item"></textarea>
+    <h3 class="form-item">Выберите страну:</h3>
+    <div class="form-item">
+      <input type="checkbox" checked id="item1" name="item1" value="Belarus">
+      <label for="item1">Беларусь</label><br>
+      <input type="checkbox" id="item2" name="item2" value="Russia">
+      <label for="item2">Россия</label><br>
+      <input type="checkbox" id="item3" name="item3" value="Ukraine">
+      <label for="item3">Украина</label>
+    </div>
+    <select name="select" i d="profession" size="5" class="form-item">
+      <option disabled>Выберите направление: </option>
+      <option selected value="Front-End">Front-End</option>
+      <option value=".NET">.NET</option>
+      <option value="Java">Java</option>
+      <option value="PHP">PHP</option>
+      <option value="Python">Python</option>
+      <option value="C++">C++</option>
+      <option value="Salesforce">Salesforce</option>
+    </select>
+    <button type="submit" class="form-item">Отправить дальше</button>
+    <button type="reset" class="form-item">Очистить данные</button>
+  </form>
+  <img src="https://hhcdn.ru/ichameleon/160386.jpg" alt="andersen">
+  <h1>Сегодня ANDERSEN</h1>
+  <p>Дружная команда разработчиков, архитекторов, специалистов по сопровождению и поддержке, тестировщиков, бизнес-аналитиков и менеджеров проектов.</p>
 </body>
 
 </html>
