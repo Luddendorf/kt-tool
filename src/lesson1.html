@@ -5,12 +5,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1</title>
+  <title>Влад Якавицкий Lesson 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-	<h1>Первая страница</h1>
-	<a href="./lesson1-2.html">Ссылка на 2-ю страницу для Lesson1</a>
+<body class="child">
+  <div class="container">
+    <h1>Child account</h1>
+    <p>Add something about yourself</p>
+    <form action="./index.html" id="child-form">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="name-child" name="fname"><br><br>
+      <textarea name="textarea" id="teaxtarea-child" cols="23" rows="5" placeholder="O себе"></textarea><br><br>
+      <select name="" id="">
+        <option value=" "></option>
+        <option value="Js">JS</option>
+        <option value="Angular">Angular</option>
+        <option value="React">React</option>
+      </select><br><br>
+      <div class="all-radio">
+        <label for="male">
+          <input class="radio" id="male" type = "radio" name = "sex" value = "male">
+          Male
+        </label>
+        <label for="female">
+          <input class="radio" id="female" type = "radio" name = "sex" value = "female">
+          Female
+        </label>
+        <label for="other">
+          <input class="radio" id="other" type = "radio" name = "sex" value = "other">
+          Other
+        </label>
+      </div>
+      <input id="check" type = "checkbox" ><span> Disable</span><br><br>
+      <button type="submit">
+        Submit
+      </button>
+      <button type="reset">
+        Reset
+      </button>
+    </form>
+  </div>
+  <script src="./child.js"></script>
 </body>
 
 </html>

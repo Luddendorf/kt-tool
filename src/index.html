@@ -5,10 +5,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1</title>
+  <title>Влад Якавицкий Lesson 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
+  <div class="container">
+    <h1>Parent account</h1>
+    <p>Add something about yourself</p>
+    <form action="./lesson1.html" id="parent-form">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname-parent" name="fname" value=""><br><br>
+      <textarea name="textarea" id="teaxtarea-parent" cols="23" rows="5" placeholder="O себе"></textarea><br><br>
+      <select name="" id="">
+        <option value=" "></option>
+        <option value="Js">JS</option>
+        <option value="Angular">Angular</option>
+        <option value="React">React</option>
+      </select><br><br>
+      <div class="all-radio">
+        <label for="male">
+          <input class="radio" id="male" type = "radio" name = "sex" value = "male">
+          Male
+        </label>
+        <label for="female">
+          <input class="radio" id="female" type = "radio" name = "sex" value = "female">
+          Female
+        </label>
+        <label for="other">
+          <input class="radio" id="other" type = "radio" name = "sex" value = "other">
+          Other
+        </label>
+      </div>
+      <input id="check" type = "checkbox" ><span> Disable</span><br><br>
+      <button id="parent-submit" type="submit">
+        Submit
+      </button>
+      <button type="reset">
+        Reset
+      </button>
+    </form>
+  </div>
+  <iframe id="frame" name="myFrame" src="./lesson1.html" width="500px" height="520px" style="pointer-events: none;" scrolling="yes" >
+  </iframe>
+	<script src="./index.js"></script>
 </body>
 
 </html>
