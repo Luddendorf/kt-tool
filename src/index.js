@@ -12,13 +12,15 @@ submit.addEventListener('submit', () => {
 
 window.addEventListener('load', () => {
 
-  let div = document.createElement('div');
-  let em = document.getElementById("form1");
-  div.classList.add('received__text');
-  div.innerHTML = "<strong>отД</strong>";
-  em.append(div);
 
   if(localStorage.getItem('childName')){
+
+    let div = document.createElement('div');
+    let fromD = document.getElementById("form1");
+    div.classList.add('received__text');
+    div.innerHTML = "<strong>отД</strong>";
+    fromD.append(div);
+
     document.querySelector('#fname-parent').value = localStorage.getItem('childName');
   }
   if( localStorage.getItem('childText')){
