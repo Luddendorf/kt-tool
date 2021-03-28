@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+* {
+  font-family: "Dela Gothic One", cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 3.5vh;
+  margin: 3vh;
+}
+header .logo p {
+  font-size: 2vh;
+  margin-top: 1vh;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+}
+header ul li {
+  margin: 2.5vh;
+}
+header ul li a {
+  list-style: none;
+  font-size: 2.5vh;
+  font-weight: 600;
+  color: black;
+}
+header ul li a:hover {
+  color: #ace6ac;
+}
+
+.contacts {
+  height: 50vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts .get-in-touch {
+  width: 50%;
+  height: 100%;
+  background: #20603c;
+  color: #fffdf6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contacts .get-in-touch h1,
+.contacts .get-in-touch h4,
+.contacts .get-in-touch button {
+  margin: 2vh;
+}
+.contacts .get-in-touch button {
+  height: 5vh;
+  width: 8vw;
+  border: 1px solid #fffdf6;
+  border-radius: 9px;
+  border: 2px #fffdf6 solid;
+  color: #fffdf6;
+  background: #20603c;
+  text-shadow: 1px 1px 1px #fffdf6;
+  cursor: pointer;
+  font-size: 2vh;
+}
+.contacts .get-in-touch h1 {
+  font-size: 7vh;
+}
+.contacts .get-in-touch h4 {
+  font-size: 2.45vh;
+}
+.contacts .get-in-touch button:hover {
+  animation: jello-horizontal 2s ease-in-out infinite;
+}
+.contacts .image {
+  width: 50%;
+  height: 100%;
+  background: url(https://barnsburydemo.files.wordpress.com/2019/09/sri-lanka-ksa66ayiqnk-unsplash.jpg?w=750);
+  background-size: cover;
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.services {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2vh;
+}
+.services .what-we-do {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+.services .what-we-do h4 {
+  margin-top: 5vh;
+  font-size: 2vh;
+}
+.services .what-we-do h1 {
+  font-size: 4vh;
+  margin-top: 5vh;
+}
+.services .what-we-do p {
+  margin-top: 5vh;
+  width: 5%;
+  border-bottom: 2px solid black;
+}
+.services .services-images {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.services .services-images .service-wrapper {
+  margin: 2vh 2vh 2vh 2vh;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.services .services-images .img {
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+}
+.services .services-images .text {
+  height: 50%;
+  padding-top: 2vh;
+  font-size: 2.5vh;
+}
+.services .services-images .first,
+.services .services-images .second,
+.services .services-images .third {
+  width: 100%;
+  height: 100%;
+}
+
+.meet-us-better {
+  margin-top: 2vh;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://barnsburydemo.files.wordpress.com/2019/09/naseem-buras-cwpy-hpdt9q-unsplash-copy-4.jpg);
+}
+.meet-us-better .wrapper-str {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fffdf6;
+}
+.meet-us-better .wrapper-str h3 {
+  font-size: 4vh;
+}
+.meet-us-better .wrapper-str h1 {
+  font-size: 6vh;
+}
+.meet-us-better .wrapper-str .meet-us-better-wrapper {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+.meet-us-better .wrapper-str .meet-us-better-wrapper div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.meet-us-better .wrapper-str .meet-us-better-wrapper div h3 {
+  font-weight: 800;
+}
