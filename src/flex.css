@@ -1,0 +1,134 @@
+.red {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.red-item {
+    background-color: red;
+}
+
+.red-1, .red-3 {
+    width: 15%;
+}
+
+.red-2 {
+    width: 65%;
+}
+
+.green {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.green-item {
+    background-color: green;
+}
+
+.green-1, .green-2 {
+    width: 20%;
+}
+
+.green-3 {
+    width: 45%;
+}
+
+.blue {
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.blue-item {
+    background-color: blue;
+}
+
+.blue-1, .blue-3 {
+    height: 10%;
+}
+
+.blue-2 {
+    height: 75%;
+}
+
+.purple {
+    background-color: #c0c0c0;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.purple-item {
+    background-color: purple;
+    width: 20px;
+}
+
+.purple-item:not(:last-child) {
+    margin-right: 2px;
+}
+
+.orange {
+    background-color: #c0c0c0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.orange-item {
+    background-color: orange;
+    height: 20px;
+    width: 33.3%;
+    border: 1px solid black;
+}
+
+.pink {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.pink-top {
+    display: flex;
+}
+
+.pink-bottom, .pink-top-item {
+    background-color: pink;
+    border: 1px solid black;
+    height: 20px;
+}
+
+.pink-top-item {
+    width: 33.3%;
+}
+
+.yellow {
+    background-color: #c0c0c0;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.yellow-item {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.yellow-1, .yellow-2 {
+    height: 10px;
+    width: 40%;
+}
+
+.yellow-1 {
+    align-self: flex-end;
+}
+
+.yellow-3 {
+    height: 50px;
+    width: 20%;
+}
