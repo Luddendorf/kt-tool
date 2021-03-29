@@ -1,5 +1,8 @@
+@import "reset.css";
 @import "flex.css";
-@import "./barnsbury/header.css";
+@import "barnsbury/header.css";
+@import "barnsbury/sections.css";
+@import "barnsbury/footer.css";
 
 html {
   box-sizing: border-box;
@@ -24,4 +27,5 @@ body {
 
 .barnsbury {
   width: 100%;
+  margin-top: 40px;
 }

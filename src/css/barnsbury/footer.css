@@ -1,0 +1,38 @@
+.footer {
+    height: 680px;
+    color: white;
+    text-align: center;
+}
+
+.footer-first-heading, .footer-second-heading, .numbers {
+    position: relative;
+}
+
+.footer-first-heading, .numbers-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-second-heading, .numbers-numbers {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.footer-first-heading {
+    top: -650px;
+}
+
+.footer-second-heading {
+    top: -620px;
+}
+
+.numbers {
+    top: -300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.numbers-content {
+    display: flex;
+    flex-direction: column;
+}
