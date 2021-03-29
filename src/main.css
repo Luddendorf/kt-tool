@@ -3,6 +3,10 @@ html {
   font-size: 100%;
 }
 
+body{
+  font-family: sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -12,3 +16,4 @@ html {
 a{
   text-decoration: none;
 }
+
