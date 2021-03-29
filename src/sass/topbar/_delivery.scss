@@ -1,0 +1,61 @@
+.delivery {
+  display: flex;
+  flex-direction: column-reverse;
+  &__imgblock {
+    background-image: url("https://barnsburydemo.files.wordpress.com/2019/09/sri-lanka-ksa66ayiqnk-unsplash.jpg?w=750");
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 250px;
+  }
+  &__textblock {
+    padding: 16px;
+    background-color: #20603c;
+    color: #fffdf6;
+    &--title {
+      margin: 0;
+    }
+    &--text {
+      margin: 0;
+      padding: 20px 0;
+    }
+    &--link {
+      color: #fffdf6;
+      border: 1px solid #fffdf6;
+      border-radius: 3px;
+      padding: 8px 15px;
+
+      transition: 0.2s linear;
+      &:hover {
+        color: #0e351e;
+        border: 1px solid #0e351e;
+      }
+    }
+    @media (min-width: 576px) {
+      &--title {
+        font-size: 53px;
+      }
+      &--text {
+        font-size: 30px;
+        padding: 32px 0;
+      }
+      &--link {
+        font-size: 30px;
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    &__textblock {
+      padding: 128px 32px;
+      width: 50%;
+      flex: 1;
+    }
+    &__imgblock {
+      flex: 1;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .delivery {
+    flex-direction: row;
+  }
+}
