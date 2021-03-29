@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  background: $bg-main;
+  color: #ffffff;
+  &__info {
+    flex: 1 1 50%;
+  }
+  &__header {}
+  &__description {}
+  &__button {}
+  &__image {
+    flex: 1 1 50%;
+  }
+}
