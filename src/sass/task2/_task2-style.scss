@@ -1,0 +1,216 @@
+.task2 {
+    margin-top: 50px;
+}
+
+.wrapper {
+    margin:0 auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFDF6;
+    height: 117px;
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 40px;
+    
+        span:nth-child(1) {
+            color:black;
+            font-size: 37px;
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+                color: #20603C;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            width: 450px;
+
+            a {
+                text-decoration: none;
+                color: #3C2323;
+                font-size: 22px;
+                font-weight: bold;
+            
+                &:hover {
+                    color: #20603C;
+                }
+            }
+        }
+    }
+}
+
+.delivery {
+    height: 545px;
+    display: flex;
+
+    .left-block {
+        background-color: #20603C;
+        flex-basis: 50%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        div, form {
+            margin-left: 50px;
+        }
+
+        span {
+            display: block;
+        }
+
+        .title {
+            span {
+                font-size: 50px;
+                font-weight: bold;
+            }
+        }
+        
+        .description {
+            margin-top: 20px;
+            span {
+                font-size: 20px;
+            }
+        }
+
+        button {
+            margin-top: 50px;
+            width: 160px;
+            height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            border-color: white;
+            background-color: #20603C;
+
+            &:hover {
+                border-color: green;
+                color: green;
+            }
+        }
+    }
+
+    .right-block {
+        flex-basis: 50%;
+        background: url('../../imgs/bg-right.png');
+    }
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+    background-color: #FFFDF6;
+
+    .content {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .bottom-border {
+            border-top:1px solid #3C2323;
+            width:95px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span:nth-child(1) {
+                font-weight: bold;
+                font-size: 20px;
+                color: #3C2323;
+            }
+
+            span:nth-child(2) {
+                font-weight: bold;
+                font-size: 40px;
+                color: #3C2323;
+            }
+        }
+
+        .images {
+            width: 1050px;
+            display: flex;
+            justify-content: space-between;
+
+            figure {
+                flex-basis: 30%;
+
+                figcaption {
+                    font-size: 20px;
+                }
+
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+.statistics {
+    height: 470px;
+    background: url('../../imgs/bg-bottom.png') no-repeat;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h1 {
+        font-size: 48px;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        width: 900px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 20px;
+
+            div:nth-child(1) {
+                font-size: 50px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .delivery {
+        .left-block {
+            .title {
+                span {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
