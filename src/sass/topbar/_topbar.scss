@@ -2,8 +2,28 @@
 	color: orange;
 }
 
+.pretitle{
+	font-family: 'Baloo Da 2';
+	font-weight: 700;
+	font-size: 20px;
+}
+
 .title{
+	font-family: 'Baloo Da 2';
 	text-transform: capitalize;
+	font-size: 48px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
+	&::after{
+		content: '';
+		position: absolute;
+		width: 100px;
+		height: 2px;
+		background-color: rgb(122, 120, 120);
+		bottom: -30px;
+	}
 }
 
 .container{

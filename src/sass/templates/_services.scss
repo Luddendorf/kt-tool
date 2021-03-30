@@ -1,5 +1,6 @@
 .section-services {
   text-align: center;
+  background-color: $bg-primary;
 }
 .container {
 }
@@ -21,6 +22,15 @@
 .title {
 }
 .services-item {
-    &__img {}
-    &__text {}
+    &__img {
+      margin-bottom: 20px;
+      & img{
+        max-height: 210px;
+      }
+    }
+    &__text {
+      text-align: left;
+      line-height: 36px;
+      font-size: 20px;
+    }
 }
