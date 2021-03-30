@@ -274,7 +274,7 @@ ul li a:focus {
     justify-content: space-between;
     align-items: center;
     background-color: #20603C;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -287,6 +287,10 @@ ul li a:focus {
 
 .imgDelivery {
     flex-basis: 50%;
+}
+
+.h1W {
+    font-family: "Rubik", Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
 }
 
 .imgDelivery img {
@@ -390,5 +394,53 @@ ul li a:focus {
     font-size: 18px;
 }
 
+.info>div>h2 {
+    font-size: 33px;
+}
 
-/**/
+@media (max-width: 840px) {
+    .Delivery {
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+    }
+    .imgDelivery {
+        order: -1;
+        max-height: 200px;
+    }
+    .imgDelivery>img {
+        /* overflow: hidden; */
+    }
+    .textDelivery {}
+}
+
+@media (max-width:600px) {
+    .imgBoxThree {
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    .box1 {
+        width: 300px;
+        margin: 0;
+    }
+    .box2 {
+        width: 300px;
+        margin: 0;
+    }
+    .box3 {
+        width: 300px;
+        margin: 0;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+    .info>div {
+        margin: 0px 5px 5px 5px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .farm {
+        max-height: 100%;
+    }
+}
