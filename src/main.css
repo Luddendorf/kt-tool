@@ -161,3 +161,168 @@ html {
   width: 20%;
 
 }
+
+
+/* top menu */
+*{
+  font-family: 'Rubik', sans-serif;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+  height: 80px;
+}
+
+.trademark {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  
+}
+
+.trademark-text {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 2.2rem;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+.address{
+  font-size: 1rem;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-right: 20px;
+}
+
+.active {
+  color: #20603C;
+}
+
+.trademark-text:hover, .menu-item:hover {
+  color: #20603C;
+}
+
+/* main content */
+.delivery {
+  display: flex;
+  height: 600px;
+}
+
+.delivery-content {
+  background-color: #20603C;
+  color: white;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delivery-content-bold {
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 70px;
+  font-size: 55px;
+}
+
+.delivery-content-text {
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+}
+.delivery-picture {
+  height: auto;
+  width: 50%;
+  flex-shrink: 0;
+}
+.delivery-button {
+  width: 200px;
+  height: 65px;
+  background-color: #20603C;
+  border: 2px solid white;
+  border-radius: 5%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.delivery-button:hover {
+  cursor: pointer;
+  border-color: #003300;
+  color: #003300;
+}
+
+
+.servises {
+  margin-top: 100px;
+  text-align: center;
+  color: #333300;
+  background-color: #FFFDF6;
+}
+
+.servises-first-heading, .servises-second-heading {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.servises-heading-one {
+  font-size: 20px;
+}
+
+.servises-heading-two {
+  font-size: 50px;
+}
+
+.servises-descriptions {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 120px 100px;
+}
+
+.servises-descriptions-item {
+  width: 300px;
+}
+.servises-picture {
+  width: 300px;
+}
+.servises-descriptions-item-text {
+  font-size: 23px;
+  margin-top: 30px;
+}
+
+.successes {
+  height: 500px;
+  text-align: center;
+  background-image: url(./sass/img/pic5.jpg);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.successes-first, .result-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.successes-second, .result-number {
+  font-size: 50px;
+  font-weight: bold;
+}
+.result{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
