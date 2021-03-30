@@ -1,16 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Максим Стешенок Barnsbury</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Barnsbury</title>
-</head>
-
-<body>
-  <section>Практика flexbox'ов здесь</section>
-  <section>Вёрстка, как в <a href="https://wordpress.com/theme/barnsbury">"Cсылка на Barnsbury" - https://wordpress.com/theme/barnsbury</a> до секции <strong>Our Organic Farm in Numbers</strong> включительно.</section>
-</body>
-
+  <body>
+    <section class="flex-box">
+      <div class="first-row">
+        <div class="first-row__block first-row__block-1">div 1</div>
+        <div class="first-row__block first-row__block-2">div 2</div>
+        <div class="first-row__block first-row__block-3">div 3</div>
+      </div>
+      <div class="second-row">
+        <div class="second-row__block second-row__block-1">div 1</div>
+        <div class="second-row__block second-row__block-2">div 2</div>
+        <div class="second-row__block second-row__block-3">div 3</div>
+      </div>
+      <div class="first-column">
+        <div class="first-column__block first-column__block-1">div 1</div>
+        <div class="first-column__block first-column__block-2">div 2</div>
+        <div class="first-column__block first-column__block-3">div 3</div>
+      </div>
+      <div class="third-row">
+        <div class="third-row__block third-row__block-1">div 1</div>
+        <div class="third-row__block third-row__block-2">div 2</div>
+        <div class="third-row__block third-row__block-3">div 3</div>
+      </div>
+      <div class="four-row">
+        <div class="four-row__block four-row__block-1">div 1</div>
+        <div class="four-row__block four-row__block-2">div 2</div>
+        <div class="four-row__block four-row__block-3">div 3</div>
+      </div>
+      <div class="five-row">
+        <div class="five-row__block five-row__block-1">div 1</div>
+        <div class="five-row__block five-row__block-2">div 2</div>
+        <div class="five-row__block five-row__block-3">div 3</div>
+        <div class="five-row__block five-row__block-4">div 4</div>
+      </div>
+      <div class="six-row">
+        <div class="six-row__block six-row__block-1">div 1</div>
+        <div class="six-row__block six-row__block-2">div 2</div>
+        <div class="six-row__block six-row__block-3">div 3</div>
+      </div>
+    </section>
+    <section class="wp-theme">
+      <header class="header">
+        <div class="header__left">
+          <h1 class="header__title">Barnsbury</h1>
+          <h2 class="header__subtitle">10 Street Road, City, 10100 USA</h2>
+        </div>
+        <nav class="header__right">
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="#" class="nav__item-link active">Home </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">About </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Recipes </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="mobile-nav">
+          <button class="mobile-nav__btn">Menu +</button>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="content">
+          <div class="content__desqr">
+            <h3 class="desqr__title">
+              Locally Farmed Organic Vegetable Delivery
+            </h3>
+            <p class="desqr__subtitle">
+              20 years of growing organic vegetables and delivering vegetable
+              boxes from our 12-acre farm in Sussex.
+            </p>
+            <button class="desqr__btn">Get in touch</button>
+          </div>
+          <div class="content__img">
+            <img
+              src="https://barnsburydemo.files.wordpress.com/2019/09/sri-lanka-ksa66ayiqnk-unsplash.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <section class="services">
+          <h3 class="section__title">Services</h3>
+          <h3 class="section__subtitle">What We Do</h3>
+          <div class="services__line"></div>
+          <div class="row">
+            <div class="col-md">
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://barnsburydemo.files.wordpress.com/2019/09/jeshoots-com-l8nlxbhwbw0-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card__info">
+                  We have different sizes of boxes available for various
+                  appetites, from individuals to families.
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://barnsburydemo.files.wordpress.com/2019/09/martin-adams-5xxfymman84-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card__info">
+                  We are flexible with the items in your boxes. You can change
+                  items in your order for something you would like.
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://barnsburydemo.files.wordpress.com/2019/09/agence-producteurs-locaux-damien-kuhn-dtbfrwd6qto-unsplash.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card__info">
+                  We produce organic vegetable boxes that are affordable,
+                  seasonal, and as fresh and local as possible.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="farm">
+          <div class="farm__container">
+            <h3 class="section__title">Meet us better</h3>
+            <h3 class="section__subtitle">Our Organic Farm in Numbers</h3>
+            <div class="row farm__row">
+              <div class="col-md farm__card">
+                <p class="farm__card-title">370</p>
+                <p class="farm__card-subtitle">households per month</p>
+              </div>
+              <div class="col-md farm__card">
+                <p class="farm__card-title">23</p>
+                <p class="farm__card-subtitle">experts working</p>
+              </div>
+              <div class="col-md farm__card">
+                <p class="farm__card-title">5</p>
+                <p class="farm__card-subtitle">awards won</p>
+              </div>
+              <div class="col-md farm__card">
+                <p class="farm__card-title">100%</p>
+                <p class="farm__card-subtitle">satisfied customers</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
 </html>

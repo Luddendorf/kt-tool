@@ -1,0 +1,198 @@
+@import "reset";
+$primary-color: #3c2323;
+$hover-color: #20603c;
+$large: 960px;
+$medium: 768px;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  &__title {
+    font-size: 3.2rem;
+    margin: 0;
+    cursor: pointer;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $primary-color;
+  }
+}
+
+.nav {
+  display: flex;
+  @media (max-width: $medium) {
+    display: none;
+  }
+  &__item {
+    margin-right: 5px;
+    &-link {
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  display: none;
+  @media (max-width: $medium) {
+    display: block;
+  }
+  &__btn {
+    color: white;
+    font-weight: bold;
+    background: #20603c;
+    padding: 15px;
+  }
+}
+
+.active {
+  color: $hover-color;
+}
+
+.section__title {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+.section__subtitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.content {
+  width: 100%;
+  max-height: 700px;
+  display: flex;
+  margin-bottom: 30px;
+  @media (max-width: $medium) {
+    flex-direction: column;
+  }
+  &__desqr {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    background: $hover-color;
+    font-size: 2rem;
+    padding: 40px;
+    .desqr__title {
+      text-align: left;
+      font-size: 5rem;
+      padding: 20px 0px;
+      @media (max-width: $large) {
+        font-size: 4rem;
+      }
+      @media (max-width: $medium) {
+        font-size: 3rem;
+      }
+    }
+    .desqr__subtitle {
+      font-size: 2rem;
+      padding: 15px 0px;
+      @media (max-width: $large) {
+        font-size: 1.5rem;
+      }
+    }
+    .desqr__btn {
+      align-self: start;
+      font-weight: bold;
+      color: white;
+      background: transparent;
+      border: 2px solid white;
+    }
+  }
+  &__img {
+    flex-basis: 50%;
+    overflow: hidden;
+    @media (max-width: $medium) {
+      order: -1;
+    }
+    & img {
+      min-height: 100%;
+    }
+  }
+}
+
+.services {
+  color: $primary-color;
+  padding: 20px 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  &__line {
+    width: 100px;
+    height: 2px;
+    background: rgba(68, 68, 68, 0.445);
+    margin: 20px auto;
+  }
+}
+
+.card {
+  border: none;
+  margin-bottom: 15px;
+  &__image {
+    margin-bottom: 15px;
+  }
+  &__info {
+    text-align: left;
+    font-size: 2rem;
+  }
+}
+
+.farm {
+  position: relative;
+  background-image: url(https://barnsburydemo.files.wordpress.com/2019/09/naseem-buras-cwpy-hpdt9q-unsplash-copy-4.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  &__container {
+    position: relative;
+    padding: 30px;
+  }
+  &__row {
+    padding: 30px;
+  }
+  &__card {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    &-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    &-subtitle {
+      font-size: 2rem;
+    }
+  }
+}

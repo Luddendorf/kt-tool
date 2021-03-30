@@ -1,0 +1,116 @@
+@mixin flex-row {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-box {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.first-row {
+  @include flex-row;
+  &__block {
+    flex-basis: 12.5%;
+    background: red;
+    margin: 0px 5px;
+    &-2 {
+      flex-grow: 1;
+    }
+  }
+}
+
+.second-row {
+  @include flex-row;
+  &__block {
+    flex-basis: 25%;
+    background: green;
+    margin: 0px 5px;
+    &-3 {
+      flex-grow: 1;
+    }
+  }
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__block {
+    width: 10%;
+    background: blue;
+    padding-bottom: 10px;
+    margin: 5px 5px;
+    &-2 {
+      min-height: 100px;
+    }
+  }
+}
+
+.third-row {
+  @include flex-row;
+  justify-content: flex-end;
+  background: grey;
+  &__block {
+    flex-basis: 10%;
+    margin: 0px 5px;
+    background: violet;
+  }
+}
+
+.four-row {
+  @include flex-row;
+  background: grey;
+  padding: 20px 0px;
+  &__block {
+    flex-basis: 33.333%;
+    background: orange;
+    border: 1px solid black;
+    &-1 {
+      order: 1;
+    }
+  }
+}
+
+.five-row {
+  @include flex-row;
+  flex-wrap: wrap;
+  width: 30%;
+  &__block {
+    width: 33.333%;
+    background: pink;
+    border: 1px solid black;
+    &-4 {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+.six-row {
+  @include flex-row;
+  background: grey;
+  &__block {
+    background: yellow;
+    border: 1px solid black;
+    &-1 {
+      flex-basis: 33.333%;
+      align-self: flex-end;
+    }
+    &-2 {
+      flex-basis: 50%;
+      align-self: flex-start;
+    }
+    &-3 {
+      flex: auto;
+    }
+  }
+}
