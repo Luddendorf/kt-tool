@@ -1,14 +1,394 @@
 html {
-  box-sizing: border-box;
-  font-size: 100%;
+    box-sizing: border-box;
+    font-size: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-body {
+body {}
 
+
+/* .red:nth-child(-n+3) {
+    background-color: red;
+    padding: 5px;
+} */
+
+.red>div {
+    background-color: red;
 }
+
+.blue>div {
+    background-color: blue;
+}
+
+.green>div {
+    background-color: green;
+}
+
+.purple>div {
+    background-color: rgba(209, 9, 209, 0.938);
+}
+
+.orange>div {
+    background-color: orange;
+}
+
+.pink>div {
+    background-color: pink;
+}
+
+.yellow>div {
+    background-color: yellow;
+}
+
+.bottom>div {
+    background-color: rgba(11, 11, 122, 0.801);
+}
+
+.red1 {
+    flex: 0 0 17%
+}
+
+.red2 {
+    flex: 0 0 70%;
+    margin: 0px 5px 0px 5px;
+}
+
+.red3 {
+    flex: 1;
+}
+
+.green1 {
+    flex: 1;
+}
+
+.green2 {
+    flex: 1;
+    margin: 0px 5px 0px 5px;
+}
+
+.green3 {
+    flex: 2;
+}
+
+.flex {
+    display: flex;
+    height: 70px;
+    /* flex-wrap: wrap; */
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.blue1 {
+    flex-basis: 15%;
+    width: 100px;
+}
+
+.blue2 {
+    margin: 5px 0px 5px 0px;
+    flex-basis: 70%;
+    width: 100px;
+}
+
+.blue3 {
+    flex-basis: 15%;
+    width: 100px;
+}
+
+.purple {
+    justify-content: flex-end;
+    flex-grow: 1;
+    background-color: rgb(209, 209, 209);
+}
+
+.purple1 {
+    flex-grow: 0.03;
+}
+
+.purple2 {
+    flex-grow: 0.03;
+    margin: 0px 5px 0px 5px;
+}
+
+.purple3 {
+    flex-grow: 0.03;
+}
+
+.orange {
+    /* align-self: center; */
+    background-color: rgb(209, 209, 209);
+    height: 100px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.orange1 {
+    flex: 1;
+    height: 33%;
+    border: black 1px solid;
+}
+
+.orange2 {
+    flex: 1;
+    height: 33%;
+    border: black 1px solid;
+}
+
+.orange3 {
+    flex: 1;
+    height: 33%;
+    border: black 1px solid;
+}
+
+.flexWrap {
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+.pink1 {
+    height: 50px;
+    flex-basis: 100px;
+    border: 1px black solid;
+}
+
+.pink2 {
+    flex-basis: 100px;
+    border: 1px black solid;
+}
+
+.pink3 {
+    flex-basis: 100px;
+    border: 1px black solid;
+}
+
+.pink4 {
+    height: 50px;
+    flex-basis: 100%;
+    border: 1px black solid;
+}
+
+.yellow {
+    margin-top: 25px;
+    background-color: rgb(209, 209, 209);
+    height: 100px;
+}
+
+.yellow1 {
+    flex-grow: 1;
+    border: 1px black solid;
+    align-self: flex-end;
+    height: 20%;
+}
+
+.yellow2 {
+    flex-grow: 1.5;
+    border: 1px black solid;
+    height: 20%;
+    align-self: flex-start;
+}
+
+.yellow3 {
+    flex-grow: 0.5;
+    border: 1px black solid;
+}
+
+.bottom>div {
+    flex-grow: 0.9;
+    height: 150px;
+}
+
+.flexBottom {
+    display: flex;
+    justify-content: start;
+}
+
+.title_t {
+    color: #fff;
+    padding-left: 10px;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text {
+    color: #fff;
+    padding-left: 10px;
+}
+
+.Wordpress {
+    margin-top: 25px;
+}
+
+.head {
+    background-color: #FFFDF6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.textHead {
+    margin-left: 15px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    margin-right: 15px;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: "Rubik", Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+ul li a:hover {
+    color: green;
+}
+
+ul li a:focus {
+    color: green;
+}
+
+.Delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #20603C;
+    height: 400px;
+    overflow: hidden;
+}
+
+.textDelivery {
+    color: #fff;
+    flex-direction: column;
+    padding: 32px;
+    flex-basis: 50%;
+}
+
+.imgDelivery {
+    flex-basis: 50%;
+}
+
+.imgDelivery img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.textDelivery p {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.Locally {
+    font-size: 2.69955rem;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFDF6;
+}
+
+.imgBoxThree {
+    display: flex;
+    justify-content: center;
+}
+
+.box1 {
+    flex-grow: 0.25;
+    width: 5%;
+    margin: 25px;
+}
+
+.box2 {
+    flex-grow: 0.25;
+    width: 5%;
+    margin: 25px;
+}
+
+.box3 {
+    flex-grow: 0.25;
+    width: 5%;
+    margin: 25px;
+}
+
+.imgBoxThree img {
+    max-width: 100%;
+    min-height: 50%;
+}
+
+.hr_section {
+    width: 96px;
+    border: 1px solid #000;
+}
+
+.Organic {
+    color: #fff;
+}
+
+.farm {
+    max-height: 440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 100%; */
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://barnsburydemo.files.wordpress.com/2019/09/naseem-buras-cwpy-hpdt9q-unsplash-copy-4.jpg);
+}
+
+.farm img {}
+
+.textFarm {
+    flex: auto;
+}
+
+.HeadFarm {
+    flex: auto;
+}
+
+.textOrganic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.info>div {
+    margin: 0px 50px 50px 50px;
+    text-align: center;
+}
+
+.info>div>p {
+    font-size: 18px;
+}
+
+
+/**/
