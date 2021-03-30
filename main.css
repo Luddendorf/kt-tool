@@ -1,0 +1,264 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+
+}
+
+h1 {
+  font-size: 10px;
+  
+}
+
+.redcubes {
+  display: flex;
+  justify-content: center;  
+  height: 100px;
+  width: 100%;
+}
+
+.rcube1 {
+  background-color: red;
+  margin: 5px;
+  width: 10%;
+}
+
+.rcube2 {
+  background-color: red;
+  margin: 5px;
+  width: 60%;
+}
+
+.rcube3 {
+  background-color: red;
+  margin: 5px;
+  width: 30%;
+}
+
+.greencubes {
+  display: flex;
+  height: 100px;
+  justify-content: center;  
+  width: 100%;
+}
+
+.gcube1 {
+  background-color: green;
+  margin: 5px;
+  width: 20%;
+}
+
+.gcube2 {
+  background-color: green;
+  margin: 5px;
+  width: 20%;
+}
+
+.gcube3 {
+  background-color: green;
+  margin: 5px;
+  width: 60%;
+}
+.bluecubes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  width: 100%;
+  
+}
+
+.bcube1 {
+  background-color: blue;
+  margin: 5px;
+  width: 6%;
+  height: 20px;
+}
+
+.bcube2 {
+  background-color: blue;
+  margin: 5px;
+  width: 6%;
+  height: 200px;
+}
+
+.bcube3 {
+  background-color: blue;
+  margin: 5px;
+  width: 6%;
+  height: 20px;
+}
+
+.pinklecubes {
+  display: flex;  
+  justify-content: flex-end;  
+  background-color: #ddd;
+  width: 100%;
+  height: 100px;
+  padding: 0px;
+  margin-top: 6px;
+  
+}
+
+.pcube1 {
+  background-color: #f0f;
+  margin-left: 10px;
+  height: 100%;
+  width: 6%;
+  
+}
+
+.pcube2 {
+  background-color: #f0f;
+  margin-left: 10px;
+  width: 6%;
+}
+
+.pcube3 {
+  background-color: #f0f;
+  margin-left: 10px;
+  width: 6%;
+}
+
+.orangecubes {
+  display: flex;  
+  justify-content: center;  
+  align-items: center;
+  background-color: #ddd;
+  width: 100%;
+  height: 200px;
+  padding: 0px;
+  margin-top: 9px;
+  
+}
+
+.ocube1 {
+  background-color: orange;  
+  height: 33%;
+  width: 34%; 
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  border-right: none;
+}
+
+.ocube2 {
+  background-color: orange;  
+  height: 33%;
+  width: 34%;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  border-right: none;
+}
+
+.ocube3 {
+  background-color: orange;  
+  height: 33%;
+  width: 34%;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+}
+
+.wrap {
+  
+  display: flex; 
+  justify-content: flex-start;  
+  align-items: center;
+  height: 110px;
+  width: 100%;
+}
+
+.pinklecubes2 {
+  display: flex; 
+  justify-content: center;   
+  margin-bottom: -8px;
+  padding-bottom: 0px;
+}
+
+.pcube21 {
+  background-color: #fcd;
+  height: 50x;
+  width: 100px;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  border-right: none;
+}
+
+.pcube22 {
+  background-color: #fcd;
+  height: 50px;
+  width: 100px;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  border-right: none;
+}
+
+.pcube23 {
+  background-color: #fcd;
+  height: 50px;
+  width: 100px;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+ 
+}
+.pcube24 {
+  background-color: #fcd;
+  height: 50px;
+  width: 300px;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  margin-bottom: -10px;
+}
+
+.yellowcubes {
+  display: flex;  
+  justify-content: flex-end;  
+  background-color: #ddd;
+  width: 100%;
+  height: 100px;
+  padding: 0px;
+  margin-top: 6px;
+  
+}
+
+.ycube1 {
+  background-color: yellow;  
+  height: 20%;
+  width: 30%;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  
+  align-self: flex-end;
+}
+
+.ycube2 {
+  background-color: yellow;  
+  width: 50%;
+  height: 20%;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+  border-right: none;
+}
+
+.ycube3 {
+  background-color: yellow;
+  width: 20%;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+}
