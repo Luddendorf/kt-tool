@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  padding: 2em;
+  height: 15vh;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__title {
+}
+.header__name {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.header__address {
+  margin-top: 0.5em;
+  font-size: 0.9rem;
+}
+.menu {
+  display: flex;
+  align-items: flex-end;
+}
+.menu__item {
+  color: #000;
+  font-size: 1.25rem;
+  margin-left: 1em;
+  font-weight: 600;
+  &:hover {
+    color: #20603c;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+}

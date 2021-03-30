@@ -1,3 +1,11 @@
-@import "topbar/topbar";
+// normalize css
+@import "normalize/normilize.scss";
 
-
+//main part
+@import "vars/vars";
+@import "wrapper/wrapper";
+@import "flex/flex";
+@import "barnsbury/header";
+@import "barnsbury/main";
+@import "barnsbury/mixins";
+@import "barnsbury/services";

@@ -1,16 +1,12 @@
-import './main.css';
-import styles from './index.module.css';
+// import './main.css';
+// import styles from './index.module.css';
 import "./sass/main-second.scss";
 
 async function print() {
   // Here we are using dynamic import
-  const { greet } = await import('./greet');
-  const response = await greet('John Doe');
+  const { greet } = await import("./greet");
+  const response = await greet("John Doe");
   console.log(response);
 }
 
 print();
-
-
-
-

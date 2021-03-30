@@ -1,0 +1,75 @@
+.main {
+  position: relative;
+  display: flex;
+  height: 60vh;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.mainImg {
+  width: 50vw;
+  left: 0;
+  background: url("../../assets/vegetables__img.jpg") 0 0 / cover no-repeat;
+}
+
+.info__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
+  justify-content: center;
+  background-color: #20603c;
+  padding: 2em;
+}
+
+.info__title {
+  display: flex;
+  color: white;
+  flex-wrap: wrap;
+  font-size: 3.375rem;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+}
+.info__descp {
+  color: white;
+  margin: 2em 0;
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 200;
+}
+.info__btn {
+  position: relative;
+  display: block;
+  border: 2.5px solid white;
+  background: none;
+  border-radius: 0.5em;
+  width: 10em;
+  height: 3.18em;
+  padding: 1em;
+  color: white;
+  &:hover {
+    border: 2.5px solid #0e7c3e;
+    color: #0e7c3e;
+  }
+  & > span {
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+  }
+  .info__title {
+    font-size: 2rem;
+  }
+  .info__descp {
+    font-size: 1rem;
+  }
+  .mainImg {
+    width: 100vw;
+  }
+  .info__wrapper {
+    width: 100vw;
+  }
+}

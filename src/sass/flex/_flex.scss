@@ -1,0 +1,212 @@
+.title {
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 1px 2px 2px black, 0 0 0.5em #ff0000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2em 0.2em;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex__flexBlock {
+  position: relative;
+  width: 99vw;
+  margin: 0 auto 0.5em auto;
+}
+.flex__flexBlock__1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 6.438em;
+  justify-content: space-between;
+  & > .flex__blockElem_1 {
+    background: $primary-red;
+    width: 14.3vw;
+    margin: 0 0.3em;
+  }
+  & > .flex__blockElem_2 {
+    background: $primary-red;
+    width: 69.3vw;
+    margin: 0 0.3em;
+  }
+  & > .flex__blockElem_3 {
+    background: $primary-red;
+    width: 14.3vw;
+    margin: 0 0.3em;
+  }
+}
+
+.flex__flexBlock__2 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 6.438em;
+  justify-content: space-between;
+  & > .flex__blockElem_1 {
+    background: $primary-green;
+    width: 19.3vw;
+    margin: 0 0.3em;
+  }
+  & > .flex__blockElem_2 {
+    background: $primary-green;
+    width: 19.3vw;
+    margin: 0 0.3em;
+  }
+  & > .flex__blockElem_3 {
+    background: $primary-green;
+    width: 59.3vw;
+    margin: 0 0.3em;
+  }
+}
+
+.flex__flexBlock_3 {
+  display: flex;
+  position: relative;
+  height: 12.8em;
+  width: 99vw;
+  margin: 0 auto;
+  & > .flex__flexBlock__3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 5vw;
+    & > .flex__blockElem_1 {
+      background: $primary-blue;
+      height: 9.3vh;
+      margin: 0.3em;
+    }
+    & > .flex__blockElem_2 {
+      background: $primary-blue;
+      height: 79.3vh;
+      margin: 0.3em;
+    }
+    & > .flex__blockElem_3 {
+      background: $primary-blue;
+      height: 9.3vh;
+      margin: 0.3em;
+    }
+  }
+}
+
+.flex__flexBlock__4 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(184, 177, 177);
+  height: 10vh;
+  width: 100%;
+  margin: 0 0.3em;
+  & > .flex__blockElem_1 {
+    background: $primary-pink;
+    width: 5vw;
+    margin-left: 0.3em;
+  }
+  & > .flex__blockElem_2 {
+    background: $primary-pink;
+    width: 5vw;
+    margin-left: 0.3em;
+  }
+  & > .flex__blockElem_3 {
+    background: $primary-pink;
+    width: 5vw;
+    margin-left: 0.3em;
+  }
+}
+
+.flex__flexBlock__5 {
+  margin-top: 0.5em;
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(184, 177, 177);
+  margin: 0 0.3em;
+  & > .flex__blockElem_1 {
+    background: $primary-orange;
+    border: 1px solid black;
+    width: 33.33vw;
+    height: 3vh;
+    order: 1;
+  }
+  & > .flex__blockElem_2 {
+    background: $primary-orange;
+    border: 1px solid black;
+    height: 3vh;
+    width: 33.33vw;
+  }
+  & > .flex__blockElem_3 {
+    background: $primary-orange;
+    border: 1px solid black;
+    width: 33.33vw;
+    height: 3vh;
+  }
+}
+
+.flex__flexBlock__6 {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 100%;
+  width: 25vw;
+  margin: 0 0.3em;
+  & > .flex__blockElem_1 {
+    background: $light-pink;
+    height: 10vh;
+    width: 8.3vw;
+    border: 1px solid black;
+  }
+  & > .flex__blockElem_2 {
+    background: $light-pink;
+    width: 8.3vw;
+    border: 1px solid black;
+  }
+  & > .flex__blockElem_3 {
+    background: $light-pink;
+    width: 8.3vw;
+    border: 1px solid black;
+  }
+  & > .flex__blockElem_4 {
+    background: $light-pink;
+    width: 24.9vw;
+    height: 10vh;
+    border: 1px solid black;
+  }
+}
+
+.flex__flexBlock__7 {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  margin: 0 0.3em;
+  background-color: rgb(184, 177, 177);
+  & > .flex__blockElem_1 {
+    background: $primary-yellow;
+    align-self: flex-end;
+    width: 35vw;
+    height: 2.5vh;
+    border: 1px solid black;
+  }
+  & > .flex__blockElem_2 {
+    background: $primary-yellow;
+    width: 50vw;
+    height: 2.5vh;
+    border: 1px solid black;
+  }
+  & > .flex__blockElem_3 {
+    background: $primary-yellow;
+    width: 14vw;
+    border: 1px solid black;
+  }
+}
