@@ -1,0 +1,148 @@
+/* First block */
+.flex__wrapper-1 {
+    display: flex;
+    height: 80px;
+  }
+.flex__wrapper-1 > div {
+    background-color: red;
+  }
+.flex__wrapper-1 > .div1 {
+    flex-grow: 0.5;
+    margin-right: 6px;
+}
+.flex__wrapper-1 > .div2 {
+    flex-grow: 2;
+    margin-right: 6px;
+}
+.flex__wrapper-1 > .div3 {
+    flex-grow: 0.4;
+}
+
+/* Second block */
+  .flex__wrapper-2 {
+    display: flex;
+    height: 80px;
+    margin-top: 10px;
+  }
+  .flex__wrapper-2 > div {
+    background-color: green;
+  }
+  .div21 {
+    flex-grow: 1;
+    margin-right: 6px;
+  }
+  .div22 {
+    flex-grow: 1;
+    margin-right: 6px;
+  }
+  .div23 {
+    flex-grow: 2;
+  }
+
+  /* Third block */
+  .flex__wrapper-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 420px;
+    margin-top: 10px;
+  }
+  .div31 {
+    flex: 0.2 1 auto;
+    background-color: blue;
+    margin-bottom: 6px;
+  }
+  .div32 {
+    flex: 3 1 auto;
+    background-color: blue;
+    margin-bottom: 6px;
+  }
+  .div33 {
+    flex: 0.2 1 auto;
+    background-color: blue;
+  }
+  /* Fourth block */
+  .flex__wrapper-4 {
+    display: flex;
+    height: 80px;
+    justify-content: flex-end;
+    margin-top: 10px;
+    background-color: rgb(177, 176, 176);
+  }
+  .flex__wrapper-4 > div {
+    background-color: purple;
+    margin-right: 6px;
+    height: inherit;
+    width: 80px;
+  }
+ 
+
+  /* Fifth block */
+  .flex__wrapper-5 {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-top: 10px;
+    background-color: rgb(177, 176, 176);
+  }
+  .div51 {
+    flex: 1 1 auto;
+    background-color: orange;
+    height: 50%;
+    border: 1px solid black;
+  }
+  .div52 {
+    flex: 1 1 auto;
+    background-color: orange;
+    height: 50%;
+    border: 1px solid black;
+  }
+  .div53 {
+    flex: 1 1 auto;
+    background-color: orange;
+    height: 50%;
+    border: 1px solid black;
+  }
+
+  /* Sixth block */
+  .flex__wrapper-6 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 80px;
+    margin-top: 10px;
+  }
+  .flex__wrapper-6 > div {
+    background-color: pink;
+    border: 1px solid black;
+    width: 33%;
+  }
+  .div64 {
+    flex-basis: 600px;
+  }
+  /* Seventh block */
+  .flex__wrapper-7 {
+    display: flex;
+    height: 80px;
+    margin-top: 10px;
+    background-color: rgb(177, 176, 176);
+  }
+ 
+  .div71 {
+    height: 20%;
+    align-self: flex-end;
+    flex-grow: 1;
+    background-color: yellow;
+    border: 1px solid black;
+  }
+  .div72 {
+    height: 20%;
+    flex-grow: 2;
+    background-color: yellow;
+    border: 1px solid black;
+  }
+  .div73 {
+    flex-grow: 1;
+    background-color: yellow;
+    border: 1px solid black;
+  }
