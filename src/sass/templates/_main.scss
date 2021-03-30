@@ -7,6 +7,7 @@
     padding-left: 40px;
     padding-right: 20px;
     padding-top: 100px;
+    padding-bottom: 100px;
   }
   &__header {
     font-family: 'Baloo Da 2';
@@ -36,5 +37,6 @@
   }
   &__image {
     flex: 1 1 50%;
+    background: url("https://cdn.pixabay.com/photo/2016/10/25/13/16/pumpkin-1768857_960_720.jpg") no-repeat center/cover;
   }
 }
