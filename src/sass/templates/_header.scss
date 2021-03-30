@@ -5,7 +5,6 @@
   color: $gray-dark;
   font-family: 'Baloo Da 2';
   justify-content: space-between;
-  align-items: center;
 }
 .logo {
   &__title {
@@ -15,9 +14,17 @@
       color: #0bc501e1;
       transition: all ease 1s;
     }
+    & span{
+      &::selection{
+        background: $selected;
+      }
+    }
   }
   &__address {
     font-family: 'Anderson Grotesk';
+    &::selection{
+      background: $selected;
+    }
   }
 }
 .menu-list {
@@ -31,6 +38,9 @@
     &:hover{
       color: #0bc501e1;
       transition: all ease 1s;
+    }
+    &::selection{
+      background: $selected;
     }
   }
 }

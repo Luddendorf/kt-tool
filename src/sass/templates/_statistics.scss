@@ -22,9 +22,15 @@
     font-family: 'Baloo Da 2';
     font-weight: 900;
     font-size: 56px;
+    &::selection{
+      background: $selected;
+    }
   }
   &__text {
     font-size: 22px;
+    &::selection{
+      background: $selected;
+    }
   }
 }
 
