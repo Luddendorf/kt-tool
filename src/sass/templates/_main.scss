@@ -23,23 +23,12 @@
     @media screen and (max-width: 780px) {
       font-size: 40px;
     }
-    &::selection{
-      background: $selected;
-    }
-    & br{
-      &::selection{
-        background: $selected;
-      }
-    }
   }
   &__description {
     font-size: 22px;
     line-height: 36px;
     font-weight: 500;
     margin-bottom: 30px;
-    &::selection{
-      background: $selected;
-    }
   }
   &__button {
     background-color: transparent;
@@ -53,9 +42,6 @@
       color: #093107e1;
       transition: all ease 1s;
       border-color: #093107e1;
-    }
-    &::selection{
-      background: $selected;
     }
   }
   &__image {

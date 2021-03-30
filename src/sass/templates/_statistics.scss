@@ -33,15 +33,9 @@
     @media screen and (max-width: 780px) {
       font-size: 45px;
     }
-    &::selection{
-      background: $selected;
-    }
   }
   &__text {
     font-size: 22px;
-    &::selection{
-      background: $selected;
-    }
   }
 }
 
