@@ -1,13 +1,7 @@
 .section-services {
-  text-align: center;
   background-color: $bg-primary;
 }
-.container {
-}
 .services {
-    &__header {}
-    &__pretitle {}
-    &__title {}
     &__row {
       display: flex;
       margin: 0 -15px;
@@ -16,10 +10,6 @@
       flex: 0 0 calc(100%/3);
       padding: 0 15px;
     }
-}
-.pretitle {
-}
-.title {
 }
 .services-item {
     &__img {
