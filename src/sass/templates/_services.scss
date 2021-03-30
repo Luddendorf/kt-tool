@@ -1,0 +1,26 @@
+.section-services {
+  text-align: center;
+}
+.container {
+}
+.services {
+    &__header {}
+    &__pretitle {}
+    &__title {}
+    &__row {
+      display: flex;
+      margin: 0 -15px;
+    }
+    &__column {
+      flex: 0 0 calc(100%/3);
+      padding: 0 15px;
+    }
+}
+.pretitle {
+}
+.title {
+}
+.services-item {
+    &__img {}
+    &__text {}
+}
