@@ -5,12 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 1 Вторая страница</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Павел Попов Lesson 1 Вторая страница</title>
 </head>
 
 <body>
-	<h1>Вторая страница</h1>
-	<a href="./lesson1.html">Ссылка на 1-ю страницу для Lesson1</a>
+  <h2>Child</h2>
+  <button id='clear'>Очистить</button>
+  <form action="../src/lesson1.html" id="form1">
+    <div class="container">
+      <label for="login"> Имя
+        <input type="text" id="login" name="login">
+      </label>
+      <textarea name="text" id="text" cols="30" rows="5"></textarea>
+      <input type="submit" value="Отправить дальше" style="width: 50%;">
+    </div>
+    </form>
+  <script src="main.js"></script>
+  <script src="main1.js"></script>
 </body>
 
 </html>
