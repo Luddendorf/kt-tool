@@ -1,19 +1,28 @@
 .main {
   display: flex;
+  flex-wrap: wrap;
   background: $bg-main;
   color: #ffffff;
+  &__column{
+    flex: 0 0 calc(100%/2);
+    @media screen and (max-width: 599px) {
+      flex: 0 0 calc(100%);
+    }
+  }
   &__info {
-    flex: 1 1 50%;
-    padding-left: 40px;
-    padding-right: 20px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 20px 100px 40px;
+    @media screen and (max-width: 1000px) {
+      padding: 50px 10px 50px 20px;
+    }
   }
   &__header {
     font-family: 'Baloo Da 2';
     font-size: 48px;
     font-weight: 800;
     text-transform: capitalize;
+    @media screen and (max-width: 780px) {
+      font-size: 40px;
+    }
     &::selection{
       background: $selected;
     }
@@ -50,7 +59,10 @@
     }
   }
   &__image {
-    flex: 1 1 50%;
     background: url("https://cdn.pixabay.com/photo/2016/10/25/13/16/pumpkin-1768857_960_720.jpg") no-repeat center/cover;
+    @media screen and (max-width: 599px) {
+      height: 50vh;
+      order: -1;
+    }
   }
 }

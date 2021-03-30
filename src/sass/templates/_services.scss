@@ -5,15 +5,28 @@
     &__row {
       display: flex;
       margin: 0 -15px;
+      flex-wrap: wrap;
+      @media screen and (max-width: 599px) {
+        text-align: center;
+      }
     }
     &__column {
       flex: 0 0 calc(100%/3);
       padding: 0 15px;
+      @media screen and (max-width: 780px) {
+        flex: 0 0 calc(100%/2);
+      }
+      @media screen and (max-width: 599px) {
+        flex: 0 0 calc(100%);
+      }
     }
 }
 .services-item {
     &__img {
       margin-bottom: 20px;
+      @media screen and (max-width: 899px) {
+        margin-bottom: 0;
+      }
       & img{
         max-height: 210px;
       }
@@ -22,6 +35,13 @@
       text-align: left;
       line-height: 36px;
       font-size: 20px;
+      @media screen and (max-width: 599px) {
+        line-height: 28px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
       &::selection{
         background: $selected;
       }

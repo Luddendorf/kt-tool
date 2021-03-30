@@ -5,6 +5,10 @@
   color: $gray-dark;
   font-family: 'Baloo Da 2';
   justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 460px) {
+    padding: 10px;
+	}
 }
 .logo {
   &__title {
@@ -30,6 +34,9 @@
 .menu-list {
   display: flex;
   font-size: 24px;
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
   &__item {
     cursor: pointer;
     &:not(:last-child){
@@ -42,5 +49,19 @@
     &::selection{
       background: $selected;
     }
+  }
+}
+
+.menu-button{
+  display: none;
+  @media screen and (max-width: 780px) {
+    display: flex;
+    align-items: center;
+    background: $bg-main;
+    border-radius: 10px;
+    color: #ffffff;
+    height: 100%;
+    padding: 10px 10px;
+    font-size: 14px;
   }
 }
