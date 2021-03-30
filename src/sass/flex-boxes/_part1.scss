@@ -1,0 +1,26 @@
+.part1{
+  height:50px; //высота передается потомкам
+  display:flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: lightgray;
+}
+
+.part1-block1{
+  flex-grow: 1.5;
+}
+
+.part1-block2{
+  flex-grow: 7;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.part1-block3{
+  flex-grow: 1;
+}
+
+.red{
+  background-color: red;
+}
+

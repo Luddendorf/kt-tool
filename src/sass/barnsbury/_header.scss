@@ -1,0 +1,99 @@
+.header{
+  padding: 32px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  padding: 0;
+  margin: 0;
+  a{
+    font-weight: 800;
+    font-size: 35px;
+    color: black;
+  &:hover{
+    color: $greenC;
+  }
+  }
+}
+
+.address{
+  padding: 0;
+  margin: 0;
+}
+
+.header > nav {
+  display: flex;
+  align-items: flex-end;
+
+  ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  a{
+    font-size: 20px;
+    color: black;
+    &:hover{
+      color: $greenC;
+    }
+  }
+}
+
+.menu{
+  visibility: collapse;
+}
+
+@media screen and (max-width: 420px){
+  .header{
+    padding: 8px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .title{
+      a{
+        font-weight: 800;
+        font-size: 30px;
+      }
+    }
+
+    .menu{ //курсор поинтер не делается. С первого клика не раотает
+      visibility: visible;
+      border-right: 8px;
+      border-left: 8px;
+      border-radius: 5px;
+    }
+
+    nav{ //при появлении толкает всю страницу вниз
+      display: block;
+      width: 100%;
+      visibility: hidden;
+      height: 0;
+
+      ul{
+        display: block;
+      }
+
+      li{
+        border-top: 1px solid gray;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      a{
+        display: block;
+      }
+    }
+
+ }
+}
+
+

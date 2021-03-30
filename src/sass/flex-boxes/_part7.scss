@@ -1,0 +1,31 @@
+.part7{
+  height: 50px;
+  background-color: #d3d3d3;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.part7 > * {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+#d1{
+  height: 40%;
+  align-self: flex-end;
+  flex-grow:2;
+}
+
+#d2{
+  height: 40%;
+  flex-grow:3;
+}
+
+#d3{
+  flex-grow:1;
+}

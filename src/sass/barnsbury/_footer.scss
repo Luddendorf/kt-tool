@@ -1,0 +1,71 @@
+footer{       // а через фильтр можно затемнить?
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://res.cloudinary.com/dvbkndvl0/image/upload/v1617026069/barnsbury/naseem-buras-cwpy-hpdt9q-unsplash-copy-4_jxt5jw.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 32px;
+  text-align: center;
+  color: white;
+
+  hr{
+    max-width: 96px;
+    color: transparent;
+  }
+}
+
+.meet-us-better{
+  margin-top: 64px;
+  margin-bottom: 16px;
+
+  strong{
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+.footer-title{
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 2.4rem;
+}
+
+.statistics{
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  display: flex;
+  width: 100%;
+  max-width: 1040px;
+}
+
+.col{
+  //width: 25%;   // ???
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  h2{
+    margin: 0;
+    font-size: 46px;
+    line-height: 53px;
+  }
+
+  p{
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+
+@media screen and (max-width: 420px){
+  .statistics{
+    //flex-direction: column;
+    flex-wrap: wrap; //работает лучше чем в колонку, почему
+  }
+
+  .col{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

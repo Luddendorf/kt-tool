@@ -1,0 +1,84 @@
+.intro{
+  display: flex;
+}
+
+.intro-info{
+  width: 50%;
+  padding: 32px;
+  background-color: $greenC;
+  & > * {
+    color: white;
+  }
+
+  h1{
+    font-size: 3.5rem;
+    margin-top: 96px;
+    margin-bottom: 32px;
+  }
+
+  p{
+    font-size: 1.2rem;
+    line-height: 30px;
+  }
+
+  button{
+    margin-top: 32px;
+    margin-bottom: 96px;
+    background-color: transparent;
+    border-radius: 5px;
+
+    a{
+      display: block;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 14px;
+      padding-right: 14px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+
+      &:hover{
+        color: #133a24;
+      }
+    }
+
+    &:hover{
+      border-color: #133a24;
+    }
+  }
+
+}
+
+.intro-img{
+  width: 50%;
+  height: inherit;
+  background-image: url("https://res.cloudinary.com/dvbkndvl0/image/upload/v1617026025/barnsbury/sri-lanka-ksa66ayiqnk-unsplash_rz4tdg.jpg");
+  background-position: 50% 50%; // как это раотает? хорошо центрирует
+}
+
+@media screen and (max-width: 420px){
+  .intro{
+    flex-direction: column-reverse;
+  }
+
+  .intro-info{
+    width: 100%;
+    padding: 8px;
+
+    h1{
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    button{
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .intro-img{
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+  }
+}

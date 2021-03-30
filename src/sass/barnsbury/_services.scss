@@ -1,0 +1,83 @@
+.services{
+  padding: 32px;
+  text-align: center;
+
+  .services-p{
+    margin-top: 64px;
+    margin-bottom: 32px;
+
+    strong{
+      font-size: 17px;
+      line-height: 27px;
+    }
+  }
+
+  h2{
+    margin-bottom: 32px;
+    font-size: 2.7rem;
+  }
+
+  hr{
+    max-width: 96px;
+  }
+}
+
+.gallery{
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+}
+
+.card-1{
+  margin: 0;
+}
+
+.card-2{
+  margin-left: 40px;
+}
+
+.card-3{
+  margin-left: 40px;
+}
+
+.card-1, .card-2, .card-3{
+  //flex-grow: 1;                     //что такое, почему не работает?
+  text-align: left;
+  width: 100%;                        //почему это работает? 100% тоже работают
+
+  img{
+    width: 100%;
+  }
+
+  p{
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 100;
+  }
+}
+
+
+@media screen and (max-width: 420px){
+  .services{
+    padding: 8px;
+  }
+
+  .gallery{
+      flex-direction: column;
+  }
+
+  .card-1, .card-2, .card-3{
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    p{
+      margin-top: 5px;
+    }
+  }
+}

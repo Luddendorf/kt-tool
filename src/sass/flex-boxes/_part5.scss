@@ -1,0 +1,29 @@
+.part5{
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.part5 > * {
+  box-sizing: border-box;
+  border:1px solid black;
+  flex-grow: 1;
+  height: 30px;
+}
+
+.part5-block1{
+  order:2;
+}
+
+.part5-block2{
+  order:0;
+}
+
+.part5-block3{
+  order: 1;
+}
+
+.orange{
+  background-color: orange;
+}

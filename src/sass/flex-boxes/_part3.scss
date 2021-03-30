@@ -1,0 +1,29 @@
+.part3{
+  height: 200px;
+  width:50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.part3-block1{
+  width: 50px;
+  height:10%
+}
+
+.part3-block2{
+  width: 50px;
+  height:77%
+}
+
+.part3-block3{
+  width: 50px;
+  height:10%
+}
+
+.blue{
+  background-color:blue;
+}

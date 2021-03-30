@@ -9,6 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-
+a{
+  text-decoration: none;
 }
