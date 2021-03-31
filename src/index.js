@@ -1,14 +1,14 @@
-import './main.css';
-import styles from './index.module.css';
-import "./sass/main-second.scss";
-
-async function print() {
-  // Here we are using dynamic import
-  const { greet } = await import('./greet');
-  const response = await greet('John Doe');
-}
-
-print();
+// import './main.css';
+// import styles from './index.module.css';
+// import "./sass/main-second.scss";
+//
+// async function print() {
+//   // Here we are using dynamic import
+//   const { greet } = await import('./greet');
+//   const response = await greet('John Doe');
+// }
+//
+// print();
 
 
 const unsorted = [
@@ -43,6 +43,61 @@ const unsorted = [
 		amount: 45972
 	}
 ];
+
+////////////////////////
+
+// function f1(arr){
+//   sortById(arr);
+//   sortByProfile(arr);
+// }
+//
+// function sortById(arr){
+//   arr.sort((a, b) => a.id > b.id ? 1 : -1);
+// }
+//
+// function sortByProfile(arr){
+//   arr.sort((a, b) => a.profile > b.profile ? 1 : -1);
+// }
+//
+// f1(unsorted);
+//
+// console.log(unsorted);
+
+
+/////////////////////////
+
+// function f2(arr){
+//
+//  arr.map(item => item.discount = item.amount * 0.05);
+//  return arr.map(item => delete item.profile);
+// }
+//
+// f2(unsorted)
+//
+// console.log(unsorted);
+
+/////////////////////////
+
+function f3(arr){
+
+  const newObj = {
+    removed: true
+  }
+
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > unsorted.length) {
+      return console.log("Error")
+    }
+  }
+
+  for(let i = 0; i < arr.length; i++) {
+    unsorted.splice(arr[i], 1, newObj);
+  }
+  return console.log(unsorted);
+}
+
+f3([1,3,4]);
+
 
 
 
