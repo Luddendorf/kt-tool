@@ -44,6 +44,14 @@ const unsorted = [
 	}
 ];
 
-unsorted.sort((a)=>{ a.id })
+
+unsorted
+		.sort(function(a, b){
+			if(a.id > b.id) return 1
+			else return -1;
+		})
+		.map((item)=>{ delete item.profile && (item.discount = Math.ceil(item.amount * 0.05))})
 
 console.log(unsorted);
+
+
