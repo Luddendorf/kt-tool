@@ -1,15 +1,9 @@
 import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
-
-async function print() {
-  // Here we are using dynamic import
-  const { greet } = await import('./greet');
-  const response = await greet('John Doe');
-}
-
-print();
-
+import {convertNumber} from './convertNumber'
+import {customSort, task2ex2, task2ex3} from './task2'
+import {formatCommet} from './formatCommet'
 
 const unsorted = [
 	{
@@ -44,5 +38,50 @@ const unsorted = [
 	}
 ];
 
+const handleConvert = () => {
+  const number = document.getElementById('inputNumber').value
+  const re = new RegExp('^\\d*$')
+  if(!re.test(number)){
+    alert("Input must be a number.")
+    return
+  }
+  const convertedNumber = convertNumber(number)
+  document.getElementById('outputNumber').value = convertedNumber
+}
 
+const handleClear = () => {
+  document.getElementById('inputNumber').value = ''
+  document.getElementById('outputNumber').value = ''
+}
 
+const handleSort = () => {
+  unsorted.sort(customSort)
+  console.log(unsorted);
+}
+
+const handleTask2Ex2B = () => {
+  const newArray = task2ex2(unsorted)
+  console.log(newArray)
+}
+
+const handleTask2Ex3B = () => {
+  const indexes = [1,3,4,10]
+  task2ex3(unsorted, indexes)
+  console.log(unsorted)
+}
+
+const handleFormat = () => {
+  const comment = document.getElementById('commentBefore').value
+  const k = document.getElementById('k').value
+
+  const newComment =  formatCommet(comment, k)
+
+  document.getElementById('commentAfter').value = `"${newComment}"`
+}
+
+document.getElementById('convertB').addEventListener('click', handleConvert)
+document.getElementById('clearB').addEventListener('click', handleClear)
+document.getElementById('sortB').addEventListener('click', handleSort)
+document.getElementById('task2Ex2B').addEventListener('click', handleTask2Ex2B)
+document.getElementById('task2Ex3B').addEventListener('click', handleTask2Ex3B)
+document.getElementById('formatB').addEventListener('click', handleFormat)
