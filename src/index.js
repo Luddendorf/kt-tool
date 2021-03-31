@@ -44,5 +44,6 @@ const unsorted = [
 	}
 ];
 
+unsorted.sort((a)=>{ a.id })
 
-
+console.log(unsorted);
