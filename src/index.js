@@ -44,12 +44,10 @@ const unsorted = [
 	}
 ];
 
-const sortID = (arr) => {
-	return arr.sort((a,b) => a.id > b.id ? 1 : -1);
-};
-
-const sortProf = (arr) => {
-	return arr.sort((a,b) => a.profile > b.profile ? 1 : -1);
+const sort = (arr) => {
+	return arr.sort((a,b) => {
+		return a.id.localeCompare(b.id) || a.profile.localeCompare(b.profile);
+	});
 };
 
 const addDiscount = (arr) => {
