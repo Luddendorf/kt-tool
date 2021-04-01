@@ -63,13 +63,12 @@ const solution = (myNumber) => {
     }
 		newCount.value = result;
   } else if (myNumber > 100000000){
-			newCount.value = "The number must be less than 100k";
-		} else if (myNumber < 0 ){
-			newCount.value = "The number must be positive";
-		} else if (!(intRegex.test(myNumber)) ){
-			newCount.value = "The number must be integer";
-		} 
-
+		newCount.value = "The number must be less than 100k";
+	} else if (myNumber < 0 ){
+		newCount.value = "The number must be positive";
+	} else if (!(intRegex.test(myNumber)) ){
+		newCount.value = "The number must be integer";
+	} 
 }
 sendBtn.addEventListener('click', () => {
   const count = document.querySelector('#number').value;
