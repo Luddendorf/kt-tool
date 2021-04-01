@@ -68,3 +68,22 @@ const remove = (arr, indexes) => {
 
 	return arr;
 };
+
+const taskThree = (string, k) => {
+	let str = string.trim();
+
+	if (str.length > k) {
+		if (str[k-1] !== ' ' && str[k] !== ' ' ) {
+			const arr = str.split('');
+			for (let i = k-1; i > 0; i--) {
+				if (arr[i] === ' ') {
+					return arr.slice(0, i).join('').trim();
+				}
+			}
+		} else {
+			return str.split('').slice(0, k).join('').trim();
+		}
+	} else {
+		return str;
+	}
+};
