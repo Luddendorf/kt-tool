@@ -37,7 +37,7 @@ function solution(num) {
   }
 }
 
-console.log('первое задание: ', solution(number));
+console.log(`первое задание: ${solution(number)}`);
 
 // ===========================Второе задание===========================
 
@@ -73,7 +73,7 @@ const unsorted = [
 		amount: 45972
 	}
 ];
-
+console.log('Второе задание: ');
 // 2.1 сортируем, сначала по id, затем по profile
 const sorted = (obj) =>{
 	return obj
@@ -113,7 +113,7 @@ console.log('2.3 : ', filtered(unsorted, arr));
 
 // ===========================Третье задание===========================
 
-const message = "Andersen We Test Programmers";
+const message = "    Hello";
 
 function filterComment(msg, k) {
 	// отрезаем от переменной строку длинной k символов
@@ -135,6 +135,6 @@ function filterComment(msg, k) {
   }
 }
 
-console.log('третье задание: ', filterComment(message, 14));
+console.log(`третье задание: ${filterComment(message, 14)}`);
 
 
