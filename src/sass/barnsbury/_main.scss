@@ -1,15 +1,23 @@
 .main {
-  position: relative;
   display: flex;
   height: 60vh;
-  width: 100vw;
-  justify-content: space-between;
 }
 
-.mainImg {
-  width: 50vw;
-  left: 0;
-  background: url("../../assets/vegetables__img.jpg") 0 0 / cover no-repeat;
+.img-block {
+  position: relative;
+  max-width: 50vw;
+
+  // position: relative;
+  // max-width: 50vw;
+  // height: 100%;
+  // background: url("../../assets/vegetables__img.jpg") 0 0 / cover no-repeat;
+}
+
+.img-block__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60vh;
 }
 
 .info__wrapper {
@@ -58,7 +66,7 @@
 
 @media (max-width: 1200px) {
   .main {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .info__title {
     font-size: 2rem;
@@ -66,10 +74,14 @@
   .info__descp {
     font-size: 1rem;
   }
-  .mainImg {
+  .img-block {
+    max-height: max-content;
+  }
+  .img-block__img {
     width: 100vw;
   }
   .info__wrapper {
     width: 100vw;
+    min-height: 40vh;
   }
 }
