@@ -10,5 +10,7 @@ html {
 }
 
 body {
-
+}
+.err {
+  border: 1px solid tomato;
 }

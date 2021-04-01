@@ -1,15 +1,35 @@
 import './main.css';
-import styles from './index.module.css';
 import "./sass/main-second.scss";
 
-async function print() {
-  // Here we are using dynamic import
-  const { greet } = await import('./greet');
-  const response = await greet('John Doe');
+// 1 Task
+const countBtn = document.querySelector('#counts__btn');
+const newCount = document.querySelector('#new__count');
+
+const solution = (myNumber) => {
+  const arr = myNumber.split('');
+  const newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(i < Math.ceil(arr.length / 2) ){
+      newArr.push(arr[i]);
+      if(arr.length % 2 !== 1)
+        newArr.push(arr[arr.length - i -  1]);
+      else{
+        if(Math.ceil(arr.length / 2) - 1 !== i)
+          newArr.push(arr[arr.length - i -  1]);
+      }
+    }
+  }
+  newCount.value = newArr.join('');
 }
 
-print();
+countBtn.addEventListener('click', () => {
+  const count = document.querySelector('#counts').value;
+  if(count){
+    solution(count);
+  }
+})
 
+//  Task 2
 
 const unsorted = [
 	{
@@ -44,5 +64,106 @@ const unsorted = [
 	}
 ];
 
+// Для просмотра всего массива
 
+const show = document.querySelector('#unsorted');
+
+const showArr = () => {
+  console.log(unsorted);
+}
+
+show.addEventListener('click', showArr)
+
+//  1 Function
+
+const sortId = document.querySelector('#sortId');
+const sortProfile = document.querySelector('#sortProfile');
+
+const sorting = (props) => {
+  if(props === "id")
+    return unsorted.sort((a, b) => a.id > b.id ? 1 : -1);
+  if(props === "profile")
+    return unsorted.sort((a, b) => a.profile > b.profile ? 1 : -1)
+}
+
+
+sortId.addEventListener('click', () => {
+  sorting("id"),
+  showArr();
+});
+sortProfile.addEventListener('click', () => {
+  sorting("profile");
+  showArr();
+});
+
+// 2 Function
+
+const discount = document.querySelector('#addDiscount');
+
+const addDiscount = () => {
+  return unsorted.map(el => {
+    return {
+      id: el.id,
+      type: el.type,
+      amount: el.amount,
+      discount: Math.round(el.amount * 0.05),
+    }
+  })
+}
+
+discount.addEventListener('click', () => console.log(addDiscount()));
+
+// 3 Function
+
+const remove = document.querySelector('#addRemove');
+
+const addRemove = (arr = [], arrInd = []) => {
+  return arr.forEach((el, index) => {
+    if(arrInd){
+      arrInd.forEach(item => {
+        if(index === item){
+          arr.splice(index, 1, {remove: true})
+        }
+      })
+    }
+  })
+}
+
+remove.addEventListener('click', () => {
+  addRemove(unsorted, [1,4]);
+  showArr();
+});
+
+// 3 Task
+
+const postBtn = document.querySelector('#post__btn')
+const postList = document.querySelector('#post__list');
+const maxLength = 14;
+
+const validation = (text) => {
+  if(text.length > maxLength) return false;  // проверка на максимальную длину
+  else{
+    const arr = text.split(' ').filter(el => el !== ''); // проверка на пробелы
+    return arr.join(' ');
+  }
+}
+
+postBtn.addEventListener('click', () => {
+  const post = document.querySelector('#addPost');
+  const errorBlock = document.querySelector('.error__block');
+
+  if(post.value.trim().length && !!validation(post.value)){
+
+    if(errorBlock.innerText) errorBlock.innerHTML = ''; // проверка на блок с ошибкой
+
+    post.classList.remove('err');
+    const li = document.createElement('li');
+    li.innerHTML = validation(post.value); // добавляем валидированное значение
+    postList.append(li);
+    document.querySelector('#addPost').value = ''; // очищаем строку ввода
+  }else{
+    post.classList.add('err');
+    errorBlock.innerText = 'Error!';
+  }
+})
 
