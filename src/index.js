@@ -76,3 +76,42 @@ sendBtn.addEventListener('click', () => {
     solution(count);
   }
 })
+
+
+
+//Task 3
+const symbolNumbers = document.querySelector('#numberCharacters')
+const submitSymbolNumbers = document.querySelector('#submitBtn')
+const commentText = document.querySelector('#addComment')
+const postBtn = document.querySelector('#sendBtn')
+const cutComment = document.querySelector('#cutComment');
+let commentLength = 0;
+
+submitSymbolNumbers.addEventListener('click', () => {
+	commentLength = symbolNumbers.value
+	console.log(commentLength)
+})
+
+
+function makeCutComent(message){
+	if(message[commentLength-1] === ' '){
+		cutComment.value = message.slice(0,commentLength).trimEnd()
+	} else {
+		if(message[commentLength] === ' '){
+			cutComment.value = message.slice(0,commentLength)
+		}else{
+		 let indexToSlice = commentLength-1
+		 while(indexToSlice != 0){
+			 if(message[indexToSlice] === ' ') break
+				indexToSlice--
+			}
+			cutComment.value = message.slice(0, indexToSlice).trimEnd()
+		}
+	}
+//  console.log(cutComment.value)
+}
+
+postBtn.addEventListener('click', () => {
+	const message = commentText.value;
+  if(message) makeCutComent(message)
+})
