@@ -45,4 +45,35 @@ const unsorted = [
 ];
 
 
+// Task 1
+const sendBtn = document.querySelector('#send_btn');
+const newCount = document.querySelector('#flip_number');
 
+const solution = (myNumber) => {
+  let str = myNumber.toString();
+  let result = "";
+	let intRegex = /^\d+$/;
+  if(!isNaN(myNumber) && (myNumber >= 0) && (myNumber <= 100000000) && intRegex.test(myNumber)) { //check myNumber
+    for(let i = 0; i < str.length; i++) {
+      if(i % 2 == 0) {
+        result = result + str[Math.floor(i / 2)];
+      } else {
+        result = result + (str[str.length - Math.floor(i / 2 + 1)]);
+      }
+    }
+		newCount.value = result;
+  } else if (myNumber > 100000000){
+			newCount.value = "The number must be less than 100k";
+		} else if (myNumber < 0 ){
+			newCount.value = "The number must be positive";
+		} else if (!(intRegex.test(myNumber)) ){
+			newCount.value = "The number must be integer";
+		} 
+
+}
+sendBtn.addEventListener('click', () => {
+  const count = document.querySelector('#number').value;
+  if(count){
+    solution(count);
+  }
+})
