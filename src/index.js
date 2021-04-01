@@ -44,5 +44,27 @@ const unsorted = [
 	}
 ];
 
+const sortID = (arr) => {
+	return arr.sort((a,b) => a.id > b.id ? 1 : -1);
+};
 
+const sortProf = (arr) => {
+	return arr.sort((a,b) => a.profile > b.profile ? 1 : -1);
+};
 
+const addDiscount = (arr) => {
+	arr.forEach(item => {
+		item.discount = item.amount*5/100;
+		delete item.profile;
+	})
+
+	return arr;
+};
+
+const remove = (arr, indexes) => {
+	for (let i = 0; indexes.length > i; i++) {
+		arr.splice(indexes[i], 1, { removed: true });
+	}
+
+	return arr;
+};
