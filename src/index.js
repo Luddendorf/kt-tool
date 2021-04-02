@@ -67,6 +67,29 @@ const remove = (arr, indexes) => {
 	return arr;
 };
 
+const taskOne = (myNumber) => {
+	let str = myNumber + '';
+	let arr = str.split('');
+	const newArr = [];
+
+	for (let i = 0; i <= arr.length / 2; i++) {
+
+		if (i === 0) {
+			newArr.push(arr[i]);
+
+		} else {
+			newArr.push(arr[arr.length - i]);
+			newArr.push(arr[i]);
+		}
+	}
+	if (arr.length % 2 === 0) {
+		return newArr.slice(0, newArr.length - 1);
+	}
+	return newArr;
+
+};
+
+
 const taskThree = (string, k) => {
 	let str = string.trim();
 
