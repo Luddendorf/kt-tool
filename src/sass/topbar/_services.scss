@@ -1,0 +1,14 @@
+.services {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  &__title {
+    font-weight: 700;
+  }
+  &__about {
+    margin: 16px;
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
