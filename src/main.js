@@ -1,8 +1,8 @@
 const form = document.getElementById("form1");
-const clear = document.getElementById("clear");
-const formFrame = form.querySelector("iframe");
 
-const formFields = form.elements;
+if(form){const formFields = form.elements;
+  const clear = document.getElementById("clear");
+const formFrame = form.querySelector("iframe");
 const submitBtn = form.querySelector('[type="submit"]');
 const formLogin = form.querySelector("#login");
 const formText = form.querySelector("#text");
@@ -49,7 +49,7 @@ clear.addEventListener("click", () => {
   form.reset();
 });
 
-checkStorage();
+checkStorage();}
 
 if(document.querySelector('.languages')){
   document.getElementById('disabling').addEventListener('change', ()=>{

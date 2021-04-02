@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'Atomicaboy Extrude';
+  src: url('./fonts/AtomicaboyExtrude-Regular.eot');
+  src: local('Atomicaboy Extrude'), local('AtomicaboyExtrude-Regular'),
+      url('./fonts/AtomicaboyExtrude-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/AtomicaboyExtrude-Regular.woff2') format('woff2'),
+      url('./fonts/AtomicaboyExtrude-Regular.woff') format('woff'),
+      url('./fonts/AtomicaboyExtrude-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atomicaboy';
+  src: url('./fonts/Atomicaboy-Regular.eot');
+  src: local('Atomicaboy'), local('Atomicaboy-Regular'),
+      url('./fonts/Atomicaboy-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Atomicaboy-Regular.woff2') format('woff2'),
+      url('./fonts/Atomicaboy-Regular.woff') format('woff'),
+      url('./fonts/Atomicaboy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'Atomicaboy';
+}
+
+
 .container{
   max-width: 400px;
 }
