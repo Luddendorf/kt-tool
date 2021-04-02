@@ -2,7 +2,7 @@
 // 1 task
 function solution(myNumber) {
     const temp = [];
-    if (myNumber) {
+    if (myNumber.length>0) {
         for (let i=0; i<myNumber.length/2; i++) {
             temp.push(myNumber[i]);
             temp.push(myNumber[myNumber.length-1-i]);
@@ -100,11 +100,10 @@ function sliceComment(comment, k) {
        if (splitComment.indexOf(arrWord[arrWord.length-1]) < 0) {
         arrWord.splice(-1, 1);
         result = arrWord.join(' ');
-       } console.log(result);
+       }; 
     } else {
         result = comment;
-        console.log(result);
-    }
+    } console.log(result);
 };
 
 sliceComment("Привет мир", 9);
