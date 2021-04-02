@@ -1,4 +1,123 @@
-.wrapper1 { 
-display: flex;
-
+.wrapper {
+	display: flex;
+	margin-bottom: 5px;
+}
+.group-1 {
+	background-color: red;
+	margin-right: 5px;
+	height: 70px;
+	&-one {
+		width: 150px;
+	}
+	&-two {
+		flex: 1;
+	}
+	&-three {
+		width: 125px;
+	}
+}
+.group-2 {
+	background-color: green;
+	margin-right: 5px;
+	height: 70px;
+	&-one {
+		flex: 1;
+	}
+	&-two {
+		flex: 1;
+	}
+	&-three {
+		flex: 3;
+	}
+}
+.wrapper-3 {
+	flex-direction: column;
+	height: 300px;
+}
+.group-3 {
+	margin-bottom: 5px;
+	background-color: blue;
+	width: 75px;
+	&-one {
+		flex: 1;
+	}
+	&-two {
+		flex: 3;
+	}
+	&-three {
+		flex: 1;
+	}
+}
+.wrapper-4 {
+	background-color: gray;
+	height: 70px;
+	justify-content: flex-end;
+}
+.group-4 {
+	background-color: #cd00cd;
+	margin-right: 5px;
+	width: 70px;
+}
+.wrapper-5 {
+	height: 100px;
+	background-color: gray;
+}
+.group-5 {
+	background-color: orange;
+	align-self: center;
+	height: 30px;
+	width: 100%;
+	border: 0.5px solid black;
+	&-one {
+		order: 2;
+	}
+	&-two {
+		order: 0;
+	}
+	&-three {
+		order: 1;
+	}
+}
+.wrapper-6 {
+	flex-wrap: wrap;
+	width: 20%;
+}
+.group-6 {
+	background-color: #ffc0cb;
+	border: 0.5px solid black;
+	width: 35%;
+	height: 40px;
+	&-one {
+		flex: 1;
+	}
+	&-two {
+		flex: 1;
+	}
+	&-three {
+		flex: 1;
+	}
+	&-four {
+		flex: 100%;
+	}
+}
+.wrapper-7 {
+	background-color: gray;
+	height: 70px;
+}
+.group-7 {
+	background-color: yellow;
+	border: 0.5px solid black;
+	&-one {
+		align-self: flex-end;
+		flex: 2;
+		height: 20px;
+	}
+	&-two {
+		flex: 3;
+		height: 20px;
+	}
+	&-three {
+		flex: 1;
+		height: 100%;
+	}
 }

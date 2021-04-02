@@ -3,12 +3,70 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-top: 5.6rem;
+  align-content: flex-start;
+  padding: 1rem;
+  color: $services-font-color;
+  
   &__title {
+    font-size: 1.1rem;
     font-weight: 700;
   }
   &__about {
-    margin: 16px;
-    font-size: 35px;
+    font-size: 2.9rem;
     font-weight: 700;
+  }
+  &__separator {
+    width: 96px;
+    height: 2px;
+    margin: 22px auto;
+    background-color: rgb(158, 158, 158);
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-wrap: wrap;  
+    height: 500px;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    height: 10vh;
+    padding: 1vw;
+
+    &__img {
+      width: 100%;
+      margin-bottom: 3vh;
+    }
+    &__text {
+      font-size: 2.4vh;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    &__wrapper {
+      justify-content: flex-start;
+      height: 760px;
+      align-items: flex-start;
+    }
+    &__block {
+      width: 50%;
+      padding: 2vw;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .services {
+    &__wrapper {
+      height: 1300px;
+    }
+    &__block {
+      width: 100%;
+    }
   }
 }

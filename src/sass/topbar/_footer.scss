@@ -1,0 +1,61 @@
+.footer {
+  background-image: url("https://barnsburydemo.files.wordpress.com/2019/09/naseem-buras-cwpy-hpdt9q-unsplash-copy-4.jpg");
+  background-color: rgb(0, 0, 0);
+  background-size: auto;
+  background-position: 50% 50%;
+  color: rgb(255, 255, 255);
+  height: 52vh;
+  opacity: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 700;
+  flex-wrap: wrap;
+  max-width: 100%;
+  text-align: center;
+
+  &__pretitle {
+    font-size: 1.2rem;
+  }
+  &__title {
+    font-size: 3rem;
+    margin-top: 2vh;
+  }
+  &__separator {
+    width: 96px;
+    height: 2px;
+    margin: 22px auto;
+    background-color: rgb(158, 158, 158);
+  }
+  &__blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10vw;
+
+    &__numbers {
+      font-size: 3rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 660px;
+    &__blocks {
+      display: flex;
+      justify-content: center;
+    }
+    &__block {
+      padding-left: 14px;
+    }
+  }
+}
