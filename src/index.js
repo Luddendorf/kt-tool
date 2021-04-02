@@ -113,28 +113,24 @@ console.log('2.3 : ', filtered(unsorted, arr));
 
 // ===========================Третье задание===========================
 
-const message = "Andersen We Test Programmers";
+const message = "Test Testing Testia";
 
 function filterComment(msg, k) {
 	// отрезаем от переменной строку длинной k символов
-  let result = msg.slice(0, k);
-	// если в result не хватает символов даже на первое слово
-	if(result.length < msg.split(" ")[0].length){
-		return 'слишком маленькое K'
-	}
-	// проверяем, содержится ли последнее слово из result в строке msg, если да, то убираем пробелы
-  else if (msg.split(" ").includes(result.split(" ")[result.split(" ").length - 1])){
-    return result.trim();
-  } else {
+	let result = msg.slice(0, k);
+	// проверяем, является ли пробелом символ строки msg под индексом k или под индексом k - 1, если да, то возвращаем result
+	if(msg[k] == ' ' || msg[k-1] == ' '){
+		return result.trim();
+	} else {
 		//если нет, ищем последний пробел в result, отрезаем всё что идёт после него, убираем пробелы
-    for (let i = 0; i < result.length; i++) {
-      if (i === result.lastIndexOf(" ")) {
-        return result.slice(0, i).trim();
-      }
-    }
-  }
+		for (let i = 0; i < result.length; i++) {
+			if (i === result.lastIndexOf(" ")) {
+				return result.slice(0, i).trim();
+			}
+		}
+	}
 }
 
-console.log(`третье задание: ${filterComment(message, 2)}`);
+console.log(filterComment(message, 11));
 
 
