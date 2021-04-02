@@ -24,6 +24,25 @@ sliceButton.addEventListener('click', function() {
 // const k = 14
 
 
+let arr = [1, 2, 3, 4, 5, 6]
+let newArr = []
+let leng = arr.length
+
+function solution(arr) {
+    while (newArr.length !== leng) {
+        newArr.push(arr[0])
+        arr.shift();
+        arr.reverse()
+        console.log('1', arr);
+    }
+
+    console.log('arr', arr);
+    console.log('newArr', newArr);
+}
+
+solution(arr)
+
+
 function funcSlice(comment, k) {
 
     let result = '';
