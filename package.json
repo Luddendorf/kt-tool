@@ -37,11 +37,13 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --config=config/webpack.dev.js",
-    "build": "webpack --config=config/webpack.prod.js"
+    "build": "webpack --config=config/webpack.prod.js",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@babel/runtime": "^7.9.2",
-    "core-js": "^3.6.4"
+    "core-js": "^3.6.4",
+    "jest": "^26.6.3"
   },
   "browserslist": [
     ">0.2%",
