@@ -9,6 +9,8 @@ function solution(myNumber) {
         };
         temp.pop();
         console.log(temp);
+    } else {
+      console.log(myNumber);
     };
 }; 
 
