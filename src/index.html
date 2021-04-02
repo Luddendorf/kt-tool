@@ -2,13 +2,84 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Lesson 3</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href=".\src\main.css"> -->
+    <title>Владимир Ерошенко Lesson 3</title>
 </head>
 
 <body>
+    <section class="taskOne">
+        <div class="flexx">
+            <h1>Task 1</h1>
+            <p class="textCenter">Есть компания, которая оригинальным способом ведёт свои счета. Каждый раз при записи числа, они перемешивают цифры следующим образом: сначала первую цифру сначала числа, потом первую с конца, потом вторую от начала числа, потом вторую с конца
+                и так до тех пор, пока длина финального числа не будет равна длине начального числа. Напишите функцию solution(myNumber), которая получив целое число, возвращает перевёртыш, например, дано 123456, вернёт 162534. Дано 130, вернёт 103. Число
+                может быть от 0 до 100 000 000. В решении главное правильность, а не скорость выполнения.
+            </p>
+            <div>
+                <form action="">
+                    <input type="text" id="textInput"> Запись числа
+                    <p></p>
+                    <input type="text" class="TextOutput"> Перемешанные числа
+                    <p></p>
+                    <div class="flexx">
+                        <button type="button" id='btnRevers' class="buttons">Перевернуть</button>
+                    </div>
+
+                </form>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section class="taskOne">
+        <div class="flexx">
+            <h1>Task 2</h1>
+            <p class="textCenter">В index.js файле есть Array объектов unsorted. Написать: 1) функцию, которая будет сортировать элементы сначала по id, потом по profile; 2) функцию, которая будет возвращать массив, в котором каждый элемент также имеет свойство ‘discount’,
+                значение которого рассчитывается, как 5% от amount данного элемента, а свойства profile не будет вообще; 3) функцию, которая будет принимать, как аргументы исходный массив и массив индексов (например, [1, 3, 4]), в результате она будет
+                заменять элементы исходного массива на объект типа { removed: true }.
+            </p>
+            <div class="textCenter">
+                <form action="">
+
+                    <button type="button" id='sort' class="buttons">Сортировка</button>
+                    <p></p>
+                    <button type="button" id='discount' class="buttons">Расчитать скидку</button>
+                    <p></p>
+                    <button type="button" id='removed' class="buttons">Removed:true</button>
+
+                </form>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section class="taskOne">
+        <div class="flexx">
+            <h1>Task 3</h1>
+            <p class="textCenter">Есть форум с лимитом в K символов для 1-го комментария. Ваша задача - разработать функцию, чтобы обрезать слишком длинные комменты. Вам даётся строка из английских букв и пробелов. Нужно обрезать некое количество слов с конца строки, придерживаясь
+                таких правил: * нельзя отрезать кусок слова; * строка-результат не должна заканчиваться на пробел; * строка-результат не должна быть длиннее, чем лимит К, который передаётся в фукцию, как аргумент; * строка-результат должна быть максимально
+                длинной. Это значит, что, в некоторых случаях, функция должна отрезать всю строку, выдавая пустую строку. Например, дано "Andersen We Test Programmers" c K = 14, вернёт "Andersen We". Имейте в виду, что * результат "Andersen We Test Pr"
+                - неправильно, так как разрезано слово; * результат "Andersen We " - неправильно, так как заканчивается на пробел; * результат "Andersen We Test Programmers" - неправильно, так как превосходит лимит; * результат "Andersen" - неправильно,
+                так как короче, чем правильный результат;
+            </p>
+            <div class="textCenter">
+                <form action="" class="forms">
+                    <p>Комментарий</p>
+                    <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+                    <p></p>
+                    <input type="text" id="k" size="2" maxlength="2" value="14"> Ограничение символов
+                    <p></p>
+                    <button type="button" id='slice' class="buttons">Обрезать</button>
+                    <p></p>
+                    <textarea name="commentOut" id="commentOut" cols="50" rows="5"></textarea>
+                </form>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+
+
 </body>
 
 </html>

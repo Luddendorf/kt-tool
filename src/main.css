@@ -1,14 +1,44 @@
 html {
-  box-sizing: border-box;
-  font-size: 100%;
+    box-sizing: border-box;
+    font-size: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+section {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 500px;
+    background-color: lavender;
+    margin-top: 50px;
+}
+
+.flexx {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textCenter {
+    text-align: center;
+    margin: 30px;
+    font-size: 18px;
+}
+
+.buttons {
+    font-size: 20px;
+    margin: 10px;
 }
