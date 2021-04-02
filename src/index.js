@@ -95,7 +95,7 @@ const addDiscount = (obj) => {
 }
 console.log('2.2 : ', addDiscount(unsorted));
 
-const arr = [0, 2, 3];
+const arr = [0, 2, 4];
 
 const filtered = (obj, array) =>{
 	return obj.map((item, index) => {
@@ -113,7 +113,7 @@ console.log('2.3 : ', filtered(unsorted, arr));
 
 // ===========================Третье задание===========================
 
-const message = "    Hello";
+const message = "Andersen We Test Programmers";
 
 function filterComment(msg, k) {
 	// отрезаем от переменной строку длинной k символов
@@ -135,6 +135,6 @@ function filterComment(msg, k) {
   }
 }
 
-console.log(`третье задание: ${filterComment(message, 14)}`);
+console.log(`третье задание: ${filterComment(message, 2)}`);
 
 
