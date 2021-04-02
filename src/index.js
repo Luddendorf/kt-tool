@@ -10,7 +10,6 @@ async function print() {
 
 print();
 
-
 const unsorted = [
 	{
 		id: 'c744e61d-18ab-4df1-9bf2-281bd7fcf02e',
@@ -77,7 +76,64 @@ sendBtn.addEventListener('click', () => {
   }
 })
 
+//Task 2
+const originalArr = document.querySelector('#unsorted');
+// const arrArea = document.querySelector('.array__area');
+const showArray = () => {
+  console.log(unsorted);
+}
+originalArr.addEventListener('click', showArray)
+// sort by id
+const sortId = document.querySelector('#sortId');
+const sortingId = () => {
+	unsorted.sort((a, b) => a.id > b.id ? 1 : -1);
+}
+sortId.addEventListener('click', () => {
+	sortingId(),
+	showArray();
+});
 
+//Sort by profile
+const sortProfile = document.querySelector('#sortProfile');
+const sortingProfile = () => {
+	unsorted.sort((a, b) => a.profile > b.profile ? 1 : -1);
+}
+sortProfile.addEventListener('click', () => {
+	sortingProfile(),
+	showArray();
+});
+
+// Add discount, remove profile
+const discount = document.querySelector('#addDiscount');
+const addDiscount = () => {
+	unsorted.map((i)=>{ delete i.profile && (i.discount = Math.floor(i.amount * 0.05))});
+	return unsorted;
+}
+discount.addEventListener('click', () => {
+	addDiscount(),
+	showArray();
+});
+
+// Add {Removed} for some items
+const removed = document.querySelector('#addRemoved');
+const arr = [1, 3, 4];
+const resultArr = [];
+const addRemoved = (unsorted, arr) =>{
+	
+	for (let i = 0; i < unsorted.length; i++){
+		if (arr.includes(i)) {
+			resultArr.push({removed: true});
+		} else {
+			resultArr.push(unsorted[i])
+		}
+	}
+	return resultArr
+}
+
+removed.addEventListener('click', () => {
+	addRemoved(unsorted, arr)
+	console.log(resultArr)
+});
 
 //Task 3
 const symbolNumbers = document.querySelector('#numberCharacters')
