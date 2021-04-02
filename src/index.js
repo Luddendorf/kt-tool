@@ -125,9 +125,10 @@ formText.onsubmit = function (e) {
   );
 };
 
-function toCut(string, quantity) {
+function toCut(stringa, quantity) {
   let answer;
   let spaceArr = [];
+  let string = stringa.trim()
 
   tomakeSpaceArr(string, spaceArr);
   answer = tomakeAnswer(spaceArr, quantity, string, answer);
