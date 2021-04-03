@@ -1,6 +1,7 @@
 import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
+import { omit } from 'lodash';  
 
 async function print() {
   // Here we are using dynamic import
@@ -9,7 +10,25 @@ async function print() {
 }
 
 print();
-
+// TASK 1
+const reverser = (num) => {
+  const str = String(num);
+	// Это на случай если число меньше трёхзначного, но отрицательные значения не покрывает.
+  if (str.length <= 2) {
+    return Number(str.split('').reverse().join(''));
+  }
+  const arr = str.split('');
+  const reversedArr = [...arr].reverse();
+  const secondArr = [];
+  // Проходимся циклом и пушим элементы по порядку в secondArr
+  for (let i = 0; i < arr.length; i++) {
+    secondArr.push(arr[i]);
+    secondArr.push(reversedArr[i]);
+  }
+  // Делим до длинны оригинального массива, так как сдвоенный массив и приводим к типу число
+  const result = Number(secondArr.slice(0, arr.length).join(''));
+  return result;
+}
 
 const unsorted = [
 	{
@@ -43,6 +62,46 @@ const unsorted = [
 		amount: 45972
 	}
 ];
-
-
-
+// TASK 2
+const sorting = (data) => {
+  const sortedById = data.sort((element,nextElement) => element.id > nextElement.id ? 1 : -1 )
+  const sortedByProfile = sortedById.sort((element, nextElement) => element.id > nextElement.id ? 1 : -1);
+  return sortedByProfile;
+}
+const discounter = (data) => {
+  const discountEval = (e) => Math.floor(e.amount * 0.05);
+  const result = data.map((e) => {
+    const  dataWithDiscount = {...e, discount: discountEval(e)};
+		// удалил элемент с помощью omit, так как delete оставил бы пустое место
+    const dataWithoutProfile = omit(dataWithDiscount,['profile']); 
+    return dataWithoutProfile;
+  }) 
+return result;
+}
+const replace = (arr, indexArr) => {
+	const result = arr.reduce((acc,e,i) => indexArr.includes(i) ?  [...acc, { removed: true}] : [...acc, e]
+	,[])
+return result;
+};
+// TASK 3
+const commentSlicer = (str, limit) => {
+	// guard expression
+  if (str === '' || limit <= 0) {
+    return ' ';
+  }
+  if (str.length <= limit) {
+    return str;
+  }
+const sliced = str.slice(0, limit);
+  const f = (data) => {
+    const result = data.split('');
+    const neededIndex = result.lastIndexOf(' ') ;
+    const trash = result.splice(neededIndex);
+    if (neededIndex < 0) {
+      return '';
+    }
+    return result.join('').trim();
+}
+return  (str[limit] === ' ' || str[limit-1] === ' ') ? sliced.trim() : f(sliced);
+}
+// многовота if но решенее рабочее, даже проверяет на отрицательные значения.
