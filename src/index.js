@@ -11,7 +11,8 @@ async function print() {
 print();
 
 
-// 2-e задание 
+// 2-e задание
+console.log('2-e задание');
 var snickersInput = document.getElementById('snickers');
 
 function sparky() {
@@ -59,17 +60,18 @@ const path = {
   }
 };
 
-// // Возращает 1 
+// // Возращает 1
+console.log('3-e задание');
 path.stayInPlace().goToStart().forward().backward().forward().showMile();
 
-
+// 4-е задание
 const arr = [1, 4, 5];
 
 function calc(arr, operation){
   switch(operation){
     case 'sum':
       return (function(){
-        return arr.reduce((sum, item) => sum += item, 0) 
+        return arr.reduce((sum, item) => sum + item) 
       })();
     case 'multiply':
       return (function(){
@@ -87,5 +89,5 @@ function calc(arr, operation){
       return 'wrong operation';
   }
 }
-
-console.log(calc(arr, 'divide'));
+console.log('4-e задание');
+console.log(calc(arr, 'sum'));
