@@ -43,9 +43,12 @@ export const addDiscount = (obj) => {
 addDiscountBtn.addEventListener("click", () => {
   console.log("added discount prop to an object");
   console.log(addDiscount(unsorted));
-  document.querySelector(".add-discount__output").innerHTML = JSON.stringify(
+  document.querySelector(".add-discount__result").innerHTML = JSON.stringify(
     addDiscount(unsorted),
     null,
     0
   );
+  setTimeout(function () {
+    document.querySelector(".add-discount__result").innerHTML = "";
+  }, 6000);
 });

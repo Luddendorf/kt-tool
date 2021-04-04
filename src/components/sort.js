@@ -49,6 +49,9 @@ export const sortFunc = () => {
 
 sortBtn.addEventListener("click", () => {
   document.querySelector(".sort__output").innerHTML = sortFunc();
+  setTimeout(function () {
+    document.querySelector(".sort__output").innerHTML = "";
+  }, 1000);
 });
 
 // 2nd variant of sorted Array (obj). By profile -> id

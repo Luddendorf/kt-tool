@@ -26,4 +26,7 @@ document.querySelector(".reverse__result").innerHTML = "number: 123456789";
 
 changeBtn.addEventListener("click", function () {
   document.querySelector(".reverse__result").innerHTML = solution(123456789);
+  setTimeout(function () {
+    document.querySelector(".reverse__result").innerHTML = "number: 123456789";
+  }, 4000);
 });
