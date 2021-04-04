@@ -40,15 +40,19 @@ const path = {
   mile: 0,
   forward() {
     this.mile++;
+    return this;
   },
   backward() {
     this.mile--;
+    return this;
   },
   stayInPlace(){
   	this.mile = this.mile;
+    return this;
   },
   goToStart() {
   	this.mile = 0;
+    return this;
   },
   showMile: function() { // показывает текущую милю
     console.log(this.mile);
@@ -57,3 +61,31 @@ const path = {
 
 // // Возращает 1 
 path.stayInPlace().goToStart().forward().backward().forward().showMile();
+
+
+const arr = [1, 4, 5];
+
+function calc(arr, operation){
+  switch(operation){
+    case 'sum':
+      return (function(){
+        return arr.reduce((sum, item) => sum += item, 0) 
+      })();
+    case 'multiply':
+      return (function(){
+        return arr.reduce((mult, item) => mult * item)
+      })();
+    case 'divide':
+      return (function(){
+        return arr.reduce((divide, item) => divide / item)
+      })();
+    case 'subtract':
+      return (function(){
+        return arr.reduce((sub, item) => sub - item)
+      })();
+    default:
+      return 'wrong operation';
+  }
+}
+
+console.log(calc(arr, 'divide'));
