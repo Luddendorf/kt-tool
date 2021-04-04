@@ -9,9 +9,28 @@ async function print() {
 }
 
 print();
+// 1-e задание
+console.log('1-e задание');
+
+const objC = {
+
+};
+
+const objD = {
+
+};
 
 
-// 2-e задание
+function funcA(){
+
+};
+
+function funcB(){
+
+};
+
+
+//2-e задание
 console.log('2-e задание');
 var snickersInput = document.getElementById('snickers');
 
@@ -31,9 +50,9 @@ function greeter(surname, name) {
 	console.log(this.value + ', ' + surname + ' ' + name);
 }
 
-let b = greeter.bind(snickersInput, person.secondName, person.nick);
+let greeterSneakers = greeter.bind(snickersInput, person.secondName, person.nick);
 
-b();
+greeterSneakers();
 
 
 // 3-е задание
