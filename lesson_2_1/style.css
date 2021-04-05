@@ -1,0 +1,25 @@
+.row {
+    flex-wrap: nowrap;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bg-height {
+    height: 7rem;
+}
+
+.bg-pink {
+    background-color: rgb(247, 137, 205);
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.margin-pink {
+    margin-left: 1px;
+    margin-right: 1px;
+}

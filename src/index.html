@@ -5,12 +5,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Ваши Имя Фамилия Barnsbury</title>
+  <link rel="stylesheet" href="./sass/normalize.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="./main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet" />
+  <title>Wordpress testing site layout</title>
 </head>
 
 <body>
-  <section>Практика flexbox'ов здесь</section>
-  <section>Вёрстка, как в <a href="https://wordpress.com/theme/barnsbury">"Cсылка на Barnsbury" - https://wordpress.com/theme/barnsbury</a> до секции <strong>Our Organic Farm in Numbers</strong> включительно.</section>
+  <header>
+    <div id="header-item-1">
+      <h1><a>Barnsbury</a></h1>
+      <p>10 Street Road, City, 10100 USA</p>
+    </div>
+    <div id="header-item-2">
+      <nav>
+        <ul class="row" none>
+          <li><a href="#" class="green">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="row">
+    <div class="content">
+      <h1 class="content-text">Locally Farmed Organic Vegetable Delivery</h1>
+      <p>
+        20 years of growing organic vegetables and delivering vegetable boxes
+        from our 12-acre farm in Sussex.
+      </p>
+      <div class="content__btn">
+        <a class="btn" href="#">Get in touch</a>
+      </div>
+    </div>
+    <div class="media-image"></div>
+  </section>
+
+  <section>
+    <div id="block-group">
+      <div id="block-group__maintext">
+        <p>Services</p>
+        <h1>What we do</h1>
+        <hr />
+      </div>
+      <div class="block-group__cards">
+        <div class="card">
+          <div class="card-image-1"></div>
+          <div class="card-content">
+            We produce organic vegetable boxes that are affordable, seasonal,
+            and as fresh and local as possible.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image-2"></div>
+          <div class="card-content">
+            We have different sizes of boxes available for various appetites,
+            from individuals to families.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image-3"></div>
+          <div class="card-content">
+            We are flexible with the items in your boxes. You can change items
+            in your order for something you would like.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div id="footer-block">
+      <div>
+        <p id="footer-block__title">Meet us better</p>
+      </div>
+      <div>
+        <h1 id="footer-block__maintext">Our Organic Farm in Numbers</h1>
+      </div>
+      <div class="row footer-block__columns">
+        <div class="footer-block__column">
+          <h1>370</h1>
+          <p>households per month</p>
+        </div>
+        <div class="footer-block__column">
+          <h1>23</h1>
+          <p>experts working</p>
+        </div>
+        <div class="footer-block__column">
+          <h1>5</h1>
+          <p>awards won</p>
+        </div>
+        <div class="footer-block__column">
+          <h1>100%</h1>
+          <p>satisfied customers</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
