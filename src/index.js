@@ -35,6 +35,7 @@ print();
 
 
 // 3-е задание
+
 const path = {
     mile: 0,
     forward() {
