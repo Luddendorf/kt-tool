@@ -62,3 +62,42 @@ const path = {
 
 // Возращает 1 
 path.stayInPlace().goToStart().forward().backward().forward().showMile();
+
+//4 задание 
+
+let arr = [100, 10, 5, 2]
+let
+    sum = 'sum',
+    sub = 'sub',
+    mult = 'mult',
+    div = 'div';
+
+function f1(arr, action) {
+    switch (action) {
+        case 'sum':
+            console.log(arr[0] + arr[1]);
+            return arr[0] + arr[1];
+
+        case 'sub':
+            console.log(arr[0] - arr[1]);
+            return arr[0] - arr[1];
+
+        case 'mult':
+            console.log(arr[0] - arr[1]);
+            return arr[0] * arr[1];
+
+        case 'div':
+            console.log('div', arr[0] / arr[1]);
+            return arr[0] - arr[1];
+
+        default:
+            return null;
+    }
+}
+
+let summ = f1.bind(null, arr, sum)
+let subb = f1.bind(null, arr, sub)
+let multt = f1.bind(null, arr, mult)
+let divv = f1.bind(null, arr, div)
+
+divv()
