@@ -10,6 +10,47 @@ async function print() {
 
 print();
 
+// 1-е задание
+
+const objC = {
+  name: 'Victor',
+  lastname: 'Ivanov',
+  age: 22,
+  profession: 'doctor',
+};
+
+const objD = {
+  type: 'cat',
+  name: 'bars',
+  age: 3,
+};
+
+function taskOne (funcA, funcB, objC, objD) {
+ funcA.call(this, funcB, objC, objD);
+};
+
+function funcA (funcB, objC, objD) {
+  this.name = 'Alex';
+  this.lastname = 'Seleznev',
+  this.profession = 'teacher';
+
+  return this;
+
+};
+
+function funcB (objD) {
+  this.type = 'dog';
+  this.age = 5;
+  return this;
+}
+
+
+let a = funcA.bind(objC);
+let b = funcB.bind(objD);
+
+console.log(b());
+console.log(a()); // пока что не до конца разобрался с этим заданием
+
 
 // 2-e задание 
 var snickersInput = document.getElementById('snickers');
@@ -77,3 +118,38 @@ const taskFour = (n, str) => {
       console.log('Unknown value');
   }
 };
+
+// 5-е задание
+
+const ultraDominator = { commandCabin: 'ultra-dominator' };
+const transport = { commandCabin: 'transport' };
+const meteorFieldPasser = { commandCabin: 'meteor-field-passer' };
+const standard = { mainСompartment: 'standard'} ;
+const armored = { mainСompartment: 'armored' };
+const poor = { mainСompartment: 'poor' };
+const ionEngine = { engine: 'ion-engine' };
+const antiMatterEngine = { engine: 'anti-matter-engine' };
+const plasmaEngine = { engine: 'plasma-engine' };
+
+const createShip = (commandCabin, mainСompartment, engine) => {
+  return Object.assign({}, commandCabin, mainСompartment, engine);
+};
+
+console.log(createShip(transport, armored, antiMatterEngine));
+
+// 6-е задание
+
+let now = new Date();
+console.log(now);
+console.log(now.getFullYear());
+console.log(now.getMonth());
+console.log(now.getDate());
+console.log(now.getDay());
+console.log(now.getTimezoneOffset());
+
+let past = new Date();
+past.setFullYear(2020);
+past.setMonth(0);
+past.setHours(11, 59, 59);
+console.log(past);
+
