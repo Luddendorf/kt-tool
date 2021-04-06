@@ -118,3 +118,26 @@ function calc(arr, operation){
 }
 console.log('4-e задание');
 console.log(calc(arr, 'sum'));
+
+
+// даты
+console.log('5-e задание');
+
+let Jan01_1970 = new Date(0);
+console.log(Jan01_1970);
+
+let Jan02_1970 = new Date(24 * 3600 * 1000);
+console.log( Jan02_1970 );
+
+let date = new Date("2020-01-26");
+console.log(date);
+
+let now = new Date();
+
+console.log(now);
+
+console.log(now.getFullYear());
+
+console.log(now.getMonth());
+
+console.log(now.getDate());
