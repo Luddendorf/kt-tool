@@ -1,0 +1,30 @@
+@import "./newYearsCalendar.scss";
+
+.main__wrap {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap__block1 {
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  & div {
+    font-size: 1.25rem;
+    margin: 1vh 5vw;
+  }
+  .task {
+    max-height: 12.5em;
+    width: 12.5em;
+    text-align: center;
+    border: 1px solid black;
+  }
+  .task__2 {
+    min-width: 3em;
+  }
+}

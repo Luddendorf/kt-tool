@@ -1,0 +1,56 @@
+$black: #000;
+
+.wrap__block2 {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80")
+    no-repeat center;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  flex-wrap: wrap;
+}
+
+.container > h1 {
+  font-size: 2rem;
+  color: $black;
+}
+
+.clock__container {
+  display: flex;
+  color: $black;
+}
+.clock__container > span {
+  line-height: 1rem;
+  font-size: 1rem;
+}
+.clock__container > div {
+  margin: 0 2rem;
+}
+
+.big-text {
+  line-height: 1rem;
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+@media (max-width: 740px) {
+  .container > h1 {
+    font-size: 2rem;
+  }
+  .clock__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .big-text {
+    font-size: 2rem;
+  }
+}
