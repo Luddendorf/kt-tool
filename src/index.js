@@ -13,22 +13,30 @@ print();
 console.log('1-e задание');
 
 const objC = {
-
+  value: 1
 };
 
 const objD = {
-
+  value: 1
 };
 
 
-function funcA(){
 
+
+function funcA(b, c, d){
+  return b.value + c.value + d
 };
+
+console.log(funcA.apply(objC, [objC, objD, funcB()]));
+funcB.apply(objD);
 
 function funcB(){
-
+  return 1;
 };
 
+function complex(a, b, c, d){
+  return a(b, c, d);
+}
 
 //2-e задание
 console.log('2-e задание');
