@@ -22,9 +22,7 @@ print();
 function main(f1, f2, obj1, obj2) {
     let str = 'данные основной функции + '
     let resA = f1(f2, obj1, obj2)
-
     let resMain = str + resA
-
     console.log('resMain', resMain);
     return resMain
 
@@ -32,19 +30,15 @@ function main(f1, f2, obj1, obj2) {
 
 
 function f1(b, c, d) {
-
     let resB = (d)
     console.log('resB', resB);
-
     c = {
         id: 'измененный C'
     }
     console.log('c', c);
-
-    let resA = `${c.id} + ${resB.id}`
+    let resA = `${c.id} + ${resB.id}`;
     console.log('resA = ', resA);
-
-    return resA
+    return resA;
 }
 
 function f2(d) {
@@ -123,42 +117,73 @@ path.stayInPlace().goToStart().forward().backward().forward().showMile();
 
 //4 задание 
 
-let arr = [100, 10, 5, 2]
-let
-    sum = 'sum',
-    sub = 'sub',
-    mult = 'mult',
-    div = 'div';
+let arr = [5, 10, 1, 2]
 
-function fOne(arr, action) {
-    switch (action) {
+const stringTotal = document.getElementById('selectString');
+const btnTotal = document.querySelector('#buttonRes');
+const areaTotal = document.getElementById('total');
+// const value = stringTotal.selectedIndex.value
+// console.log(value)
+// const indexT = stringTotal.value;
+// console.log(indexT)
+btnTotal.addEventListener('click', function() {
+    const indexT = stringTotal.value;
+    // console.log(indexT)
+    // const indexT = stringTotal.options[stringTotal.selectedIndex].value
+    let totalCount = fOne.bind(null, arr, indexT);
+    totalCount();
+
+    // subb();
+    // multt();
+    // divv();
+});
+
+// let
+//     sum = 'sum',
+//     sub = 'sub',
+//     mult = 'mult',
+//     div = 'div';
+
+
+// let subb = fOne.bind(null, arr, value);
+// let multt = fOne.bind(null, arr, value);
+// let divv = fOne.bind(null, arr, value);
+
+
+function fOne(arr, indexT) {
+    switch (indexT) {
         case 'sum':
-            console.log(arr[0] + arr[1]);
-            return arr[0] + arr[1];
-
+            const sumTotal = arr.reduce((total, amount) => total + amount);
+            console.log('sum', sumTotal);
+            areaTotal.innerHTML = sumTotal
+                // return sumTotal;
+            break;
         case 'sub':
-            console.log(arr[0] - arr[1]);
-            return arr[0] - arr[1];
-
+            const subTotal = arr.reduce((total, amount) => total - amount);
+            console.log('sub', subTotal);
+            areaTotal.innerHTML = subTotal
+                // return subTotal;
+            break;
         case 'mult':
-            console.log(arr[0] - arr[1]);
-            return arr[0] * arr[1];
-
+            const multTotal = arr.reduce((total, amount) => total * amount);
+            console.log('mult', multTotal);
+            areaTotal.innerHTML = multTotal
+                // return multTotal;
+            break;
         case 'div':
-            console.log('div', arr[0] / arr[1]);
-            return arr[0] - arr[1];
+            const divTotal = arr.reduce((total, amount) => total / amount);
+            console.log('div', divTotal);
+            areaTotal.innerHTML = divTotal
+                // return divTotal;
+            break;
 
         default:
             return null;
     }
 }
 
-let summ = fOne.bind(null, arr, sum);
-let subb = fOne.bind(null, arr, sub);
-let multt = fOne.bind(null, arr, mult);
-let divv = fOne.bind(null, arr, div);
 
-divv()
+
 
 
 
