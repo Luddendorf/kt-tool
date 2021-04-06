@@ -11,7 +11,7 @@ async function print() {
 print();
 
 
-// 2-e задание 
+// 2-e задание
 var snickersInput = document.getElementById('snickers');
 
 function sparky() {
@@ -47,11 +47,11 @@ const path = {
   },
   goToStart() {
   	this.mile = 0;
-  }
+  },
   showMile: function() { // показывает текущую милю
     console.log(this.mile);
   }
 };
 
-// Возращает 1 
+// Возращает 1
 path.stayInPlace().goToStart().forward().backward().forward().showMile();
