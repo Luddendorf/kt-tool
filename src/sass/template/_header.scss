@@ -1,0 +1,22 @@
+.header {
+  flex: 0 0 80%;
+  &__wrapper {
+    display: flex;
+    font-size: 48px;
+    color: $light;
+    text-align: center;
+  }
+  &__bay {
+    background-color: rgba(54%, 78%, 98%, 0.7);
+    width: 50%;
+  }
+  &__ship {
+    background-color: rgba(54%, 78%, 98%, 0.7);
+    width: 50%;
+  }
+}
+.active {
+  background-color: #89C7FB;
+  color: $dark;
+  border: 3px solid $dark;
+}
