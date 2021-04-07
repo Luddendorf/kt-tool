@@ -1,36 +1,43 @@
 const obj1 = {
-  name: "Ervin",
-  age: 21,
-  sex: "male",
-  citizenship: null,
+  name: "Jordan",
 };
 const obj2 = {
-  name: "Micheal",
-  secondName: "Jordan",
-  age: 23,
-  sex: "male",
-  citizenship: null,
+  secondName: "Micheal",
 };
+const resultBlock = document.querySelector("#result__1");
 
-// export function MainFunction(a, b, c, d) {
-//   const resFuncA = a.apply(this, [b, c, d]);
-//   console.log(`result funcA: ${resFuncA} <br> ${b} <br> ${c} <br> ${d}`);
-// }
+function funcA(funcB, obj1, obj2) {
+  obj1.name = "Ervin";
+  const secondName = funcB(obj2);
 
-// function funcA(funcB, obj1, obj2) {
-//   this.citizenship = "ukrainian";
+  return `full name: ${this.name} ${secondName}`;
+}
 
-//   const resFuncB = funcB.apply(this);
+const boundA = funcA.bind(obj1);
 
-//   return {
-//     funcA: this,
-//     funcB: resFuncB,
-//   };
-// }
+function funcB(obj2) {
+  obj2.secondName = "Abliamitov";
+  return this.secondName;
+}
 
-// function funcB() {
-//   this.citizenship = "american";
-//   return this;
-// }
+const boundB = funcB.bind(obj2);
 
-// console.log(MainFunction(funcA, funcB, obj1, obj2));
+export function MainFunction(a, b, c, d) {
+  const mainData = {
+    src: "Main",
+    data: [
+      { id: 1, post: "post 1" },
+      { id: 2, post: "post 2" },
+    ],
+  };
+
+  const resFuncA = function resA() {
+    return a(b, c, d);
+  };
+  resultBlock.innerHTML = `result of a function: ${resFuncA()} <br>
+  main function data:<br> ${JSON.stringify(mainData)}`;
+  return `result of a function: ${resFuncA()}
+  main function data: ${JSON.stringify(mainData, null, 3)}`;
+}
+
+console.log(MainFunction(boundA, boundB, obj1, obj2));
