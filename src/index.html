@@ -9,13 +9,67 @@
 </head>
 
 <body>
-    <section>
-        <div class="tabs">
-            <div class="tabs__header">
-                <div class="tabs-h">1</div>
-                <div class="tabs-h">2</div>
-                <div class="tabs-h">3</div>
-
+    <section class="content-header">
+        <div class="tabs-wrapper">
+            <div class="tabs-header">
+                <div class="tab " data-target="one">Бухта</div>
+                <div class="tab" data-target="two">Мой корабль</div>
+            </div>
+        </div>
+    </section>
+    <section class="content-body">
+        <div class="menu-left">
+            <form action="">
+                <h1>Фильтр кораблей</h1>
+                <label for="min-price">Минимальная цена</label>
+                <input type="number" class="price">
+                <p></p>
+                <label for="min-price">Максимальная цена</label>
+                <input type="number" class="price">
+                <div class="ac-container">
+                    <div>
+                        <input type="checkbox" name="accordion-1" id="ac-1" class="order" value="Text1">
+                        <label for="ac-1">Паруса
+                          <i class="down"></i>
+                        </label>
+                        <article>
+                            <p>Паруса</p>
+                        </article>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="accordion-1" id="ac-2" class="order" value="Text2">
+                        <label for="ac-2">Ремонт
+                          <i class="down"></i>
+                        </label>
+                        <article>
+                            <p>Ремонт</p>
+                        </article>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="accordion-1" id="ac-3" class="order" value="Text3">
+                        <label for="ac-3">Пушки
+                          <i class="down"></i>
+                        </label>
+                        <article>
+                            <p>Пушки</p>
+                        </article>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="accordion-1" id="ac-4" class="order" value="Text4">
+                        <label for="ac-4">Команда
+                          <i class="down"></i>
+                          </label>
+                        <article>
+                            <p>Команда</p>
+                        </article>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tabs-panels">
+            <div class="tab-panel one">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor reiciendis expedita vero mollitia ullam necessitatibus doloremque aperiam eaque consectetur commodi ipsa aspernatur vel assumenda ex excepturi, fugiat illo obcaecati?
+            </div>
+            <div class="tab-panel two">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga autem ipsa nostrum accusantium nemo iste, voluptatem neque fugiat dicta, tempora nam, ipsum error ea magni suscipit adipisci odio. Tempore, recusandae!
             </div>
         </div>
     </section>
