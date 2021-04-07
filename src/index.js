@@ -9,7 +9,35 @@ async function print() {
 }
 
 print();
+// 1-е задание 
+const c = {
+  city: "NewYork",
+   population:1000,
+};
+const d = {
+  city: "Moscow",
+   population:2000,
+};
 
+function a(b, c, d){
+  this.population = 3000;
+	return `I would love to see ${this.city} with population ${this.population},but i live in ${b(d)}`
+}
+function b(obj)  {
+this.city = "Kazan"
+return `${this.city} with this ${this.population}`;
+} 
+const bindA =  a.bind(c);
+const bindB =  b.bind(d);
+// Привязал объектры к функциям
+
+function main(a,b,c,d) {
+  const greeting = "Hello";
+  const goodbye = "Goodbye";
+  return `${greeting}, ${a(b,c,d)}. ${goodbye}`;
+  }
+  // Вызвал уже привязанные фуункциии
+  console.log(main(bindA,bindB,c, d));
 
 // 2-e задание 
 var snickersInput = document.getElementById('snickers');
