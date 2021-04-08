@@ -2,7 +2,7 @@ const accordeon = () => {
   const accordButtons = document.querySelectorAll('.aside__button');
   const asideLists = document.querySelectorAll('.aside__list');
 
-  accordButtons.forEach((button, index)=>{
+  accordButtons.forEach((button)=>{
     button.addEventListener('click', (event)=>{
       event.preventDefault();
       const content = button.nextElementSibling;
@@ -14,7 +14,7 @@ const accordeon = () => {
         content.style.maxHeight = content.scrollHeight + 'px';
         button.classList.add('is_open');
       }
-
+      
       asideLists.forEach((listItem)=>{
         if(listItem !== content){
           listItem.style.maxHeight = null;
