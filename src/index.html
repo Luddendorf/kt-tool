@@ -9,87 +9,121 @@
 </head>
 
 <body>
-    <section class="content-header">
-        <div class="tabs-wrapper">
-            <div class="tabs-header">
-                <div class="tab " data-target="one">Бухта</div>
-                <div class="tab" data-target="two">Мой корабль</div>
+    <main>
+        <section class="content-header">
+            <div class="tabs-wrapper">
+                <div class="tabs-header">
+                    <div class="tab " data-target="one">Бухта</div>
+                    <div class="tab" data-target="two">Мой корабль</div>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="content-body">
-        <div class="menu-left">
-            <form action="">
-                <h1>Фильтр кораблей</h1>
-                <label for="min-price">Минимальная цена</label>
-                <input type="number" class="price">
-                <p></p>
-                <label for="min-price">Максимальная цена</label>
-                <input type="number" class="price">
-                <div class="ac-container">
-                    <div>
-                        <input type="checkbox" name="accordion-1" id="ac-1" class="order" value="Text1">
-                        <label for="ac-1">Паруса
+        </section>
+        <section class="content-body">
+            <div class="menu-left">
+                <form action="">
+                    <h1>Фильтр кораблей</h1>
+                    <label for="min-price">Минимальная цена</label>
+                    <input name="min" type="number" class="priceMin">
+                    <p></p>
+                    <label for="min-price">Максимальная цена</label>
+                    <input name="max" type="number" class="priceMax">
+                    <div class="ac-container">
+                        <div>
+                            <input type="checkbox" name="accordion-1" id="ac-1" class="order" value="Text1">
+                            <label for="ac-1">Паруса
                           <i class="down"></i>
                         </label>
-                        <article>
-                            <p>Паруса</p>
-                        </article>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="accordion-1" id="ac-2" class="order" value="Text2">
-                        <label for="ac-2">Ремонт
+                            <article>
+                                <p>Паруса</p>
+                            </article>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="accordion-1" id="ac-2" class="order" value="Text2">
+                            <label for="ac-2">Ремонт
                           <i class="down"></i>
                         </label>
-                        <article>
-                            <p>Ремонт</p>
-                        </article>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="accordion-1" id="ac-3" class="order" value="Text3">
-                        <label for="ac-3">Пушки
+                            <article>
+                                <p>Ремонт</p>
+                            </article>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="accordion-1" id="ac-3" class="order" value="Text3">
+                            <label for="ac-3">Пушки
                           <i class="down"></i>
                         </label>
-                        <article>
-                            <p>Пушки</p>
-                        </article>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="accordion-1" id="ac-4" class="order" value="Text4">
-                        <label for="ac-4">Команда
+                            <article>
+                                <p>Пушки</p>
+                            </article>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="accordion-1" id="ac-4" class="order" value="Text4">
+                            <label for="ac-4">Команда
                           <i class="down"></i>
                           </label>
-                        <article>
-                            <p>Команда</p>
-                        </article>
+                            <article>
+                                <p>Команда</p>
+                            </article>
+                        </div>
                     </div>
+                </form>
+            </div>
+            <div class="tabs-panels">
+                <div class="tab-panel one" id="ships">
+                    <!-- <div style="width:100%; height:1px; clear:both;"></div> -->
+                    <!-- <div id="divSh">
+                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
+                        <p></p>
+                    </div>
+                    <div id="divShTwo">
+                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
+                        <p></p>
+                    </div>
+                    <div id="divShThree">
+                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
+                        <p></p>
+                    </div>
+                    <div id="divShFour">
+                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
+                        <p></p>
+                    </div>
+                    <div id="divShFive">
+                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
+                        <p></p>
+                    </div>
+                    <div id="divShSix">
+                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
+                        <p></p>
+                    </div> -->
+
                 </div>
-            </form>
-        </div>
-        <div class="tabs-panels">
-            <div class="tab-panel one" id="ships">
+                <div class="tab-panel two">ЕУЧЕ 2
+                </div>
                 <!-- <div style="width:100%; height:1px; clear:both;"></div> -->
-                <div id="divSh">
-                    <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                    <p></p>
-                </div>
-                <div id="divShTwo">
-                    <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                    <p></p>
-                </div>
-                <div id="divShThree">
-                    <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                    <p></p>
-                </div>
             </div>
-            <div class="tab-panel two">ЕУЧЕ 2
+
+        </section>
+    </main>
+    <footer>
+        <section class="content-footer">
+            <div>
+                <img src="https://clipart-best.com/img/treasure-chest/treasure-chest-clip-art-156.png" alt="" height="150px">
             </div>
-            <!-- <div style="width:100%; height:1px; clear:both;"></div> -->
-        </div>
-    </section>
-    <section class="content-footer">
-        <img src="https://clipart-db.ru/file_content/rastr/xtiger_001.png.pagespeed.ic.iyvzPFd-Va.png" alt="" height="50px" width="50px">
-    </section>
+            <div>
+                <img src="https://clipart-best.com/img/pirate/pirate-clip-art-76.png" alt="" height="150px">
+            </div>
+            <div class="capitan">
+                <p>
+                    Капитан Владимир Ерошенко, отчаянный пират,<br> человек чести. <br>Судно: Каравелла "Черная Жемчужина"
+                </p>
+            </div>
+            <div>
+                <img src="https://clipart-best.com/img/pirate/pirate-clip-art-76.png" alt="" height="150px">
+            </div>
+            <div>
+                <img src="https://clipart-best.com/img/treasure-chest/treasure-chest-clip-art-156.png" alt="" height="150px">
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>

@@ -3,6 +3,7 @@ import styles from './index.module.css';
 import "./sass/main-second.scss";
 import {} from './tabs'
 import {} from './checkbox'
+import {} from './filter'
 
 async function print() {
     // Here we are using dynamic import
@@ -16,3 +17,11 @@ print();
 
 
 export let counter = 3;
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    function callModal(ship) {
+        console.log("2");
+    }
+});
