@@ -1,0 +1,43 @@
+* {
+    font-size: 2rem;
+}
+
+header {
+    background-color: red;
+    position: sticky;
+    top:0px;
+    display: flex;
+    justify-content: center;
+
+    div {
+        border:1px solid black;
+        line-height: 50px;
+        width: 300px;
+        text-align: center;
+    }
+}
+
+section {
+   background-color: lightblue;
+    margin-left: 550px;
+    display: flex;
+
+    
+}
+
+footer {
+    background-color: yellow;
+    position: sticky;
+    bottom:0px;
+    display: flex;
+    justify-content: center;
+
+    div {
+        margin: 0 20px;
+    }
+
+    img {
+        width: 100px;
+        margin: 0 10px;
+    }
+}
