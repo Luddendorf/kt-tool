@@ -2,8 +2,10 @@ import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
 import accordeon from './modules/accordeon';
+import tabs from './modules/tabs';
 
 accordeon();
+tabs();
 
 const ships = [
   { 
