@@ -31,4 +31,10 @@ body {
 .main {
   width: 100%;
   display: flex;
+  padding: 75px 0 180px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

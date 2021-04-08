@@ -49,7 +49,6 @@ const accordion = () => {
 };
 
 const renderCards = (cards) => {
-    const cardsList = document.querySelector('.cards-list');
     const createCardItem = (card) => {
         const { shipName,
             className,
@@ -70,8 +69,8 @@ const renderCards = (cards) => {
                         <img
                             src="https://i.pinimg.com/originals/9a/5d/c8/9a5dc8195d864b6ce7d87b599b58e191.jpg"
                             alt="ship"
-                            height="250px"
-                            width="200px"
+                            height="200px"
+                            width="150px"
                             class="card-image"
                         />
                         <h1 class="card-name">${shipName}</h1>
@@ -92,19 +91,31 @@ const renderCards = (cards) => {
         return liItem;
     };
 
+    var docFrag = document.createDocumentFragment();
     cards.forEach(item => {
-        cardsList.append(createCardItem(item));
-    })
+        docFrag.appendChild(createCardItem(item));
+    });
+
+    const cardsList = document.querySelector('.cards-list');
+    cardsList.appendChild(docFrag);
 }
     
 const modal = () => {
-    const button = document.querySelector('.topbar-button');
-    const cardImages = document.querySelectorAll('.card-image');
+    const shipCards = document.querySelectorAll('.ship-cards');
     const modal = document.querySelector('.modal');
-    console.log(cardImages);
+    
 
-    button.addEventListener('click', () => {
-        modal.classList.add('open');
+    shipCards.forEach(item => {
+        item.addEventListener('click', () => {
+            modal.classList.add('open');
+        })
+    })
+
+    modal.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target.classList.contains('modal-close') || target === modal) {
+            modal.classList.remove('open');
+        }
     })
 
 }
