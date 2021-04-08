@@ -1,19 +1,6 @@
-import "./main.css";
-import styles from "./index.module.css";
-import "./sass/main-second.scss";
-import {} from "./filters";
-import {} from "./topbar";
-import {} from "./main-cards";
-import {} from "./myprofile";
-
-async function print() {
-  // Here we are using dynamic import
-  const { greet } = await import("./greet");
-  const response = await greet("John Doe");
-  // console.log(response);
-}
-
-print();
+"use strict";
+import { closeModal } from "../../../Front/Food/js/modules/modal";
+import ship from "./ship.jpg";
 
 const ships = [
   {
@@ -257,3 +244,96 @@ const ships = [
       "Быстрые и маневренные фрегаты нравятся очень многим за свои высокие ходовые качества и огневую мощь. Эскадра фрегатов вполне может разгромить форт и разграбить город.",
   },
 ];
+
+const lonelyBayField = document.querySelector(".lonely-bay");
+const frame = document.querySelector(".frame-for-card");
+const visible = document.querySelector("#vision");
+
+let currentMaxPrice = document.querySelector("#max-price");
+let currentMinPrice = document.querySelector("#min-price");
+let currentMaxDurab = document.querySelector("#max-durability");
+let currentMinDurab = document.querySelector("#min-durability");
+let cards = lonelyBayField.childNodes;
+let div = document.createElement("div");
+
+let closeBtn = document.createTextNode(String.fromCharCode(10062));
+div.prepend(closeBtn);
+
+const inputs = document.querySelectorAll("input[type=text]");
+inputs.forEach((item) => {
+  item.addEventListener("blur", filterInputs);
+});
+
+function filterInputs() {
+  lonelyBayField.innerHTML = "";
+  ships.map((item) => {
+    if (
+      item.price <= currentMaxPrice.value &&
+      item.price >= currentMinPrice.value &&
+      item.hold <= currentMaxDurab.value &&
+      item.hold >= currentMinDurab.value
+    ) {
+      createCards(item);
+    } else {
+      return;
+    }
+  });
+}
+
+function createCards(item) {
+  let card = document.createElement("div");
+
+  lonelyBayField.append(card);
+  card.classList.add("card");
+  card.innerHTML = `
+                        <img src =${ship}  alt =${"IMG"} class ="ship-img" >
+                        <div>Name: ${item.shipName}</div>
+                        <div>Class: ${item.className}</div>
+                        <div>Rang: ${item.class}</div>
+                        <div>Ship Hull: ${item.shipHull}</div>
+                        <div>Speed: ${item.speed}</div>
+                        <div>Maneuverability: ${item.maneuverability}</div>
+                    
+                      `;
+}
+
+function beforeFilter() {
+  ships.map((item) => {
+    if (
+      currentMaxPrice.value == 0 &&
+      currentMinPrice.value == 0 &&
+      currentMaxDurab.value == 0 &&
+      currentMinDurab.value == 0
+    ) {
+      createCards(item);
+    }
+  });
+}
+
+beforeFilter();
+
+cards.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    const target = event.currentTarget;
+    let clone = target.cloneNode(true);
+    clone.prepend(div);
+    lonelyBayField.style.display = "none";
+    frame.classList.remove("frame-for-card");
+    frame.classList.add("visible");
+    frame.prepend(clone);
+  });
+});
+
+div.addEventListener("click", (event) => {
+  close();
+});
+visible.addEventListener("click", (event) => {
+  close();
+});
+
+function close() {
+  frame.innerHTML = "";
+  frame.classList.remove("visible");
+  frame.classList.add("frame-for-card");
+  lonelyBayField.style.display = "flex";
+}

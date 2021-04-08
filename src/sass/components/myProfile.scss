@@ -1,0 +1,17 @@
+form {
+  text-align: center;
+  font-size: 3vh;
+  div {
+    height: 10vh;
+    background: rgb(90,51,198);
+    background: radial-gradient(circle, rgba(90,51,198,1) 0%, rgba(217,214,230,0.14329481792717091) 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    input {
+      width: 45%;
+      height: 2vh;
+    }
+  }
+}

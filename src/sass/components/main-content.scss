@@ -1,0 +1,43 @@
+body {
+  background: rgb(146, 123, 210);
+  background: radial-gradient(
+    circle,
+    rgba(146, 123, 210, 1) 0%,
+    rgba(217, 214, 230, 0.14329481792717091) 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+main {
+  margin-top: 25vh;
+
+  display: flex;
+  .main-content {
+    width: 85%;
+    .frame-for-card {
+      display: none;
+    }
+  }
+  .lonely-bay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.card {
+  margin: 1vh;
+  width: 15vw;
+  height: 45%;
+  border: 2px solid rgb(171, 202, 171);
+  font-size: 1.7vh;
+}
+.ship-img {
+  width: 100%;
+  height: 20%;
+}
+.visible {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

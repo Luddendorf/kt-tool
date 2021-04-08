@@ -1,13 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ponevejski Anton Lesson 5</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <nav><a href="#" id="lonely-bay">Loneley ships bay</a></nav>
+      <nav><a href="#" id="my-ship">My ship</a></nav>
+    </header>
 
-<body>
-</body>
+    <main>
+      <div class="filter-inputs">
+        <div class="filter-inputs-filters">
+          Нужно ввести все значения MAX
+          <div>
+            <input type="text" id="min-price" value="0" />
+            <label for="min-price">MIN Price</label>
+          </div>
+          <div>
+            <input type="text" id="max-price" value="0" />
+            <label for="max-price">MAX Price</label>
+          </div>
+          <div>
+            <input type="text" id="min-durability" value="0" />
+            <label for="min-durability">MIN Durability</label>
+          </div>
+          <div>
+            <input type="text" id="max-durability" value="0" />
+            <label for="max-durability">MAX Durability</label>
+          </div>
+        </div>
+        <div class="filter-choises">
+          <ul class="sails">
+            Type of the sails
+            <li>Sprint</li>
+            <li>Bermuda</li>
+            <li>Gaffle</li>
+          </ul>
+          <ul class="repair">
+            Type of repair
+            <li>Usual</li>
+            <li>Fasr</li>
+          </ul>
+          <ul class="Guns">
+            Type of the guns
+            <li>Guns</li>
+            <li>Culevrins</li>
+          </ul>
+          <ul class="team">
+            Type of the team
+            <li>Rookie</li>
+            <li>Sea wolf</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="main-content">
+        <div class="lonely-bay"></div>
+        <div class="my-ship">
+          <div id="capitan"></div>
+          <div id="card"></div>
+          <form name="sendForm">
+            Request to buy a ship (obj in console)
+            <div>
+              <input type="text" name="name" placeholder="Name" />
+              <input type="text" name="quantity" placeholder="Quantity" />
+              <input type="text" name="class" placeholder="Class" />
+              <input type="text" name="price" placeholder="Price" />
+            </div>
+            <button id="button-form" type="button">Send data</button>
+          </form>
+        </div>
+        <div id="vision" class="frame-for-card"></div>
+      </div>
+    </main>
+    <footer>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Edward_England.svg/1200px-Flag_of_Edward_England.svg.png"
+        alt=""
+      />
+      <h1>
+        Captain Neo, Nautilus Apostle
+        <br />
+        Ship : "Sea Tiger"
+      </h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Edward_England.svg/1200px-Flag_of_Edward_England.svg.png"
+        alt=""
+      />
+    </footer>
+  </body>
 </html>
