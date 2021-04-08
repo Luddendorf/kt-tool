@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  background: linear-gradient(90deg, #b9deed, #efefef);
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;

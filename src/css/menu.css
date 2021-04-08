@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 20%;
+    width: 100%;
 }
 
 .left-menu-item {
@@ -15,6 +15,10 @@
     width: 100%;
     background-color: transparent;
     text-align: left;
+}
+
+.left-menu-item-button:hover {
+    cursor: pointer;
 }
 
 .left-menu-item-button:after {
@@ -30,6 +34,11 @@
     transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
 }
 
+.left-menu-item-button.active:after {
+    border-color: #000 transparent transparent #000;
+    bottom: 2px;
+}
+
 .left-menu-item-button:focus {
     outline:none;
 }
@@ -43,4 +52,10 @@
 
 .left-menu-description.active {
     height: auto;
+}
+
+.left-menu-description-link {
+    text-decoration-line: none;
+    color: #000000;
+    font-style: italic;
 }

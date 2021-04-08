@@ -1,5 +1,6 @@
-
 'use strict';
+
+import ships from './ships';
 
 const accordion = () => {
     const leftMenu = document.querySelector('.left-menu');
@@ -47,5 +48,13 @@ const accordion = () => {
     })
 };
 
+const renderCards = (ships) => {
+    const createCard = (cards) => {
+        cards.forEach(item => {
+            
+        })
+    };
+};
 
 accordion();
+renderCards(ships);

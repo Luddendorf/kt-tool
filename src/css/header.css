@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     border-bottom: 5px solid red;
- /*    position: fixed;
+/*    position: fixed;
     top: 0; */
 }
 
@@ -14,7 +14,6 @@
     border: none;
     background-color: transparent;
     color: #0066ff;
-    text-decoration-line: none;
     font-size: 30px;
     font-weight: bold;
     margin: 20px 25px;
