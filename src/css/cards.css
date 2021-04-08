@@ -33,3 +33,7 @@
     text-align: center;
     margin-top: 10px;
 }
+
+.card-image:hover {
+    cursor: pointer;
+}

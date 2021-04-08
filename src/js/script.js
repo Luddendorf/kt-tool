@@ -48,24 +48,24 @@ const accordion = () => {
     })
 };
 
-    const renderCards = (cards) => {
-            const cardsList = document.querySelector('.cards-list');
-            const createCardItem = (card) => {
-                const { shipName, 
-                    className, 
-                    classification, 
-                    shipHull, 
-                    speed, 
-                    maneuverability, 
-                    beidewind,
-                    hold,
-                    team,
-                    weapons,
-                    price,
-                    desc } = card;
-                const liItem = document.createElement('li');
-        
-                liItem.innerHTML = `
+const renderCards = (cards) => {
+    const cardsList = document.querySelector('.cards-list');
+    const createCardItem = (card) => {
+        const { shipName,
+            className,
+            classification,
+            shipHull,
+            speed,
+            maneuverability,
+            beidewind,
+            hold,
+            team,
+            weapons,
+            price,
+            desc } = card;
+        const liItem = document.createElement('li');
+
+        liItem.innerHTML = `
                     <article class="card-item">
                         <img
                             src="https://i.pinimg.com/originals/9a/5d/c8/9a5dc8195d864b6ce7d87b599b58e191.jpg"
@@ -85,26 +85,31 @@ const accordion = () => {
                         <span class="card-description">team: ${team}</span>
                         <span class="card-description">weapons: ${weapons}</span>
                         <span class="card-description">price: ${price}</span>
-                        <p class="card-text">${desc}</p>
+                        <p class="card-text" style="display: none">${desc}</p>
                     </article>
                 `;
-                liItem.classList.add('ship-cards');
-                return liItem;
-            };
+        liItem.classList.add('ship-cards');
+        return liItem;
+    };
 
-        cards.forEach(item => {
-            cardsList.append(createCardItem(item));
-        })
-    }
-    
-/* 
-const createCards = (cards) => {
-    console.log(cards);
     cards.forEach(item => {
-        
+        cardsList.append(createCardItem(item));
+    })
+}
+    
+const modal = () => {
+    const button = document.querySelector('.topbar-button');
+    const cardImages = document.querySelectorAll('.card-image');
+    const modal = document.querySelector('.modal');
+    console.log(cardImages);
+
+    button.addEventListener('click', () => {
+        modal.classList.add('open');
     })
 
-}; */
+}
+
 
 accordion();
 renderCards(ships);
+modal();
