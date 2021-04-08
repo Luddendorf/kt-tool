@@ -1,3 +1,7 @@
 body{
   font-family: 'Pieces of Eight Cyrillic AA';
 }
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
