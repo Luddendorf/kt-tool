@@ -2,7 +2,7 @@ export default [
     {
         "shipName": 'Thunder Child',
         "className": 'tartana',
-        "class": 7,
+        "classification": 7,
         "shipHull": 95, // корпус
         "speed": 6.5,
         "maneuverability": 46,
@@ -16,7 +16,7 @@ export default [
     {
         "shipName": 'Panther',
         "className": 'longboat',
-        "class": 7,
+        "classification": 7,
         "shipHull": 200,
         "speed": 13.5,
         "maneuverability": 72,
@@ -30,7 +30,7 @@ export default [
     {
         "shipName": 'Neptune',
         "className": 'lugger',
-        "class": 6,
+        "classification": 6,
         "shipHull": 700,
         "speed": 14.5,
         "maneuverability": 62,
@@ -44,7 +44,7 @@ export default [
     {
         "shipName": 'Gladiator',
         "className": 'sloop',
-        "class": 6,
+        "classification": 6,
         "shipHull": 1000,
         "speed": 13.5,
         "maneuverability": 36,
@@ -58,7 +58,7 @@ export default [
     {
         "shipName": 'Viperous',
         "className": 'barque',
-        "class": 5,
+        "classification": 5,
         "shipHull": 1500,
         "speed": 9.5,
         "maneuverability": 26,
@@ -72,7 +72,7 @@ export default [
     {
         "shipName": 'Sea Tiger',
         "className": 'schooner',
-        "class": 5,
+        "classification": 5,
         "shipHull": 1400,
         "speed": 12.5,
         "maneuverability": 32,
@@ -86,7 +86,7 @@ export default [
     {
         "shipName": 'Medusa',
         "className": 'caravel',
-        "class": 5,
+        "classification": 5,
         "shipHull": 2300,
         "speed": 9.5,
         "maneuverability": 28,
@@ -100,7 +100,7 @@ export default [
     {
         "shipName": 'Seagull',
         "className": 'barquentine',
-        "class": 4,
+        "classification": 4,
         "shipHull": 2300,
         "speed": 10.5,
         "maneuverability": 38,
@@ -114,7 +114,7 @@ export default [
     {
         "shipName": 'Conqueror',
         "className": 'brigantine',
-        "class": 4,
+        "classification": 4,
         "shipHull": 2100,
         "speed": 16.5,
         "maneuverability": 52,
@@ -142,7 +142,7 @@ export default [
     {
         "shipName": 'Viking',
         "className": 'brig',
-        "class": 4,
+        "classification": 4,
         "shipHull": 2700,
         "speed": 14.5,
         "maneuverability": 44,
@@ -156,7 +156,7 @@ export default [
     {
         "shipName": 'Warlock',
         "className": 'galleon',
-        "class": 4,
+        "classification": 4,
         "shipHull": 3500,
         "speed": 10.5,
         "maneuverability": 31,
@@ -170,7 +170,7 @@ export default [
     {
         "shipName": 'Leviathan',
         "className": 'corvette',
-        "class": 3,
+        "classification": 3,
         "shipHull": 3200,
         "speed": 15.5,
         "maneuverability": 58,
@@ -184,7 +184,7 @@ export default [
     {
         "shipName": 'Leviathan',
         "className": 'heavy galleon',
-        "class": 3,
+        "classification": 3,
         "shipHull": 5500,
         "speed": 7.5,
         "maneuverability": 23,
@@ -198,7 +198,7 @@ export default [
     {
         "shipName": 'Nightingale',
         "className": 'pinnace',
-        "class": 3,
+        "classification": 3,
         "shipHull": 3600,
         "speed": 12.5,
         "maneuverability": 32,
@@ -212,7 +212,7 @@ export default [
     {
         "shipName": 'Sea Wolf',
         "className": 'corvette',
-        "class": 2,
+        "classification": 2,
         "shipHull": 5000,
         "speed": 15.5,
         "maneuverability": 37,
