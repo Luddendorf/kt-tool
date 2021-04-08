@@ -4,7 +4,9 @@
     align-items: center;
     background: rgba(189, 186, 130, 0.8);
     padding: 0 20px;
-    max-width: 300px;
+    max-width: 250px;
+    padding-top: 80px;
+    padding-bottom: 50px;
   }
   &__filter {
     display: flex;
@@ -12,30 +14,53 @@
     background: #719C2E;
     padding: 21px 25px;
     border: 1px solid $dark;
+    max-width: 200px;
+    margin-bottom: 30px;
   }
   &__column {
-
-  }
-  &__item {
-    color: $light
+    color: $light;
   }
   &__label {
-    font-size: 26px;
+    font-size: 20px;
+    width: 100%;
   }
   &__input {
     display: block;
     width: 100%;
   }
-  &__accord {}
-  &__accord-wrapper {}
-  &__accord-item {
-    
-  }
   &__button {
     font-size: 40px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    background: #C5DBE2;
+    outline: 2px solid $dark;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::after{
+      content: "+";
+      position: absolute;
+      right: 10%
+    }
+    &.is_open{
+      background-color: coral;
+      &::after{
+        content: "-";
+        position: absolute;
+        right: 10%
+      }
+    }
   }
   &__list {
     font-size: 32px;
+    background: rgba(197, 219, 226, 0.7);
+    padding-left: 19px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease 0.3s;
   }
 }
 
