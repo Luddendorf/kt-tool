@@ -29,3 +29,18 @@
     transform: rotate(45deg);
     transition: border-color 0.5s ease-in-out, bottom 0.5s ease-in-out;
 }
+
+.left-menu-item-button:focus {
+    outline:none;
+}
+
+.left-menu-description {
+    margin-top: -2px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.left-menu-description.active {
+    height: auto;
+}
