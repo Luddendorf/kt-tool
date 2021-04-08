@@ -57,10 +57,17 @@
   &__list {
     font-size: 32px;
     background: rgba(197, 219, 226, 0.7);
-    padding-left: 19px;
     max-height: 0;
     overflow: hidden;
     transition: all ease 0.3s;
+    cursor: pointer;
+    &-item{
+      padding-left: 10px;
+      transition: all ease 0.5s;
+      &:hover{
+        background: rgba(86, 212, 250, 0.7);
+      }
+    }
   }
 }
 

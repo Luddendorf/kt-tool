@@ -1,0 +1,30 @@
+.footer {
+  background: #C5DBE2;
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__skull-image {
+    width: 100px;
+    height: 100px;
+    & img{
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  &__chest-image {
+    width: 200px;
+    height: 200px;
+  }
+  &__text {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  &__captain-name {}
+  &__captain-ship {}
+}
