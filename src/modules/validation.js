@@ -9,7 +9,7 @@ const validation = ()=>{
   console.log(filterInputs);
 
   shipClass.addEventListener('input', ()=>{
-    if(!shipClass.value.match(/^([-+] ?)?[0-9]+(,[0-9]+)?$/gi)){
+    if(!shipClass.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
       shipClass.style.outline = '1px solid red';
     } else{
       shipClass.style.outline = null;
@@ -17,7 +17,7 @@ const validation = ()=>{
   });
 
   shipName.addEventListener('input', ()=>{
-    if(shipName.value.match(/^([-+] ?)?[0-9]+(,[0-9]+)?$/gi)){
+    if(shipName.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
       shipName.style.outline = '1px solid red';
     } else{
       shipName.style.outline = null;
@@ -25,7 +25,7 @@ const validation = ()=>{
   });
 
   shipQuantity.addEventListener('input', ()=>{
-    if(!shipQuantity.value.match(/^([-+] ?)?[0-9]+(,[0-9]+)?$/gi)){
+    if(!shipQuantity.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
       shipQuantity.style.outline = '1px solid red';
     } else{
       shipClass.style.outline = null;
@@ -33,7 +33,7 @@ const validation = ()=>{
   });
 
   shipPrice.addEventListener('input', ()=>{
-    if(!shipPrice.value.match(/^([-+] ?)?[0-9]+(,[0-9]+)?$/gi)){
+    if(!shipPrice.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
       shipPrice.style.outline = '1px solid red';
     } else{
       shipPrice.style.outline = null;
@@ -42,7 +42,7 @@ const validation = ()=>{
 
   filterInputs.forEach((input)=>{
     input.addEventListener('input', ()=>{
-      if(!input.value.match(/^([-+] ?)?[0-9]+(,[0-9]+)?$/gi)){
+      if(!input.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
         input.style.outline = '1px solid red';
       } else{
         input.style.outline = null;
