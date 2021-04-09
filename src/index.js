@@ -3,12 +3,18 @@ import styles from './index.module.css';
 import "./sass/main-second.scss";
 import accordeon from './modules/accordeon';
 import tabs from './modules/tabs';
+import filter from './modules/filter'
 
 accordeon();
 tabs();
+filter();
 
 const cardsWrapper = document.querySelector('.main__cards-wrapper');
 const modal = document.querySelector('.modal');
+const lowPrice = document.getElementById('low-price');
+const maxPrice = document.getElementById('max-price');
+const lowDur = document.getElementById('low-dur');
+const maxDur = document.getElementById('max-dur');
 
 
 const ships = [
@@ -277,6 +283,14 @@ ships.forEach((card)=>{
   </div>`);
 });
 
+lowPrice.addEventListener('blur', ()=>{
+  ships.filter((card)=>{
+    if(lowPrice.value >= card.price){
+      console.log(card.price);
+    }
+  })
+})
+
 cardsWrapper.addEventListener('click', (event)=>{
   let target = event.target;
   target = target.closest('.main__card');
@@ -295,4 +309,4 @@ cardsWrapper.addEventListener('click', (event)=>{
     modal.removeChild(clonedNode);
     modal.style.display = 'none';
   })
-})
+});
