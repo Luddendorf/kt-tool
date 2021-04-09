@@ -1,5 +1,4 @@
 "use strict";
-import { closeModal } from "../../../Front/Food/js/modules/modal";
 import ship from "./ship.jpg";
 
 const ships = [
