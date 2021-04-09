@@ -1,13 +1,7 @@
-# Webpack Boilerplate
+The implementation is in the files index.html, index.js, main.css. I performed the task through debugging. At the moment, everything works except for the full sort.
+To start, you just need to open index.html in the tool and open it in the browser there.
+![alt text](first.png)
 
-This is a repossitory for [Webpack Configuration step by step - Development to Production](https://finmavis.dev/blog/webpack-configuration-step-by-step) guide.
+![alt text](second.png)
 
-## 🚀 Quick start
-
-To run this locally:
-
-1. Clone project `git clone https://github.com/finmavis/webpack-4-boilerplate.git .`
-2. Install all dependencies using `yarn` or `npm install`
-3. Start the development server using `yarn start` or `npm run start`
-4. Open up [http://localhost:3000](http://localhost:3000)
-5. Happy Hacking!
+![alt text](third.png)

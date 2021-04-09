@@ -4,10 +4,181 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
+  <title>Пиратская бухта</title>
+  <link rel="stylesheet"  href="main.css">
+  <link rel="shortcut icon" href="https://st2.depositphotos.com/1067257/6827/v/600/depositphotos_68275549-stock-illustration-jolly-roger-pirate-skull-and.jpg" type="image/x-icon" >
 </head>
 
 <body>
+<header>
+  <h1 class="line__background">Пиратская бухта</h1>
+  <div class="horizontal__menu">
+
+    <div id="horizontal-menu-first" class="horizontal__menu__first horizontal__menu__for__items new__horizontal__menu__for__items">Бухта Одинокого острова</div>
+    <div id="horizontal-menu-second" class="horizontal__menu__second horizontal__menu__for__items">Мой корабль</div>
+  </div>
+</header>
+
+<div id="layer">
+  <div id="choose-ship" class="layer__ship"></div>
+  <div id="desk-ship" class="desk__ship"></div>
+</div>
+
+
+<div class="main">
+  <div class="sidebar">
+    <div class="sidebar__selection">
+
+      <div id="min-price-div" class="sidebar__selection__div">
+        <p>мин. цена</p>
+        <input id="min-price-input" class="sidebar__selection__div__prise" type="text">
+      </div>
+
+      <div id="max-price-div" class="sidebar__selection__div">
+        <p>макс. цена</p>
+        <input id="max-price-input" class="sidebar__selection__div__prise" type="text">
+      </div>
+
+      <div id="min-ship-hull-div" class="sidebar__selection__div">
+        <p>мин. прочность</p>
+        <input id="min-ship-hull-input" class="sidebar__selection__div__strength" type="text">
+      </div>
+
+      <div id="max-ship-hull-div" class="sidebar__selection__div">
+        <p>макс. прочность</p>
+        <input id="max-ship-hull-input" class="sidebar__selection__div__strength" type="text">
+      </div>
+
+    </div>
+    <div class="sidebar__choice">
+      <ul>
+        <li id="sail">
+          <div class="sidebar__choice__items">Паруса</div>
+          <ul id="sail-attribute" class="sidebar__choice__attribute__none sidebar__choice__attribute__hover">
+            <li>Шпринтовые</li>
+            <li>Бермудские</li>
+            <li>Гафельные</li>
+          </ul>
+        </li>
+        <li id="repairs">
+          <div class="sidebar__choice__items">Ремонт</div>
+          <ul id="repairs-attribute" class="sidebar__choice__attribute__none">
+            <li>Обычный</li>
+            <li>Быстрый</li>
+          </ul>
+        </li>
+        <li id="cannons">
+          <div class="sidebar__choice__items">Пушки</div>
+          <ul id="cannons-attribute" class="sidebar__choice__attribute__none">
+            <li>Пушки</li>
+            <li>Кулеврины</li>
+          </ul>
+        </li>
+        <li id="command">
+          <div class="sidebar__choice__items">Команда</div>
+          <ul id="command-attribute" class="sidebar__choice__attribute__none">
+            <li>Салаги</li>
+            <li>Моркие волки</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="ships" class="ships">
+    <div id="first-ship" class="for__ship"></div>
+    <div id="second-ship" class="for__ship"></div>
+    <div id="third-ship" class="for__ship"></div>
+    <div id="forth-ship" class="for__ship"></div>
+    <div id="fifth-ship" class="for__ship"></div>
+    <div id="sixth-ship" class="for__ship"></div>
+    <div id="seventh-ship" class="for__ship"></div>
+    <div id="eighth-ship" class="for__ship"></div>
+    <div id="ninth-ship" class="for__ship"></div>
+    <div id="tenth-ship" class="for__ship"></div>
+    <div id="eleventh-ship" class="for__ship"></div>
+    <div id="twelfth-ship" class="for__ship"></div>
+    <div id="thirteenth-ship" class="for__ship"></div>
+    <div id="fourteenth-ship" class="for__ship"></div>
+    <div id="fifteenth-ship" class="for__ship"></div>
+    <div id="sixteenth-ship" class="for__ship"></div>
+  </div>
+
+  <div id="my-ship" class="my__ship" style="display: none;">
+    <div class="my__ship__information">
+      <div class="my__ship__information__img"></div>
+      <p>Фрегат: Queen Anne's revenge</p>
+      <p>Класс: 1</p>
+      <p>Пушки: 106</p>
+      <p>Корпус: 7000</p>
+      <p>Команда: 379</p>
+      <p>Трюм: 3500</p>
+      <p>Скорость: 13.5</p>
+      <p>Манёвренность: 42</p>
+    </div>
+
+    <div class="my__ship__field">
+      <div class="my__ship__field__me">
+        <div class="my__ship__field__me__img"></div>
+          <div class="my__ship__field__me__first">
+            <p>Имя: Клебеко Владислав</p>
+            <p>Класс: 9</p>
+            <p>Урон саблей: 47-54</p>
+          </div>
+          <div class="my__ship__field__me__second">
+            <p>Врзраст: 20</p>
+            <p>Дублонов: 3 849 647</p>
+            <p>Урон пистолеты: 96-101</p>
+          </div>
+      </div>
+
+      <form id="my-ship-form" class="my__ship__field__form">
+        <p class="my__ship__field__form__p">Заявка наема судна</p>
+        <div class="my__ship__field__form__items">
+
+          <div class="my__ship__field__form__items__first">
+          <div class="my__ship__field__form__items__class__all">
+            <p>Имя: </p>
+            <input id="name-form" type="text" class="my__ship__field__form__items__input">
+          </div>
+          <div class="my__ship__field__form__items__class__all">
+            <p>Количество: </p>
+            <input id="size-form" type="text" class="my__ship__field__form__items__input">
+          </div>
+          </div>
+
+          <div class="my__ship__field__form__items__second">
+          <div class="my__ship__field__form__items__class__all">
+            <p>Класс: </p>
+            <input id="class-form" type="text" class="my__ship__field__form__items__input">
+          </div>
+          <div class="my__ship__field__form__items__class__all">
+            <p>Цена: </p>
+            <input id="price-form" type="text" class="my__ship__field__form__items__input">
+          </div>
+          </div>
+
+        </div>
+
+        <input id="form-button" type="button"  class="my__ship__field__form__button" value="Отправить">
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="page__footer">
+  <div class="page__footer__container">
+    <div class="page__footer__container__black-label"></div>
+    <div class="page__footer__container__chest"></div>
+    <div class="page__footer__container__captain">
+      <p>Капитан: Клебеко Владислав по прозвищу Чёрная Борода, всегда там где есть золото, разграбит для вас любое судно.</p>
+      <p>Судно: Флагман “Месть королевы Анны”</p>
+    </div>
+    <div class="page__footer__container__black-label"></div>
+  </div>
+</footer>
+
+<script src="./index.js"></script>
 </body>
 
 </html>

@@ -10,4 +10,328 @@ html {
 }
 
 body {
+  margin: 0;
+  background: url("images/back.jpg");
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+.line__background{
+  background-color: rgba(36, 36, 36, 0.9);
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 30px;
+}
+
+
+.page__footer {
+  padding: 20px 0;
+  background-color: rgba(36, 36, 36, 0.9);
+  margin-top: 100px;
+
+}
+
+.page__footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page__footer__container__black-label{
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-image: url("images/post.png");
+}
+
+.page__footer__container__chest{
+  width: 170px;
+  height: 150px;
+  background-size: cover;
+  background-image: url("images/chest.png");
+}
+
+.page__footer__container__captain{
+  width: 40%;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal__menu{
+  background-color: rgba(109, 106, 106, 0.6);
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.main{
+  display: flex;
+}
+
+.horizontal__menu__for__items{
+  text-align: center;
+  padding: 15px 0 15px 0;
+  width: 300px;
+  color: white;
+  background-color: black;
+  border: 4px solid #0d1cbe;
+  cursor: pointer;
+}
+
+.new__horizontal__menu__for__items{
+  border-bottom: 0;
+}
+
+.sidebar{
+  flex-basis: 25%;
+}
+
+.sidebar__selection{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar__selection__div{
+  border: 1px solid black;
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 15px;
+  align-items: center;
+}
+
+.sidebar__selection__div__prise{
+  width: 55px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.sidebar__selection__div__strength{
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.sidebar__choice{
+  border: 1px solid black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sidebar__choice ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__choice__items{
+  background-color: #3498db;
+  padding: 25px 0 25px 15px;
+  border-bottom: 1px solid black;
+}
+
+.sidebar__choice__additional__elements{
+  display: none;
+}
+
+.sidebar__choice__attribute__none{
+  display: none;
+}
+
+.sidebar__choice__attribute li {
+  display: block;
+  background-color: #87cbf3;
+  padding: 25px 0 25px 30px;
+  border-bottom: 1px solid black;
+}
+
+.sidebar__choice__attribute li:hover {
+  background-color: #b4dff8;
+}
+
+.ships{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 15px;
+  color: white;
+  /*margin-top: 20px;*/
+  flex-basis: 75%;
+}
+
+.for__ship{
+  background-color: rgba(3, 18, 129, 0.8);
+  border: 5px solid black;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.for__ship__image{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.my__ship__start{
+  display: none;
+}
+
+.my__ship{
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  color: white;
+  flex-basis: 75%;
+}
+
+.my__ship__information{
+  margin-top: 20px;
+  background-color: rgba(3, 18, 129, 0.8);
+  border: 5px solid black;
+  padding: 30px;
+}
+
+.my__ship__information__img {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-image: url("images/my_ship.jpg");
+}
+
+.my__ship__field__me{
+  margin-top: 20px;
+  background-color: rgba(3, 18, 129, 0.8);
+  border: 5px solid black;
+  padding: 30px;
+  display: flex;
+}
+
+.my__ship__field__me__img{
+  width: 180px;
+  height: 180px;
+  border-radius: 10px 10px;
+  background-size: cover;
+  background-image: url("images/me.jpg");
+}
+
+.my__ship__field__me__first{
+  padding:0 40px;
+}
+
+.my__ship__field__form{
+  margin-top: 50px;
+  background-color: rgba(3, 18, 129, 0.8);
+  border: 5px solid black;
+  padding: 30px 30px 50px 30px;
+
+}
+
+.my__ship__field__form__p {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+.my__ship__field__form__items{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.my__ship__field__form__items__class__all{
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: 15px;
+  align-items: center;
+  flex-basis: 34%;
+}
+
+.my__ship__field__form__items__input{
+  width: 50%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.my__ship__field__form__items__first{
+  display: flex;
+  flex-direction: column;
+}
+
+.my__ship__field__form__items__second{
+  display: flex;
+  flex-direction: column;
+}
+
+#layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
+  text-align: center;
+  z-index: 10;
+  color: black;
+}
+
+#layer::before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#modal {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.8);
+  vertical-align: middle;
+}
+
+.layer__ship{
+  color: white;
+  min-height: 550px;
+  min-width:  270px;
+  margin: 5% 40% 0 40%;
+  background-color: rgba(3, 18, 129, 0.8);
+  border: 5px solid black;
+  padding: 30px 0 30px 30px;
+  font-size: 15px;
+  text-align: start;
+
+}
+
+.layer__ship__image {
+  padding: 0;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.desk__ship{
+  font-size: 20px;
+  color: white;
+  margin: 20px 400px 0 400px;
+  text-align: start;
+}
+
+
+.my__ship__field__form__button{
+  border-radius: 12px;
+  padding: 5px 70px;
+  float: right;
+  margin:10px 180px 0 0;
 }
