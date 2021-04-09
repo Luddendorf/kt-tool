@@ -1,29 +1,38 @@
 .content-wrapper{
   display: flex;
   background: url('https://1rulon.ru/wp-content/uploads/46322.jpg') no-repeat 0 0 / cover;
-  min-height: 90vh;
+  min-height: 75vh;
 }
 
 .main {
+  max-width: 1440px;
   &__cards-wrapper {
-    max-width: 1440px;
     margin: 32px 28px;
     display: flex;
     flex-wrap: wrap;
   }
   &__card {
     background: $light;
-    border: 3px solid #964B00;
+    border: $border;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     padding-bottom: 10px;
     margin-bottom: 20px;
+    transition: all ease 0.5s;
+    cursor: pointer;
     &:not(:last-child){
       margin-right: 20px;
     }
+    &:hover{
+      transform: scale(1.1);
+    }
   }
   &__card-img {
-    max-width: 250px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
+    & img{
+      object-fit: cover;
+    }
   }
   &__list {
     font-size: 22px;
@@ -36,8 +45,66 @@
       text-decoration: underline;
     }
   }
-  &__ship{
-    font-size: 48px;
+}
+
+.main {
+  &__ship {
+    font-size: 24px;
+    margin: 32px 28px;
     display: none;
   }
+  &__ship-wrapper {
+    display: flex;
+  }
+  &__ship-card {
+    border: $border;
+    margin-right: 100px;
+    background: $light;
+    box-shadow: $boxShadow;
+    max-width: 500px;
+  }
+  &__profile-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__profile-wrapper {
+    display: flex;
+    background: $light;
+    border: $border;
+    box-shadow: $boxShadow;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  &__profile-photo{
+    max-width: 100px;
+    margin-right: 10px;
+    & img{
+      border-radius: 20px;
+    }
+  }
+  &__ship-form {
+    display: flex;
+    flex-direction: column;
+    background: $light;
+    border: $border;
+    box-shadow: $boxShadow;
+    padding: 10px;
+    & input{
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 1px solid $dark;
+    }
+  }
 }
+.ship-form {
+  &__submit {
+    background: #B85D02;
+    border-radius: 15px;
+    border: none;
+    width: 60%;
+    align-self: flex-end;
+  }
+}
+
+

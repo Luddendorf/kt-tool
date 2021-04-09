@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,17 +28,17 @@
               </label>
             </div>
             <div class="aside__item">
-              <label class="aside__label" for="low-price">Макс. цена
+              <label class="aside__label" for="max-price">Макс. цена
                 <input type="number" class="aside__input" id="max-price">
               </label>
             </div>
             <div class="aside__item">
-              <label class="aside__label" for="low-price">Мин. прочность
+              <label class="aside__label" for="low-dur">Мин. прочность
                 <input type="number" class="aside__input" id="low-dur">
               </label>
             </div>
             <div class="aside__item">
-              <label class="aside__label" for="low-price">Макс. прочность
+              <label class="aside__label" for="max-dur">Макс. прочность
                 <input type="number" class="aside__input" id="max-dur">
               </label>
             </div>
@@ -89,48 +89,61 @@
     </aside>
     <main class="main">
       <div class="main__cards-wrapper tab-content">
-        <div class="main__card">
-          <div class="main__card-img">
-            <img src="https://s1.1zoom.ru/big0/586/Sailing_Sea_Ships_524343_1280x853.jpg" alt="ship">
-          </div>
-          <ul class="main__list">
-            <li class="main__list-item"><span>Тартана</span>: Thunder Child</li>
-            <li class="main__list-item"><span>Класс</span>: 7</li>
-            <li class="main__list-item"><span>Пушки</span>: 2</li>
-            <li class="main__list-item"><span>Корпус</span>: 95</li>
-            <li class="main__list-item"><span>Трюм</span>: 50</li>
-            <li class="main__list-item"><span>Скорость</span>: 6.5</li>
-            <li class="main__list-item"><span>Манёвренность</span>: 46</li>
-            <li class="main__list-item"><span>Команда</span>: 10</li>
-          </ul>
-        </div>
       </div>
       <div class="main__ship tab-content">
         <div class="main__ship-wrapper">
           <div class="main__ship-card">
             <div class="main__ship-card--img">
-              <img src="https://s1.1zoom.ru/big0/586/Sailing_Sea_Ships_524343_1280x853.jpg" alt="ship">
+              <img src="https://live.staticflickr.com/7412/9970379744_52702ff746_b.jpg" alt="ship">
             </div>
-            <ul class="main__ship-list">
-              <li class="main__ship-item"><span>Тартана</span>: Thunder Child</li>
-              <li class="main__ship-item"><span>Класс</span>: 7</li>
-              <li class="main__ship-item"><span>Пушки</span>: 2</li>
-              <li class="main__ship-item"><span>Корпус</span>: 95</li>
-              <li class="main__ship-item"><span>Трюм</span>: 50</li>
-              <li class="main__ship-item"><span>Скорость</span>: 6.5</li>
-              <li class="main__ship-item"><span>Манёвренность</span>: 46</li>
-              <li class="main__ship-item"><span>Команда</span>: 10</li>
+            <ul class="main__list main__ship-list">
+              <li class="main__list-item main__ship-item"><span>Линкор</span>: Стремительный</li>
+              <li class="main__list-item main__ship-item"><span>Класс</span>: 7</li>
+              <li class="main__list-item main__ship-item"><span>Пушки</span>: 100</li>
+              <li class="main__list-item main__ship-item"><span>Корпус</span>: 95</li>
+              <li class="main__list-item main__ship-item"><span>Трюм</span>: 50</li>
+              <li class="main__list-item main__ship-item"><span>Скорость</span>: 6.5</li>
+              <li class="main__list-item main__ship-item"><span>Манёвренность</span>: 46</li>
+              <li class="main__list-item main__ship-item"><span>Команда</span>: 50</li>
+              <li class="main__list-item main__ship-item"><span>Цена</span>: 100000</li>
+              <li class="main__list-item main__ship-item"><span>Описание</span>: Личный корабль лорда Беккета, который по своей сути, являлся боевой крепостью на море. Был способен дать достойный отпор мистическим кораблям, если бы сражение было один на один. Единственный корабль из моего списка, не обладающий сверхъестественными способностями, но на голову превосходящий обычные корабли.</li>
             </ul>
           </div>
-          <div class="main__ship-card">
-            
+          <div class="main__profile-form">
+            <div class="main__profile-wrapper">
+              <div class="main__profile-photo">
+                <img src="https://artfiles.alphacoders.com/983/thumb-1920-98369.jpg" alt="">
+              </div>
+              <div class="main__profile-info">
+                <p class="main__profile-name">Имя: Попов Павел</p>
+                <p class="main__profile-team">Команда: 10</p>
+                <p class="main__profile-age">Возраст: 26 лет</p>
+                <p class="main__profile-money">Дублонов: 1000000</p>
+              </div>
+            </div>
+            <form action="" class="main__ship-form">
+              <h2 class="main__ship-header">Закажи собственное судно!</h2>
+              <label for="ship-form__name">Имя:
+                <input type="text" name="" id="ship-form__name">
+              </label>
+              <label for="ship-form__class">Класс:
+                <input type="text" name="" id="ship-form__class">
+              </label>
+              <label for="ship-form__quantity">Количество:
+                <input type="text" name="" id="ship-form__quantity">
+              </label>
+              <label for="ship-form__price">Цена:
+                <input type="text" name="" id="ship-form__price">
+              </label>
+              <button class="ship-form__submit" type="submit">Отправить!</button>
+            </form>
           </div>
-          <form action="" class="main__ship-form">
-  
-          </form>
         </div>
       </div>
     </main>
+  </div>
+  <div class="modal">
+    
   </div>
   <footer class="footer">
     <div class="footer__wrapper">
