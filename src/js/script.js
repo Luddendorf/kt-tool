@@ -166,7 +166,33 @@ const modal = () => {
     })
 };
 
+const transition = () => {
+    const bayLink = document.querySelector('.bay-link');
+    const shipLink = document.querySelector('.ship-link');
+    const cards = document.querySelector('.cards');
+    const myShip = document.querySelector('.my-ship');
+
+    const openMyShip = () => {
+        cards.classList.add('hidden');
+        myShip.classList.remove('hidden');
+    };
+
+    const openCards = () => {
+        myShip.classList.add('hidden');
+        cards.classList.remove('hidden');
+    };
+
+    shipLink.addEventListener('click', () => {
+        openMyShip();
+    })
+
+    cards.addEventListener('click', () => {
+        openCards();
+    })
+};
+
 
 accordion();
 renderCards(ships);
 modal(ships);
+transition();

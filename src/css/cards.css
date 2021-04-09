@@ -1,3 +1,7 @@
+.cards.hidden {
+    display: none;
+}
+
 .cards-list {
     display: flex;
     justify-content: space-around;

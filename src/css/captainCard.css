@@ -1,0 +1,14 @@
+.captain-card {
+    border: 2px solid #000000;
+    display: flex;
+    max-width: 600px;
+}
+
+.captain-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.captain-info:not(:last-child) {
+    margin: 0 30px;
+}
