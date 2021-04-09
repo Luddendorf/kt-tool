@@ -23,7 +23,6 @@
 
 .modal-close:hover {
     cursor: pointer;
-
 }
 
 .modal.open {
@@ -31,7 +30,39 @@
 }
 
 .modal-card {
+    max-height: 500px;
     position: relative;
     padding: 30px 50px;
     background-color: #fff;
+}
+
+.modal-card-name, .modal-card-classname {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.modal-numbers {
+    max-width: 400px;
+    display: flex;
+    margin: 7px 0;
+}
+
+.modal-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-div:not(:last-child) {
+    margin-right: 7px;
+}
+
+.modal-card-description, .modal-card-text {
+    font-size: 15px;
+}
+
+.modal-card-text {
+    max-width: 400px;
+    text-align: center;
+    font-style: italic;
 }

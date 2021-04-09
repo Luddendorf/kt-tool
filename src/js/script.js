@@ -76,15 +76,14 @@ const renderCards = (cards) => {
                         <h1 class="card-name">${shipName}</h1>
                         <h1 class="card-classname">"${className}"</h1>
                         <span class="card-description">class: ${classification}</span>
-                        <span class="card-description">ship hull: ${shipHull}</span>
-                        <span class="card-description">speed: ${speed}</span>
-                        <span class="card-description">maneuverability: ${maneuverability}</span>
-                        <span class="card-description">beidewind: ${beidewind}</span>
-                        <span class="card-description">hold: ${hold}</span>
-                        <span class="card-description">team: ${team}</span>
-                        <span class="card-description">weapons: ${weapons}</span>
-                        <span class="card-description">price: ${price}</span>
-                        <p class="card-text" style="display: none">${desc}</p>
+                        <span class="card-description ship-hull">ship hull: ${shipHull}</span>
+                        <span class="card-description speed">speed: ${speed}</span>
+                        <span class="card-description maneuverability">maneuverability: ${maneuverability}</span>
+                        <span class="card-description beidewind">beidewind: ${beidewind}</span>
+                        <span class="card-description hold">hold: ${hold}</span>
+                        <span class="card-description team">team: ${team}</span>
+                        <span class="card-description weapons">weapons: ${weapons}</span>
+                        <span class="card-description price">price: ${price}</span>
                     </article>
                 `;
         liItem.classList.add('ship-cards');
@@ -98,29 +97,76 @@ const renderCards = (cards) => {
 
     const cardsList = document.querySelector('.cards-list');
     cardsList.appendChild(docFrag);
-}
+};
     
 const modal = () => {
-    const shipCards = document.querySelectorAll('.ship-cards');
+    const cardsList = document.querySelector('.cards-list');
     const modal = document.querySelector('.modal');
+    const modalCardName = modal.querySelector('.modal-card-name');
+    const cardClassname = modal.querySelector('.modal-card-classname');
+    const classification = modal.querySelector('.classification');
+    const shipHull = modal.querySelector('.ship-hull');
+    const speed = modal.querySelector('.speed');
+    const maneuverability = modal.querySelector('.maneuverability');
+    const beidewind = modal.querySelector('.beidewind');
+    const hold = modal.querySelector('.hold');
+    const team = modal.querySelector('.team');
+    const weapons = modal.querySelector('.weapons');
+    const price = modal.querySelector('.price');
+    const cardText = modal.querySelector('.modal-card-text');
     
+    const openModal = () => {
+        modal.classList.add('open');
+        document.addEventListener('keydown', escapePress);
 
-    shipCards.forEach(item => {
-        item.addEventListener('click', () => {
-            modal.classList.add('open');
-        })
-    })
+        
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('open');
+    };
+
+    
+    const escapePress = event => {
+        if (event.code === 'Escape') {
+            closeModal();
+        }
+    };
 
     modal.addEventListener('click', (event) => {
         const target = event.target;
         if (target.classList.contains('modal-close') || target === modal) {
-            modal.classList.remove('open');
+            closeModal();
         }
     })
 
-}
+
+
+    cardsList.addEventListener('click', event => {
+        const target = event.target;
+        const parent = target.closest('.card-item');
+    
+        const findName =  parent.querySelector('.card-name').textContent;
+        let ship = ships.filter(item =>  item.shipName === findName);
+
+        modalCardName.textContent = ship[0].shipName;
+        cardClassname.textContent = `"${ship[0].className}"`;
+        classification.textContent = `class: ${ship[0].classification}`;
+        shipHull.textContent = `ship hull: ${ship[0].shipHull}`;
+        speed.textContent = `speed: ${ship[0].speed}`;
+        maneuverability.textContent = `maneuverability: ${ship[0].maneuverability}`;
+        beidewind.textContent = `beidewind: ${ship[0].beidewind}`;
+        hold.textContent = `hold: ${ship[0].hold}`;
+        team.textContent = `team: ${ship[0].team}`;
+        weapons.textContent = `weapons: ${ship[0].weapons}`;
+        price.textContent = `price: ${ship[0].price}`;
+        cardText.textContent = ship[0].desc;
+
+        openModal();
+    })
+};
 
 
 accordion();
 renderCards(ships);
-modal();
+modal(ships);

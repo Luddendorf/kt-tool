@@ -1,0 +1,18 @@
+.filter {
+    position: fixed;
+    left: 0;
+    bottom: 180px;
+}
+
+.form,.form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div {
+    text-align: center;
+}
+
+.form-text {
+    font-weight: bold;
+}
