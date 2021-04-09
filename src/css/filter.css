@@ -4,15 +4,15 @@
     bottom: 180px;
 }
 
-.form,.form-div {
+.search,.search-div {
     display: flex;
     flex-direction: column;
 }
 
-.form-div {
+.search-div {
     text-align: center;
 }
 
-.form-text {
+.search-text {
     font-weight: bold;
 }
