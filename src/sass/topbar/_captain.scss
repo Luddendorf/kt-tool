@@ -1,0 +1,29 @@
+.captain__inf {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid $mainColor;
+  border-radius: 5px;
+  color: $mainColor;
+  &--img {
+    flex: 1;
+    & img {
+      height: 200px;
+    }
+  }
+  &--detail {
+    flex: 1;
+    & div {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+  &--damage {
+    flex: 1;
+    & div {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}

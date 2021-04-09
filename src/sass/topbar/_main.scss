@@ -1,0 +1,70 @@
+.main {
+  margin: 20px 0;
+  &__container {
+    display: flex;
+  }
+  &__menu {
+    flex: 1;
+    margin-right: 50px;
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__list {
+      transition: 0.3s ease;
+    }
+    &__filters {
+      color: $mainColor;
+      &--price {
+        & div {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          & label {
+            flex: 1;
+            margin-right: 10px;
+          }
+          & input {
+            border: 1px solid $mainColor;
+            border-radius: 5px;
+          }
+        }
+      }
+      &--strength {
+        & div {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          & label {
+            flex: 1;
+            margin-right: 10px;
+          }
+          & input {
+            border: 1px solid $mainColor;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    &__lists {
+      cursor: pointer;
+      border-left: 1px solid $mainColor;
+      border-right: 1px solid $mainColor;
+      &:last-child {
+        border-bottom: 1px solid $mainColor;
+      }
+      &--name {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: $mainColor;
+        padding: 5px;
+        color: white;
+        border: 1px solid rgb(78, 78, 78);
+      }
+    }
+  }
+  &__content {
+    flex: 4;
+  }
+}

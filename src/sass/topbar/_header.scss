@@ -1,0 +1,30 @@
+.header {
+  background-color: $mainColor;
+  color: rgb(255, 255, 255);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__nav {
+    display: flex;
+    &--item {
+      padding: 15px 10px;
+      height: 100%;
+    }
+    @media (min-width: 576px) {
+      &--item {
+        font-size: 24px;
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

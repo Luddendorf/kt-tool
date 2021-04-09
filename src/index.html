@@ -4,10 +4,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
+  <title>Капитан Якавицки Влад</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/b3c8077126.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__title">Captain</div>
+      <div class="header__nav">
+        <div class="header__nav--item">All ships</div>
+        <div class="header__nav--item active">My ship</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card__modal none"></div>
+
+  <section class="main">
+    <div class="main__container container">
+      <div class="main__menu">
+        <div class="main__menu__filters">
+          <div class="main__menu__filters--price">
+            <div>
+              <label for="min__price">Min price:</label>
+              <input type="text" id="min__price">
+            </div>
+            <div>
+              <label for="max__price">Max price:</label>
+              <input type="text" id="max__price">
+            </div>
+          </div>
+          <div class="main__menu__filters--strength">
+            <div>
+              <label for="min__strength">Min strength:</label>
+              <input type="text" id="min__strength">
+            </div>
+            <div>
+              <label for="max__strength">Max strength:</label>
+              <input type="text" id="max__strength">
+            </div>
+          </div>
+        </div>
+        <div class="main__menu__container">
+          <div class="main__menu__lists">
+            <div class="main__menu__lists--name">
+              <span>Sail</span>
+              <i class="fas fa-sort-down"></i>
+            </div>
+            <ul class="main__menu__list hidden">
+              <li class="main__menu__list--item">Sprint</li>
+              <li class="main__menu__list--item">Bermuda</li>
+              <li class="main__menu__list--item">Gaffle</li>
+            </ul>
+          </div>
+          <div class="main__menu__lists">
+            <div class="main__menu__lists--name">
+              <span>Repairs</span>
+              <i class="fas fa-sort-down"></i>
+            </div>
+            <ul class="main__menu__list hidden">
+              <li class="main__menu__list--item">Normal</li>
+              <li class="main__menu__list--item">Fast</li>
+            </ul>
+          </div>
+          <div class="main__menu__lists">
+            <div class="main__menu__lists--name">
+              <span>Cannons</span>
+              <i class="fas fa-sort-down"></i>
+            </div>
+            <ul class="main__menu__list hidden">
+              <li class="main__menu__list--item">Cannons</li>
+              <li class="main__menu__list--item">Kulevrins</li>
+            </ul>
+          </div>
+          <div class="main__menu__lists">
+            <div class="main__menu__lists--name">
+              <span>Command</span>
+              <i class="fas fa-sort-down"></i>
+            </div>
+            <ul class="main__menu__list hidden">
+              <li class="main__menu__list--item">Salagi</li>
+              <li class="main__menu__list--item">Carrot wolves</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main__content">
+        <div class="all__ships"></div>
+        <div class="profile">
+          <div class="profile__ship">
+            <div class="card">
+              <img src="http://pngimg.com/uploads/ship/ship_PNG5416.png" alt="">
+              <div class="card__shipName">Name: Black Pearl</div>
+              <div class="card__className">Class name: Longboat</div>
+              <div class="card__team">Team: 10</div>
+              <div class="card__price">Price: 350 $</div>
+            </div>
+          </div>
+          <div class="profile__captain">
+            <div class="captain__inf">
+              <div class="captain__inf--img">
+                <img src="http://pngimg.com/uploads/pirate/pirate_PNG70.png" alt="captain photo">
+              </div>
+              <div class="captain__inf--detail">
+                <div>Name: Vlad Yakavitskiy</div>
+                <div>Class: 100</div>
+                <div>Damage: 100</div>
+              </div>
+              <div class="captain__inf--damage">
+                <div>Age: 19</div>
+                <div>Class: 100</div>
+                <div>Damage: 100</div>
+              </div>
+            </div>
+            <div class="captain__form">
+              <form class="app__form">
+
+                <div class="app__form--row">
+                  <label for="app__form--name">Name: </label>
+                  <input type="text" id="app__form--name" placeholder="Name Surname">
+
+                  <label for="app__form--class">Class: </label>
+                  <input type="text" id="app__form--class" placeholder="from 1 to 9">
+                </div>
+
+                <div class="app__form--row">
+                  <label for="app__form--count">Count: </label>
+                  <input type="text" id="app__form--count" placeholder="Count">
+
+                  <label for="app__form--price">Price: </label>
+                  <input type="text" id="app__form--price" placeholder="Price">
+                </div>
+
+                <div class="app__form--row">
+                  <button type="submit">Send</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <img class="footer__container--img" src="http://pngimg.com/uploads/pirate/small/pirate_PNG90.png" alt="flag">
+
+      <div class="footer__information">
+        <div class="footer__information--name">
+          Captain: Vlad Yakavitskiy, head pirate.
+        </div>
+        <div class="footer__information--ship">
+          Ship: Black Pearl
+        </div>
+      </div>
+
+      <img class="footer__container--img" src="http://pngimg.com/uploads/pirate/small/pirate_PNG90.png" alt="flag">
+    </div>
+  </footer>
+
 </body>
 
 </html>

@@ -1,0 +1,43 @@
+.captain__form {
+  border: 1px solid $mainColor;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.app__form {
+  &--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: $mainColor;
+    font-weight: 600;
+    &:last-child {
+      justify-content: flex-end;
+      margin: 0;
+    }
+    & button {
+      width: 150px;
+      padding: 5px 10px;
+      border: 1px solid $mainColor;
+      background-color: #fff;
+      border-radius: 5px;
+      color: $mainColor;
+      transition: 0.2s linear;
+      &:hover {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+
+    & input {
+      padding: 3px 5px;
+      border: 1px solid $mainColor;
+      border-radius: 5px;
+      min-width: 200px;
+    }
+    .err {
+      border: 1px solid tomato;
+    }
+  }
+}

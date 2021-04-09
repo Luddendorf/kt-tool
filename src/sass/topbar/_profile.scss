@@ -1,0 +1,10 @@
+.profile {
+  display: flex;
+  &__ship {
+    flex: 1;
+  }
+  &__captain {
+    flex: 3;
+    margin-left: 20px;
+  }
+}
