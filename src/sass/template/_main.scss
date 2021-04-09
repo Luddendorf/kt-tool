@@ -19,6 +19,7 @@
     margin-bottom: 20px;
     transition: all ease 0.5s;
     cursor: pointer;
+    width: 206px;
     &:not(:last-child){
       margin-right: 20px;
     }
@@ -43,6 +44,9 @@
     margin-bottom: 10px;
     & span{
       text-decoration: underline;
+    }
+    &:last-child{
+      display: none;
     }
   }
 }

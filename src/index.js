@@ -8,6 +8,7 @@ accordeon();
 tabs();
 
 const cardsWrapper = document.querySelector('.main__cards-wrapper');
+const modal = document.querySelector('.modal');
 
 
 const ships = [
@@ -257,6 +258,7 @@ const ships = [
 ships.forEach((card)=>{
   cardsWrapper.insertAdjacentHTML('beforeend', `
   <div class="main__card">
+    <a href="#close" title="Закрыть" class="close">X</a>
   <div class="main__card-img">
     <img src="${card.url}" alt="ship">
   </div>
@@ -270,6 +272,25 @@ ships.forEach((card)=>{
       <li class="main__list-item"><span>Манёвренность</span>: ${card.maneuverability}</li>
       <li class="main__list-item"><span>Команда</span>: ${card.team}</li>
       <li class="main__list-item"><span>Цена</span>: ${card.price}</li>
+      <li class="main__list-item"><span>Описание</span>: ${card.desc}</li>
     </ul>
-  </div>`)
+  </div>`);
+});
+
+cardsWrapper.addEventListener('click', (event)=>{
+  let target = event.target;
+  target = target.closest('.main__card');
+  let list = target.querySelectorAll('.main__list-item');
+  let close = target.querySelector('.close');
+
+  modal.style.display = 'flex';
+  target.style.transform = 'scale(1.3)';
+  list[list.length - 1].style.display = 'block';
+  close.style.display = 'block';
+  modal.append(target);
+
+  close.addEventListener('click', ()=>{
+    modal.removeChild(target);
+    modal.style.display = 'none';
+  })
 })
