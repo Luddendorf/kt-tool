@@ -1,13 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Стешенок Максим Lesson 5</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-</body>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item active">Причал</li>
+            <li class="nav__list-item inactive">Мой корабль</li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="modal">
+          <div class="modal__overlay">
+            <span class="modal-close">&times;</span>
+          </div>
+        </div>
 
+        <div class="sidebar">
+          <div class="sidebar__wrapper">
+            <div class="filters">
+              <div class="filters__card">
+                <div class="filters__card-min">
+                  <span class="filters__card-title"
+                    >мин. <br />
+                    цена</span
+                  >
+                  <input
+                    class="filters__card-input"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                </div>
+                <div class="filters__card-max">
+                  <span class="filters__card-title"
+                    >макс.<br />
+                    цена</span
+                  >
+                  <input
+                    class="filters__card-input"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                </div>
+              </div>
+              <div class="filters__card">
+                <div class="filters__card-min">
+                  <span class="filters__card-title"
+                    >мин.<br />
+                    прочность</span
+                  >
+                  <input
+                    class="filters__card-input"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                </div>
+                <div class="filters__card-max">
+                  <span class="filters__card-title"
+                    >макс.<br />
+                    прочность</span
+                  >
+                  <input
+                    class="filters__card-input"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                </div>
+              </div>
+              <button class="filters__reset btn" type="reset">
+                Сбросить фильтры
+              </button>
+            </div>
+            <ul class="menu">
+              <li class="menu__item">Паруса</li>
+              <ul class="submenu">
+                <li class="submenu__item">Шпринтовые</li>
+                <li class="submenu__item">Бермудские</li>
+                <li class="submenu__item">Гафельные</li>
+              </ul>
+              <li class="menu__item">Ремонт</li>
+              <ul class="submenu">
+                <li class="submenu__item">Обычный</li>
+                <li class="submenu__item">Быстрый</li>
+              </ul>
+              <li class="menu__item">Пушки</li>
+              <ul class="submenu">
+                <li class="submenu__item">Шпринтовые</li>
+                <li class="submenu__item">Бермудские</li>
+                <li class="submenu__item">Гафельные</li>
+              </ul>
+              <li class="menu__item">Команда</li>
+              <ul class="submenu">
+                <li class="submenu__item">Шпринтовые</li>
+                <li class="submenu__item">Бермудские</li>
+                <li class="submenu__item">Гафельные</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <section class="content">
+          <div class="ships"></div>
+          <div class="about">
+            <div class="about__my-ship">
+              <h3 class="about-title">Мой корабль</h3>
+              <div class="my-ship">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BlackPearl.jpg"
+                  alt=""
+                  class="my-ship__img"
+                />
+                <h3>Фрегат "Thunder Child"</h3>
+                <p>Класс: 7</p>
+                <p>Пушки: 2</p>
+                <p>Корпус: 95</p>
+                <p>Команда: 10</p>
+                <p>Трюм: 50</p>
+                <p>Скорость: 6.5</p>
+                <p>Манёвренность: 8.2</p>
+                <p>Цена: 350</p>
+                <p>
+                  Впервые тартана появилась в Средиземном море. Изначально это
+                  была небольшая рыбачья лодка с треугольным парусом, но хорошие
+                  ходовые характеристики сделали ее очень популярным кораблем
+                  для каботажных плаваний и торговли между соседними
+                  поселениями.
+                </p>
+              </div>
+            </div>
+            <div class="about__capitan">
+              <h3 class="about-title">Мой капитан</h3>
+              <div class="capitan-info">
+                <div class="capitan-info__img"></div>
+                <div class="capitan-info__text">
+                  <p class="capitan">Имя: Максим Стешенок</p>
+                  <p class="capitan">Класс: 98</p>
+                  <p class="capitan">Урон саблей: 35</p>
+                  <p class="capitan">Возраст: 33</p>
+                  <p class="capitan">Дублонов: 1399999</p>
+                  <p class="capitan">Урон пистолеты: 80</p>
+                </div>
+              </div>
+              <form action="" class="form">
+                <h3 class="about-title">Заявка на покупку судна</h3>
+                <input type="text" placeholder="Имя" />
+                <input type="text" placeholder="Количество" />
+                <input type="text" placeholder="Класс" />
+                <input type="text" placeholder="Цена" />
+                <button class="form-btn btn" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <img
+          src="https://lh3.googleusercontent.com/proxy/aEdvkjfSlsoFgUxjQWmUanguyZ-nOVgnhEdGMQV_PQhQIjVXve7I8bqgUCdkmChupeTrwqI4LE0i1wGc02EnlmtL0UKS8gG2ufsk"
+          alt=""
+          class="footer__img"
+        />
+        <div class="footer__info">
+          Капитан Стешенок Максим, отчаянный пират и славный малый)
+        </div>
+        <img
+          src="https://lh3.googleusercontent.com/proxy/aEdvkjfSlsoFgUxjQWmUanguyZ-nOVgnhEdGMQV_PQhQIjVXve7I8bqgUCdkmChupeTrwqI4LE0i1wGc02EnlmtL0UKS8gG2ufsk"
+          alt=""
+          class="footer__img"
+        />
+      </footer>
+    </div>
+  </body>
 </html>

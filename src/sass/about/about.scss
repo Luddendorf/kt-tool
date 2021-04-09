@@ -1,0 +1,60 @@
+.about {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  z-index: 0;
+  &-show {
+    left: 0;
+    opacity: 1;
+  }
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__my-ship {
+    width: 50%;
+    padding: 0rem 1rem;
+  }
+  &__capitan {
+    width: 50%;
+    padding: 0rem 1rem;
+  }
+}
+
+.my-ship {
+  &__img {
+    max-width: 75%;
+    margin-bottom: 1.5rem;
+  }
+  & > p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.capitan-info {
+  display: flex;
+  margin-bottom: 2.5rem;
+  padding: 1rem rem;
+  &__img {
+    width: 150px;
+    height: 150px;
+    background-image: url(../../src/img/pirat.jpg);
+    background-size: cover;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    & > p {
+      font-size: 1.5rem;
+    }
+  }
+}

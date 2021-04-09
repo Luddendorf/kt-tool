@@ -1,3 +1,96 @@
 @import "topbar/topbar";
+@import "nav/nav";
+@import "sidebar/sidebar";
+@import "section/section";
+@import "modalCard/modal-card";
+@import "about/about";
+@import "form/form";
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-size: 10px;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  color: #f5f5f7;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+.header {
+  position: sticky;
+  top: 0px;
+  background: #151515;
+  z-index: 10;
+  &__logo {
+    max-height: 100%;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  background: #1b1b1b;
+}
+
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #000000;
+  z-index: 10;
+  padding: 0.5rem 1.5rem;
+  & img {
+    max-height: 100%;
+  }
+  &__info {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.btn {
+  color: #1b1b1b;
+  background: #ffa31a;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  &:hover {
+    background: #ffb951;
+  }
+}
