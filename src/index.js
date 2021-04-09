@@ -280,17 +280,19 @@ ships.forEach((card)=>{
 cardsWrapper.addEventListener('click', (event)=>{
   let target = event.target;
   target = target.closest('.main__card');
-  let list = target.querySelectorAll('.main__list-item');
-  let close = target.querySelector('.close');
+  var clonedNode = target.cloneNode(true);
+  let list = clonedNode.querySelectorAll('.main__list-item');
+  let close = clonedNode.querySelector('.close');
+
 
   modal.style.display = 'flex';
-  target.style.transform = 'scale(1.3)';
+  clonedNode.style.transform = 'scale(1.2)';
   list[list.length - 1].style.display = 'block';
   close.style.display = 'block';
-  modal.append(target);
+  modal.append(clonedNode);
 
   close.addEventListener('click', ()=>{
-    modal.removeChild(target);
+    modal.removeChild(clonedNode);
     modal.style.display = 'none';
   })
 })
