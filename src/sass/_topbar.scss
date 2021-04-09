@@ -1,0 +1,28 @@
+.header {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #fff;
+    background-color: #000;
+  }
+  &__btn-block {
+    margin: 0 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      transition: all 0.5s ease-in-out;
+      & > a {
+        transition: 0.7s;
+        color: #000;
+      }
+    }
+  }
+  &__btn {
+    font-size: 1.5rem;
+  }
+}

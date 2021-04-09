@@ -1,0 +1,115 @@
+.main {
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 0 2rem;
+  }
+  .left-menu {
+    border-right: 2px solid rgb(0, 0, 0);
+    border-left: 2px solid rgb(0, 0, 0);
+  }
+  .left-menu__filter {
+  }
+  .filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid rgb(0, 0, 0);
+      padding: 0.5rem;
+    }
+    &__item input {
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 0.2rem;
+      width: 3rem;
+    }
+  }
+  .left-menu__menu {
+    &:focus {
+      cursor: pointer;
+    }
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__item {
+      display: block;
+      padding: 1.5rem;
+      width: 100%;
+      border-bottom: 1px solid #000;
+    }
+    &__link.link {
+      display: block;
+      padding: 1rem 2rem;
+      width: 100%;
+      border-bottom: 1px solid #000;
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
+    }
+    .menu__dropdown_1,
+    .menu__dropdown_2,
+    .menu__dropdown_3,
+    .menu__dropdown_4 {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .menu__dropdown_1:hover,
+    .menu__dropdown_2:hover,
+    .menu__dropdown_3:hover,
+    .menu__dropdown_4:hover {
+      background-color: black;
+      color: #fff;
+    }
+
+    .menu__hide_1,
+    .menu__hide_2,
+    .menu__hide_3,
+    .menu__hide_4 {
+      height: auto;
+    }
+
+    .closed ul {
+      display: none;
+    }
+  }
+  .cards {
+    & div {
+      padding: 0 2rem;
+    }
+    &__buhta {
+      display: block;
+      flex-wrap: wrap;
+      min-height: 45.5rem;
+      background: url("https://images.unsplash.com/photo-1466094899371-97b327dff551?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
+        no-repeat;
+      background-size: cover;
+      .buhta-boat__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+      .buhta-boat__boat {
+        max-width: 200px;
+        max-height: auto;
+        border: 1px solid #000;
+        margin: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+      }
+    }
+    &__boats {
+      display: none;
+      min-height: 45.5rem;
+      background: url("https://images.unsplash.com/photo-1590880449155-b54f958ce314?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2030&q=80")
+        no-repeat center;
+      background-size: cover;
+    }
+  }
+}
