@@ -4,7 +4,8 @@
 
 .my-ship {
    /*  display: flex; */
-    padding-bottom: 200px;
+    padding: 30px 0 30px 230px;
+
 }
 
 .my-ship-card, .numbers {
