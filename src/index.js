@@ -4,10 +4,12 @@ import "./sass/main-second.scss";
 import accordeon from './modules/accordeon';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
+import validation from './modules/validation';
 
 accordeon();
 tabs();
 modal();
+validation();
 
 const cardsWrapper = document.querySelector('.main__cards-wrapper');
 const lowPrice = document.getElementById('low-price');
