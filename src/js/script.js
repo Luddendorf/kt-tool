@@ -169,24 +169,24 @@ const modal = () => {
 const transition = () => {
     const bayLink = document.querySelector('.bay-link');
     const shipLink = document.querySelector('.ship-link');
-    const cards = document.querySelector('.cards');
+    const cardsList = document.querySelector('.cards-list');
     const myShip = document.querySelector('.my-ship');
 
     const openMyShip = () => {
-        cards.classList.add('hidden');
+        cardsList.classList.add('hidden');
         myShip.classList.remove('hidden');
     };
 
     const openCards = () => {
         myShip.classList.add('hidden');
-        cards.classList.remove('hidden');
+        cardsList.classList.remove('hidden');
     };
 
     shipLink.addEventListener('click', () => {
         openMyShip();
     })
 
-    cards.addEventListener('click', () => {
+    bayLink.addEventListener('click', () => {
         openCards();
     })
 };
