@@ -1,0 +1,14 @@
+.main{
+  width: 100%;
+  padding: 20px 0px 20px 20px; // пересмотреть
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.tab-opened{
+  display: flex; // пересмотреть
+}
+
+.tab-closed{
+  display: none;
+}

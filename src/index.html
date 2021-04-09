@@ -9,9 +9,114 @@
   <title>Domochka Artem Lesson 5</title>
 </head>
 
-<body>
+<body class="page-body">
+  <header class="header">
+    <div class="header-spacer"></div>
+    <div id="bight" class="header-tab header-tab-selected">
+      <p>Bight</p>
+    </div>
+    <div id="my-ship" class="header-tab header-tab-margin">
+      <p>My ship</p>
+    </div>
+    <div class="header-spacer"></div>
+  </header>
+
+  <main class="main">
+    <aside>
+
+      <div class="side-search">
+
+        <div class="search-row">
+          <div class="serach-col fix-right-margin">
+            <label for="max-price-input">min<br>price:</label>
+            <input id="max-price-input" type="text" class="search-input">
+          </div>
+          <div class="serach-col">
+            <label for="min-price-input">max<br>price:</label>
+            <input id="min-price-input" type="text" class="search-input">
+          </div>
+        </div>
+
+        <div class="search-row">
+          <div class="serach-col fix-right-margin">
+            <label for="max-speed-input">min<br>speed: </label>
+            <input id="max-speed-input" type="text" class="search-input">
+          </div>
+          <div class="serach-col">
+            <label for="min-speed-input">max<br>speed:</label>
+            <input id="min-speed-input" type="text" class="search-input">
+          </div>
+        </div>
+
+      </div>
+
+      <ul class="menu">
+
+        <li>
+          <button id="sails" class="menu-title">
+            <p>Паруса</p>
+            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+          </button>
+          <ul id="sails-menu" class="menu-options closed">
+            <li>Шпринтовые</li>
+            <li>Бермудские</li>
+            <li>Гафельные</li>
+          </ul>
+        </li>
+
+        <li>
+          <button id="repair" class="menu-title">
+            <p>Ремонт</p>
+            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+          </button>
+          <ul id="repair-menu" class="menu-options closed">
+            <li>Обычный</li>
+            <li>Быстрый</li>
+          </ul>
+        </li>
+
+        <li>
+          <button id="guns" class="menu-title">
+            <p>Пушки</p>
+            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+          </button>
+          <ul id="guns-menu" class="menu-options closed">
+            <li>Пушки</li>
+            <li>Кулеврины</li>
+          </ul>
+        </li>
+        <li>
+          <button id="team" class="menu-title">
+            <p>Команда</p>
+            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+          </button>
+          <ul id="team-menu" class="menu-options closed">
+            <li>Салаги</li>
+            <li>Морские волки</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <div id="bight-tab" class="tab-opened"></div>
+
+    <div id="my-ship-tab" class="my-ship-tab tab-closed"></div>
+
+    </div>
+  </main>
 
 
+  <footer class="footer">
+    <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617798162/pirates/chest_wwp68v.webp" alt="chest" class="chest">
+    <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617800769/pirates/imageedit_4_9358755980_ydr0y8.png" alt="mark" class="mark">
+    <p class="about-capitan">
+      Капитан<br>
+      Артём<br>
+      Дёмочка<br>
+    </p>
+    <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617800769/pirates/imageedit_4_9358755980_ydr0y8.png" alt="mark" class="mark">
+    <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617798162/pirates/chest_wwp68v.webp" alt="chest" class="chest">
+  </footer>
 </body>
 
 </html>
