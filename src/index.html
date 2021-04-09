@@ -19,6 +19,13 @@
             </div>
         </section>
         <section class="content-body">
+            <div id="mod">
+                <div class="modalWindow_container" id="modal1">
+                    <div class="modalWindow">
+                        <div class="modal"></div>
+                    </div>
+                </div>
+            </div>
             <div class="menu-left">
                 <form action="">
                     <h1>Фильтр кораблей</h1>
@@ -34,8 +41,16 @@
                           <i class="down"></i>
                         </label>
                             <article>
-                                <p>Паруса</p>
+                                <p>Шпринтовые</p>
                             </article>
+                            <article>
+                                <p>Бурмудские</p>
+                            </article>
+                            <article>
+                                <p>Гафельные</p>
+                            </article>
+
+
                         </div>
                         <div>
                             <input type="checkbox" name="accordion-1" id="ac-2" class="order" value="Text2">
@@ -43,7 +58,10 @@
                           <i class="down"></i>
                         </label>
                             <article>
-                                <p>Ремонт</p>
+                                <p>Обычный</p>
+                            </article>
+                            <article>
+                                <p>Быстрый</p>
                             </article>
                         </div>
                         <div>
@@ -54,6 +72,9 @@
                             <article>
                                 <p>Пушки</p>
                             </article>
+                            <article>
+                                <p>Кулеврины</p>
+                            </article>
                         </div>
                         <div>
                             <input type="checkbox" name="accordion-1" id="ac-4" class="order" value="Text4">
@@ -61,7 +82,10 @@
                           <i class="down"></i>
                           </label>
                             <article>
-                                <p>Команда</p>
+                                <p>Салаги</p>
+                            </article>
+                            <article>
+                                <p>Морские волки</p>
                             </article>
                         </div>
                     </div>
@@ -69,38 +93,28 @@
             </div>
             <div class="tabs-panels">
                 <div class="tab-panel one" id="ships">
-                    <!-- <div style="width:100%; height:1px; clear:both;"></div> -->
-                    <!-- <div id="divSh">
-                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                        <p></p>
-                    </div>
-                    <div id="divShTwo">
-                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                        <p></p>
-                    </div>
-                    <div id="divShThree">
-                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                        <p></p>
-                    </div>
-                    <div id="divShFour">
-                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                        <p></p>
-                    </div>
-                    <div id="divShFive">
-                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                        <p></p>
-                    </div>
-                    <div id="divShSix">
-                        <img src="https://cdn141.picsart.com/278250765023211.png" alt="" height="190px" class="center">
-                        <p></p>
-                    </div> -->
-
                 </div>
-                <div class="tab-panel two">ЕУЧЕ 2
+                <div class="tab-panel two" id="myShip">
+                    <div class="formSubmit">
+                        <form action="">
+                            <h1>Заявка на покупку судна</h1>
+                            <label for="name">Имя: </label>
+                            <input type="text" name="name">
+                            <p></p>
+                            <label for="name">Количество: </label>
+                            <input type="text" name="col">
+                            <p></p>
+                            <label for="name">Класс: </label>
+                            <input type="text" name="class">
+                            <p></p>
+                            <label for="name">Цена: </label>
+                            <input type="text" name="price">
+                            <p></p>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    </div>
                 </div>
-                <!-- <div style="width:100%; height:1px; clear:both;"></div> -->
             </div>
-
         </section>
     </main>
     <footer>

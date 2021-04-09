@@ -248,56 +248,24 @@ export const ships = [{
     document.querySelector('.tab').classList.add('active')
     document.querySelector('.tab-panel').classList.add('active')
 
-
     function selectPanel(e) {
         var target = e.target.dataset.target
         document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'))
         e.target.classList.add('active')
         document.querySelector('.' + target).classList.add('active')
     }
-
-
     document.querySelectorAll('.tab').forEach(el => {
         el.addEventListener('click', selectPanel)
     })
-
 }())
 
 //ships /**/  */
-// console.log(ships[0])
+
 
 const tabShip = document.querySelector('#ships');
 const itemShip = document.createElement('div');
-
-
 tabShip.appendChild(itemShip);
-
-
 let contentShip = ''
-
-// ships.forEach(function(obj, index) {
-
-//     contentShip += `
-
-//     <div class='shipItemStyle'> 
-//     <img height="190px" class="center" src="${obj.photo}">
-//     <p> Фрегат ${obj.shipName} </p>
-//     <p> Класс ${obj.class} </p>
-//     <p> Пушки ${obj.weapons} </p>
-//     <p> Корпус ${obj.shipHull} </p>
-//     <p> Команда ${obj.team} </p>
-//     <p> Трюм ${obj.hold} </p>
-//     <p> Скорость ${obj.speed} </p>
-//     <p> Манёвренность ${obj.beidewind} </p>
-//     </div>
-
-//     `
-//         // console.log(obj);
-
-//     // }
-// });
-// console.log('content', contentShip)
-
 itemShip.innerHTML += renderDiv(ships, contentShip)
 
 // const itemShipTwo = document.querySelector('#divShTwo');

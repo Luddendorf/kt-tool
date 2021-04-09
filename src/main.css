@@ -71,7 +71,11 @@ body {}
 }
 
 .tab-panel.active {
-    display: block;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .price {
@@ -230,7 +234,11 @@ i {
     justify-content: space-around; */
 }
 
-#ships div {}
+#ships div {
+    cursor: pointer;
+}
+
+#myShip {}
 
 .shipItemStyle {
     float: left;
@@ -248,16 +256,45 @@ i {
     margin-right: auto;
 }
 
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 
-/* #divSh {
-    background-image: url(https://clipart-db.ru/file_content/rastr/xtiger_001.png.pagespeed.ic.iyvzPFd-Va.png);
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 220px;
-    border: 2px solid red;
-    margin: 15px;
-    color: blue;
-    font-size: 18px;
-    padding: 10px;
-} */
+.modalWindow_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0px;
+    left: 0px;
+    transition: opacity 0.4s;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.modalWindow {
+    width: 400px;
+    height: 650px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: calc(50% - 390px);
+    left: calc(50% - 100px);
+    font-size: 16px;
+    padding: 20px;
+    background: #fff;
+}
+
+.hide {
+    display: block;
+    margin-left: auto;
+}
+
+.formSubmit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 3;
+    margin: 25px;
+}
