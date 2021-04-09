@@ -123,9 +123,51 @@ tabMyCapitan.appendChild(divMyCapitan);
 
 
 
+const form = {
+    name: null,
+    col: null,
+    class: null,
+    price: null,
+};
 
+const submitButton = document.querySelector('.submit');
+const nameForm = document.querySelector('.name');
+const colForm = document.querySelector('.col');
+const classForm = document.querySelector('.class');
+const priceForm = document.querySelector('.price');
 
+submitButton.addEventListener('click', function(e) {
+    var nameF = nameForm.value;
+    var colF = colForm.value;
+    var classF = classForm.value;
+    var priceF = priceForm.value;
+    click(nameF, colF, classF, priceF, nameForm, colForm, classForm, priceForm);
+})
 
+function click(name, col, classes, price, namForm, coForm, claForm, prForm) {
+    var success = false;
+    var a = /^([a-zа-яё]+|\d+)$/i;
+    if (name.match(a)) {
+        success = true;
+        // alert('Имя верное'); // красная // добавляю зеленый цвет инпуту
+        namForm.classList.remove('false');
+        namForm.classList.add('true');
+    } else {
+        // alert('Имя не верное'); // красная
+        success = false;
+        namForm.classList.remove('true');
+        namForm.classList.add('false');
+    };
+    if (success) {
+        console.log('Проверка пройдена');
+        form.name = name;
+        form.col = col;
+        form.class = classes;
+        form.price = price;
+    } else {
+        console.log('Проверка не пройдена');
+    };
+};
 
 
 
@@ -134,33 +176,6 @@ const name = '1Vova';
 const age = '50';
 const gender = 'woman';
 
-const form = {
-    name: null,
-    age: null,
-    gender: null,
-};
+
 
 // создать кнопку и повесить слушателя, иф в слушатель
-
-function click(name, age, gender) {
-    var success = false;
-    var a = /^([a-zа-яё]+|\d+)$/i;
-    if (name.match(a)) {
-        success = true;
-        // alert('Имя верное'); // красная // добавляю зеленый цвет инпуту
-    } else {
-        // alert('Имя не верное'); // красная
-        success = false;
-    };
-    if (success) {
-        console.log('Проверка пройдена');
-        form.name = name;
-        form.age = age;
-        form.gender = gender;
-    } else {
-        console.log('Проверка не пройдена');
-    };
-};
-click(name, age, gender);
-
-console.log(capitan);

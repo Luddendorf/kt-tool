@@ -29,11 +29,17 @@
             <div class="menu-left">
                 <form action="">
                     <h1>Фильтр кораблей</h1>
-                    <label for="min-price">Минимальная цена</label>
-                    <input name="min" type="number" class="priceMin">
-                    <p></p>
-                    <label for="min-price">Максимальная цена</label>
-                    <input name="max" type="number" class="priceMax">
+                    <div class="min-max-flex">
+                        <div class="flexMin">
+                            <label for="min">Минимальная цена</label>
+                            <input name="min" type="number" class="priceMin">
+                        </div>
+                        <p></p>
+                        <div class="flexMax">
+                            <label for="max">Максимальная цена</label>
+                            <input name="max" type="number" class="priceMax">
+                        </div>
+                    </div>
                     <div class="ac-container">
                         <div>
                             <input type="checkbox" name="accordion-1" id="ac-1" class="order" value="Text1">
@@ -99,18 +105,18 @@
                         <form action="">
                             <h1>Заявка на покупку судна</h1>
                             <label for="name">Имя: </label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" class="name">
                             <p></p>
                             <label for="name">Количество: </label>
-                            <input type="text" name="col">
+                            <input type="text" name="col" class="col">
                             <p></p>
                             <label for="name">Класс: </label>
-                            <input type="text" name="class">
+                            <input type="text" name="class" class="class">
                             <p></p>
                             <label for="name">Цена: </label>
-                            <input type="text" name="price">
+                            <input type="text" name="price" class="price">
                             <p></p>
-                            <button type="submit">Отправить</button>
+                            <button type="button" class="submit">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -120,10 +126,10 @@
     <footer>
         <section class="content-footer">
             <div>
-                <img src="https://clipart-best.com/img/treasure-chest/treasure-chest-clip-art-156.png" alt="" height="150px">
+                <img src="https://clipart-best.com/img/treasure-chest/treasure-chest-clip-art-156.png" alt="" height="130px">
             </div>
             <div>
-                <img src="https://clipart-best.com/img/pirate/pirate-clip-art-76.png" alt="" height="150px">
+                <img src="https://clipart-best.com/img/pirate/pirate-clip-art-76.png" alt="" height="130px">
             </div>
             <div class="capitan">
                 <p>
