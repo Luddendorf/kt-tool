@@ -1,15 +1,16 @@
+// import './normalize.css';
 import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
 
-async function print() {
-  // Here we are using dynamic import
-  const { greet } = await import('./greet');
-  const response = await greet('John Doe');
-  console.log(response);
-}
+// async function print() {
+//   // Here we are using dynamic import
+//   const { greet } = await import('./greet');
+//   const response = await greet('John Doe');
+//   console.log(response);
+// }
 
-print();
+// print();
 
 const ships = [
   { 
@@ -237,3 +238,88 @@ const ships = [
     "desc": 'Быстрые и маневренные фрегаты нравятся очень многим за свои высокие ходовые качества и огневую мощь. Эскадра фрегатов вполне может разгромить форт и разграбить город.'
   }
 ];
+
+// var acc = document.getElementsByClassName("accordion");
+// var i;
+
+// for (i = 0; i < acc.length; i++) {
+//     acc[i].addEventListener("click", function() {
+//         /* Toggle between adding and removing the "active" class,
+//         to highlight the button that controls the panel */
+//         this.classList.toggle("active");
+
+//         /* Toggle between hiding and showing the active panel */
+//         var panel = this.nextElementSibling;
+//         if (panel.style.display === "block") {
+//             panel.style.display = "none";
+//         } else {
+//             panel.style.display = "block";
+//         }
+//     });
+// }
+
+// Code for Task 5
+
+// Script fot TABS-buttons
+
+  let tab = document.querySelectorAll('.title_header_tabs');
+  let info = document.querySelector('.tabs_header');
+  let content = document.querySelectorAll('.tabContent');
+  function hideTabContent(a) {
+    for (let i = a; i < content.length; i++) {
+    content[i].classList.remove('show');
+    content[i].classList.add('hide');
+    tab[i].classList.remove('active');
+    }
+  }
+  hideTabContent(1);
+  function showTabContent(b) {
+    if(content[b].classList.contains('hide')) {
+    content[b].classList.remove('hide');
+    content[b].classList.add('show');
+    tab[b].classList.add('active');
+    }
+  }
+  info.addEventListener('click', function(event) {
+    let target = event.target;
+    if (target && target.classList.contains('title_header_tabs')) {
+    for(let i = 0; i < tab.length; i++) {
+    if (target == tab[i]) {
+    hideTabContent(0);
+    showTabContent(i);
+    break;
+    }
+    }
+    }
+    });
+
+    // Acordion menu
+
+(function () {
+  const acc = document.getElementsByClassName("accordion");
+   for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function (ev) {
+    
+      const panel = ev.target.nextElementSibling;
+      const panelArr = document.getElementsByClassName("panel");
+    
+      if (panel.style.maxHeight) {
+  
+        panel.style.maxHeight = null;
+        acc[i].classList.remove("active");
+    
+      } else {
+    
+        for (let i = 0; i < panelArr.length; i++) {
+          panelArr[i].style.maxHeight = null;
+          acc[i].classList.remove("active");
+        }
+    
+        acc[i].classList.add("active")
+        panel.style.maxHeight = panel.scrollHeight + "px";
+   
+      }
+   
+    });
+  }
+})();
