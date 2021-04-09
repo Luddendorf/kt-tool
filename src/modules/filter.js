@@ -1,4 +1,4 @@
-
+import { ships } from './data';
 
 const filter = () => {
   const cardsWrapper = document.querySelector(".main__cards-wrapper");

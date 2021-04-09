@@ -6,8 +6,6 @@ const validation = ()=>{
   const asideFilter = document.querySelector('.aside__filter');
   const filterInputs = asideFilter.querySelectorAll('input[type="text"]');
 
-  console.log(filterInputs);
-
   shipClass.addEventListener('input', ()=>{
     if(!shipClass.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
       shipClass.style.outline = '1px solid red';
