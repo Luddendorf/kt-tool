@@ -258,7 +258,7 @@ const ships = [
 const horizontalMenuFirst = document.querySelector('#horizontal-menu-first');
 const horizontalMenuSecond = document.querySelector("#horizontal-menu-second");
 
-const shipsMenu = document.getElementById("ships");
+const shipsMenu = document.getElementById("all-ships");
 const myShipMenu = document.getElementById("my-ship");
 
 const sail = document.getElementById("sail");
@@ -328,6 +328,14 @@ let forTest = false;
 
 let randomShip = getRandom();
 
+// let sortArr = [];
+
+
+let lengthsMax = [];
+let lengthsMin = [];
+
+
+
 horizontalMenuFirst.addEventListener('click',handlerHeader1);
 horizontalMenuSecond.addEventListener('click',handlerHeader2);
 
@@ -338,69 +346,69 @@ command.addEventListener('click',commandHeader);
 
 formButton.addEventListener('click',writeOrder);
 
-firstShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 0);
-});
-
-secondShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 1);
-});
-
-thirdShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 2);
-});
-
-forthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 3);
-});
-
-fifthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 4);
-});
-
-sixthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 5);
-});
-
-seventhShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 6);
-});
-
-eighthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 7);
-});
-
-ninthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 8);
-});
-
-tenthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 9);
-});
-
-eleventhShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 10);
-});
-
-twelfthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 11);
-});
-
-thirteenthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 12);
-});
-
-fourteenthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 13);
-});
-
-fifteenthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 14);
-});
-
-sixteenthShip.addEventListener('click', () => {
-  listenerPopUpWindow(randomShip, 15);
-});
+// firstShip.addEventListener('click', () => {
+//   listenerPopUpWindow(0);
+// });
+//
+// secondShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 1);
+// });
+//
+// thirdShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 2);
+// });
+//
+// forthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 3);
+// });
+//
+// fifthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 4);
+// });
+//
+// sixthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 5);
+// });
+//
+// seventhShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 6);
+// });
+//
+// eighthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 7);
+// });
+//
+// ninthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 8);
+// });
+//
+// tenthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 9);
+// });
+//
+// eleventhShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 10);
+// });
+//
+// twelfthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 11);
+// });
+//
+// thirteenthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 12);
+// });
+//
+// fourteenthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 13);
+// });
+//
+// fifteenthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 14);
+// });
+//
+// sixteenthShip.addEventListener('click', () => {
+//   listenerPopUpWindow(randomShip, 15);
+// });
 
 layer.addEventListener('click', (e) => {
   if (e.target === layer) {
@@ -427,44 +435,45 @@ priceShip.onblur = function() {
 
 minPriceInput.onblur = function() {
   let minPrice = sortByMinPrice(ships);
-  console.log(minPrice);
+  // console.log(minPrice);
+  let sortNum2 = sortPrice();
   testFormMaxMin(minPriceInput, minPriceDiv,regularPriceMaxMin);
+  shipsMenu.innerHTML = '';
+  for(let i = 0; i < sortNum2.length; i++) {
+    informationForShip(sortNum2[i])
+  }
 };
 
 maxPriceInput.onblur = function() {
   let maxPrice = sortByMaxPrice(ships);
-  console.log(maxPrice);
+  let sortNum = sortPrice();
   testFormMaxMin(maxPriceInput, maxPriceDiv,regularPriceMaxMin);
+  shipsMenu.innerHTML = '';
+  for(let i = 0; i < sortNum.length; i++) {
+    informationForShip(sortNum[i])
+  }
 };
 
 minShipHullInput.onblur = function() {
   let minShipHull = sortByMinShipHull(ships);
-  console.log(minShipHull);
+  // console.log(minShipHull);
   testFormMaxMin(minShipHullInput, minShipHullDiv,regularShipHullMaxMin);
 };
 
 maxShipHullInput.onblur = function() {
   let maxShipHull =sortByMaxShipHull(ships);
-  console.log(maxShipHull);
+  // console.log(maxShipHull);
   testFormMaxMin(maxShipHullInput, maxShipHullDiv,regularShipHullMaxMin);
 };
 
-informationForShip(firstShip,randomShip,0);
-informationForShip(secondShip,randomShip,1);
-informationForShip(thirdShip,randomShip,2);
-informationForShip(forthShip,randomShip,3);
-informationForShip(fifthShip,randomShip,4);
-informationForShip(sixthShip,randomShip,5);
-informationForShip(seventhShip,randomShip,6);
-informationForShip(eighthShip,randomShip,7);
-informationForShip(ninthShip,randomShip,8);
-informationForShip(tenthShip,randomShip,9);
-informationForShip(eleventhShip,randomShip,10);
-informationForShip(twelfthShip,randomShip,11);
-informationForShip(thirteenthShip,randomShip,12);
-informationForShip(fourteenthShip,randomShip,13);
-informationForShip(fifteenthShip,randomShip,14);
-informationForShip(sixteenthShip,randomShip,15);
+
+function startShip() {
+  for(let i = 0; i < ships.length; i++) {
+    informationForShip(i);
+  }
+}
+
+startShip();
 
 function Order(name, shipClass, size, price) {
   this.name = name;
@@ -473,45 +482,56 @@ function Order(name, shipClass, size, price) {
   this.price = price;
 }
 
-function informationForShip(ship,randomShips,num){
+function informationForShip(num){
+
+  const createShip = document.createElement('div');
+  createShip.setAttribute('id',`${num}-ship`);
+  createShip.setAttribute('class',`for__ship`);
+  shipsMenu.append(createShip);
+
+  const test = document.getElementById(`${num}-ship`);
+
   const shipImag = document.createElement('div');
 
-  shipImag.setAttribute('class',`${ship.className}__image`);
-  shipImag.style.backgroundImage = `url(\"images/${randomShips[num]}.jpg\")`;
-  ship.append(shipImag);
+  shipImag.setAttribute('class',`${test.className}__image`);
+  shipImag.style.backgroundImage = `url(\"images/${num}.jpg\")`;
+  test.append(shipImag);
 
   for(let i = 1; i <= 8; i++){
     const shipInformation = document.createElement('p');
 
-    ship.append(shipInformation);
+    test.append(shipInformation);
     switch(i){
       case 1:
-        shipInformation.innerText = `Фрегат: ${ships[randomShips[num]].shipName}`;
+        shipInformation.innerText = `Фрегат: ${ships[num].shipName}`;
         break;
       case 2:
-        shipInformation.innerText = `Класс: ${ships[randomShips[num]].class}`;
+        shipInformation.innerText = `Класс: ${ships[num].class}`;
         break;
       case 3:
-        shipInformation.innerText = `Пушки: ${ships[randomShips[num]].weapons}`;
+        shipInformation.innerText = `Пушки: ${ships[num].weapons}`;
         break;
       case 4:
-        shipInformation.innerText = `Корпус: ${ships[randomShips[num]].shipHull}`;
+        shipInformation.innerText = `Корпус: ${ships[num].shipHull}`;
         break;
       case 5:
-        shipInformation.innerText = `Команда: ${ships[randomShips[num]].team}`;
+        shipInformation.innerText = `Команда: ${ships[num].team}`;
         break;
       case 6:
-        shipInformation.innerText = `Трюм: ${ships[randomShips[num]].hold}`;
+        shipInformation.innerText = `Трюм: ${ships[num].hold}`;
         break;
       case 7:
-        shipInformation.innerText = `Скорость: ${ships[randomShips[num]].speed}`;
+        shipInformation.innerText = `Скорость: ${ships[num].speed}`;
         break;
       case 8:
-        shipInformation.innerText = `Манёвренность: ${ships[randomShips[num]].maneuverability}`;
+        shipInformation.innerText = `Манёвренность: ${ships[num].maneuverability}`;
         break;
     }
-
   }
+
+  test.addEventListener('click', () => {
+    listenerPopUpWindow(num);
+  });
 }
 
 function testForm(nameForm, regular){
@@ -541,9 +561,46 @@ function testFormMaxMin(nameInput, nameDiv, regular){
   }
 }
 
-function listenerPopUpWindow(random, number){
-  informationForShip(chooseShip,random,number);
-  DeskShip.innerText = `${ships[random[number]].desc}`;
+function listenerPopUpWindow(number){
+
+  const shipImag2 = document.createElement('div');
+
+  shipImag2.setAttribute('class',`layer__ship__image`);
+  shipImag2.style.backgroundImage = `url(\"images/${number}.jpg\")`;
+  chooseShip.append(shipImag2);
+
+  for(let i = 1; i <= 8; i++){
+    const shipInformation = document.createElement('p');
+
+    chooseShip.append(shipInformation);
+    switch(i){
+      case 1:
+        shipInformation.innerText = `Фрегат: ${ships[number].shipName}`;
+        break;
+      case 2:
+        shipInformation.innerText = `Класс: ${ships[number].class}`;
+        break;
+      case 3:
+        shipInformation.innerText = `Пушки: ${ships[number].weapons}`;
+        break;
+      case 4:
+        shipInformation.innerText = `Корпус: ${ships[number].shipHull}`;
+        break;
+      case 5:
+        shipInformation.innerText = `Команда: ${ships[number].team}`;
+        break;
+      case 6:
+        shipInformation.innerText = `Трюм: ${ships[number].hold}`;
+        break;
+      case 7:
+        shipInformation.innerText = `Скорость: ${ships[number].speed}`;
+        break;
+      case 8:
+        shipInformation.innerText = `Манёвренность: ${ships[number].maneuverability}`;
+        break;
+    }
+  }
+  DeskShip.innerText = `${ships[number].desc}`;
   layer.style.display = 'block';
 }
 
@@ -616,34 +673,58 @@ function commandHeader() {
   cannonsAttribute.classList.add("sidebar__choice__attribute__none");
 }
 
+
+
+function sortPrice(max) {
+  let sort = [].concat(lengthsMax,lengthsMin);
+
+  let result = [];
+
+if(lengthsMax.length !== 0 && lengthsMin.length !== 0) {
+  for(let i = 0; i <sort.length;i++) {
+    for(let j = i + 1; j < sort.length;j++){
+      if(sort[i] === sort[j]){
+        result.push(sort[i]);
+      }
+    }
+  }
+}
+
+  if(lengthsMax.length === 0 && lengthsMin.length !== 0) {
+    result = lengthsMin;
+  }
+
+  if(lengthsMax.length !== 0 && lengthsMin.length === 0) {
+    result = lengthsMax;
+  }
+  return result;
+}
+
+
 function sortByMaxPrice(arr) {
 
-  let lengths = []
   let valueInput = Number(maxPrice.value)
 
   for(let i =0; i < arr.length;i++){
     if(arr[i].price <= valueInput){
-      lengths.push(arr[i]);
+      lengthsMax.push(i);
     }
   }
-  lengths.sort((a, b) => a.price > b.price ? 1 : -1);
 
-  return lengths;
+  return lengthsMax;
 }
 
 function sortByMinPrice(arr) {
 
-  let lengths = []
   let valueInput = Number(minPrice.value)
 
   for(let i =0; i < arr.length;i++){
     if(arr[i].price >= valueInput){
-      lengths.push(arr[i]);
+      lengthsMin.push(i);
     }
   }
-  lengths.sort((a, b) => a.price > b.price ? 1 : -1);
 
-  return lengths;
+  return lengthsMin;
 }
 
 function sortByMinShipHull(arr) {
