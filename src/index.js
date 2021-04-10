@@ -271,23 +271,6 @@ const repairsAttribute = document.getElementById("repairs-attribute");
 const cannonsAttribute = document.getElementById("cannons-attribute");
 const commandAttribute = document.getElementById("command-attribute");
 
-const firstShip = document.getElementById("first-ship");
-const secondShip = document.getElementById("second-ship");
-const thirdShip = document.getElementById("third-ship");
-const forthShip = document.getElementById("forth-ship");
-const fifthShip = document.getElementById("fifth-ship");
-const sixthShip = document.getElementById("sixth-ship");
-const seventhShip = document.getElementById("seventh-ship");
-const eighthShip = document.getElementById("eighth-ship");
-const ninthShip = document.getElementById("ninth-ship");
-const tenthShip = document.getElementById("tenth-ship");
-const eleventhShip = document.getElementById("eleventh-ship");
-const twelfthShip = document.getElementById("twelfth-ship");
-const thirteenthShip = document.getElementById("thirteenth-ship");
-const fourteenthShip = document.getElementById("fourteenth-ship");
-const fifteenthShip = document.getElementById("fifteenth-ship");
-const sixteenthShip = document.getElementById("sixteenth-ship");
-
 const layer = document.getElementById('layer');
 const chooseShip = document.getElementById("choose-ship");
 const DeskShip = document.getElementById('desk-ship');
@@ -326,15 +309,10 @@ const maxShipHull = document.getElementById("max-ship-hull-input");
 
 let forTest = false;
 
-let randomShip = getRandom();
-
-// let sortArr = [];
-
-
 let lengthsMax = [];
 let lengthsMin = [];
-
-
+let lengthsMinHull = [];
+let lengthsMaxHull = [];
 
 horizontalMenuFirst.addEventListener('click',handlerHeader1);
 horizontalMenuSecond.addEventListener('click',handlerHeader2);
@@ -345,70 +323,6 @@ cannons.addEventListener('click',cannonsHeader);
 command.addEventListener('click',commandHeader);
 
 formButton.addEventListener('click',writeOrder);
-
-// firstShip.addEventListener('click', () => {
-//   listenerPopUpWindow(0);
-// });
-//
-// secondShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 1);
-// });
-//
-// thirdShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 2);
-// });
-//
-// forthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 3);
-// });
-//
-// fifthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 4);
-// });
-//
-// sixthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 5);
-// });
-//
-// seventhShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 6);
-// });
-//
-// eighthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 7);
-// });
-//
-// ninthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 8);
-// });
-//
-// tenthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 9);
-// });
-//
-// eleventhShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 10);
-// });
-//
-// twelfthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 11);
-// });
-//
-// thirteenthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 12);
-// });
-//
-// fourteenthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 13);
-// });
-//
-// fifteenthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 14);
-// });
-//
-// sixteenthShip.addEventListener('click', () => {
-//   listenerPopUpWindow(randomShip, 15);
-// });
 
 layer.addEventListener('click', (e) => {
   if (e.target === layer) {
@@ -434,8 +348,7 @@ priceShip.onblur = function() {
 };
 
 minPriceInput.onblur = function() {
-  let minPrice = sortByMinPrice(ships);
-  // console.log(minPrice);
+  sortByMinPrice(ships);
   let sortNum2 = sortPrice();
   testFormMaxMin(minPriceInput, minPriceDiv,regularPriceMaxMin);
   shipsMenu.innerHTML = '';
@@ -445,25 +358,33 @@ minPriceInput.onblur = function() {
 };
 
 maxPriceInput.onblur = function() {
-  let maxPrice = sortByMaxPrice(ships);
-  let sortNum = sortPrice();
-  testFormMaxMin(maxPriceInput, maxPriceDiv,regularPriceMaxMin);
-  shipsMenu.innerHTML = '';
-  for(let i = 0; i < sortNum.length; i++) {
-    informationForShip(sortNum[i])
-  }
+    sortByMaxPrice(ships);
+    let sortNum = sortPrice();
+    testFormMaxMin(maxPriceInput, maxPriceDiv, regularPriceMaxMin);
+    shipsMenu.innerHTML = '';
+    for (let i = 0; i < sortNum.length; i++) {
+      informationForShip(sortNum[i])
+    }
 };
 
 minShipHullInput.onblur = function() {
-  let minShipHull = sortByMinShipHull(ships);
-  // console.log(minShipHull);
+  sortByMinShipHull(ships);
+  let sortHull = sortShipHull()
   testFormMaxMin(minShipHullInput, minShipHullDiv,regularShipHullMaxMin);
+  shipsMenu.innerHTML = '';
+  for(let i = 0; i < sortHull.length; i++) {
+    informationForShip(sortHull[i])
+  }
 };
 
 maxShipHullInput.onblur = function() {
-  let maxShipHull =sortByMaxShipHull(ships);
-  // console.log(maxShipHull);
+  sortByMaxShipHull(ships);
+  let sortHull2 = sortShipHull()
   testFormMaxMin(maxShipHullInput, maxShipHullDiv,regularShipHullMaxMin);
+  shipsMenu.innerHTML = '';
+  for(let i = 0; i < sortHull2.length; i++) {
+    informationForShip(sortHull2[i])
+  }
 };
 
 
@@ -547,7 +468,7 @@ function testForm(nameForm, regular){
 
 function writeOrder() {
   if(forTest === false) {
-    let rand = new Order(nameUser.value, classShip.value, sizeShip.value, priceShip.value);
+    new Order(nameUser.value, classShip.value, sizeShip.value, priceShip.value);
     shipForm.reset();
   }
 }
@@ -604,29 +525,6 @@ function listenerPopUpWindow(number){
   layer.style.display = 'block';
 }
 
-function getRandom() {
-  let gerRandomShips = [];
-
-  // while (gerRandomShips.length < 16) {
-  //   // let numb = Math.floor(Math.random() * 16);
-  //   //
-  //   // for (let i = 0; i < gerRandomShips.length; i++) {
-  //   //   while (gerRandomShips[i] === numb) {
-  //   //     numb = Math.floor(Math.random() * 16);
-  //   //   }
-  //   // }
-  //
-  //   gerRandomShips.push(numb);
-  // }
-
-  for(let i = 0; i < 16;i++){
-    let numb = i;
-    gerRandomShips.push(numb);
-  }
-  // console.log(gerRandomShips);
-  return gerRandomShips;
-}
-
 function handlerHeader1() {
   horizontalMenuFirst.classList.add("new__horizontal__menu__for__items");
   horizontalMenuSecond.classList.remove("new__horizontal__menu__for__items");
@@ -673,9 +571,7 @@ function commandHeader() {
   cannonsAttribute.classList.add("sidebar__choice__attribute__none");
 }
 
-
-
-function sortPrice(max) {
+function sortPrice() {
   let sort = [].concat(lengthsMax,lengthsMin);
 
   let result = [];
@@ -701,9 +597,36 @@ if(lengthsMax.length !== 0 && lengthsMin.length !== 0) {
 }
 
 
+function sortShipHull() {
+  let sort2 = [].concat(lengthsMaxHull,lengthsMinHull);
+
+  let result2 = [];
+
+  if(lengthsMaxHull.length !== 0 && lengthsMinHull.length !== 0) {
+    for(let i = 0; i <sort2.length;i++) {
+      for(let j = i + 1; j < sort2.length;j++){
+        if(sort2[i] === sort2[j]){
+          result2.push(sort2[i]);
+        }
+      }
+    }
+  }
+
+  if(lengthsMaxHull.length === 0 && lengthsMinHull.length !== 0) {
+    result2 = lengthsMinHull;
+  }
+
+  if(lengthsMaxHull.length !== 0 && lengthsMinHull.length === 0) {
+    result2 = lengthsMaxHull;
+  }
+  return result2;
+}
+
 function sortByMaxPrice(arr) {
 
   let valueInput = Number(maxPrice.value)
+
+  lengthsMax = [];
 
   for(let i =0; i < arr.length;i++){
     if(arr[i].price <= valueInput){
@@ -718,6 +641,8 @@ function sortByMinPrice(arr) {
 
   let valueInput = Number(minPrice.value)
 
+  lengthsMin = [];
+
   for(let i =0; i < arr.length;i++){
     if(arr[i].price >= valueInput){
       lengthsMin.push(i);
@@ -729,30 +654,28 @@ function sortByMinPrice(arr) {
 
 function sortByMinShipHull(arr) {
 
-  let lengths = []
   let valueInput = Number(minShipHull.value)
+
+  lengthsMinHull = [];
 
   for(let i =0; i < arr.length;i++){
     if(arr[i].shipHull >= valueInput){
-      lengths.push(arr[i]);
+      lengthsMinHull.push(i);
     }
   }
-  lengths.sort((a, b) => a.shipHull > b.shipHull ? 1 : -1);
 
-  return lengths;
+  return lengthsMinHull;
 }
 
 function sortByMaxShipHull(arr) {
-
-  let lengths = []
   let valueInput = Number(maxShipHull.value)
+  lengthsMaxHull = [];
 
   for(let i =0; i < arr.length;i++){
     if(arr[i].shipHull <= valueInput){
-      lengths.push(arr[i]);
+      lengthsMaxHull.push(i);
     }
   }
-  lengths.sort((a, b) => a.shipHull > b.shipHull ? 1 : -1);
 
-  return lengths;
+  return lengthsMaxHull;
 }
