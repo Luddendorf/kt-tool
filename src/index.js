@@ -347,9 +347,17 @@ priceShip.onblur = function() {
   testForm(priceShip,regularPrice);
 };
 
+
 minPriceInput.onblur = function() {
   sortByMinPrice(ships);
-  let sortNum2 = sortPrice();
+  let sortNum2;
+
+  if(lengthsMaxHull.length !== 0 && lengthsMinHull.length !== 0 && lengthsMax.length !== 0 && lengthsMin.length !== 0) {
+    sortNum2 = sortAll();
+  }else{
+    sortNum2 = sortPrice();
+  }
+
   testFormMaxMin(minPriceInput, minPriceDiv,regularPriceMaxMin);
   shipsMenu.innerHTML = '';
   for(let i = 0; i < sortNum2.length; i++) {
@@ -358,18 +366,32 @@ minPriceInput.onblur = function() {
 };
 
 maxPriceInput.onblur = function() {
-    sortByMaxPrice(ships);
-    let sortNum = sortPrice();
-    testFormMaxMin(maxPriceInput, maxPriceDiv, regularPriceMaxMin);
-    shipsMenu.innerHTML = '';
-    for (let i = 0; i < sortNum.length; i++) {
-      informationForShip(sortNum[i])
-    }
+  sortByMaxPrice(ships);
+  let sortNum;
+
+  if(lengthsMaxHull.length !== 0 && lengthsMinHull.length !== 0 && lengthsMax.length !== 0 && lengthsMin.length !== 0) {
+    sortNum = sortAll();
+  }else{
+    sortNum = sortPrice();
+  }
+
+  testFormMaxMin(maxPriceInput, maxPriceDiv, regularPriceMaxMin);
+  shipsMenu.innerHTML = '';
+  for (let i = 0; i < sortNum.length; i++) {
+    informationForShip(sortNum[i])
+  }
 };
 
 minShipHullInput.onblur = function() {
   sortByMinShipHull(ships);
-  let sortHull = sortShipHull()
+  let sortHull;
+
+  if(lengthsMaxHull.length !== 0 && lengthsMinHull.length !== 0 && lengthsMax.length !== 0 && lengthsMin.length !== 0) {
+    sortHull = sortAll();
+  }else{
+    sortHull =  sortShipHull();
+  }
+
   testFormMaxMin(minShipHullInput, minShipHullDiv,regularShipHullMaxMin);
   shipsMenu.innerHTML = '';
   for(let i = 0; i < sortHull.length; i++) {
@@ -379,7 +401,14 @@ minShipHullInput.onblur = function() {
 
 maxShipHullInput.onblur = function() {
   sortByMaxShipHull(ships);
-  let sortHull2 = sortShipHull()
+  let sortHull2;
+
+  if(lengthsMaxHull.length !== 0 && lengthsMinHull.length !== 0 && lengthsMax.length !== 0 && lengthsMin.length !== 0) {
+    sortHull2 = sortAll();
+  }else{
+    sortHull2 =  sortShipHull();
+  }
+
   testFormMaxMin(maxShipHullInput, maxShipHullDiv,regularShipHullMaxMin);
   shipsMenu.innerHTML = '';
   for(let i = 0; i < sortHull2.length; i++) {
@@ -596,6 +625,24 @@ if(lengthsMax.length !== 0 && lengthsMin.length !== 0) {
   return result;
 }
 
+function sortAll(){
+
+  let a = sortPrice();
+  let b = sortShipHull();
+
+  let resultAll = [].concat(a,b);
+
+  let c = [];
+
+  for(let i = 0; i <resultAll.length;i++) {
+    for(let j = i + 1; j < resultAll.length;j++){
+      if(resultAll[i] === resultAll[j]){
+        c.push(resultAll[i]);
+      }
+    }
+  }
+  return c;
+}
 
 function sortShipHull() {
   let sort2 = [].concat(lengthsMaxHull,lengthsMinHull);
