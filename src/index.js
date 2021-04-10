@@ -5,7 +5,7 @@ import appendData from './modules/appendData';
 import accordeon from './modules/accordeon';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
-import filter from './modules/filter';
+// import filter from './modules/filter';
 import validation from './modules/validation';
 
 
@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   tabs();
   modal();
   validation();
-  filter();
+  // filter();
 });
