@@ -1,10 +1,9 @@
 import { ships } from './data';
 
-const appendData = () => {
-  const cardsWrapper = document.querySelector(".main__cards-wrapper");
+const renderData = (arr, el) => {
 
-  ships.forEach((card) => {
-    cardsWrapper.insertAdjacentHTML(
+  arr.forEach((card) => {
+    el.insertAdjacentHTML(
       "beforeend",
       `
   <div class="main__card">
@@ -29,4 +28,4 @@ const appendData = () => {
   });
 };
 
-export default appendData;
+export default renderData;

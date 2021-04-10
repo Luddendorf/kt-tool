@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background: #C5DBE2;
   &__wrapper {
     display: flex;
@@ -8,6 +8,16 @@
     color: $light;
     text-align: center;
     flex: 0 0 80%;
+  }
+  &__logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & img{
+      width: 50px;
+      height: 50px;
+      animation: bounce 0.3s infinite alternate;
+    }
   }
   &__bay {
     background-color: rgba(54%, 78%, 98%, 0.7);
