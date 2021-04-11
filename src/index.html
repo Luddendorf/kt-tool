@@ -4,10 +4,143 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
+  <title>Momziakov Aleksandr Lesson 5</title>
+  <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-</body>
+  <header>
+    <div class="top__topbar">
+      <div class="topbar__logo">
+        <img src="/assets/blackflag.png" width="100" height="100" alt="logo">
+      </div>
+      <div class="top__topbar-item">
+       <div class="top__topbar-button" id="list">Lonely island bay</div>
+       </div>
+      <div class="top__topbar-item">
+        <div class="top__topbar-button" id="mine">My boat</div> 
+      </div>
+    </div>
+  </header>
+    
+    <main>
+      <div class="main__wrapper">
+        <div class="main__wrapper-sidebar">
+          <div class="main__sidebar-metrics">
+            <div class="metrics-item">
+              <label for="minprice">min price</label>
+              <input type="text" id="minprice">
+            </div>
+            <div class="metrics-item">
+              <label for="maxprice">max price</label>
+              <input type="text" id="maxprice">
+            </div>
+            <div class="metrics-item">
+              <label for="minstrength">min strength</label>
+              <input type="text" id="minstrength">
+            </div>
+            <div class="metrics-item">
+              <label for="maxstrength">max strength</label>
+              <input type="text" id="maxstrength">
+            </div>
+          </div>
+          <div class="main__sidebar-dropdown">
+            <button class="accordion">Sails</button>
+              <div class="panel">
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+              </div>
+              <button class="accordion">Repair</button>
+              <div class="panel">
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+              </div>
+            <button class="accordion">Guns</button>
+              <div class="panel">
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+              </div>
+              <button class="accordion">Team</button>
+              <div class="panel">
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+                <p href="#">Bermudian</p>
+              </div>
+          </div>
+        </div>
+        <div class="main__wrapper-descr">
+          <div class="main__content">
+            <div class="list">
 
+            </div>
+            <div class="mine" style="display: none;">
+              <div id="card"> <span>My Boat</span> 
+                <div class="card-img"><img src="/assets/blackflag.png" width="100" height="100" alt="mine"></div>
+                <p>Frigate "Seawolf"</p>
+                <p>Class: 4</p>
+                <p>Guns: 20</p>
+                <p>Strength: 218</p>
+                <p>Team count: 189</p>
+                <p>Cabin: 2800</p>
+                <p>Speed: 14.5</p>
+                <p>Maneuverability: 5.5</p>
+              </div>
+              <div class="captain-form">
+                <div id="capitan"><span>My captain</span> 
+                    <div class="captain-img">
+                      <img src="./assets/blackflag.png" width="100" height="100" alt="captain">
+                    </div>
+                    <div class="captain__title">
+                      <p>Name: Ivan</p>
+                      <p>Class: 98</p>
+                      <p>Damage: 35</p>
+                    </div>
+                    <div class="captain__subtitle">
+                      <p>Age: 26</p>
+                      <p>Dublons: 1000000</p>
+                      <p>Gun damage: 80</p>
+                    </div>
+                </div>
+                <div class="form" id="form">
+                  <form name="sendForm">
+                    Request to buy a ship
+                    <div>
+                      <input type="text" name="name" placeholder="Name" />
+                      <input type="text" name="quantity" placeholder="Quantity" />
+                      <input type="text" name="class" placeholder="Class" />
+                      <input type="text" name="price" placeholder="Price" />
+                    </div>
+                    <button id="button-form" type="button">Send data</button>
+                  </form>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="menu__overlay"></div>
+      </div>
+    </main>
+    
+  
+    <footer>
+      <nav class="footer__navigation">
+        <img src="assets/wheel.jpg" width="100" height="100" alt="label" class="footer-image"/>
+        <div>
+          <h1 class="footer__heading">Captain:</h1>
+          <h2 class="captain">Aleksandr Momziakov</h2>
+          <span class="footer__description">Lorem, ipsum dolor.</span>
+          <h1 class="footer__heading">Boat:</h1>
+          <h2 class="captain">Caravella: "Black Pearl"</h2>
+        </div>
+        <img 
+          src="assets/wheel.jpg" width="100" height="100" alt="label" class="footer-image"/>
+      </nav>
+    </footer>
+</body>
+<script type="module" src="/js/accordion.js"></script>
+<script type="module" src="/js/tabs.js"></script>
+<script type="module" src="/js/cards.js"></script>
+<script type="module" src="/js/form.js"></script>
 </html>

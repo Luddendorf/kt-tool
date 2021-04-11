@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+@import url('./css/header.css');
+@import url('./css/mainmodule.css');
+@import url('./css/footer.css');
+
+
 html {
   box-sizing: border-box;
+  font-family: 'New Tegomin', serif;
   font-size: 62.5%; /* Set font to 1rem = 10px */
 }
 
@@ -9,5 +16,3 @@ html {
   box-sizing: inherit;
 }
 
-body {
-}

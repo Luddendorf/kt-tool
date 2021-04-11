@@ -1,0 +1,34 @@
+.header {
+    width: 100%;
+}
+
+.top__topbar {
+    margin: 40px auto;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topbar__logo {
+    position: absolute;
+    right: 32px;
+}
+
+.top__topbar-button {
+    transform: skewX(-10deg);
+    border: 2px dashed #996633;
+    font-size: 26px;
+    font-weight: 400;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+.top__topbar-button:hover {
+    background-color: #996633;
+    box-shadow: inset 0 0 0 25px #996633;
+}
+.chosen > div {
+    background-color: #9e5307;
+}
