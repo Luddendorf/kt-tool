@@ -30,7 +30,7 @@ const capitan = document.querySelector("#capitan");
 card.classList.add("card");
 capitan.classList.add("card");
 card.innerHTML = `
-                        <img src =${capt}  alt =${"IMG"} class ="ship-img" >
+                        <img src =${ship}  alt =${"IMG"} class ="ship-img" >
                         <div>Name: ${myProfile.shipName}</div>
                         <div>Class: ${myProfile.className}</div>
                         <div>Rang: ${myProfile.class}</div>
@@ -40,7 +40,7 @@ card.innerHTML = `
 
                       `;
 capitan.innerHTML = `
-                        <img src =${ship}  alt =${"IMG"} class ="ship-img" >
+                        <img src =${capt}  alt =${"IMG"} class ="ship-img" >
                         <div>Name: ${myProfile.capitansName}</div>
                         <div>Class: ${myProfile.capitansClass}</div>
                         <div>Age: ${myProfile.capitansAge}</div>
