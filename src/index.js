@@ -1,9 +1,10 @@
 import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
-import { ships } from './tabs'
-import {} from './checkbox'
-import { arrFilter } from './filter'
+import { ships } from './tabs';
+import {} from './checkbox';
+// import { arrFilter } from './filter';
+import {} from './Temperature';
 
 async function print() {
     // Here we are using dynamic import
@@ -14,10 +15,10 @@ async function print() {
 }
 print();
 
-export let counter = 3;
-const arrFilters = arrFilter;
+
+// const arrFilters = arrFilter;
 const arrShip = ships;
-console.log(arrFilters);
+// console.log(arrFilters);
 
 function fOne(e, arr) {
     const target = e.currentTarget.getAttribute("data");
@@ -47,7 +48,7 @@ function fOne(e, arr) {
 
 const tabShip = document.querySelector('.shipItemStyle');
 const tabShips = document.querySelectorAll('.shipItemStyle');
-console.log(tabShips);
+// console.log(tabShips);
 for (let i = 0; i < tabShips.length; i++) {
     tabShips[i].addEventListener('click', (e) => fOne(e, arrShip));
 };
@@ -120,9 +121,6 @@ divMyCapitan.innerHTML = renderMyCapitan;
 tabMyCapitan.appendChild(divMyCapitan);
 
 
-
-
-
 const form = {
     name: null,
     col: null,
@@ -172,10 +170,4 @@ function click(name, col, classes, price, namForm, coForm, claForm, prForm) {
 
 
 /** */
-const name = '1Vova';
-const age = '50';
-const gender = 'woman';
-
-
-
 // создать кнопку и повесить слушателя, иф в слушатель

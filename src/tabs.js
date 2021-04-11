@@ -244,6 +244,7 @@ export const ships = [{
 ];
 
 
+
 (function() {
     document.querySelector('.tab').classList.add('active')
     document.querySelector('.tab-panel').classList.add('active')
