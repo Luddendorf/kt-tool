@@ -1,8 +1,8 @@
-import createCard from './createCard'
-import createCaptainCard from './createCaptainCard'
-import createPurchaseForm from './createPurchaseForm'
+import ShipCard from '../components/ShipCard'
+import CaptainCard from '../components/CaptainCard'
+import PurchaseForm from '../components/PurchaseForm'
 
-const setupMyShipPage = () => {
+const MyShipTab = () => {
 
   const myShip = {
     "shipName": 'Panther',
@@ -28,20 +28,24 @@ const setupMyShipPage = () => {
     story: 'Once ...'
   }
 
+  const shipCard = ShipCard(myShip)
+  const captainPortrait = CaptainCard(captain)
+  const purchaseForm = PurchaseForm()
 
+  const rightPageBlock = document.createElement('div')
+  rightPageBlock.append(captainPortrait)
+  rightPageBlock.append(purchaseForm)
 
-  const shipCard = createCard(myShip)
-  const captainPortrait = createCaptainCard(captain)
-  const purchaseForm = createPurchaseForm()
+  const myShipTab = document.createElement('div')
+  myShipTab.setAttribute('id', 'my-ship-tab')
+  myShipTab.classList.add('my-ship-tab')
+  myShipTab.classList.add('tab-closed')
 
-  const rightPagePart = document.createElement('div')
-  rightPagePart.append(captainPortrait)
-  rightPagePart.append(purchaseForm)
+  myShipTab.append(shipCard)
+  myShipTab.append(rightPageBlock)
 
-  const myShipPage = document.getElementById('my-ship-tab')
-  myShipPage.append(shipCard)
-  myShipPage.append(rightPagePart)
+  return myShipTab
 
 }
 
-export default setupMyShipPage
+export default MyShipTab

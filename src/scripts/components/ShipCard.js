@@ -1,4 +1,4 @@
-const createCard = ship => {
+const ShipCard = ship => {
 
   const imgPath = 'https://res.cloudinary.com/dvbkndvl0/image/upload/v1617895212/pirates/ThePirateShip_papscf.png'
 
@@ -16,6 +16,7 @@ const createCard = ship => {
 
 
   const card = document.createElement('div')
+  card.setAttribute('id', ship.id)
   card.classList.add('card')
 
   const picture = document.createElement('img')
@@ -44,4 +45,4 @@ const createCard = ship => {
 
 }
 
-export default createCard
+export default ShipCard

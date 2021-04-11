@@ -1,4 +1,4 @@
-const configureHeaderTabs = () => {
+const configureTabsControls = () => {
 
   const tabsIds = ['bight', 'my-ship']
   let currentTabId = 'bight'
@@ -29,4 +29,4 @@ const configureHeaderTabs = () => {
 
 }
 
-export default configureHeaderTabs
+export default configureTabsControls

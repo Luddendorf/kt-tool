@@ -28,7 +28,7 @@ const handleFormClick = () => {
 
 }
 
-const createPurchaseForm = () => {
+const PurchaseForm = () => {
 
   const form = document.createElement('form')
   form.setAttribute('id', 'purchase-form')
@@ -109,4 +109,4 @@ const createPurchaseForm = () => {
 
 }
 
-export default createPurchaseForm
+export default PurchaseForm

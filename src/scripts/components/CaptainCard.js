@@ -1,4 +1,4 @@
-const createCaptainCard = captain => {
+const CaptainCard = captain => {
 
   const portraitPath = 'https://res.cloudinary.com/dvbkndvl0/image/upload/v1617906416/pirates/pirate_portrait_rwum2c.jpg'
 
@@ -38,4 +38,4 @@ const createCaptainCard = captain => {
 
 }
 
-export default createCaptainCard
+export default CaptainCard
