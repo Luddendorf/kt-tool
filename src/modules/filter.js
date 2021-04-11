@@ -8,7 +8,8 @@ const filter = () => {
 
   renderData(ships, cardsWrapper);
 
-  const filterShips = (arr, el, operation)=>{
+  // функция фильтрации
+  const filterMinMAx = (arr, el, operation)=>{
     return arr.filter((item)=>{
       if(operation === 'min'){
         if(item.price > el.value){
@@ -24,29 +25,34 @@ const filter = () => {
     })
   }
 
+  // фильтр по минимальной цене
   lowPrice.addEventListener("blur", () => {
-    let result = filterShips(ships, lowPrice, 'min');
-    cardsWrapper.innerHTML = '';
-    renderData(result, cardsWrapper);
-
-    maxPrice.addEventListener("blur", () => {
-      filterShips(result, maxPrice, 'max');
+    if(lowPrice.value.trim() !== ''){
+      let result = filterMinMAx(ships, lowPrice, 'min');
       cardsWrapper.innerHTML = '';
-      renderData(filterShips(result, maxPrice, 'max'), cardsWrapper)
-    });
+      renderData(result, cardsWrapper);
+  
+      maxPrice.addEventListener("blur", () => {
+        filterMinMAx(result, maxPrice, 'max');
+        cardsWrapper.innerHTML = '';
+        renderData(filterMinMAx(result, maxPrice, 'max'), cardsWrapper)
+      });
+    }
   });
 
-
+  // фильтр по максимальной цене
   maxPrice.addEventListener("blur", () => {
-    let result = filterShips(ships, maxPrice, 'max');
-    cardsWrapper.innerHTML = '';
-    renderData(result, cardsWrapper);
-
-    lowPrice.addEventListener("blur", () => {
-      filterShips(result, lowPrice, 'min');
+    if(lowPrice.value.trim() !== ''){
+      let result = filterMinMAx(ships, maxPrice, 'max');
       cardsWrapper.innerHTML = '';
-      renderData(filterShips(result, lowPrice, 'min'), cardsWrapper)
-    });
+      renderData(result, cardsWrapper);
+
+      lowPrice.addEventListener("blur", () => {
+        filterMinMAx(result, lowPrice, 'min');
+        cardsWrapper.innerHTML = '';
+        renderData(filterMinMAx(result, lowPrice, 'min'), cardsWrapper)
+      });
+    }
   });
 };
 

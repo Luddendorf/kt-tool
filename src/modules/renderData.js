@@ -1,5 +1,4 @@
-import { ships } from './data';
-
+// отражение массива
 const renderData = (arr, el) => {
 
   arr.forEach((card) => {
