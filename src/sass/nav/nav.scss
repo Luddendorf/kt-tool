@@ -1,3 +1,5 @@
+@import "media/media";
+
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -8,6 +10,9 @@
     justify-content: center;
     height: 3.5rem;
     margin-bottom: 0;
+    @media (max-width: $small) {
+      width: 100%;
+    }
     &-item {
       width: 30%;
       color: #fff;
@@ -15,6 +20,9 @@
       text-align: center;
       margin: 0rem 0.25rem;
       transition: all 0.25s ease;
+      @media (max-width: $small) {
+        font-size: 1.55rem;
+      }
       &.active {
         color: #ffa31a;
         padding-bottom: 10px;

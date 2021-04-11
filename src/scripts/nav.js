@@ -4,7 +4,7 @@ const ships = document.querySelector(".ships");
 const about = document.querySelector(".about");
 
 nav.addEventListener("click", (event) => {
-  if (!event.target.classList.contains("active")) {
+  if (event.target.classList.contains("inactive")) {
     for (let item of navItems) {
       item.classList.toggle("active");
       item.classList.toggle("inactive");

@@ -1,3 +1,5 @@
+@import "media/media";
+
 .modal {
   display: flex;
   align-items: center;
@@ -23,6 +25,9 @@
     color: #22252d;
     padding: 1.5rem;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    @media (max-width: $medium) {
+      max-width: 90vw;
+    }
     &-open {
       display: flex;
     }
@@ -33,6 +38,9 @@
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 1.5rem;
+        @media (max-width: $small) {
+          font-size: 1.7rem;
+        }
       }
       &-wrapper {
         display: flex;
@@ -44,9 +52,15 @@
       &-list > p {
         font-size: 2rem;
         margin-left: 1rem;
+        @media (max-width: $small) {
+          font-size: 1.2rem;
+        }
       }
       &-desq {
         font-size: 1.75rem;
+        @media (max-width: $small) {
+          font-size: 1.4rem;
+        }
       }
     }
   }

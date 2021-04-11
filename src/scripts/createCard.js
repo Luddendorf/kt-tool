@@ -13,12 +13,12 @@ const createCard = (ship) => {
           <h3>Фрегат "${ship.shipName}"</h3>
           <p>Класс: ${ship.class}</p>
           <p>Пушки: ${ship.weapons}</p>
-          <p>Корпус: ${ship.shipHull}</p>
+          <p>Прочность корпуса: ${ship.shipHull}</p>
           <p>Команда: ${ship.team}</p>
           <p>Трюм: ${ship.hold}</p>
           <p>Скорость: ${ship.speed}</p>
           <p>Манёвренность: ${ship.beidewind}</p>
-          <p>Цена: ${ship.price}</p>
+          <p style="color: red">Цена: ${ship.price}</p>
         </div>
         `;
 

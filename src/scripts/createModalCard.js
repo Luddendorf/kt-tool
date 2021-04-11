@@ -12,7 +12,7 @@ function createModalCard(ship) {
         <div class="modal__overlay-card-list">
           <p>Класс: ${ship.class}</p>
           <p>Пушки: ${ship.weapons}</p>
-          <p>Корпус: ${ship.shipHull}</p>
+          <p>Прочность корпуса: ${ship.shipHull}</p>
           <p>Команда: ${ship.team}</p>
           <p>Трюм: ${ship.hold}</p>
           <p>Скорость: ${ship.speed}</p>

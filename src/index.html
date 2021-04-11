@@ -21,6 +21,9 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <div class="burger-menu">
+          <span></span>
+        </div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__list-item active">Причал</li>
@@ -36,90 +39,91 @@
         </div>
 
         <div class="sidebar">
-          <div class="sidebar__wrapper">
-            <div class="filters">
-              <div class="filters__card">
-                <div class="filters__card-min">
-                  <span class="filters__card-title"
-                    >мин. <br />
-                    цена</span
-                  >
-                  <input
-                    class="filters__card-input"
-                    type="number"
-                    name=""
-                    id=""
-                  />
-                </div>
-                <div class="filters__card-max">
-                  <span class="filters__card-title"
-                    >макс.<br />
-                    цена</span
-                  >
-                  <input
-                    class="filters__card-input"
-                    type="number"
-                    name=""
-                    id=""
-                  />
-                </div>
+          <form class="filters">
+            <div class="filters__card">
+              <div class="filters__card-min">
+                <span class="filters__card-title"
+                  >мин. <br />
+                  цена</span
+                >
+                <input
+                  class="filters__card-input"
+                  type="number"
+                  name=""
+                  id="min-price"
+                />
               </div>
-              <div class="filters__card">
-                <div class="filters__card-min">
-                  <span class="filters__card-title"
-                    >мин.<br />
-                    прочность</span
-                  >
-                  <input
-                    class="filters__card-input"
-                    type="number"
-                    name=""
-                    id=""
-                  />
-                </div>
-                <div class="filters__card-max">
-                  <span class="filters__card-title"
-                    >макс.<br />
-                    прочность</span
-                  >
-                  <input
-                    class="filters__card-input"
-                    type="number"
-                    name=""
-                    id=""
-                  />
-                </div>
+              <div class="filters__card-max">
+                <span class="filters__card-title"
+                  >макс.<br />
+                  цена</span
+                >
+                <input
+                  class="filters__card-input"
+                  type="number"
+                  name=""
+                  id="max-price"
+                />
               </div>
+            </div>
+            <div class="filters__card">
+              <div class="filters__card-min">
+                <span class="filters__card-title"
+                  >мин.<br />
+                  прочность</span
+                >
+                <input
+                  class="filters__card-input"
+                  type="number"
+                  name=""
+                  id="min-hull"
+                />
+              </div>
+              <div class="filters__card-max">
+                <span class="filters__card-title"
+                  >макс.<br />
+                  прочность</span
+                >
+                <input
+                  class="filters__card-input"
+                  type="number"
+                  name=""
+                  id="max-hull"
+                />
+              </div>
+            </div>
+            <div class="filters__btn-wrapper">
               <button class="filters__reset btn" type="reset">
                 Сбросить фильтры
               </button>
+              <button class="filters__apply btn" type="submit">Смотреть</button>
             </div>
-            <ul class="menu">
-              <li class="menu__item">Паруса</li>
-              <ul class="submenu">
-                <li class="submenu__item">Шпринтовые</li>
-                <li class="submenu__item">Бермудские</li>
-                <li class="submenu__item">Гафельные</li>
-              </ul>
-              <li class="menu__item">Ремонт</li>
-              <ul class="submenu">
-                <li class="submenu__item">Обычный</li>
-                <li class="submenu__item">Быстрый</li>
-              </ul>
-              <li class="menu__item">Пушки</li>
-              <ul class="submenu">
-                <li class="submenu__item">Шпринтовые</li>
-                <li class="submenu__item">Бермудские</li>
-                <li class="submenu__item">Гафельные</li>
-              </ul>
-              <li class="menu__item">Команда</li>
-              <ul class="submenu">
-                <li class="submenu__item">Шпринтовые</li>
-                <li class="submenu__item">Бермудские</li>
-                <li class="submenu__item">Гафельные</li>
-              </ul>
+          </form>
+          <ul class="menu">
+            <li class="menu__item">Паруса</li>
+            <ul class="submenu">
+              <li class="submenu__item">Шпринтовые</li>
+              <li class="submenu__item">Бермудские</li>
+              <li class="submenu__item">Гафельные</li>
             </ul>
-          </div>
+            <li class="menu__item">Ремонт</li>
+            <ul class="submenu">
+              <li class="submenu__item">Обычный</li>
+              <li class="submenu__item">Быстрый</li>
+            </ul>
+            <li class="menu__item">Пушки</li>
+            <ul class="submenu">
+              <li class="submenu__item">Шпринтовые</li>
+              <li class="submenu__item">Бермудские</li>
+              <li class="submenu__item">Гафельные</li>
+            </ul>
+            <li class="menu__item">Команда</li>
+            <ul class="submenu">
+              <li class="submenu__item">Шпринтовые</li>
+              <li class="submenu__item">Бермудские</li>
+              <li class="submenu__item">Гафельные</li>
+            </ul>
+          </ul>
         </div>
         <section class="content">
           <div class="ships"></div>
@@ -128,7 +132,7 @@
               <h3 class="about-title">Мой корабль</h3>
               <div class="my-ship">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BlackPearl.jpg"
+                  src="https://i.pinimg.com/originals/df/42/46/df4246df71a346cb78c67d5f67bb0ceb.jpg"
                   alt=""
                   class="my-ship__img"
                 />
@@ -163,32 +167,45 @@
                   <p class="capitan">Урон пистолеты: 80</p>
                 </div>
               </div>
-              <form action="" class="form">
+              <form action="" class="form__request">
                 <h3 class="about-title">Заявка на покупку судна</h3>
-                <input type="text" placeholder="Имя" />
-                <input type="text" placeholder="Количество" />
-                <input type="text" placeholder="Класс" />
-                <input type="text" placeholder="Цена" />
+                <input
+                  class="form__input"
+                  type="text"
+                  placeholder="Имя"
+                  id="name"
+                />
+                <input
+                  class="form__input"
+                  type="number"
+                  placeholder="Количество"
+                  id="amount"
+                />
+                <input
+                  class="form__input"
+                  type="number"
+                  placeholder="Класс"
+                  id="class"
+                />
+                <input
+                  class="form__input"
+                  type="number"
+                  placeholder="Цена"
+                  id="price"
+                />
                 <button class="form-btn btn" type="submit">Отправить</button>
+                <p class="form__message">Заполните форму!</p>
               </form>
             </div>
           </div>
         </section>
       </main>
       <footer class="footer">
-        <img
-          src="https://lh3.googleusercontent.com/proxy/aEdvkjfSlsoFgUxjQWmUanguyZ-nOVgnhEdGMQV_PQhQIjVXve7I8bqgUCdkmChupeTrwqI4LE0i1wGc02EnlmtL0UKS8gG2ufsk"
-          alt=""
-          class="footer__img"
-        />
+        <div class="footer__img"></div>
         <div class="footer__info">
           Капитан Стешенок Максим, отчаянный пират и славный малый)
         </div>
-        <img
-          src="https://lh3.googleusercontent.com/proxy/aEdvkjfSlsoFgUxjQWmUanguyZ-nOVgnhEdGMQV_PQhQIjVXve7I8bqgUCdkmChupeTrwqI4LE0i1wGc02EnlmtL0UKS8gG2ufsk"
-          alt=""
-          class="footer__img"
-        />
+        <div class="footer__img"></div>
       </footer>
     </div>
   </body>

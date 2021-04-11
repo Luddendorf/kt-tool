@@ -20,3 +20,39 @@ input[type="submit"] {
 .form-btn {
   border-radius: 20px;
 }
+
+.form__input {
+  &-error {
+    border: 2px solid #cb333b;
+    border-left: 12px solid #cb333b;
+    transition: 0.5s ease;
+  }
+  &-succes {
+    border: 2px solid #0a9504;
+    border-left: 12px solid #0a9504;
+    transition: 0.5s ease;
+  }
+}
+
+.form__message {
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 20px;
+  line-height: 40px;
+  border-width: 0;
+  &-error,
+  &-succes {
+    visibility: visible;
+    opacity: 1;
+  }
+  &-succes {
+    border: 2px solid #0a9504;
+  }
+  &-error {
+    border: 2px solid #cb333b;
+  }
+}

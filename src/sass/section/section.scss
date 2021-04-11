@@ -1,7 +1,15 @@
+@import "media/media";
+
 .content {
   position: relative;
   width: 70%;
   margin-bottom: 70px;
+  @media (max-width: $small) {
+    width: 65%;
+  }
+  @media (max-width: $extraSmall) {
+    width: 100%;
+  }
 }
 
 .ships {
@@ -25,6 +33,12 @@
   cursor: pointer;
   transform: scale(1);
   transition: 0.5s;
+  @media (max-width: $large) {
+    width: calc(50% - 10px);
+  }
+  @media (max-width: $small) {
+    width: calc(100% - 10px);
+  }
   &:after {
     content: "";
     position: absolute;

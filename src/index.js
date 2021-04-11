@@ -1,11 +1,14 @@
 import "./main.css";
 import styles from "./index.module.css";
 import "./sass/main-second.scss";
+import img from "../src/src/img/unnamed.png";
 import nav from "./scripts/nav";
 import menu from "./scripts/submenu";
+import burgerMenu from "./scripts/burger";
 import ships from "./src/shipsData";
-import createCard from "./scripts/createCard";
-// import modal from "./scripts/showModalCard";
+import showCards from "./scripts/showCards";
+import filterCards from "./scripts/filterCards";
+import form from "./scripts/validateForm";
 
 async function print() {
   // Here we are using dynamic import
@@ -17,9 +20,21 @@ async function print() {
 print();
 
 document.addEventListener("DOMContentLoaded", () => {
-  const shipsDOM = ships.map((ship) => createCard(ship));
-  const shipsBlock = document.querySelector(".ships");
-  for (let ship of shipsDOM) {
-    shipsBlock.append(ship);
+  document.querySelector(".footer__img").src = img;
+  const inputs = document.querySelectorAll("input");
+  const resetBtn = document.querySelector(".filters__reset");
+
+  for (let input of inputs) {
+    input.addEventListener("blur", function () {
+      filterCards(ships);
+    });
   }
+
+  resetBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.querySelector(".filters").reset();
+    showCards(ships);
+  });
+
+  showCards(ships);
 });
