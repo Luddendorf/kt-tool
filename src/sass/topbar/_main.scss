@@ -2,10 +2,11 @@
   margin: 20px 0;
   &__container {
     display: flex;
+    flex-direction: column;
   }
   &__menu {
     flex: 1;
-    margin-right: 50px;
+    margin-bottom: 30px;
     &__container {
       display: flex;
       flex-direction: column;
@@ -66,5 +67,14 @@
   }
   &__content {
     flex: 4;
+  }
+  @media (min-width: 576px) {
+    &__container {
+      display: flex;
+      flex-direction: row;
+    }
+    &__menu {
+      margin-right: 50px;
+    }
   }
 }

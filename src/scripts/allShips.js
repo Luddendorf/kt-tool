@@ -5,7 +5,7 @@ const createShip = ({shipName,className,team,price,shipHull}) => {
   const newShip = document.createElement('div');
   newShip.className = 'card'
   newShip.innerHTML = `
-      <img src="http://pngimg.com/uploads/ship/ship_PNG5416.png" alt="${shipName}">
+      <img src="http://pngimg.com/uploads/ship/ship_PNG5403.png" alt="${shipName}">
       <div class="card__shipName">Name: ${shipName}</div>
       <div class="card__className">Class name: ${className}</div>
       <div class="card__team">shipHull: ${shipHull}</div>

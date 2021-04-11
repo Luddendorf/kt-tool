@@ -7,8 +7,7 @@
 .app__form {
   &--row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
     color: $mainColor;
     font-weight: 600;
@@ -38,6 +37,25 @@
     }
     .err {
       border: 1px solid tomato;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .app__form {
+    display: flex;
+    flex-direction: column;
+    &--row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .app__form {
+    &--row {
+      flex-direction: row;
     }
   }
 }

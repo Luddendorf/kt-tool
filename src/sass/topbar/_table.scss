@@ -1,6 +1,7 @@
 .weather {
   margin-top: 30px;
   & table {
+    display: none;
     border: 1px solid $mainColor;
     color: $mainColor;
     width: 100%;
@@ -16,6 +17,15 @@
         border: 1px solid $mainColor;
         padding: 5px 10px;
       }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .weather {
+    & table {
+      display: flex;
+      justify-content: center;
     }
   }
 }

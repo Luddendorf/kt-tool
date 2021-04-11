@@ -1,6 +1,6 @@
 .captain__inf {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 30px;
   padding: 10px;
   border: 1px solid $mainColor;
@@ -25,5 +25,12 @@
       font-weight: 600;
       margin-bottom: 10px;
     }
+  }
+}
+@media (min-width: 992px) {
+  .captain__inf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

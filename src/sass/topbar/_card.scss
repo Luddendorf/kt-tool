@@ -2,6 +2,7 @@
   border: 1px solid $mainColor;
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 20px;
   height: 100%;
   & img {
     width: 100%;
@@ -17,9 +18,9 @@
     }
     &--modal {
       position: relative;
-      width: 500px;
+      width: 300px;
       top: 50px;
-      left: calc(50% - 250px);
+      left: calc(50% - 150px);
       background-color: $mainColor;
       z-index: 10;
       padding: 20px;
@@ -34,6 +35,12 @@
       right: 0;
       padding: 20px;
       cursor: pointer;
+    }
+    @media (min-width: 576px) {
+      &--modal {
+        width: 500px;
+        left: calc(50% - 250px);
+      }
     }
   }
 }
