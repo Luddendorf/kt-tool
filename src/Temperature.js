@@ -40,17 +40,17 @@ tempPromise
         let currentArray = temperature.data.timelines[0].intervals;
         currentArray.map((item, index) => {
             let reg = /[T][1][2]/;
-            let regTwo = /[T][1][3]/;
+            // let regTwo = /[T][1][3]/;
             if (item.startTime.match(reg)) {
                 result.push(item);
                 // console.log('resStart', result);
-            }
-            if (item.startTime.match(regTwo)) {
-                result.push(item);
-                // console.log('resEnd', result);
             } else {
                 return null;
             }
+            // if (item.startTime.match(regTwo)) {
+            //     result.push(item);
+            //     // console.log('resEnd', result);
+            // } 
         })
 
         console.log('result', result);
