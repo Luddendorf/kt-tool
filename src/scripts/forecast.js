@@ -1,8 +1,4 @@
 "use strict";
-// let dataPosts = fetch(
-//   "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=c2f51b76ee9274f572e408880f610449"
-// ).then((data) => data.json())
-// .then(data => console.log(data));
 
 window.onload = function () {
   class Weather {
