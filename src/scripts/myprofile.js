@@ -1,6 +1,6 @@
 "use strict";
-import ship from "./ship.jpg";
-import capt from "./papay.jpg";
+import ship from "../img/ship.jpg";
+import capt from "../img/papay.jpg";
 
 const myProfile = {
   capitansName: "Capitan Neo",
@@ -37,7 +37,7 @@ card.innerHTML = `
                         <div>Ship Hull: ${myProfile.shipHull}</div>
                         <div>Speed: ${myProfile.speed}</div>
                         <div>Maneuverability: ${myProfile.maneuverability}</div>
-                    
+
                       `;
 capitan.innerHTML = `
                         <img src =${ship}  alt =${"IMG"} class ="ship-img" >
@@ -49,7 +49,7 @@ capitan.innerHTML = `
                         }</div>
                         <div>Gun damage: ${myProfile.capitansGunDamage}</div>
                         <div>Speed: ${myProfile.capitansMoney}</div>
-                       
+
 `;
 
 const form = document.forms.sendForm;
@@ -59,12 +59,12 @@ const formClass = form.elements.class;
 const formPrice = form.elements.price;
 
 const sendBtn = document.querySelector("#button-form");
-sendBtn.addEventListener('click',()=>{
+sendBtn.addEventListener("click", () => {
   let obj = {
     name: formName.value,
     quantity: formQuantity.value,
     class: formClass.value,
-    price: formPrice.value
-  }
-  console.log(obj)
-})
+    price: formPrice.value,
+  };
+  console.log(obj);
+});

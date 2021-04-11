@@ -17,6 +17,7 @@
     div {
       width: 50%;
       height: 25%;
+      margin-top: 2vh;
       input {
         width: 50%;
         height: 100%;
@@ -32,6 +33,9 @@
       border: 1px solid rgb(221, 205, 205);
       li {
         font-size: 1.4vh;
+        list-style: none;
+        color: rgb(31, 25, 25);
+        margin-left: 1vw;
       }
     }
   }

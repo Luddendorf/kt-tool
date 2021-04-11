@@ -1,11 +1,11 @@
 import "./main.css";
 import styles from "./index.module.css";
 import "./sass/main-second.scss";
-import {} from "./filters";
-import {} from "./topbar";
-import {} from "./main-cards";
-import {} from "./myprofile";
-
+import {} from "./scripts/filters";
+import {} from "./scripts/topbar";
+import {} from "./scripts/main-cards";
+import {} from "./scripts/myprofile";
+import {} from  "./scripts/forecast";
 async function print() {
   // Here we are using dynamic import
   const { greet } = await import("./greet");

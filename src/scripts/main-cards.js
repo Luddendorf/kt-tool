@@ -1,5 +1,5 @@
 "use strict";
-import ship from "./ship.jpg";
+import ship from "../img/ship.jpg";
 
 const ships = [
   {
@@ -292,7 +292,7 @@ function createCards(item) {
                         <div>Ship Hull: ${item.shipHull}</div>
                         <div>Speed: ${item.speed}</div>
                         <div>Maneuverability: ${item.maneuverability}</div>
-                    
+
                       `;
 }
 

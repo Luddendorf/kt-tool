@@ -1,0 +1,12 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  h1 {
+    color: rgb(42, 40, 39);
+  }
+}

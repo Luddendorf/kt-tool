@@ -3,15 +3,47 @@ form {
   font-size: 3vh;
   div {
     height: 10vh;
-    background: rgb(90,51,198);
-    background: radial-gradient(circle, rgba(90,51,198,1) 0%, rgba(217,214,230,0.14329481792717091) 100%);
+    background: rgb(90, 51, 198);
+    background: radial-gradient(
+      circle,
+      rgba(90, 51, 198, 1) 0%,
+      rgba(217, 214, 230, 0.14329481792717091) 100%
+    );
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     align-items: center;
     input {
       width: 45%;
       height: 2vh;
+    }
+  }
+  .weather {
+    background: rgb(132, 98, 226);
+    background: radial-gradient(
+      circle,
+      rgb(162, 138, 228) 0%,
+      rgba(155, 153, 160, 0.143) 100%
+    );
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: auto;
+    font-size: 2vh;
+    .dynamic-wrapper {
+      background: transparent;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      div,
+      h3 {
+        background: transparent;
+        margin: 0vw 1vw 0vw 1vw;
+        width: 20%;
+      }
     }
   }
 }
