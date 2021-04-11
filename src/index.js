@@ -726,3 +726,66 @@ function sortByMaxShipHull(arr) {
 
   return lengthsMaxHull;
 }
+
+
+const tableTemperature = document.getElementById("my-ship-weather-table-temperature");
+const tableDate = document.getElementById("my-ship-weather-table-date");
+
+
+// global.fetch = require("node-fetch");
+
+const url = 'https://api.tomorrow.io/v4/timelines?location=-12.561429,43.450748&fields=temperature&timesteps=1h&units=metric&apikey=HAfCfUqmVM33AznA9lhooAK162dvK2ke'
+
+
+fetch(url)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+
+    let today = new Date();
+
+    let test;
+    for(let i = 0; i < data.data.timelines[0].intervals.length; i++) {
+
+      test = new Date(data.data.timelines[0].intervals[i].startTime)
+
+      if (today.getDate() === test.getDate() && 12 === test.getHours()) {
+
+        let a =`${test.getMonth()}.${test.getDate()}`;
+        let b = data.data.timelines[0].intervals[i].values.temperature;
+        if(a < 10){
+          a =`0${test.getMonth()}.${test.getDate()}`;
+        }
+
+        if(b < 0) {
+          b = `-${data.data.timelines[0].intervals[i].values.temperature}°C`;
+        } else {
+          b = `${data.data.timelines[0].intervals[i].values.temperature}°C`;
+        }
+
+        addColumn(tableTemperature,b);
+        addColumn(tableDate,a);
+
+        today.setDate(today.getDate() + 1);
+      }
+    }
+
+  });
+
+
+
+
+function addColumn(table,text){
+
+  const tableTemperatureColumn = document.createElement('div');
+
+  tableTemperatureColumn.setAttribute('class',`my__ship__weather__column`);
+
+  tableTemperatureColumn.innerText = `${text}`;
+
+  table.append(tableTemperatureColumn);
+}
+
+
+

@@ -189,6 +189,7 @@ body {
   justify-content: space-around;
   font-size: 15px;
   color: white;
+  flex-wrap: wrap;
   flex-basis: 75%;
 }
 
@@ -334,4 +335,30 @@ body {
   padding: 5px 70px;
   float: right;
   margin:10px 180px 0 0;
+}
+
+.my__ship__weather{
+  margin-top: 20px;
+  background-color: rgba(3, 18, 129, 0.8);
+  border: 5px solid black;
+  width: 100%;
+  /*padding: 30px;*/
+  /*display: flex;*/
+}
+
+.my__ship__weather__table{
+  display: flex;
+}
+
+.my__ship__weather__column{
+  padding: 40px;
+  border: 1px solid black;
+  text-align: start;
+  flex-basis: 20%;
+}
+
+.my__ship__weather__text{
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
 }
