@@ -1,0 +1,44 @@
+.weather-widget{
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid saddlebrown;
+  border-radius: 5px;
+
+  & * {
+    color: saddlebrown;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+}
+
+.forecast-content{
+  background-color: saddlebrown;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.forecast-content-title{
+  width: 130px;
+}
+
+.weather-widget-title{
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: large;
+}
+
+.weather-widget-row{
+  display: flex;
+}
+
+.weather-widget-col{
+  width: 100%;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+}

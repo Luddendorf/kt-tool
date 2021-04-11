@@ -1,6 +1,7 @@
 import ShipCard from '../components/ShipCard'
 import CaptainCard from '../components/CaptainCard'
 import PurchaseForm from '../components/PurchaseForm'
+import WeatherWidget from '../components/WeatherWidget'
 
 const MyShipTab = () => {
 
@@ -29,12 +30,15 @@ const MyShipTab = () => {
   }
 
   const shipCard = ShipCard(myShip)
+  shipCard.classList.add('my-ship-tab-my-ship')
   const captainPortrait = CaptainCard(captain)
   const purchaseForm = PurchaseForm()
+  const weatherWidget = WeatherWidget()
 
   const rightPageBlock = document.createElement('div')
   rightPageBlock.append(captainPortrait)
   rightPageBlock.append(purchaseForm)
+  rightPageBlock.append(weatherWidget )
 
   const myShipTab = document.createElement('div')
   myShipTab.setAttribute('id', 'my-ship-tab')

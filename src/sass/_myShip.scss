@@ -5,11 +5,21 @@
 
 .captain-card{
   height: 200px;
-  width: 750px; // fix
+  width: 730px; // fix
   margin: 20px;
   border: 2px solid saddlebrown;
   border-radius: 5px;
   display: flex;
+}
+
+.my-ship-tab-my-ship{
+  height: fit-content;
+
+  &:hover{
+    cursor: default;
+    filter: brightness(1);
+    border: 2px solid saddlebrown;
+  }
 }
 
 .captain-portrait{
@@ -37,7 +47,7 @@
 
 
 .purchase-form{
-  width: 750px;
+  width: 730px;
   margin: 20px;
   padding: 20px;
   border: 2px solid saddlebrown;

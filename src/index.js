@@ -9,11 +9,11 @@ import configureSideFilters from './scripts/supportFunctions/configureSideFilter
 const setupApp = () => {
 
   const main = document.getElementById('main')
-  const shipTab = MyShipTab()
   const bightTab = BightTab()
+  const shipTab = MyShipTab()
 
-  main.append(shipTab)
   main.append(bightTab)
+  main.append(shipTab)
 
   configureTabsControls()
   configureSideMenu()
