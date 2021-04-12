@@ -8,6 +8,4 @@ To start, you just need to open index.html in the tool and open it in the browse
 
 ![alt text](fourth.png)
 
-![alt text](fourth.png)
-
 ![alt text](fifth.png)
