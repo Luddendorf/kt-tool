@@ -242,36 +242,43 @@ const ships = [
 
 const cards = document.querySelector('.tabcontent-wrapper');
 
-ships.forEach((obj) => {
+function renderShips(arr, elem) {
 
-  const cardsItem = document.createElement('div');
+  arr.forEach((obj) => {
 
-  cardsItem.innerHTML = `
-  <div class='cardsItem' > 
-  <img height="190px" class="center" src="https://lh3.googleusercontent.com/proxy/SiRulvjaw-IcBfyaMBtoIFxqhn_F3FgHQwyPTH0eg2izncraUZlrKiIWZlRBYRyTFwws8KbOFQUZl6eFoTPz9jX4aNqojXXKEkArTJ7wog">
-  <p> Фрегат: ${obj.shipName} </p>
-  <p> Название класса: ${obj.className} </p>
-  <p> Класс: ${obj.class} </p>
-  <p> Пушки: ${obj.weapons} шт.</p>
-  <p> Корпус: ${obj.shipHull} </p>
-  <p> Команда: ${obj.team} чел.</p>
-  <p> Трюм: ${obj.hold} </p>
-  <p> Скорость: ${obj.speed} узлов</p>
-  <p> Курс относительно ветра: ${obj.beidewind} </p>
-  <p> Манёвренность: ${obj.maneuverability} </p>
-  <p> Описание: ${obj.desc} </p>
-  <p> Цена: ${obj.price} $</p>
-  </div>
-  `;
+    const cardsItem = document.createElement('div');
 
-  cards.appendChild(cardsItem);
-});
+    cardsItem.innerHTML = `
+    <div class='cardsItem' > 
+    <img height="190px" class="center" src="https://stihi.ru/pics/2019/10/05/4506.jpg">
+    <p> Фрегат: ${obj.shipName} </p>
+    <p> Название класса: ${obj.className} </p>
+    <p> Класс: ${obj.class} </p>
+    <p> Пушки: ${obj.weapons} шт.</p>
+    <p> Корпус: ${obj.shipHull} </p>
+    <p> Команда: ${obj.team} чел.</p>
+    <p> Трюм: ${obj.hold} </p>
+    <p> Скорость: ${obj.speed} узлов</p>
+    <p> Курс относительно ветра: ${obj.beidewind} </p>
+    <p> Манёвренность: ${obj.maneuverability} </p>
+    <p> Описание: ${obj.desc} </p>
+    <p> Цена: ${obj.price} $</p>
+    </div>
+    `;
+
+    elem.appendChild(cardsItem);
+  });
+}
+
+renderShips(ships, cards);
+
+//отображение моего корабля
 
 const myShip = document.querySelector('.my-ship');
 
 myShip.innerHTML = `
   <div class='cardsItem' > 
-  <img height="190px" class="center" src="https://lh3.googleusercontent.com/proxy/SiRulvjaw-IcBfyaMBtoIFxqhn_F3FgHQwyPTH0eg2izncraUZlrKiIWZlRBYRyTFwws8KbOFQUZl6eFoTPz9jX4aNqojXXKEkArTJ7wog">
+  <img height="190px" class="center" src="https://stihi.ru/pics/2019/10/05/4506.jpg">
   <p> Фрегат: ${ships[0].shipName} </p>
   <p> Название класса: ${ships[0].className} </p>
   <p> Класс: ${ships[0].class} </p>
@@ -320,7 +327,7 @@ myShip.innerHTML = `
   }
 })();
 
-//main-content-tabs
+//main-content-tabs вкладки
 
 (function () {
   const tablinks = document.getElementsByClassName("tablinks");
@@ -352,6 +359,182 @@ myShip.innerHTML = `
 
   document.getElementById("defaultOpen").click();
 })();
+
+//валидация min-max
+
+const sortingFilter = document.querySelector('.sorting');
+const inputsFilter = sortingFilter.querySelectorAll('input[type="text"]');
+
+inputsFilter.forEach((input) => {
+  input.addEventListener('input', () => {
+    if (!input.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)) {
+      input.style.outline = '2px solid red';
+    } else {
+      input.style.outline = null;
+    }
+  });
+});
+
+//получение данных с формы и валидация 
+
+const form = {
+  name: null,
+  quantity: null,
+  class: null,
+  price: null,
+};
+
+const submitButton = document.querySelector('.submit');
+const shipName = document.getElementById('ship-name');
+const shipQuantity = document.getElementById('ship-quantity');
+const shipClass = document.getElementById('ship-class');
+const shipPrice = document.getElementById('ship-price');
+
+submitButton.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const shipNameVal = shipName.value;
+  const shipQuantityVal = shipQuantity.value;
+  const shipClassVal = shipClass.value;
+  const shipPriceVal = shipPrice.value;
+
+  form.name = shipNameVal;
+  form.quantity = shipQuantityVal;
+  form.class = shipClassVal;
+  form.price = shipPriceVal;
+
+});
+
+shipClass.addEventListener('input', () => {
+  if (!shipClass.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)) {
+    shipClass.style.outline = '2px solid red';
+  } else {
+    shipClass.style.outline = null;
+  }
+});
+
+shipName.addEventListener('input', () => {
+  if (shipName.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)) {
+    shipName.style.outline = '2px solid red';
+  } else {
+    shipName.style.outline = null;
+  }
+});
+
+shipQuantity.addEventListener('input', () => {
+  if (!shipQuantity.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)) {
+    shipQuantity.style.outline = '2px solid red';
+  } else {
+    shipClass.style.outline = null;
+  }
+});
+
+shipPrice.addEventListener('input', () => {
+  if (!shipPrice.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)) {
+    shipPrice.style.outline = '2px solid red';
+  } else {
+    shipPrice.style.outline = null;
+  }
+});
+
+//фильтрация по цене
+
+const tabcontentWrapper = document.querySelector(".tabcontent-wrapper");
+const minPrice = document.getElementById("min-price");
+const maxPrice = document.getElementById("max-price");
+
+const filterMinMaxPrice = (arr, el, operation) => {
+  return arr.filter((item) => {
+    if (operation === 'min') {
+      if (item.price > el.value) {
+        return item;
+      }
+    } else if (operation === 'max') {
+      if (item.price < el.value) {
+        return item;
+      } else if (el.value == '') {
+        return item;
+      }
+    }
+  })
+}
+
+minPrice.addEventListener("blur", () => {
+  if (minPrice.value.trim() !== '') {
+    let result = filterMinMaxPrice(ships, minPrice, 'min');
+    tabcontentWrapper.innerHTML = '';
+    renderShips(result, tabcontentWrapper);
+
+    maxPrice.addEventListener("blur", () => {
+      filterMinMaxPrice(result, maxPrice, 'max');
+      tabcontentWrapper.innerHTML = '';
+      renderShips(filterMinMaxPrice(result, maxPrice, 'max'), tabcontentWrapper)
+    });
+  }
+});
+
+maxPrice.addEventListener("blur", () => {
+  if (minPrice.value.trim() !== '') {
+    let result = filterMinMaxPrice(ships, maxPrice, 'max');
+    tabcontentWrapper.innerHTML = '';
+    renderShips(result, tabcontentWrapper);
+
+    minPrice.addEventListener("blur", () => {
+      filterMinMaxPrice(result, minPrice, 'min');
+      tabcontentWrapper.innerHTML = '';
+      renderShips(filterMinMaxPrice(result, minPrice, 'min'), tabcontentWrapper)
+    });
+  }
+});
+
+//фильтрация по прочности
+
+const minStrength = document.getElementById("min-strength");
+const maxStrength = document.getElementById("max-strength");
+
+const filterMinMaxStrength = (arr, el, operation) => {
+  return arr.filter((item) => {
+    if (operation === 'min') {
+      if (item.shipHull > el.value) {
+        return item;
+      }
+    } else if (operation === 'max') {
+      if (item.shipHull < el.value) {
+        return item;
+      } else if (el.value == '') {
+        return item;
+      }
+    }
+  })
+}
+
+minStrength.addEventListener("blur", () => {
+  if (minStrength.value.trim() !== '') {
+    let result = filterMinMaxStrength(ships, minStrength, 'min');
+    tabcontentWrapper.innerHTML = '';
+    renderShips(result, tabcontentWrapper);
+
+    maxStrength.addEventListener("blur", () => {
+      filterMinMaxStrength(result, maxStrength, 'max');
+      tabcontentWrapper.innerHTML = '';
+      renderShips(filterMinMaxStrength(result, maxStrength, 'max'), tabcontentWrapper)
+    });
+  }
+});
+
+maxStrength.addEventListener("blur", () => {
+  if (minStrength.value.trim() !== '') {
+    let result = filterMinMaxStrength(ships, maxStrength, 'max');
+    tabcontentWrapper.innerHTML = '';
+    renderShips(result, tabcontentWrapper);
+
+    minStrength.addEventListener("blur", () => {
+      filterMinMaxStrength(result, minStrength, 'min');
+      tabcontentWrapper.innerHTML = '';
+      renderShips(filterMinMaxStrength(result, minStrength, 'min'), tabcontentWrapper)
+    });
+  }
+});
 
 
 
