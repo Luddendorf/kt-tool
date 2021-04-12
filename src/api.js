@@ -11,7 +11,6 @@ fetch(url)
   .then((data) => {
 
     let today = new Date();
-    // today.setDate(today.getDate() + 1);
 
     let test;
     for(let i = 0; i < data.data.timelines[0].intervals.length; i++) {

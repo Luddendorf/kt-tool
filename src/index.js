@@ -724,6 +724,10 @@ fetch(url)
     let today = new Date();
     let test;
 
+    if(today.getHours() > 12) {
+      today.setDate(today.getDate() + 1);
+    }
+
     for(let i = 0; i < data.data.timelines[0].intervals.length; i++) {
 
       test = new Date(data.data.timelines[0].intervals[i].startTime)
