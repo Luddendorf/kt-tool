@@ -1,10 +1,16 @@
 @import "body";
-@import "header";
-@import "footer";
 @import "main";
-@import "side-menu";
-@import "cards";
-@import "myShip";
-@import "popupWindow";
-@import "sideSearch";
-@import "weatherWidget";
+
+@import "components/captainCard";
+@import "components/cardsContainer";
+@import "components/footer";
+@import "components/header";
+@import "components/shipCard";
+@import "components/popupWindow";
+@import "components/purchaseForm";
+@import "components/sideMenu";
+@import "components/sideSearch";
+@import "components/weatherWidget";
+
+@import "tabs/bightTab";
+@import "tabs/myShipTab";

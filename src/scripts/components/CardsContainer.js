@@ -12,6 +12,7 @@ const CardsContainer = ships => {
 
   const cardsContainer = document.createElement('div')
   cardsContainer.classList.add('cards-container')
+  cardsContainer.classList.add('cards-container-margin')
 
   ships.forEach(ship => {
     const card = ShipCard(ship)

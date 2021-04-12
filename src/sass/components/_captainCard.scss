@@ -1,0 +1,48 @@
+.captain-card{
+  height: 200px;
+  margin: 15px;
+  border: 2px solid saddlebrown;
+  border-radius: 5px;
+  display: flex;
+}
+
+.captain-portrait{
+  height: 100%
+}
+
+.captain-description{
+  padding: 5px 15px;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  p{
+    margin: 0;
+    width: 50%;
+
+    color: saddlebrown;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .captain-card{
+    height: fit-content;
+    margin: 5px 0px;
+    flex-direction: column;
+  }
+
+  .captain-description{
+    width: 100%;
+
+    p{
+      width: 100%;
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+  }
+}

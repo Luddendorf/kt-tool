@@ -1,0 +1,79 @@
+.footer{
+  width: 100%;
+  height: 120px;
+  background-image: url('https://res.cloudinary.com/dvbkndvl0/image/upload/v1617797933/pirates/sand_p9vpbh.jpg');
+  background-size:cover;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.chest{
+  width: 220px;
+  height: 220px;
+  margin-top: -105px;
+}
+
+.mark{
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+
+.about-capitan{
+  font-size: 25px;
+  text-align: center;
+  color: rgb(87, 43, 11);
+  align-self: center;
+}
+
+@media screen and (min-width: 421px) and (max-width: 1024px){
+  .footer{
+    height: fit-content;
+  }
+
+  .chest{                                                            // //
+    width: 25%;
+    height:fit-content;
+    margin-top: -40px;
+  }
+
+  .about-capitan{
+    width: 15%;
+    color: white;
+  }
+
+  .mark{
+    width: 10%;
+    height: auto;
+  }
+}
+
+@media screen and(max-width: 420px){
+  .footer{
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+
+  .chest{
+    width: 40%;
+    order: 1;
+    height: auto;
+    margin-top: -50px;
+  }
+
+  .about-capitan{
+    width: 100%;
+    order: 2;
+    color: white;
+  }
+
+  .mark{
+    order: 3;
+    width: 30%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+

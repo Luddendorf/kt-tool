@@ -1,0 +1,36 @@
+.my-ship-tab{
+    width: 100%;
+  //display: flex;
+}
+
+.right-page-block{
+  width: 77%;
+}
+
+.my-ship-tab-my-ship{
+  height: fit-content;
+  width: 23%;
+  flex-grow: 0;
+
+
+  &:hover{
+    cursor: default;
+    filter: brightness(1);
+    border: 2px solid saddlebrown;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .my-ship-tab{
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .my-ship-tab-my-ship, .right-page-block{
+    width: 100%;
+  }
+}
+
+
+
+

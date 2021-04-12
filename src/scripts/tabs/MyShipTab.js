@@ -36,6 +36,7 @@ const MyShipTab = () => {
   const weatherWidget = WeatherWidget()
 
   const rightPageBlock = document.createElement('div')
+  rightPageBlock.classList.add('right-page-block')
   rightPageBlock.append(captainPortrait)
   rightPageBlock.append(purchaseForm)
   rightPageBlock.append(weatherWidget )

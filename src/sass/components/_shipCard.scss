@@ -1,13 +1,6 @@
-.cards-container{
-  padding: 0px 0px 0px 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card{
-  //margin: 20px;
+.ship-card{
   margin: 15px;
-  width: 230px;
+  width: 200px;
   border: 2px solid saddlebrown;
   background-color: white;
   border-radius: 5px;
@@ -43,5 +36,25 @@
     margin: 0;
     font-size: 1.3rem;
     line-height: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .ship-card{
+    width: 100%;
+    margin: 5px 0px;
+  }
+
+  .ship-description{
+    text-align: center;                                 //
+
+    h4{
+      font-size: 1.6rem;
+    }
+
+    p{
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
   }
 }

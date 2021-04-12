@@ -1,0 +1,17 @@
+.cards-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards-container-margin{
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 420px){
+  .cards-container-margin{
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+

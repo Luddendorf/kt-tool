@@ -53,3 +53,24 @@
   font-size: 1.2rem;
 }
 
+@media screen and (min-width: 421px) and (max-width: 1024px){                                                 //
+  .popup-card{
+    width: 300px;
+  }
+}
+
+@media screen and(max-width: 420px){                                                  //
+  .popup-window{
+    overflow: scroll;
+  }
+
+  .popup-card, .popup-card-description{
+    width: 90%;
+    margin: 5px 0px;
+  }
+
+  .popup-card{
+    margin-top: 80px;
+  }
+
+}

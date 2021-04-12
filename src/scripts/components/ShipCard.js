@@ -17,7 +17,7 @@ const ShipCard = ship => {
 
   const card = document.createElement('div')
   card.setAttribute('id', ship.id)
-  card.classList.add('card')
+  card.classList.add('ship-card')
 
   const picture = document.createElement('img')
   picture.setAttribute('src', imgPath)

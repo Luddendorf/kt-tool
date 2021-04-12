@@ -5,6 +5,7 @@ const BightTab = () => {
 
   const bightTab = document.createElement('div')
   bightTab.setAttribute('id', 'bight-tab')
+  //bightTab.classList.add('bight-tab')
   bightTab.classList.add('tab-opened')
 
   const cardsContainer = CardsContainer(ships)

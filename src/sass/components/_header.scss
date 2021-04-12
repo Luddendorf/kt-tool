@@ -45,3 +45,14 @@
   flex-grow: 1;
   border-bottom: 2px solid saddlebrown;
 }
+
+
+@media screen and (min-width: 421px) and (max-width: 1024px){
+  .header-spacer{
+    display: none;
+  }
+
+  .header-tab{
+    width: 40%;
+  }
+}

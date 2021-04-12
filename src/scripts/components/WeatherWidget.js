@@ -41,26 +41,23 @@ const WeatherWidget = () => {
   const forecastContent = document.createElement('div')
   forecastContent.classList.add('forecast-content')
 
-  const dateRow = document.createElement('div')
-  dateRow.classList.add('weather-widget-row')
-
   const dateTitle = document.createElement('div')
   dateTitle.innerHTML = 'Date:'
   dateTitle.classList.add('weather-widget-col')
   dateTitle.classList.add('forecast-content-title')
-
-
-  const tempRow = document.createElement('div')
-  tempRow.classList.add('weather-widget-row')
 
   const tempTitle = document.createElement('div')
   tempTitle.innerHTML = 'Temperature:'
   tempTitle.classList.add('weather-widget-col')
   tempTitle.classList.add('forecast-content-title')
 
+  const titleBlock = document.createElement('div')
+  titleBlock.classList.add('title-block')
 
-  dateRow.append(dateTitle)
-  tempRow.append(tempTitle)
+  titleBlock.append(dateTitle)
+  titleBlock.append(tempTitle)
+
+  forecastContent.append(titleBlock)
 
   const numberOfDays = 4
   const dates = []
@@ -81,13 +78,15 @@ const WeatherWidget = () => {
 
   for(let i = 0; i < numberOfDays; i++){
 
-    dateRow.append(dates[i])
-    tempRow.append(temps[i])
+    const dayBlock = document.createElement('div')
+    dayBlock.classList.add('day-block')
+
+    dayBlock.append(dates[i])
+    dayBlock.append(temps[i])
+
+    forecastContent.append(dayBlock)
 
   }
-
-  forecastContent.append(dateRow)
-  forecastContent.append(tempRow)
 
   weatherWidget.append(title)
   weatherWidget.append(forecastContent)
