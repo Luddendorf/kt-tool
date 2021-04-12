@@ -38,10 +38,10 @@ const filter = () => {
   }
   
   
-  minPrice.addEventListener('change', filterHandler.bind(null, ships));
-  maxPrice.addEventListener('change', filterHandler.bind(null, ships));
-  minDur.addEventListener('change', filterHandler.bind(null, ships));
-  maxDur.addEventListener('change', filterHandler.bind(null, ships));
+  minPrice.addEventListener('blur', filterHandler.bind(null, ships));
+  maxPrice.addEventListener('blur', filterHandler.bind(null, ships));
+  minDur.addEventListener('blur', filterHandler.bind(null, ships));
+  maxDur.addEventListener('blur', filterHandler.bind(null, ships));
 };
 
 export default filter;

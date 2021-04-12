@@ -1,51 +1,72 @@
+import {regs} from './regExp';
+
 const validation = ()=>{
-  const shipClass = document.getElementById('ship-form__class');
-  const shipQuantity = document.getElementById('ship-form__quantity');
-  const shipPrice = document.getElementById('ship-form__price');
-  const shipName = document.getElementById('ship-form__name');
-  const asideFilter = document.querySelector('.aside__filter');
-  const filterInputs = asideFilter.querySelectorAll('input[type="text"]');
+  const shipForm = document.querySelector('.main__ship-form');
+  const formName = document.getElementById('ship-form__name');
+  const formClass = document.getElementById('ship-form__class');
+  const formQuantity = document.getElementById('ship-form__quantity');
+  const formPrice = document.getElementById('ship-form__price');
+  const formData = {};
 
-  shipClass.addEventListener('input', ()=>{
-    if(!shipClass.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
-      shipClass.style.outline = '1px solid red';
-    } else{
-      shipClass.style.outline = null;
-    }
-  });
-
-  shipName.addEventListener('input', ()=>{
-    if(shipName.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
-      shipName.style.outline = '1px solid red';
-    } else{
-      shipName.style.outline = null;
-    }
-  });
-
-  shipQuantity.addEventListener('input', ()=>{
-    if(!shipQuantity.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
-      shipQuantity.style.outline = '1px solid red';
-    } else{
-      shipClass.style.outline = null;
-    }
-  });
-
-  shipPrice.addEventListener('input', ()=>{
-    if(!shipPrice.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
-      shipPrice.style.outline = '1px solid red';
-    } else{
-      shipPrice.style.outline = null;
-    }
-  });
-
-  filterInputs.forEach((input)=>{
-    input.addEventListener('input', ()=>{
-      if(!input.value.match(/^([-+]?)?[0-9]+(,[0-9]+)?$/gi)){
-        input.style.outline = '1px solid red';
-      } else{
-        input.style.outline = null;
-      }
+  function removeElement(el) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(el.remove());
+      }, 2000);
     });
+  }
+
+  const addErrorMsg = (_el, errorText = 'Неверная валидация')=>{
+    const errorMsg = document.createElement('div');
+    errorMsg.textContent = errorText;
+    errorMsg.style.cssText = `text-align: center;
+                              font-size: 18px;
+                              color: red;`;
+    _el.insertAdjacentElement('afterend', errorMsg);
+    return errorMsg;
+  }
+
+  const errorHandler = (_el, msg)=>{
+    _el.classList.add('error');
+    removeElement(addErrorMsg(_el, msg))
+    .then(()=>{
+      _el.classList.remove('error');
+    });
+  }
+
+  const errorOnChange = (_el, reg = '', text = '')=>{
+    if(!_el.value.match(reg)){
+      errorHandler(_el, text);
+      return false;
+    } else{
+      return true;
+    }
+  };
+
+  const isValidate = ()=>{
+    if(errorOnChange(formName, regs.regName, null) &&
+        errorOnChange(formClass, regs.regDigits, null) &&
+        errorOnChange(formQuantity, regs.regDigits, null) &&
+        errorOnChange(formPrice, regs.regDigits, null))
+        {
+          return true;
+        } else{
+          return false;
+        }
+    }
+
+  shipForm.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    
+    errorOnChange(formName, regs.regName, 'только буквы или цифры');
+    errorOnChange(formClass, regs.regDigits, 'только цифры');
+    errorOnChange(formQuantity, regs.regDigits, 'только цифры');
+    errorOnChange(formPrice, regs.regDigits, 'число формата 123 или 123.321');
+    if(isValidate()){
+      shipForm.querySelectorAll('input').forEach((input)=>{
+        formData[input.name] = input.value;
+      });
+    }
   })
 }
 

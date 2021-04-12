@@ -29,22 +29,22 @@
           <div class="aside__column">
             <div class="aside__item">
               <label class="aside__label" for="low-price">Мин. цена
-                <input type="text" class="aside__input" id="min-price">
+                <input type="number" class="aside__input" id="min-price">
               </label>
             </div>
             <div class="aside__item">
               <label class="aside__label" for="max-price">Макс. цена
-                <input type="text" class="aside__input" id="max-price">
+                <input type="number" class="aside__input" id="max-price">
               </label>
             </div>
             <div class="aside__item">
               <label class="aside__label" for="min-dur">Мин. корпус
-                <input type="text" class="aside__input" id="min-dur">
+                <input type="number" class="aside__input" id="min-dur">
               </label>
             </div>
             <div class="aside__item">
               <label class="aside__label" for="max-dur">Макс. корпус
-                <input type="text" class="aside__input" id="max-dur">
+                <input type="number" class="aside__input" id="max-dur">
               </label>
             </div>
           </div>
@@ -111,7 +111,7 @@
               <li class="main__list-item main__ship-item"><span>Манёвренность</span>: 46</li>
               <li class="main__list-item main__ship-item"><span>Команда</span>: 50</li>
               <li class="main__list-item main__ship-item"><span>Цена</span>: 100000</li>
-              <li class="main__list-item main__ship-item"><span>Описание</span>: Личный корабль лорда Беккета, который по своей сути, являлся боевой крепостью на море. Был способен дать достойный отпор мистическим кораблям, если бы сражение было один на один. Единственный корабль из моего списка, не обладающий сверхъестественными способностями, но на голову превосходящий обычные корабли.</li>
+              <li class="main__ship-item"><span>Описание</span>: Личный корабль лорда Беккета, который по своей сути, являлся боевой крепостью на море. Был способен дать достойный отпор мистическим кораблям, если бы сражение было один на один. Единственный корабль из моего списка, не обладающий сверхъестественными способностями, но на голову превосходящий обычные корабли.</li>
             </ul>
           </div>
           <div class="main__profile-form">
@@ -126,19 +126,19 @@
                 <p class="main__profile-money">Дублонов: 1000000</p>
               </div>
             </div>
-            <form action="" class="main__ship-form">
+            <form action="#" class="main__ship-form">
               <h2 class="main__ship-header">Закажи собственное судно!</h2>
               <label for="ship-form__name">Имя:
-                <input type="text" name="" id="ship-form__name">
+                <input type="text" name="name" id="ship-form__name" required>
               </label>
               <label for="ship-form__class">Класс:
-                <input type="text" name="" id="ship-form__class">
+                <input type="text" name="ship-class" id="ship-form__class" required>
               </label>
               <label for="ship-form__quantity">Количество:
-                <input type="text" name="" id="ship-form__quantity">
+                <input type="text" name="ship-quantity" id="ship-form__quantity" required>
               </label>
               <label for="ship-form__price">Цена:
-                <input type="text" name="" id="ship-form__price">
+                <input type="text" name="ship-price" id="ship-form__price" required>
               </label>
               <button class="ship-form__submit" type="submit">Отправить!</button>
             </form>

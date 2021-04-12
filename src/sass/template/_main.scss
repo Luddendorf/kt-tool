@@ -65,7 +65,8 @@
     margin-right: 100px;
     background: $light;
     box-shadow: $boxShadow;
-    max-width: 500px;
+    max-width: 400px;
+    padding-bottom: 10px;
   }
   &__profile-form{
     display: flex;
@@ -81,10 +82,12 @@
     margin-bottom: 30px;
   }
   &__profile-photo{
-    max-width: 100px;
     margin-right: 10px;
     & img{
-      border-radius: 20px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   }
   &__ship-form {
