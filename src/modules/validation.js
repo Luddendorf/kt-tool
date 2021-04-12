@@ -66,6 +66,14 @@ const validation = ()=>{
       shipForm.querySelectorAll('input').forEach((input)=>{
         formData[input.name] = input.value;
       });
+      shipForm.reset();
+      const successMsg = document.createElement('div');
+      successMsg.textContent = 'Форма успешно отправлена';
+      successMsg.style.cssText = `text-align: center;
+                                font-size: 18px;
+                                color: green;`;
+      shipForm.insertAdjacentElement('beforeend', successMsg);
+      removeElement(successMsg);
     }
   })
 }
