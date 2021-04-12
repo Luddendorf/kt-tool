@@ -715,10 +715,12 @@ function sortByMaxShipHull(arr) {
   return lengthsMaxHull;
 }
 
-fetch(url)
-  .then((response) => {
-    return response.json();
-  })
+async function asynchronousWeather(url){
+  const response = await fetch(url);
+  return response.json();
+}
+
+asynchronousWeather(url)
   .then((data) => {
 
     let today = new Date();
