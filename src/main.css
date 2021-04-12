@@ -11,25 +11,13 @@
 @import url('./css/modal.css');
 @import url('./css/footer.css');
 
-
-html {
-  height: 100%;
-/*   box-sizing: border-box;
-  font-size: 62.5%; /* Set font to 1rem = 10px */ 
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: linear-gradient(90deg, #b9deed, #efefef);
   font-family: 'Open Sans', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .main {
@@ -38,7 +26,25 @@ body {
   padding: 75px 0 180px 0;
 }
 
+.left-nav-menu {
+  min-width: 250px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  padding-left: 250px;
+  width: 100%;
+  height: 100%;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,10 +1,8 @@
 .filter {
-    position: fixed;
-    left: 0;
-    bottom: 180px;
+    margin-bottom: 30px;
 }
 
-.search,.search-div {
+.search, .search-div {
     display: flex;
     flex-direction: column;
 }

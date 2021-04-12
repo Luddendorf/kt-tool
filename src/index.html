@@ -22,159 +22,163 @@
   </header>
 
   <main class="main">
-    <section class="menu">
-      <ul class="left-menu">
-        <li class="left-menu-item">
-          <div class="left-menu-item-button">Паруса</div>
-          <div class="left-menu-description">
-            <ul class="left-menu-description-list">
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Шпринтовые</a>
-              </li>
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Бермудские</a>
-              </li>
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Гафельные</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="left-menu-item">
-          <div class="left-menu-item-button">Ремонт</div>
-          <div class="left-menu-description">
-            <ul class="left-menu-description-list">
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Обычный</a>
-              </li>
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Быстрый</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="left-menu-item">
-          <div class="left-menu-item-button">Пушки</div>
-          <div class="left-menu-description">
-            <ul class="left-menu-description-list">
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Пушки</a>
-              </li>
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Кулеврины</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="left-menu-item">
-          <div class="left-menu-item-button">Команда</div>
-          <div class="left-menu-description">
-            <ul class="left-menu-description-list">
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Салаги</a>
-              </li>
-              <li class="left-menu-description-list-item">
-                <a href="#" class="left-menu-description-link">Моркие волки</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <nav class="left-nav-menu">
 
-    <section class="filter">
-      <form class="search" action="#">
-        <div class="search-div">
-          <span class="search-text">Макс. цена</span>
-          <input type="text" />
-        </div>
-        <div class="search-div">
-          <span class="search-text">Мин. цена</span>
-          <input type="text" />
-        </div>
-        <div class="search-div">
-          <span class="search-text">Макс. прочность</span>
-          <input type="text" />
-        </div>
-        <div class="search-div">
-          <span class="search-text">Мин. прочность</span>
-          <input type="text" />
-        </div>
-        <div>
-          <input type="reset" />
-          <input type="submit" />
-        </div>
-      </form>
       
-    </section>
+      <section class="filter">
+        <form class="search" action="#">
+          <div class="search-div">
+            <span class="search-text">Макс. цена</span>
+            <input type="text" class="max-price" id="filter-input" />
+          </div>
+          <div class="search-div">
+            <span class="search-text">Мин. цена</span>
+            <input type="text" class="min-price" id="filter-input" />
+          </div>
+          <div class="search-div">
+            <span class="search-text">Макс. прочность</span>
+            <input type="text" class="max-ship-hull" id="filter-input" />
+          </div>
+          <div class="search-div">
+            <span class="search-text">Мин. прочность</span>
+            <input type="text" class="min-ship-hull" id="filter-input" />
+          </div>
+          <input type="reset" class="reset-button" />
+        </form>
+      </section>
 
-    <section class="сards">
-      <ul class="cards-list">
-      </ul>
-    </section>
+      <section class="menu">
+        <ul class="left-menu">
+          <li class="left-menu-item">
+            <div class="left-menu-item-button">Паруса</div>
+            <div class="left-menu-description">
+              <ul class="left-menu-description-list">
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Шпринтовые</a>
+                </li>
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Бермудские</a>
+                </li>
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Гафельные</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="left-menu-item">
+            <div class="left-menu-item-button">Ремонт</div>
+            <div class="left-menu-description">
+              <ul class="left-menu-description-list">
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Обычный</a>
+                </li>
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Быстрый</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="left-menu-item">
+            <div class="left-menu-item-button">Пушки</div>
+            <div class="left-menu-description">
+              <ul class="left-menu-description-list">
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Пушки</a>
+                </li>
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Кулеврины</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="left-menu-item">
+            <div class="left-menu-item-button">Команда</div>
+            <div class="left-menu-description">
+              <ul class="left-menu-description-list">
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Салаги</a>
+                </li>
+                <li class="left-menu-description-list-item">
+                  <a href="#" class="left-menu-description-link">Моркие волки</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-    <section class="my-ship hidden">
-      <article class="my-ship-card">
-        <img
-            src="http://ic.pics.livejournal.com/filgray/15183826/604048/604048_original.jpg"
-            alt="ship"
-            width="300px"
-            class="my-ship-image"
-        />
-        <h1 class="my-ship-name">Black Pearl</h1>
-        <h1 class="my-ship-classname">"Sparrow"</h1>
-        <div class="numbers">
-            <span class="my-ship-description">class: 30</span>
-            <span class="my-ship-description">ship hull: 1200</span>
-            <span class="my-ship-description">speed: 15</span>
-            <span class="my-ship-description">maneuverability: 70</span>
-            <span class="my-ship-description">beidewind: 10.1</span>
-            <span class="my-ship-description">hold: 640</span>
-            <span class="my-ship-description">team: 72</span>
-            <span class="my-ship-description">weapons: 32</span>
-            <span class="my-ship-description">price: 50000000000</span>
-        </div>
-        <p class="my-ship-text">«Черная Жемчужина» умеренно вооружена.
-          Она несёт тридцать две 12-фунтовые пушки: 18 на пушечной палубе и 14 на верхней палубе.
-          Бортовой залп содержит 16 пушечных ядер общим весом 192 фунта.
-          На «Жемчужине» нет носовых или кормовых орудий, что очень необычно для пиратского судна.
-        </p>
-    </article>
+    </nav>
+
+    <div class="content">
+      <section class="cards">
+        <ul class="cards-list">
+        </ul>
+      </section>
   
-    <article class="captain-card">
-      <img
-        src="https://radiokp.ru/sites/default/files/styles/max_width_1200px/public/2020-03/1_3.jpeg?itok=_RGF8-G_"
-        alt="captain"
-        width="200px"
-      />
-      <div class="captain-info">
-        <span>Имя: Станислав Лукьяненко</span>
-        <span>Класс: 80</span>
-        <span>Урон саблей: 40</span>
+      <section class="my-ship hidden">
+        <article class="my-ship-card">
+          <img
+              src="http://ic.pics.livejournal.com/filgray/15183826/604048/604048_original.jpg"
+              alt="ship"
+              width="300px"
+              class="my-ship-image"
+          />
+          <h1 class="my-ship-name">Black Pearl</h1>
+          <h1 class="my-ship-classname">"Sparrow"</h1>
+          <div class="numbers">
+              <span class="my-ship-description">class: 30</span>
+              <span class="my-ship-description">ship hull: 1200</span>
+              <span class="my-ship-description">speed: 15</span>
+              <span class="my-ship-description">maneuverability: 70</span>
+              <span class="my-ship-description">beidewind: 10.1</span>
+              <span class="my-ship-description">hold: 640</span>
+              <span class="my-ship-description">team: 72</span>
+              <span class="my-ship-description">weapons: 32</span>
+              <span class="my-ship-description">price: 50000000000</span>
+          </div>
+          <p class="my-ship-text">«Черная Жемчужина» умеренно вооружена.
+            Она несёт тридцать две 12-фунтовые пушки: 18 на пушечной палубе и 14 на верхней палубе.
+            Бортовой залп содержит 16 пушечных ядер общим весом 192 фунта.
+            На «Жемчужине» нет носовых или кормовых орудий, что очень необычно для пиратского судна.
+          </p>
+      </article>
+    
+      <div>
+        <article class="captain-card">
+          <img
+            src="https://radiokp.ru/sites/default/files/styles/max_width_1200px/public/2020-03/1_3.jpeg?itok=_RGF8-G_"
+            alt="captain"
+            width="200px"
+          />
+          <div class="captain-info">
+            <span>Имя: Станислав Лукьяненко</span>
+            <span>Класс: 80</span>
+            <span>Урон саблей: 40</span>
+          </div>
+          <div class="captain-info">
+            <span>Возраст: 25</span>
+            <span>Дублонов: 1 213 434 231</span>
+            <span>Урон пистолеты: 100</span>
+          </div>
+      
+        </article>
+      
+        <div class="buy-form">
+          <form action="#">
+            <div>
+              <input type="text" />
+              <input type="text" />
+            </div>
+            <div>
+              <input type="text" />
+              <input type="text" />
+              <input type="submit" />
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="captain-info">
-        <span>Возраст: 25</span>
-        <span>Дублонов: 1 213 434 231</span>
-        <span>Урон пистолеты: 100</span>
-      </div>
-  
-    </article>
-  
-    <div class="buy-form">
-      <form action="#">
-        <div>
-          <input type="text" />
-          <input type="text" />
-        </div>
-        <div>
-          <input type="text" />
-          <input type="text" />
-          <input type="submit" />
-        </div>
-      </form>
+      </section>
     </div>
-  
-    </section>
 
     <div class="modal">
       <div class="modal-card">

@@ -1,5 +1,6 @@
 'use strict';
 
+import { render } from 'node-sass';
 import ships from './ships';
 
 const accordion = () => {
@@ -8,7 +9,6 @@ const accordion = () => {
 
     const open = (button, dropDown) => {
         closeAllDrops();
-        dropDown.style.height = `${dropDown.scrollHeight}px`;
         button.classList.add('active');
         dropDown.classList.add('active');
     };
@@ -28,7 +28,6 @@ const accordion = () => {
     };
 
     leftMenu.addEventListener('click', (event) => {
-        console.log(event.target);
         const target = event.target;
         if (target.classList.contains('left-menu-item-button')) {
             const parent = target.closest('.left-menu-item');
@@ -38,14 +37,14 @@ const accordion = () => {
                 close(target, description) :
                     open(target, description);
         }
-    })
+    });
 
     document.body.addEventListener('click', (event) => {
         const target = event.target;
         if (!target.closest('.left-menu')) {
             closeAllDrops();
         }
-    })
+    });
 };
 
 const renderCards = (cards) => {
@@ -60,8 +59,7 @@ const renderCards = (cards) => {
             hold,
             team,
             weapons,
-            price,
-            desc } = card;
+            price} = card;
         const liItem = document.createElement('li');
 
         liItem.innerHTML = `
@@ -98,6 +96,34 @@ const renderCards = (cards) => {
     const cardsList = document.querySelector('.cards-list');
     cardsList.appendChild(docFrag);
 };
+
+const filter = () => {
+
+    const maxPrice = document.querySelector('.max-price').value;
+    const minPrice = document.querySelector('.min-price').value;
+    const maxShipHull = document.querySelector('.max-ship-hull').value;
+    const minShipHull = document.querySelector('.min-ship-hull').value;
+
+    
+
+    const newArray = ships.filter(item => {
+        if (maxPrice.length > 0) item.price < maxPrice;
+        item.price > minPrice;
+        item.shipHull < maxShipHull;
+        item.shipHull > minShipHull;
+    });
+
+    const cardList = document.querySelector('.cards-list');
+    cardList.remove();
+    renderCards(newArray);
+};
+
+document.querySelectorAll("#filter-input").forEach(item => {
+    item.addEventListener('blur', filter)
+});
+
+
+
     
 const modal = () => {
     const cardsList = document.querySelector('.cards-list');
@@ -118,12 +144,11 @@ const modal = () => {
     const openModal = () => {
         modal.classList.add('open');
         document.addEventListener('keydown', escapePress);
-
-        
     };
 
     const closeModal = () => {
         modal.classList.remove('open');
+        document.removeEventListener('keydown', escapePress);
     };
 
     
@@ -145,54 +170,49 @@ const modal = () => {
     cardsList.addEventListener('click', event => {
         const target = event.target;
         const parent = target.closest('.card-item');
-    
-        const findName =  parent.querySelector('.card-name').textContent;
-        let ship = ships.filter(item =>  item.shipName === findName);
 
-        modalCardName.textContent = ship[0].shipName;
-        cardClassname.textContent = `"${ship[0].className}"`;
-        classification.textContent = `class: ${ship[0].classification}`;
-        shipHull.textContent = `ship hull: ${ship[0].shipHull}`;
-        speed.textContent = `speed: ${ship[0].speed}`;
-        maneuverability.textContent = `maneuverability: ${ship[0].maneuverability}`;
-        beidewind.textContent = `beidewind: ${ship[0].beidewind}`;
-        hold.textContent = `hold: ${ship[0].hold}`;
-        team.textContent = `team: ${ship[0].team}`;
-        weapons.textContent = `weapons: ${ship[0].weapons}`;
-        price.textContent = `price: ${ship[0].price}`;
-        cardText.textContent = ship[0].desc;
+        const findName =  parent.querySelector('.card-name').textContent;
+        let ship = ships.find(item =>  item.shipName === findName);
+
+        modalCardName.textContent = ship.shipName;
+        cardClassname.textContent = `"${ship.className}"`;
+        classification.textContent = `class: ${ship.classification}`;
+        shipHull.textContent = `ship hull: ${ship.shipHull}`;
+        speed.textContent = `speed: ${ship.speed}`;
+        maneuverability.textContent = `maneuverability: ${ship.maneuverability}`;
+        beidewind.textContent = `beidewind: ${ship.beidewind}`;
+        hold.textContent = `hold: ${ship.hold}`;
+        team.textContent = `team: ${ship.team}`;
+        weapons.textContent = `weapons: ${ship.weapons}`;
+        price.textContent = `price: ${ship.price}`;
+        cardText.textContent = ship.desc;
 
         openModal();
-    })
+    });
 };
 
 const transition = () => {
     const bayLink = document.querySelector('.bay-link');
     const shipLink = document.querySelector('.ship-link');
-    const cardsList = document.querySelector('.cards-list');
+    const cards = document.querySelector('.cards');
     const myShip = document.querySelector('.my-ship');
 
-    const openMyShip = () => {
-        cardsList.classList.add('hidden');
-        myShip.classList.remove('hidden');
-    };
-
-    const openCards = () => {
-        myShip.classList.add('hidden');
-        cardsList.classList.remove('hidden');
+    const changePage = () => {
+        cards.classList.toggle('hidden');
+        myShip.classList.toggle('hidden');
     };
 
     shipLink.addEventListener('click', () => {
-        openMyShip();
+        changePage();
     })
 
     bayLink.addEventListener('click', () => {
-        openCards();
+        changePage();
     })
 };
 
 
 accordion();
 renderCards(ships);
-modal(ships);
+modal();
 transition();

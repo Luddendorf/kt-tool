@@ -29,6 +29,6 @@
 }
 
 .topbar-elem:not(:last-child) {
-    height: 80px;
+    height: 75px;
     border-right: 5px solid red;
 }
