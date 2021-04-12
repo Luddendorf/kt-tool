@@ -1,13 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
+  <title>Денисенко Максим Lesson 6</title>
 </head>
 
 <body>
+  <div class="wrapper">
+
+    <header class="tab">
+      <button class="tablinks" id="defaultOpen">Бухта Одинокого острова</button>
+      <button class="tablinks">Мой корабль</button>
+    </header>
+
+    <section>
+      <aside>
+        <h1>Фильтр кораблей</h1>
+        <form>
+          <div class="sorting">
+            <div class="sorting-price">
+              <label>
+                Мин. цена
+                <input type="text" class="price" id="min-price">
+              </label>
+              <label>
+                Макс. цена
+                <input type="text" class="price" id="max-price">
+              </label>
+            </div>
+            <div class="sorting-strength">
+              <label>
+                Мин. прочность
+                <input type="text" class="strength" id="min-strength">
+              </label>
+              <label>
+                Макс. прочность
+                <input type="text" class="strength" id="max-strength">
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <button class="accordion">Паруса</button>
+          <div class="panel">
+            <p>Шпринтовые</p>
+            <p>Бермудские</p>
+            <p>Гафельные</p>
+          </div>
+          <button class="accordion">Ремонт</button>
+          <div class="panel">
+            <p>Обычный</p>
+            <p>Быстрый</p>
+          </div>
+          <button class="accordion">Пушки</button>
+          <div class="panel">
+            <p>Пушки</p>
+            <p>Кулеврины</p>
+          </div>
+          <button class="accordion">Команда</button>
+          <div class="panel">
+            <p>Салаги</p>
+            <p>Моркие волки</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-content">
+        <div id="tab1" class="tabcontent">
+          <div class="tabcontent-wrapper"></div>
+        </div>
+
+        <div id="tab2" class="tabcontent">
+
+          <div class="tab2-wrapper">
+
+            <div>
+              <p>Мой корабль</p>
+              <div class="my-ship">
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <p>Мой капитан</p>
+                <div class="my-captain">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFP3uTwo-S2Fq1f9h2B32RHQQMaUNSsG69Td3BYZWaNWt0XnPmYeoJ9Plh6uiP0C79jrw&usqp=CAU"
+                    alt="">
+                  <div>
+                    <p>Имя: Максим Денисенко</p>
+                    <p>Класс: 98</p>
+                    <p>Урон саблей: 35</p>
+                  </div>
+                  <div>
+                    <p>Возраст: 30</p>
+                    <p>Дублонов: 1565872</p>
+                    <p>Урон пистолетом: 80</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shop-ship">
+                <form>
+                  <p>Заявка на покупку судна</p>
+                  <div class="shop-ship-form">
+                    <div>
+                      <label>
+                        Имя:
+                        <input type="text" id="ship-name">
+                      </label>
+                      <label>
+                        Количество:
+                        <input type="text" id="ship-quantity">
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        Класс:
+                        <input type="text" id="ship-class">
+                      </label>
+                      <label>
+                        Цена:
+                        <input type="text" id="ship-price">
+                      </label>
+                      <button class="submit">Отправить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div id="temperatura">
+                <table id="tempTable">
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <div>
+        <img src="https://pedagog-prof.org/images/2018/chernaya_metka.jpg" alt="Black-label">
+        <img
+          src="https://storage.googleapis.com/multi-static-content/previews/artage-io-thumb-8ecd2b31d508ae93046c63204478be24.png"
+          alt="pirate-chest">
+      </div>
+      <div>
+        <p>Капитан Максим Денисенко, отчаянный пират, человек чести.</p>
+        <p>Судно: Каравелла "Черная жемчужина".</p>
+      </div>
+      <div>
+        <img
+          src="https://storage.googleapis.com/multi-static-content/previews/artage-io-thumb-8ecd2b31d508ae93046c63204478be24.png"
+          alt="pirate-chest">
+        <img src="https://pedagog-prof.org/images/2018/chernaya_metka.jpg" alt="Black-label">
+      </div>
+    </footer>
+
+  </div>
+
 </body>
 
 </html>
