@@ -66,6 +66,7 @@ const validation = ()=>{
       shipForm.querySelectorAll('input').forEach((input)=>{
         formData[input.name] = input.value;
       });
+      console.log(formData);
       shipForm.reset();
       const successMsg = document.createElement('div');
       successMsg.textContent = 'Форма успешно отправлена';
