@@ -7,7 +7,7 @@ https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.758720695975
 /* Fetch */
 let result = []
 
-const tempPromise = fetch('https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=7mnu6Im4yRODlaYnkOl4mXO10OoRx7fK');
+const tempPromise = fetch('https://api.tomorrow.io/v4/timelines?location=-50.631183,36.676264&fields=temperature&timesteps=1h&units=metric&apikey=7mnu6Im4yRODlaYnkOl4mXO10OoRx7fK');
 tempPromise
     .then(data => data.json())
     .then(temperature => {
