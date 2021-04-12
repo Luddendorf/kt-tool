@@ -348,12 +348,14 @@ body {
 
 .my__ship__weather__table{
   display: flex;
+  font-size: 17px;
+
 }
 
 .my__ship__weather__column{
-  padding: 40px;
+  padding: 30px;
   border: 1px solid black;
-  text-align: start;
+  text-align: center;
   flex-basis: 20%;
 }
 
