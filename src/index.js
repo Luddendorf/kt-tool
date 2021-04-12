@@ -98,23 +98,30 @@ const capitan = {
     age: '29',
     money: '1 565 872',
     damagePistols: '80',
-    photo: 'https://i.pinimg.com/736x/ad/cc/f6/adccf6e3a3b137a04007d479c24e7d6a--famous-pirates-pirate-party.jpg',
+    photo: 'https://bumper-stickers.ru/61583-thickbox_default/multyashnyj-pirat.jpg',
 }
 
 
 const tabMyCapitan = document.querySelector('#myShip');
 let divMyCapitan = document.createElement('div');
+divMyCapitan.classList.add('divMyCap');
 let renderMyCapitan = `
 
 <div class='shipItemStyle myCapitan'>
-<h1>Мой капитан</h1>
-<img height="190px" class="center" src="${capitan.photo}">
+<h1 class='h1_myCapitan'>Мой капитан</h1>
+<div class='img_myCapitan'>
+<img height="135px" class="center" src="${capitan.photo}">
+</div>
+<div class='div_myCapitan_one'>
 <p>Имя:: ${capitan.name}</p>
 <p>Класс: ${capitan.class}</p>
 <p>Урон саблей: ${capitan.damageSable}</p>
+</div>
+<div class='div_myCapitan_two'>
 <p>Возраст: ${capitan.age}</p>
 <p>Дублонов: ${capitan.money}</p>
 <p>Урон пистолеты: ${capitan.damagePistols}</p>
+</div>
 </div>
 `;
 divMyCapitan.innerHTML = renderMyCapitan;

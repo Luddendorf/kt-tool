@@ -10,9 +10,26 @@ html {
     box-sizing: inherit;
 }
 
-body {}
+body {
+    background-image: url(https://k60.kn3.net/taringa/9/8/5/2/0/E/Beriku/0AA.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #464646;
+}
 
-.tabs-wrapper {}
+.fon_scroll {
+    /* background-image: url(https://k60.kn3.net/taringa/9/8/5/2/0/E/Beriku/0AA.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: 999999; */
+}
+
+.tabs-wrapper {
+    position: fixed;
+}
 
 .tabs-header {
     display: flex;
@@ -20,11 +37,12 @@ body {}
 }
 
 .tab {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     cursor: pointer;
-    border-bottom: none;
+    /* border-bottom: none; */
     font-size: 24px;
+    background-color: rgb(255, 255, 255);
 }
 
 .tab:hover {
@@ -42,6 +60,11 @@ body {}
 .tabs-panels {
     font-size: 16px;
     margin-bottom: 200px;
+    background-color: rgb(243 243 243 / 92%);
+}
+
+div#h1_temp {
+    flex-basis: 100%;
 }
 
 .tab-panel {
@@ -57,7 +80,7 @@ body {}
     width: auto;
     margin: 0auto;
     padding: 10px;
-    display: flex;
+    margin: 25px;
 }
 
 .content-body {
@@ -68,6 +91,9 @@ body {}
 .menu-left {
     margin-right: 15px;
     font-size: 16px;
+    background-color: rgb(243 243 243 / 92%);
+    height: 100%;
+    padding: 25px;
 }
 
 .tab-panel.active {
@@ -75,7 +101,25 @@ body {}
     flex: 1 1 auto;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+}
+
+.min-max-flex {
+    /* display: flex; */
+    /* justify-content: end; */
+    /* flex-wrap: wrap; */
+    text-align: center;
+}
+
+.menu-left input {
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+
+.menu-left h1 {
+    text-align: center;
 }
 
 .price {
@@ -88,14 +132,14 @@ body {}
 }
 
 .ac-container label {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 5px 20px;
     position: relative;
     z-index: 20;
     display: block;
     height: 50px;
     cursor: pointer;
-    color: #777;
+    color: rgb(0, 0, 0);
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
     line-height: 33px;
     font-size: 19px;
@@ -234,6 +278,8 @@ i {
 
 #ships {
     /* display: flex;
+    flex-wrap: nowrap; */
+    /* display: flex;
     justify-content: space-around; */
 }
 
@@ -244,7 +290,7 @@ i {
 #myShip {}
 
 .shipItemStyle {
-    float: left;
+    /* float: left; */
     width: 250px;
     border: 4px solid darksalmon;
     margin: 25px;
@@ -295,7 +341,7 @@ p {
 }
 
 .formSubmit {
-    width: 100%;
+    width: 300px;
     display: flex;
     justify-content: center;
     order: 3;
@@ -350,4 +396,91 @@ p {
     border: 1px solid black;
     padding: 15px;
     margin-left: 15px;
+}
+
+.shipItemStyle.myCapitan {
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1.h1_myCapitan {
+    color: black;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formSubmit form input {
+    width: 100%;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+
+.formSubmit form label {
+    font-size: 18px;
+}
+
+.formSubmit form {
+    width: 100%;
+    text-align: center;
+}
+
+.formSubmit form button {
+    margin-top: 5px;
+    min-width: 100px;
+    font-family: inherit;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676d7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.shipItemStyle h1 {
+    text-align: center;
+    color: black;
+}
+
+.h1_temp {
+    font-size: 24px;
+}
+
+div#tempCol {
+    margin-bottom: 15px;
+}
+
+.divCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.capitan p {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .menu-left {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .img_pirates {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .capitan p {
+        font-size: 16px;
+    }
 }

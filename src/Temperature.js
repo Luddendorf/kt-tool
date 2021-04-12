@@ -51,6 +51,13 @@ tempPromise
     })
     .catch(err => {
         console.log('Ошибка', err);
+        const tempDiv = document.querySelector('#h1_temp');
+        let temperatureH1 = document.createElement('p');
+        let contentError = `
+        Ошибка 429 ${err}
+        `
+        temperatureH1.innerHTML = contentError;
+        tempDiv.appendChild(temperatureH1);
     })
 
 

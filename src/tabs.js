@@ -267,7 +267,8 @@ const tabShip = document.querySelector('#ships');
 const itemShip = document.createElement('div');
 tabShip.appendChild(itemShip);
 let contentShip = ''
-itemShip.innerHTML += renderDiv(ships, contentShip)
+itemShip.innerHTML += renderDiv(ships, contentShip);
+itemShip.classList.add('divCont')
 
 // const itemShipTwo = document.querySelector('#divShTwo');
 // const itemShipThree = document.querySelector('#divShThree');
