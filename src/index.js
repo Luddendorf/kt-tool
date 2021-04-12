@@ -6,6 +6,7 @@ import tabs from './modules/tabs';
 import modal from './modules/modal';
 import filter from './modules/filter';
 import validation from './modules/validation';
+import fetchTemperature from './modules/fetchTemperature';
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
   tabs();
   modal();
   validation();
+  fetchTemperature();
 });
