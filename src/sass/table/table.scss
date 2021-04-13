@@ -1,0 +1,22 @@
+.table {
+  display: flex;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  &__wrapper {
+    width: 50%;
+    border: 1px solid red;
+  }
+  &__block-title {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid red;
+  }
+  &__info {
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid red;
+    padding: 1rem;
+  }
+}

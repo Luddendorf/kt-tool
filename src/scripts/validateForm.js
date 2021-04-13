@@ -12,7 +12,7 @@ form.addEventListener("submit", (event) => {
   form.forEach((element) => {
     switch (element.id) {
       case "name":
-        validateInput(element, /^[a-zA-Z0-9]{4,10}$/)
+        validateInput(element, /^[а-яА-Я]{4,10}$/)
           ? (dataSend.name = element.value)
           : delete dataSend.name;
         break;

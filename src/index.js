@@ -9,6 +9,7 @@ import ships from "./src/shipsData";
 import showCards from "./scripts/showCards";
 import filterCards from "./scripts/filterCards";
 import form from "./scripts/validateForm";
+import getWeather from "./scripts/getWeather";
 
 async function print() {
   // Here we are using dynamic import
@@ -37,4 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   showCards(ships);
+  getWeather();
 });
