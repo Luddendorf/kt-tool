@@ -253,13 +253,6 @@ const ships = [
   let currentMinDurab = document.querySelector("#minstrength");
   let cards = lonelyBayField.childNodes;
  
-  let div = document.createElement("div");
-
-
- /*  let closeBtn = document.createTextNode(String.fromCharCode(10062));
-  div.prepend(closeBtn); */
-  
-
   
   function filterInputs() {
     lonelyBayField.innerHTML = "";
@@ -331,24 +324,18 @@ function createCards(item) {
 beforeFilter(); 
   
  cards.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      const target = event.currentTarget;
-      let clone = target.cloneNode(true);
-      clone.prepend(div);
-      lonelyBayField.style.display = "none";
-      frame.classList.remove("frame-for-card");
-      frame.classList.add("visible");
-      frame.prepend(clone);
+    item.addEventListener("click", function () {
+      overlay.append(item);
+      item.style.transform = "scale(1.1)";
+      item.style.zIndex = "2";
+      overlay.style.zIndex = "1";
     });
-  });
+ });
+
+
+overlay.addEventListener("click", close);
   
-  div.addEventListener("click", (event) => {
-    close();
-  });
-  
-  function close() {
-    frame.innerHTML = "";
-    frame.classList.remove("visible");
-    frame.classList.add("frame-for-card");
-    lonelyBayField.style.display = "flex";
+function close() {
+    overlay.innerHTML = "";
+    overlay.style.zIndex = "-1";
   }
