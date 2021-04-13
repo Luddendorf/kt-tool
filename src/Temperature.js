@@ -11,6 +11,7 @@ const tempPromise = fetch('https://api.tomorrow.io/v4/timelines?location=-50.631
 tempPromise
     .then(data => data.json())
     .then(temperature => {
+        console.log(temperature);
         // console.log(temperature.data.timelines[0].intervals[0].startTime);
         // console.log(temperature);
         let currentArray = temperature.data.timelines[0].intervals;
@@ -52,11 +53,6 @@ tempPromise
     })
     .catch(err => {
         console.log('Ошибка', err);
-        // var req = new XMLHttpRequest();
-        // req.open('GET', tempPromise, false);
-        // req.send(null);
-        // var headers = req.getAllResponseHeaders().toLowerCase();
-        // console.log(headers);
         const tempDiv = document.querySelector('#h1_temp');
         let temperatureH1 = document.createElement('p');
         let contentError = `

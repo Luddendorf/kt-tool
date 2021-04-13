@@ -247,20 +247,31 @@ export const ships = [{
 
 
 (function() {
-    document.querySelector('.tab').classList.add('active')
-    document.querySelector('.tab-panel').classList.add('active')
+    let memory = localStorage.getItem('a');
+    if (memory) {
+        console.log(memory);
+        let actualeMemory = document.querySelector(`.tab[data-target="${memory}"]`);
+        actualeMemory.classList.add('active');
+        let actualBody = document.querySelector(`.tab-panel[data-target="${memory}"]`);
+        actualBody.classList.add('active');
+        console.log('act', actualBody);
+    };
+    document.querySelector('.tab');
+    document.querySelector('.tab-panel');
 
     function selectPanel(e) {
-        var target = e.target.dataset.target
-        document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'))
-        e.target.classList.add('active')
-        document.querySelector('.' + target).classList.add('active')
+        var target = e.target.dataset.target;
+        document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'));
+        e.target.classList.add('active');
+        document.querySelector('.' + target).classList.add('active');
+        let a = e.target.getAttribute('data-target');
+        localStorage.setItem('a', a);
         delFilter();
-    }
+    };
     document.querySelectorAll('.tab').forEach(el => {
-        el.addEventListener('click', selectPanel)
-    })
-}())
+        el.addEventListener('click', selectPanel);
+    });
+}());
 
 //ships /**/  */
 
