@@ -245,7 +245,6 @@ export const ships = [{
 ];
 
 
-
 (function() {
     let memory = localStorage.getItem('a');
     if (memory) {
