@@ -1,4 +1,10 @@
+$header-heght: 6.5em;
+$footer-heigth: 6em;
+$left_menu-width: 15em;
+$filter_menu-width: 6.25em;
+
 .wrapper {
-  max-width: 1960px;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  float: left;
 }

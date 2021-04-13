@@ -241,27 +241,4 @@ const ships = [
   },
 ];
 
-let cardsSection = document.querySelector(".buhta-boat__wrapper");
-
-function setCards(obj, el) {
-  let boats = "";
-  obj.forEach((obj) => {
-    boats += `<div class='buhta-boat__boat' > 
-            <img height="190px" class="center" 
-            src="https://images.unsplash.com/photo-1487901155524-307f976ad775?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80">
-            <p> Фрегат: ${obj.shipName} </p>
-            <p> Класс: ${obj.class} </p>
-            <p> Пушки: ${obj.weapons} </p>
-            <p> Корпус: ${obj.shipHull} </p>
-            <p> Команда: ${obj.team} </p>
-            <p> Трюм: ${obj.hold} </p>
-            <p> Скорость: ${obj.speed} </p>
-            <p> Манёвренность: ${obj.beidewind} </p>
-            <p> Цена: ${obj.price} </p>
-        </div>`;
-  });
-  el.innerHTML = boats;
-  return el;
-  //   return true;
-}
-setCards(ships, cardsSection);
+export default ships

@@ -11,104 +11,159 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper">
-          <div class="header__btn-block buhta__btn">
-            <a href="#" class="header__btn"
-              ><span>Бухта одинокого острова</span></a
-            >
-          </div>
-          <div class="header__btn-block boats__btn">
-            <a href="#" class="header__btn"><span>Мой корабль</span></a>
-          </div>
+          <a href="#" class="header__btn-block buhta__btn">
+            <div class="header__btn">
+              <span
+                >Бухта одинокого <br />
+                острова</span
+              >
+            </div>
+          </a>
+          <a href="#" class="header__btn-block boats__btn">
+            <div class="header__btn">
+              <span>Мой корабль</span>
+            </div>
+          </a>
         </div>
       </header>
       <main class="main">
-        <div class="main__wrapper">
-          <aside class="left-menu">
-            <div class="left-menu__filter filter">
-              <div class="filter__item">
-                <label for="min-price">min<br />price</label>
-                <input type="text" name="min-price" />
-              </div>
-              <div class="filter__item">
-                <label for="max-price">max<br />price</label>
-                <input type="text" name="max-price" />
-              </div>
-              <div class="filter__item">
-                <label for="min-strength">min<br />strength</label>
-                <input type="text" name="min-strength" />
-              </div>
-              <div class="filter__item">
-                <label for="max-strength">max<br />strength</label>
-                <input type="text" name="max-strength" />
+        <aside class="left-menu">
+          <div class="left-menu__filter filter">
+            <div class="filter__item">
+              <label for="min-price">min<br />price</label>
+              <input
+                type="number"
+                name="min-price"
+                id="min_price"
+                class="filter__input"
+              />
+            </div>
+            <div class="filter__item">
+              <label for="max-price">max<br />price</label>
+              <input
+                type="number"
+                name="max-price"
+                id="max_price"
+                class="filter__input"
+              />
+            </div>
+            <div class="filter__item">
+              <label for="min-strength">min<br />strength</label>
+              <input
+                type="number"
+                name="min-strength"
+                id="min_strenght"
+                class="filter__input"
+              />
+            </div>
+            <div class="filter__item">
+              <label for="max-strength">max<br />strength</label>
+              <input
+                type="number"
+                name="max-strength"
+                id="max_strenght"
+                class="filter__input"
+              />
+            </div>
+          </div>
+          <div class="left-menu menu">
+            <div class="menu__dropdown_1 closed">
+              <div class="menu__item sail">
+                Паруса
+                <ul class="menu__hide_1">
+                  <a href="#" class="menu__link link">
+                    <li class="link__sail">Шпринтовые</li>
+                  </a>
+                  <a href="#" class="menu__link link">
+                    <li class="link__sail">Бермудские</li>
+                  </a>
+                  <a href="#" class="menu__link link">
+                    <li class="link__sail">Гафельные</li>
+                  </a>
+                </ul>
               </div>
             </div>
-            <div class="left-menu menu">
-              <div class="menu__dropdown_1 closed">
-                <div class="menu__item sail">
-                  Паруса
-                  <ul class="menu__hide_1">
-                    <a href="#" class="menu__link link">
-                      <li class="link__sail">Шпринтовые</li>
-                    </a>
-                    <a href="#" class="menu__link link">
-                      <li class="link__sail">Бермудские</li>
-                    </a>
-                    <a href="#" class="menu__link link">
-                      <li class="link__sail">Гафельные</li>
-                    </a>
-                  </ul>
-                </div>
-              </div>
-              <div class="menu__dropdown_2 closed">
-                <div class="menu__item repair">
-                  Ремонт
-                  <ul class="menu__hide_2">
-                    <a href="#" class="menu__link link">
-                      <li class="link__repair">Обычный</li>
-                    </a>
-                    <a href="#" class="menu__link link">
-                      <li class="link__repair">Быстрый</li>
-                    </a>
-                  </ul>
-                </div>
-              </div>
-              <div class="menu__dropdown_3 closed">
-                <div class="menu__item cannon">
-                  Пушки
-                  <ul class="menu__hide_3">
-                    <a href="#" class="menu__link link">
-                      <li class="link__cannon">Пушки</li>
-                    </a>
-                    <a href="#" class="menu__link link">
-                      <li class="link__cannon">Кулеврины</li>
-                    </a>
-                  </ul>
-                </div>
-              </div>
-              <div class="menu__dropdown_4 closed">
-                <div class="menu__item team">
-                  Команды
-                  <ul class="menu__hide_4">
-                    <a href="#" class="menu__link link">
-                      <li class="link__team">Салаги</li>
-                    </a>
-                    <a href="#" class="menu__link link">
-                      <li class="link__team">Мокрые волки</li>
-                    </a>
-                  </ul>
-                </div>
+            <div class="menu__dropdown_2 closed">
+              <div class="menu__item repair">
+                Ремонт
+                <ul class="menu__hide_2">
+                  <a href="#" class="menu__link link">
+                    <li class="link__repair">Обычный</li>
+                  </a>
+                  <a href="#" class="menu__link link">
+                    <li class="link__repair">Быстрый</li>
+                  </a>
+                </ul>
               </div>
             </div>
-          </aside>
-          <section class="main__cards cards">
-            <div class="cards__buhta buhta-boat">
-              <div class="buhta-boat__wrapper">
-                
+            <div class="menu__dropdown_3 closed">
+              <div class="menu__item cannon">
+                Пушки
+                <ul class="menu__hide_3">
+                  <a href="#" class="menu__link link">
+                    <li class="link__cannon">Пушки</li>
+                  </a>
+                  <a href="#" class="menu__link link">
+                    <li class="link__cannon">Кулеврины</li>
+                  </a>
+                </ul>
               </div>
             </div>
-            <div class="cards__boats">BOAT</div>
-          </section>
-        </div>
+            <div class="menu__dropdown_4 closed">
+              <div class="menu__item team">
+                Команды
+                <ul class="menu__hide_4">
+                  <a href="#" class="menu__link link">
+                    <li class="link__team">Салаги</li>
+                  </a>
+                  <a href="#" class="menu__link link">
+                    <li class="link__team">Мокрые волки</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section class="main__cards cards">
+          <div class="cards__buhta buhta-boat">
+            <div class="buhta-boat__wrapper"></div>
+            <div id="cards__modal-window"></div>
+          </div>
+          <div class="cards__boats captain">
+            <div class="captain__boat">
+              <h2>Корабль</h2>
+            </div>
+            <div class="captain__profile">
+              <h2>Капитан</h2>
+            </div>
+            <section class="form">
+              <h3>Заполните форму капитана:</h3>
+              <form action="#">
+                <div>
+                  <label for="name">имя</label>
+                  <input type="text" name="name" id='cap_name'/>
+                </div>
+                <div>
+                  <label for="quantity">колличесвто</label>
+                  <input type="text" name="quantity" id='cap_quantity' />
+                </div>
+                <div>
+                  <label for="class">класс</label>
+                  <input type="text" name="class" id='cp_class'/>
+                </div>
+                <div>
+                  <label for="price">цена</label>
+                  <input type="text" name="price" id='cap_price' />
+                </div>
+                <div>
+                  <button type="submit">submit</button>
+                </div>
+              </form>
+            </section>
+          </div>
+            
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__content">

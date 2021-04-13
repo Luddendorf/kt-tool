@@ -1,19 +1,16 @@
 .main {
-  margin-top: 5.5rem;
-  margin-bottom: 5.5rem;
-  &__wrapper {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
-    padding: 0 2rem;
-  }
+  margin: $header-heght 0 $footer-heigth 0;
+  z-index: -1;
   .left-menu {
-    border-right: 2px solid rgb(0, 0, 0);
-    border-left: 2px solid rgb(0, 0, 0);
-  }
-  .left-menu__filter {
+    // border-right: 2px solid rgb(0, 0, 0);
+    // border-left: 2px solid rgb(0, 0, 0);
+    position: fixed;
+    left: 0;
   }
   .filter {
+    position: absolute;
     display: grid;
+    width: $left_menu-width;
     grid-template-columns: 1fr 1fr;
     &__item {
       display: flex;
@@ -26,25 +23,29 @@
       border-radius: 0.2rem;
       width: 3rem;
     }
+    .input__closed {
+      display: none;
+    }
   }
-  .left-menu__menu {
+  .left-menu {
     &:focus {
       cursor: pointer;
     }
   }
   .menu {
-    display: grid;
-    grid-template-columns: 1fr;
-
+    position: absolute;
+    margin-top: $filter_menu-width;
+    width: $left_menu-width;
     &__item {
       display: block;
       padding: 1.5rem;
-      width: 100%;
+      width: $left_menu-width;
       border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
     }
     &__link.link {
       display: block;
-      padding: 1rem 2rem;
+      padding: 1.5rem 3rem;
       width: 100%;
       border-bottom: 1px solid #000;
       &:hover {
@@ -78,6 +79,7 @@
     }
   }
   .cards {
+    margin-left: $left_menu-width;
     & div {
       padding: 0 2rem;
     }
@@ -86,7 +88,7 @@
       flex-wrap: wrap;
       min-height: 45.5rem;
       background: url("https://images.unsplash.com/photo-1466094899371-97b327dff551?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
-        no-repeat;
+        no-repeat fixed;
       background-size: cover;
       .buhta-boat__wrapper {
         width: 100%;
@@ -96,20 +98,130 @@
         padding: 1rem;
       }
       .buhta-boat__boat {
+        min-width: 200px;
         max-width: 200px;
+        min-height: 200px;
         max-height: auto;
         border: 1px solid #000;
         margin: 1rem;
         padding: 0.5rem;
         text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+        & > img {
+          height: 190px;
+        }
+      }
+      .desc {
+        display: none;
+      }
+      #cards__modal-window {
+        display: none;
+        transition: 1s;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(93, 86, 86, 0.733);
+        z-index: 100;
       }
     }
     &__boats {
       display: none;
+      justify-content: space-between;
       min-height: 45.5rem;
-      background: url("https://images.unsplash.com/photo-1590880449155-b54f958ce314?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2030&q=80")
-        no-repeat center;
+      background: url("https://images.unsplash.com/photo-1569276163051-e5f349d09c18?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+        no-repeat fixed;
       background-size: cover;
+      & h2 {
+        font-size: 1.5rem;
+        font-style: oblique;
+      }
+      .my-boat__img {
+        width: 10rem;
+      }
+      .captain__boat {
+        z-index: 2;
+        position: relative;
+        border: 2px solid rgb(100, 5, 5);
+        height: fit-content;
+        max-width: 18rem;
+
+        & > h2 {
+          text-align: center;
+        }
+        & > div {
+          display: grid;
+          height: auto;
+          font-size: 1rem;
+          color: #fff;
+          font-weight: bold;
+        }
+        & div p {
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+        }
+      }
+      .captain__form-block {
+        display: flex;
+        flex-direction: column;
+      }
+      .captain__profile {
+        border: 2px solid rgb(100, 5, 5);
+        max-width: fit-content;
+        height: fit-content;
+        & > p {
+          margin-top: 1rem;
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+      & h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+      }
+      .form {
+        margin-top: 2rem;
+        & div {
+          display: flex;
+          flex-direction: column;
+          padding-top: 0.5rem;
+          justify-content: center;
+          align-items: center;
+        }
+        & div label {
+          color: #fff;
+          font-size: 1.2rem;
+          margin-bottom: 0.3rem;
+        }
+        & div input {
+          border-radius: 0.3rem;
+          padding: 0.5rem;
+        }
+        button[type="submit"] {
+          width: 80%;
+          padding: 1rem;
+          border-radius: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .captain {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    & div,
+    section {
+      max-width: 80%;
     }
   }
 }
