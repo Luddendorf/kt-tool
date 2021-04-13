@@ -70,7 +70,8 @@ div#h1_temp {
 .tab-panel {
     border: 2px solid black;
     display: none;
-    max-width: 1000px;
+    width: 1000px;
+    min-height: 300px;
 }
 
 .content-header {
@@ -109,6 +110,7 @@ div#h1_temp {
     /* justify-content: end; */
     /* flex-wrap: wrap; */
     text-align: center;
+    padding-bottom: 15px;
 }
 
 .menu-left input {
@@ -277,10 +279,16 @@ i {
 }
 
 #ships {
-    /* display: flex;
-    flex-wrap: nowrap; */
-    /* display: flex;
-    justify-content: space-around; */
+    /* max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+}
+
+.two {}
+
+.hide {
+    display: none!important;
 }
 
 #ships div {

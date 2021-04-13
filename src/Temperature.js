@@ -29,6 +29,7 @@ tempPromise
             // } 
         })
 
+
         console.log('result', result);
         renderTemp();
         result.forEach(element => {
@@ -51,10 +52,17 @@ tempPromise
     })
     .catch(err => {
         console.log('Ошибка', err);
+        // var req = new XMLHttpRequest();
+        // req.open('GET', tempPromise, false);
+        // req.send(null);
+        // var headers = req.getAllResponseHeaders().toLowerCase();
+        // console.log(headers);
         const tempDiv = document.querySelector('#h1_temp');
         let temperatureH1 = document.createElement('p');
         let contentError = `
         Ошибка 429 ${err}
+        <br>
+        Совет: Много запросов на API, используй второй ключ в fetch (ключи расположены в начале файла temperature.js)
         `
         temperatureH1.innerHTML = contentError;
         tempDiv.appendChild(temperatureH1);

@@ -1,4 +1,5 @@
 import { renderDiv } from './filter'
+import { delFilter } from './index'
 
 
 export const ships = [{
@@ -254,6 +255,7 @@ export const ships = [{
         document.querySelectorAll('.tab, .tab-panel').forEach(el => el.classList.remove('active'))
         e.target.classList.add('active')
         document.querySelector('.' + target).classList.add('active')
+        delFilter();
     }
     document.querySelectorAll('.tab').forEach(el => {
         el.addEventListener('click', selectPanel)
