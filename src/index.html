@@ -1,13 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
+  <title>Хорошайло Александр Lesson 5</title>
 </head>
 
 <body>
+  <header>
+    <nav>
+      <div id="buhta">Бухта одинокого пирата</div>
+      <div id="my-ship">Мой корабль</div>
+    </nav>
+  </header>
+
+  <section>
+    <aside>
+      <span id='big-text'>Фильтры</span>
+      <div id="aside__filter">
+        <div id="aside__filter__block-price-strength">
+          <div>
+            <div>
+              <label for="min_price">Мин. цена</label>
+              <input class='aside__filter__event' id="min_price" type="number" pattern="^[ 0-9]+$">
+            </div>
+            <div>
+              <label for="max_price">Макс. цена</label>
+              <input class='aside__filter__event' id="max_price" type="number" pattern="^[ 0-9]+$">
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for="min_strength">Мин. прочность</label>
+              <input class='aside__filter__event' id="min_strength" type="number" pattern="^[ 0-9]+$">
+            </div>
+            <div>
+              <label for="max_strength">Макс. прочность</label>
+              <input class='aside__filter__event' id="max_strength" type="number" pattern="^[ 0-9]+$">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="aside__filter__block-another">
+            <ul id="aside__filter__event">
+              <div class='aside__filter'>
+                <input type="radio" name="radio" id='parusa'>
+                <label for="parusa"> Паруса &nbsp;</label>
+                <i class="caret">&gt;</i>
+                <ul class="displayNone">
+                  <li><span>Шпринтовые</span></li>
+                  <li><span>Бермудские</span></li>
+                  <li><span>Гафельные</span></li>
+                </ul>
+              </div>
+              <div class='aside__filter'>
+                <input type="radio" name="radio" id='remont'>
+                <label for="remont">Ремонт&nbsp;</label>
+                <i class="caret">&gt;</i>
+                <ul class="displayNone">
+                  <li><span>Обычный</span> </li>
+                  <li><span>Быстрый</span> </li>
+                </ul>
+              </div>
+              <div class='aside__filter'>
+                <input type="radio" name="radio" id='pushki'>
+                <label for="pushki">Пушки&nbsp;</label>
+                <i class="caret">&gt;</i>
+                <ul class="displayNone">
+                  <li><span>Пушки</span> </li>
+                  <li><span>Кулеврины</span> </li>
+                </ul>
+              </div>
+              <div class='aside__filter'>
+                <input type="radio" name="radio" id='komanda'>
+                <label for="komanda">Команда&nbsp;</label>
+                <i class="caret">&gt;</i>
+                <ul class="displayNone">
+                  <li><span>Салаги</span> </li>
+                  <li><span>Моркие волки</span> </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <article id='ships'>
+    </article>
+
+    <article id="captain">
+      <div id="captain__ship__info"></div>
+      <div id="captain__container">
+        <div id="captain__container__info">
+          <div id="img-captain__info__foto">
+          </div>
+          <div>
+            <p>Имя: Алекс</p>
+            <p>Класс: 98</p>
+            <p>Урон саблей: 35</p>
+          </div>
+          <div>
+            <p>Возраст: 31</p>
+            <p>Дублонов: 1 565 872 </p>
+            <p>Урон пистолетом: 80</p>
+          </div>
+        </div>
+        <div>
+          <form id="form">
+            <p>Заявка на покупку судна</p>
+            <div id="captain__container__form">
+              <div>
+                <label for="form-name">Имя</label>
+                <input id="form-name" name='name' type="text" pattern="[A-Za-zА-Яа-яЁё]">
+                <label for="form-class">Класс</label>
+                <input id="form-class" name='class' type="number" pattern="^[ 0-9]+$">
+              </div>
+              <div>
+                <label for="form-quantity">Кол-во</label>
+                <input id="form-quantity" name='quantity' type="number" pattern="^[ 0-9]+$">
+                <label for="form-price">Цена</label>
+                <input id="form-price" name='price' type="number" pattern="^[ 0-9]+$">
+              </div>
+              <button type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <div id="footer__div">
+      <div class="footer__div__img-skull"></div>
+      <div class="footer__div__img-tresure"></div>
+      <div id="footer__div__info">Капитан Алекс ,отчаянный пират, человек чести.Судно:Каравелла "Черная жемчужина"
+      </div>
+      <div class="footer__div__img-tresure"></div>
+      <div class="footer__div__img-skull"></div>
+    </div>
+  </footer>
 </body>
 
 </html>
