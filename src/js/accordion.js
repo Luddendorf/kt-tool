@@ -1,19 +1,18 @@
-function accordion() {
-  const acc = document.querySelectorAll(".accordion");
-  let i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-    });
-  }    
+const acc = document.querySelectorAll(".accordion");
+
+const toggleAccordian = (acc, open = !acc.classList.contains('active')) => {  
+  acc.classList.toggle('active', open)
+  const panel = acc.nextElementSibling
+  panel.style.maxHeight = open ? panel.scrollHeight + "px" : null  
 }
 
-accordion();
+const elems = Array.from(acc)
+elems.forEach(a => {
+  a.addEventListener('click', () => {
+    elems
+      .filter(e => e !== a)
+      .forEach(e => toggleAccordian(e, false))
+    toggleAccordian(a)
+  })
+})
 
