@@ -31,5 +31,16 @@
 
 .footer__description {
     font-size: 15px;
-    font-style: italic;
+    font-style: inherit;
+}
+#tempTable {
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+}
+p {
+    font-size: 15px;
+    font-style: inherit;
+    color: #996633;
+    text-align: center;
 }
