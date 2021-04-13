@@ -97,11 +97,18 @@
     border: $border;
     box-shadow: $boxShadow;
     padding: 10px;
+    margin-bottom: 20px;
     & input{
       margin-bottom: 10px;
       border: none;
       border-bottom: 1px solid $dark;
     }
+  }
+  &__weather-row{
+    background: $light;
+    border: $border;
+    box-shadow: $boxShadow;
+    padding: 10px;
   }
 }
 .ship-form {
@@ -112,6 +119,10 @@
     width: 60%;
     align-self: flex-end;
   }
+}
+
+.weather-table{
+  text-align: center;
 }
 
 
