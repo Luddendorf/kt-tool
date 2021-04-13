@@ -241,46 +241,50 @@ const ships = [
     },
   ];
   
-  const lonelyBayField = document.querySelector(".list");
+  const lonelyBayField = document.querySelector(".list-card");
   const frame = document.querySelector(".frame-for-card");
   const overlay = document.querySelector(".menu__overlay");
+  const prevSlide = document.querySelector(".fa-chevron-left");
+  const nextSlide = document.querySelector(".fa-chevron-right");
   
   let currentMaxPrice = document.querySelector("#maxprice");
   let currentMinPrice = document.querySelector("#minprice");
   let currentMaxDurab = document.querySelector("#maxstrength");
   let currentMinDurab = document.querySelector("#minstrength");
   let cards = lonelyBayField.childNodes;
+ 
   let div = document.createElement("div");
+
+
+ /*  let closeBtn = document.createTextNode(String.fromCharCode(10062));
+  div.prepend(closeBtn); */
   
-  let closeBtn = document.createTextNode(String.fromCharCode(10062));
-  div.prepend(closeBtn);
+
   
-  const inputs = document.querySelectorAll("input[type=text]");
+  function filterInputs() {
+    lonelyBayField.innerHTML = "";
+    let count = 0;
+    ships.forEach(function(item) {
+      if (item.price <= currentMaxPrice.value &&
+        item.price >= currentMinPrice.value &&
+        item.hold <= currentMaxDurab.value &&
+        item.hold >= currentMinDurab.value) {
+          count++;
+          createCards(count);
+      };
+  });
+}
+
+const inputs = document.querySelectorAll("input[type=text]");
   inputs.forEach((item) => {
     item.addEventListener("blur", filterInputs);
   });
   
-  function filterInputs() {
-    lonelyBayField.innerHTML = "";
-    ships.map((item) => {
-      if (
-        item.price <= currentMaxPrice.value &&
-        item.price >= currentMinPrice.value &&
-        item.hold <= currentMaxDurab.value &&
-        item.hold >= currentMinDurab.value
-      ) {
-        createCards(item);
-      } else {
-        return;
-      }
-    });
-  }
-  
-  function createCards(item) {
+function createCards(item) {
     let card = document.createElement("div");
   
     lonelyBayField.append(card);
-    card.className = "card";
+    card.classList.add("card");
     card.innerHTML = `
                           <img src = "./assets/blackflag.png" width="100" height="100" alt =${"IMG"} class ="ship-img" >
                           <div>Name: ${item.shipName}</div>
@@ -292,8 +296,24 @@ const ships = [
                       
                         `;
     return card;
-  }
+  };
 
+ nextSlide.addEventListener('click', function() {
+  lonelyBayField.scrollBy({
+    top: 0,
+    left: 208,
+    behavior: 'smooth'
+  }); 
+ }) 
+
+ prevSlide.addEventListener('click', function() {
+  lonelyBayField.scrollBy({
+    top: 0,
+    left: -208,
+    behavior: 'smooth'
+  }); 
+ }) 
+ 
   
   function beforeFilter() {
     ships.map((item) => {
@@ -308,26 +328,27 @@ const ships = [
     });
   }
   
-  beforeFilter(); 
+beforeFilter(); 
   
-cards.forEach((item) => {
+ cards.forEach((item) => {
     item.addEventListener("click", (event) => {
-      item.style.transform = "scale(2)";
-      item.style.zIndex = "2";
-      overlay.style.zIndex = "1";
+      const target = event.currentTarget;
+      let clone = target.cloneNode(true);
+      clone.prepend(div);
+      lonelyBayField.style.display = "none";
+      frame.classList.remove("frame-for-card");
+      frame.classList.add("visible");
+      frame.prepend(clone);
     });
   });
   
-
-  overlay.addEventListener("click", (event) => {
+  div.addEventListener("click", (event) => {
     close();
   });
-
   
   function close() {
-    cards.forEach(item => { 
-    item.style.transform = "scale(1)";
-    item.style.zIndex = "1";
-    overlay.style.zIndex = "-1";
- })
-} 
+    frame.innerHTML = "";
+    frame.classList.remove("visible");
+    frame.classList.add("frame-for-card");
+    lonelyBayField.style.display = "flex";
+  }
