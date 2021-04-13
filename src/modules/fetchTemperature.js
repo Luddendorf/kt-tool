@@ -26,7 +26,6 @@ const fetchTemperature = ()=>{
         if(regDate.test(timeStamp.startTime)){
           const date = timeStamp.startTime.match(regDate);
           const temp = timeStamp.values.temperature;
-          console.log(date);
           dateArr.push(date[1].split('-').reverse().join('/'));
           tempArr.push(`+${Math.ceil(temp)}°C`);
         }
