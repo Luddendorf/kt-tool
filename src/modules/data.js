@@ -191,7 +191,7 @@ export const ships = [
     "team": 202,
     "weapons": 32,
     "price": 73500,
-    "url": "https://static.wikia.nocookie.net/naval-action/images/5/5b/Rts_heavy_1.jpg/revision/latest?cb=20181226115854&path-prefix=ru",
+    "url": "https://images.squarespace-cdn.com/content/519a3512e4b00c954c606410/1383234975504-JW0OD774VX3FKXJ2IZZO/4XScreen_31-10-2013_16-53-23.jpg?format=1500w&content-type=image%2Fjpeg",
     "desc": 'Корвет был спроектирован как судно, имеющее мощное вооружение, но при этом максимально быстрое и легкое. Как следствие, корветы обладают слабым корпусом, но способны догнать более легкие суда и вести успешный бой с более тяжелыми. Как правило, корвет использовался в качестве патрульного судна, а также как вспомогательный военный корабль.'
   },
   { 
