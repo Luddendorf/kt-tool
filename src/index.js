@@ -8,12 +8,9 @@ import modalWindow from "./components/modalWindow";
 import validator from "./components/validator";
 import getData from "./components/API";
 
-const captain = document.querySelector(".captain__profile");
-const captainBoat = document.querySelector(".captain__boat");
-
 document.addEventListener("DOMContentLoaded", () => {
   filterShips();
-  setCaptain(captainBoat, captain);
+  setCaptain();
   menuTabsSwipe();
   sideBarMenu();
   modalWindow();

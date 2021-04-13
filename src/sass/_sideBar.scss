@@ -1,0 +1,46 @@
+.menu {
+  position: absolute;
+  margin-top: $filter_menu-width;
+  width: $left_menu-width;
+  &__item {
+    display: block;
+    padding: 1.5rem;
+    width: $left_menu-width;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  &__link.link {
+    display: block;
+    padding: 1.5rem 3rem;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  .menu__dropdown_1,
+  .menu__dropdown_2,
+  .menu__dropdown_3,
+  .menu__dropdown_4 {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .menu__dropdown_1:hover,
+  .menu__dropdown_2:hover,
+  .menu__dropdown_3:hover,
+  .menu__dropdown_4:hover {
+    background-color: black;
+    color: #fff;
+  }
+
+  .menu__hide_1,
+  .menu__hide_2,
+  .menu__hide_3,
+  .menu__hide_4 {
+    height: auto;
+  }
+
+  .closed ul {
+    display: none;
+  }
+}

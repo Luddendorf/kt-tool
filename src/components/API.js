@@ -18,15 +18,20 @@ export default function getData() {
       });
 
       resultArr.forEach((el) => {
-        const div = document.createElement("div");
-        div.setAttribute("class", "temp-block");
-        let temBlock = `<div class='date'>
-        ${el.startTime.slice(0, 11)} 
-        </div>
-        <div class='temp'>${el.values.temperature}</div>`;
-        div.innerHTML = temBlock;
-        tempBlockDiv.append(div);
+        let temp = `<div>
+        дата: <span>${el.startTime.slice(0, 11)} </span>
+        температура: <span>${el.values.temperature}</span>
+        </div>`;
+        tempBlockDiv.innerHTML += temp;
       });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      if (error) {
+        let temp = `<div>
+        дата: <span> температура не доступна </span>
+        температура: <span> заходите попозже! </span>
+        </div>`;
+        tempBlockDiv.innerHTML += temp;
+      }
+    });
 }
