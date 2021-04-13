@@ -2,6 +2,10 @@
   display: flex;
   background: url('https://1rulon.ru/wp-content/uploads/46322.jpg') no-repeat 0 0 / cover;
   min-height: 75vh;
+  @media screen and (max-width: 1000px){
+    flex-direction: column;
+    background:#8bd3f5da;
+  }
 }
 
 .main {
@@ -10,6 +14,9 @@
     margin: 32px 28px;
     display: flex;
     flex-wrap: wrap;
+    @media screen and (max-width: 1000px){
+      justify-content: center;
+    }
   }
   &__card {
     background: $light;

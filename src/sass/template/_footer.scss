@@ -3,6 +3,9 @@
   &__wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    @media screen and (max-width: 1150px){
+      padding: 10px;
+    }
   }
   &__row {
     display: flex;
@@ -12,6 +15,14 @@
   &__skull-image {
     width: 100px;
     height: 100px;
+    @media screen and (max-width: 920px){
+      width: 75px;
+      height: 75px;
+    }
+    @media screen and (max-width: 650px){
+      width: 50px;
+      height: 50px;
+    }
     & img{
       border-radius: 50%;
       object-fit: cover;
@@ -20,9 +31,31 @@
   &__chest-image {
     width: 200px;
     height: 200px;
+    @media screen and (max-width: 920px){
+      width: 150px;
+      height: 150px;
+    }
+    @media screen and (max-width: 650px){
+      width: 100px;
+      height: 100px;
+    }
+    @media screen and (max-width: 450px){
+      display: none;
+    }
   }
   &__text {
     font-size: 48px;
     line-height: 48px;
+    @media screen and (max-width: 1150px){
+      font-size: 28px;
+      line-height: 28px;
+    }
+    @media screen and (max-width: 920px){
+      text-align: center;
+    }
+    @media screen and (max-width: 650px){
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 }

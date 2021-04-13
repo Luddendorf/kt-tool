@@ -1,13 +1,26 @@
 .aside {
   &__wrapper {
-    flex-direction: column;
-    align-items: center;
     background: rgba(189, 186, 130, 0.8);
     padding: 0 20px;
     max-width: 250px;
     padding-top: 80px;
     padding-bottom: 50px;
     height: 100%;
+    @media screen and (max-width: 1000px){
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      max-width: none;
+      width: 70%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
+    @media screen and (max-width: 400px){
+      flex-direction: column;
+    }
   }
   &__filter {
     display: flex;
@@ -17,6 +30,26 @@
     border: 1px solid $dark;
     max-width: 200px;
     margin-bottom: 30px;
+    margin-right: 10px;
+    @media screen and (max-width: 1000px){
+      max-width: none;
+      flex: 0 0 calc(100%/2);
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 400px){
+      flex: 0 0 calc(100%/1.5);
+    }
+  }
+  &__accord{
+    @media screen and (max-width: 1000px){
+      max-width: none;
+      flex: 0 0 calc(100%/2);
+    }
+    @media screen and (max-width: 400px){
+      order: -1;
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
   &__column {
     color: $light;
