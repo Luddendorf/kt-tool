@@ -59,6 +59,7 @@
   }
   &__ship-wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
   &__ship-card {
     border: $border;
