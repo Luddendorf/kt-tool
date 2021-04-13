@@ -20,12 +20,13 @@ const fetchTemperature = ()=>{
 
       const result = data.data.timelines[0].intervals;
 
-      const regDate = /(\d\d-\d\d).(12:\d\d)/i;
+      const regDate = /(\d\d-\d\d).(13:\d\d)/i;
 
       result.forEach((timeStamp)=>{
         if(regDate.test(timeStamp.startTime)){
           const date = timeStamp.startTime.match(regDate);
           const temp = timeStamp.values.temperature;
+          console.log(date);
           dateArr.push(date[1].split('-').reverse().join('/'));
           tempArr.push(`+${Math.ceil(temp)}°C`);
         }
