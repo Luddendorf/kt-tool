@@ -6,6 +6,7 @@ import menuTabsSwipe from "./components/tabs";
 import sideBarMenu from "./components/dropDown";
 import modalWindow from "./components/modalWindow";
 import validator from "./components/validator";
+import getData from "./components/API";
 
 const captain = document.querySelector(".captain__profile");
 const captainBoat = document.querySelector(".captain__boat");
@@ -16,5 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   menuTabsSwipe();
   sideBarMenu();
   modalWindow();
-  validator()
+  validator();
+  getData();
 });
