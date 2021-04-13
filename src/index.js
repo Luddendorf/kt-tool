@@ -2,7 +2,7 @@
 import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
-
+import {} from './weather';
 // async function print() {
 //   // Here we are using dynamic import
 //   const { greet } = await import('./greet');
