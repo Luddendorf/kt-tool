@@ -1,0 +1,48 @@
+.wrapperTwo {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.wrapperThree {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  color: white;
+  border: 2px solid gray;
+ justify-content: center;
+  width: 35vw;
+  height: 57vh;
+  margin: 2rem;
+ 
+}
+
+.captain {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  &-image-item {
+    width: 13vw;
+    height: 25vh;
+  }
+  &-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-item {
+      padding-left: 0.5vw;
+    }
+  }
+  }
+.send-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+ }
+ .error {
+   border: 2px solid red;
+ }

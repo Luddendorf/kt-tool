@@ -1,0 +1,23 @@
+.main-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  border: 2px solid gray;
+  margin: 2rem;
+  padding: 2rem;
+
+}
+.img { 
+  height: 20vh;
+  width: 10vw;
+}
+.main-list {
+  list-style-type:none;
+}
+.close {
+  color: black;
+  margin-bottom: 1rem;
+}

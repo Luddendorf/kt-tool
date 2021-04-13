@@ -1,0 +1,75 @@
+.nav {
+  width: 30vw;
+  height: 65vh;
+  margin-left: 3vw;
+}
+h1 {
+  font-size: 4vh;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  &-item {
+    font-size: 3vh;
+   }
+}
+#min-price {
+  margin-left: 1vw;
+  width: 10vw;
+ 
+}
+#max-price {
+  margin-left: 1vw;
+  margin-top: 1vh;
+  width: 10vw;
+ 
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+ 
+}
+.mainmenu{ 
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  margin-left: 0px;
+  list-style: none;
+  font-size: 4vh;
+  width: 24vw;
+  color: #B0C4DE;
+  & a {
+    display: flex;
+  text-decoration: none;
+  padding: 10px;
+  color: #B0C4DE;
+  border: 1px solid gray;
+  }
+  
+}
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out ;
+  transition: 1s;
+  & a {
+    background-color: #999;
+  border: 1px solid gray;
+    &:hover {
+      background-color: #666;
+    }
+  }
+}
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+

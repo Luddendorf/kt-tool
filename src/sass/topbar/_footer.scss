@@ -1,0 +1,19 @@
+.footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+  color:#F0FFF0;
+  &-img {
+    max-width: 20vw; 
+    max-height: 20vh;
+    border-radius: 50%;
+    padding: 1vw;
+   
+    }
+  &-text {
+    font-size: 2rem;
+    padding:1vw;
+   }
+  }

@@ -4,10 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Фамилия Имя Lesson 5</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+ 
+  <title>Шайхутдинов Булат lesson 5</title>
 </head>
+<body>  
+<div class="container">
+  <div class="topBar">
+  <div class="wrapper">
+    <div class="buttonWrapper">
+      <button class="tab-button active" data-id="home">Бухта одинокого острова</button>
+      <button class="tab-button" data-id="ship">Мой Корабль</button>
+   </div>
+    <div class="contentWrapper">
+      <div class="content active" id="home">
+        
+      </div>
+      <div class="content" id="ship">
+        <div class="wrapperTwo">
+          <div class="main-card">
+            <a href="#close" title="Закрыть" class="close">X</a>
+          <div class="main-card-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY8kW9_5Lz9S5zfg3dpkfpjXJ38A-jMwOXig&usqp=CAU" alt="ship" class="img">
+          </div>
+            <ul class="main-list">
+              <li class="main-list-item"><span>Имя</span>: Thunder Child</li>
+              <li class="main-list-item"><span>Класс</span>: 7 </li>
+              <li class="main-list-item"><span>Пушки</span>: 2</li>
+              <li class="main-list-item"><span>Корпус</span>: 95</li>
+              <li class="main-list-item"><span>Трюм</span>: 50</li>
+              <li class="main-list-item"><span>Скорость</span>: 6.5</li>
+              <li class="main-list-item"><span>Манёвренность</span>: 46</li>
+              <li class="main-list-item"><span>Команда</span>: 10</li>
+              <li class="main-list-item"><span>Цена</span>: 350</li>
+              </ul>
+          </div>`
 
-<body>
+      <div class="wrapperThree">
+        <div class="captain">
+        <div class=captain-image>
+          <img src="https://ic.pics.livejournal.com/vitas1917/81799493/1114371/1114371_original.jpg" alt="Пират" class="captain-image-item">
+        </div>
+        <div class="captain-text">
+          <p class="captain-text-item">Мой Капитан</p>
+          <p class="captain-text-item">Шайхутдинов Булат</p>
+          <p class="captain-text-item">Класс: 98</p>
+          <p class="captain-text-item">Урон саблей: 95</p>
+          <p class="captain-text-item">Возраст: 28</p>
+          <p class="captain-text-item">Урон Пистолетов: Неисчислим</p>
+          </div>
+          </div>
+          <form class="send-form">
+            <div class="form-row">
+              <label for="form-name">Имя: </label>
+              <input type="text" id="form-name" placeholder="Имя">
+            <label for="form-class">Класс: </label>
+              <input type="text" id="form-class" placeholder="Введите число">
+            </div>
+             <div class="form-row">
+              <label for="form-count">Количество: </label>
+              <input type="text" id="form-count" placeholder="Введите Количество">
+            <label for="form-price">Цена: </label>
+              <input type="text" id="form-price" placeholder="Введите цену">
+            </div>
+            <div class="form-row">
+              <button type="submit">Отправить</button>
+            </div>
+            </form>    
+      </div>
+     </div>
+      </div>
+      </div>
+  </div>   
+</div>
+<div class="containerTwo">
+
+<nav class="nav">
+    <form class="filter">
+      <h1>Фильтр кораблей</h1>
+     <div class="filter-item">
+        <label for="min-price">Мин. Цена</label>
+        <input type="number" id="min-price" value="0" />
+       </div>
+      <div class="filter-item">
+        <label for="max-price">Макс. Цена</label>
+        <input type="number" id="max-price" value="0" />
+       </div>
+      </form>
+      <div class="menu">
+       <ul class="mainmenu">
+          <li><a href="#">Паруса</a>
+            <ul class="submenu">
+              <li><a href="#">Шпринтовые</a></li>
+              <li><a href="#">Бермудские</a></li>
+              <li><a href="#">Гафельные</a></li>
+            </ul></li>
+          <li><a href="#">Ремонт</a>
+            <ul class="submenu">
+              <li><a href="#">Обычный</a></li>
+              <li><a href="#">Быстрый</a></li>
+              </ul></li>
+          <li><a href="#">Пушки</a>
+            <ul class="submenu">
+              <li><a href="#">Пушки</a></li>
+              <li><a href="#">Калеврины</a></li>
+             </ul>
+          </li>
+          <li><a href="#">Команда</a>
+            <ul class="submenu">
+              <li><a href="#">Салаги</a></li>
+              <li><a href="#">Вояки</a></li>
+              </ul>
+          </li>
+          
+        </ul>
+      </div>
+   </nav>
+</div>
+
+</div>
+<footer class="footer">
+<img src="https://olpi.ru/wa-data/public/shop/products/87/19/1987/images/2082/2082.750x0.jpg"
+alt="Сундук" class="footer-img"/>
+<img src="https://a.d-cd.net/U8AAAgJMzOA-480.jpg"
+alt="Метка" class="footer-img"/>
+  <p class="footer-text"> Капитан Шайхутдинов Булат, отчаянный пират,<br> человек чести. <br>Судно: Каравелла "Черная Жемчужина"</p>
+<img src="https://olpi.ru/wa-data/public/shop/products/87/19/1987/images/2082/2082.750x0.jpg"
+alt="Сундук" class="footer-img"/>
+<img src="https://a.d-cd.net/U8AAAgJMzOA-480.jpg"
+alt="Метка" class="footer-img"/>
+</footer>
+</div>
 </body>
-
 </html>
