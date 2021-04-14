@@ -16,6 +16,7 @@ async function print() {
 }
 
 print();
+
 document.addEventListener('DOMContentLoaded', () => {
   tabs();
   filter();
