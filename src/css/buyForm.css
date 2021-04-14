@@ -18,13 +18,22 @@
     flex-direction: column;
 }
 
+.buy-form-item {
+    display: flex;
+    align-items: center;
+}
+
+.buy-form-item-div, .input-name, .input-price, .input-number, .input-class {
+    width: 100%;
+    padding-left: 5px;
+}
+
 .buy-form-item:not(:last-child) {
     margin-bottom: 5px;
 }
 
-.buy-form-item:last-child {
+.buy-form-button {
     font-style: italic;
     cursor: pointer;
-    
 }
 

@@ -95,23 +95,6 @@ const renderCards = (cards) => {
     cardsList.appendChild(docFrag);
 };
 
-const onBlurFilter = () => {
-
-    const maxPrice = document.querySelector('.max-price').value;
-    const minPrice = document.querySelector('.min-price').value;
-    const maxShipHull = document.querySelector('.max-ship-hull').value;
-    const minShipHull = document.querySelector('.min-ship-hull').value;
-
-    const filteredShips = ships.filter(item => (maxPrice ? item.price < maxPrice : true) &&
-                                                (minPrice ? item.price > minPrice : true) &&
-                                                (maxShipHull ? item.shipHull < maxShipHull : true) &&
-                                                (minShipHull ? item.shipHull > minShipHull : true));
-
-    const cardList = document.querySelector('.cards-list');
-    cardList.innerHTML = '';
-    renderCards(filteredShips);
-};
-
 const modal = () => {
     const cardsList = document.querySelector('.cards-list');
     const modal = document.querySelector('.modal');
@@ -210,11 +193,50 @@ const filter = () => {
         cardList.innerHTML = '';
         renderCards(ships)
     });
-}
+};
 
+const onBlurFilter = () => {
+
+    const maxPrice = document.querySelector('.max-price').value;
+    const minPrice = document.querySelector('.min-price').value;
+    const maxShipHull = document.querySelector('.max-ship-hull').value;
+    const minShipHull = document.querySelector('.min-ship-hull').value;
+
+    const filteredShips = ships.filter(item => (maxPrice ? item.price < maxPrice : true) &&
+                                                (minPrice ? item.price > minPrice : true) &&
+                                                (maxShipHull ? item.shipHull < maxShipHull : true) &&
+                                                (minShipHull ? item.shipHull > minShipHull : true));
+
+    const cardList = document.querySelector('.cards-list');
+    cardList.innerHTML = '';
+    renderCards(filteredShips);
+};
+
+const buyFormValidation = () => {
+    const buyFormButton = document.querySelector('.buy-form-button');
+
+    buyFormButton.addEventListener('click', onClickValidationForm);
+};
+
+const onClickValidationForm = () => {
+    const nameInput = document.querySelector('.input-name').value;
+    const numberInput = document.querySelector('.input-number').value;
+    const classInput = document.querySelector('.input-class').value;
+    const priceInput = document.querySelector('.input-price').value;
+
+    const buyFormObj = {
+        name: nameInput,
+        number: numberInput,
+        class: classInput,
+        price: priceInput
+    };
+
+    console.log(buyFormObj);
+};
 
 accordion();
 filter();
 renderCards(ships);
 modal();
 transition();
+buyFormValidation();
