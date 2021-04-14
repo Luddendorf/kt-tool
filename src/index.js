@@ -1,19 +1,21 @@
 import "./sass/main.scss";
-import ships from "./components/ships";
-import setCaptain from "./components/renderCaptain";
-import filterShips from "./components/filterShips";
-import menuTabsSwipe from "./components/tabs";
-import sideBarMenu from "./components/dropDown";
-import modalWindow from "./components/modalWindow";
-import validator from "./components/validator";
-import getData from "./components/API";
+import RenderCaptain from "./components/captain/RenderCaptain";
+import RenderBoats from "./components/boats/RenderBoats";
+import menuTabsSwipe from "./components/header/tabs";
+import sideBarMenu from "./components/leftMenu/dropDown";
+import validator from "./assets/validate/validator";
+import getWeatherData from "./components/captain/getWeatherData";
+import Preloader from "./assets/preloader/Preloader";
 
 document.addEventListener("DOMContentLoaded", () => {
-  filterShips();
-  setCaptain();
-  menuTabsSwipe();
-  sideBarMenu();
-  modalWindow();
-  validator();
-  getData();
+  //imitation of preloader, waiting while quries will be ready
+  Preloader();
+  setTimeout(function () {
+    RenderBoats();
+    RenderCaptain();
+    menuTabsSwipe();
+    sideBarMenu();
+    validator();
+    getWeatherData();
+  }, 1500);
 });

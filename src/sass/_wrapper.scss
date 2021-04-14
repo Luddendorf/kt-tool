@@ -1,4 +1,4 @@
-$header-heght: 6.5em;
+$header-heght: 6em;
 $footer-heigth: 6em;
 $left_menu-width: 15em;
 $filter_menu-width: 6.25em;
@@ -7,4 +7,24 @@ $filter_menu-width: 6.25em;
   position: relative;
   width: 100%;
   float: left;
+}
+
+@font-face {
+  font-family: "Black Horse";
+  src: url("../assets/fonts/BlackRose-2Onld.ttf");
+  font-style: bold;
+}
+@font-face {
+  font-family: "Skulls and Crossbones";
+  src: url("../assets/fonts/Skullsandcrossbones-RppKM.ttf");
+  font-style: 500;
+}
+@font-face {
+  font-family: "Elpiratos";
+  src: url("../assets/fonts/Ayematey-rgxay.ttf");
+  font-style: 400;
+}
+
+@media (max-width: 750px) {
+  $header-heght: 4em;
 }

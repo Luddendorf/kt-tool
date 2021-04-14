@@ -5,6 +5,7 @@
   left: 0;
   height: $footer-heigth;
   width: 100%;
+  font-family: "Black Horse", sans-serif;
   background-color: rgb(224, 220, 220);
   background-image: url("../assets//imgs/skull-and-bones.png"),
     url("../assets//imgs/treasure.png");
@@ -21,7 +22,7 @@
     position: relative;
   }
   &__info {
-    padding: 1rem 0;
+    padding: 1rem 3rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -30,6 +31,11 @@
     text-align: center;
     & > span {
       font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 1450px) {
+    & {
+      background-position: 100% 100%, 0% 100%;
     }
   }
 }

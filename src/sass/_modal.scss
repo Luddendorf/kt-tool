@@ -1,0 +1,63 @@
+#cards__modal-window {
+  display: none;
+  transition: 1s;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(93, 86, 86, 0.733);
+  z-index: 100;
+  font-size: 1.5rem;
+  & > .clicked__boat {
+    height: 80vh;
+    width: 70vw;
+    display: grid;
+    & > img {
+      position: fixed;
+      margin: 0.5rem 0 0 12rem;
+      width: 12rem;
+      height: auto;
+      border-radius: 1rem;
+    }
+    & p {
+      margin-top: -10.5rem;
+      padding: 0.2rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    & > .clicked__boat {
+      & > img {
+        position: relative;
+        margin: 0.5rem auto;
+        width: 7rem;
+        height: auto;
+        border-radius: 0.3rem;
+      }
+      & p {
+        margin-top: -7.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    .clicked__boat {
+      font-size: 1rem;
+    }
+    & > img {
+      width: 7rem;
+    }
+  }
+  @media (max-width: 660px) {
+    & > img {
+      position: absolute;
+      width: 5rem;
+      margin: 0;
+      float: right;
+      border-radius: 0.3rem;
+    }
+  }
+}

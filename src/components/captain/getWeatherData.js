@@ -1,15 +1,14 @@
-export default function getData() {
-  const path =
-    "https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=SqBm2meinL475JcclCcefNYITDn4sKFE";
-  const tempBlockDiv = document.querySelector(".temp-block-div");
-  console.log(tempBlockDiv);
+import weathersAPI from "../api/API";
 
-  const resultArr = [];
+const tempBlockDiv = document.querySelector(".temp-block-div");
 
-  fetch(path)
+export default function getWeatherData() {
+  weathersAPI
+    .getWeather()
     .then((data) => data.json())
     .then((res) => {
       const arr = res.data.timelines[0].intervals;
+      console.log(arr);
       const regex = /[T][1][2]/;
       arr.forEach((el, id) => {
         if (el.startTime.match(regex)) {
@@ -17,6 +16,9 @@ export default function getData() {
         }
       });
 
+      const resultArr = [];
+
+      fetch(path);
       resultArr.forEach((el) => {
         let temp = `<div>
         дата: <span>${el.startTime.slice(0, 11)} </span>
@@ -28,8 +30,8 @@ export default function getData() {
     .catch((error) => {
       if (error) {
         let temp = `<div>
-        дата: <span> температура не доступна </span>
-        температура: <span> заходите попозже! </span>
+        date: <span> is unavailavble rigth now </span>
+        temperatures: <span> Come sooner! </span>
         </div>`;
         tempBlockDiv.innerHTML += temp;
       }
