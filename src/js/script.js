@@ -102,11 +102,17 @@ const onBlurFilter = () => {
     const maxShipHull = document.querySelector('.max-ship-hull').value;
     const minShipHull = document.querySelector('.min-ship-hull').value;
 
-    const newArray = ships.filter(item => item.price < maxPrice);
+    console.log(maxShipHull);
+    console.log(minShipHull);
+
+    const filteredShips = ships.filter(item => 
+        (item.price < maxPrice && item.price > minPrice) &&
+        (item.shipHull < maxShipHull && item.shipHull > minShipHull) 
+    );
 
     const cardList = document.querySelector('.cards-list');
     cardList.innerHTML = '';
-    renderCards(newArray);
+    renderCards(filteredShips);
 };
 
 const modal = () => {
@@ -199,7 +205,7 @@ const transition = () => {
 
 const filter = () => {
     document.querySelectorAll("#filter-input").forEach(item => {
-        item.addEventListener('blur', onBlurFilter)
+        item.addEventListener('blur', onBlurFilter);
     });
     
     document.querySelector('.reset-button').addEventListener('click', () => {

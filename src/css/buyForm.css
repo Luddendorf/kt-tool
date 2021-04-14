@@ -1,3 +1,30 @@
 .buy-form {
     display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 }
+
+.buy-form-header {
+    text-align: center;
+}
+
+.buy-form-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-form-item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.buy-form-item:last-child {
+    font-style: italic;
+    cursor: pointer;
+    
+}
+

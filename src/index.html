@@ -43,7 +43,7 @@
             <span class="search-text">Мин. прочность</span>
             <input type="text" class="min-ship-hull" id="filter-input" />
           </div>
-          <input type="reset" class="reset-button" />
+          <input type="reset" value="Сбросить" class="reset-button" />
         </form>
       </section>
 
@@ -164,15 +164,16 @@
         </article>
       
         <div class="buy-form">
-          <form action="#">
-            <div>
-              <input type="text" />
-              <input type="text" />
+          <h1 class="buy-form-header">Заявка на покупку судна</h1>
+          <form action="#" class="buy-form-content">
+            <div class="buy-form-div">
+              <label class="buy-form-item">Имя: <input type="text" class="input-name" /></label>
+              <label class="buy-form-item">Количество: <input type="text" class="input-number" /></label>
             </div>
-            <div>
-              <input type="text" />
-              <input type="text" />
-              <input type="submit" />
+            <div class="buy-form-div">
+              <label class="buy-form-item">Класс: <input type="text" class="input-class" /></label>
+              <label class="buy-form-item">Цена: <input type="text" class="input-price" /></label>
+              <input type="submit" class="buy-form-item" value="Отправить" />
             </div>
           </form>
         </div>

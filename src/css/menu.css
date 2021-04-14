@@ -64,3 +64,9 @@
     color: #000000;
     font-style: italic;
 }
+
+.reset-button {
+    margin-top: 15px;
+    font-style: italic;
+    cursor: pointer;
+}
