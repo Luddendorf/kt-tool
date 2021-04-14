@@ -9,7 +9,6 @@ body {
 }
 main {
   margin-top: 25vh;
-
   display: flex;
   .main-content {
     width: 85%;
@@ -21,6 +20,11 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .ship-galery {
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
   }
 }
 

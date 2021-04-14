@@ -1,0 +1,38 @@
+.dropdownmenu {
+  width: 500px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  img {
+    position: relative;
+    top: 0;
+    width: 25%;
+    cursor: pointer;
+    &:hover {
+      top: 5px;
+    }
+  }
+
+  .dropdownlist {
+    display: none;
+    position: relative;
+    top: 0;
+    font-size: 2vh;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 3vh;
+    &:hover {
+      top: 5px;
+    }
+    .treasures {
+      display: none;
+    }
+  }
+}
+.show {
+  display: none;
+}
+.hide {
+  display: block !important;
+}
