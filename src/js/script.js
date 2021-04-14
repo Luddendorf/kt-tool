@@ -85,7 +85,7 @@ const renderCards = (cards) => {
         liItem.classList.add('ship-cards');
         return liItem;
     };
-
+    
     var docFrag = document.createDocumentFragment();
     cards.forEach(item => {
         docFrag.appendChild(createCardItem(item));
@@ -102,13 +102,10 @@ const onBlurFilter = () => {
     const maxShipHull = document.querySelector('.max-ship-hull').value;
     const minShipHull = document.querySelector('.min-ship-hull').value;
 
-    console.log(maxShipHull);
-    console.log(minShipHull);
-
-    const filteredShips = ships.filter(item => 
-        (item.price < maxPrice && item.price > minPrice) &&
-        (item.shipHull < maxShipHull && item.shipHull > minShipHull) 
-    );
+    const filteredShips = ships.filter(item => (maxPrice ? item.price < maxPrice : true) &&
+                                                (minPrice ? item.price > minPrice : true) &&
+                                                (maxShipHull ? item.shipHull < maxShipHull : true) &&
+                                                (minShipHull ? item.shipHull > minShipHull : true));
 
     const cardList = document.querySelector('.cards-list');
     cardList.innerHTML = '';
