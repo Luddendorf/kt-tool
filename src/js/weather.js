@@ -36,7 +36,7 @@ fetch('https://api.tomorrow.io/v4/timelines?location=49.12332929999999,55.787894
     const divTemp = document.querySelector('#temperatura');
     const h1Temp = document.createElement('p');
     const errContent = `
-        Ошибка 429 ${err}
+        Error ${err}
         `
     h1Temp.innerHTML = errContent;
     divTemp.prepend(h1Temp);
@@ -56,7 +56,7 @@ function renderTemp() {
 
 function toCelsius(graduses) {
   const temp = graduses;
-  const cel = (temp - 32) * 5 / 9;
-  const message = `${cel}`;
-  return message.substr(0, 5);
+  const message = `${temp}`;
+  const mes = message.substr(0, 2);
+  return Math.floor(mes);
 };

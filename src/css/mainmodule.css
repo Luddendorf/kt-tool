@@ -120,6 +120,10 @@
     cursor: pointer;
 }
 
+.fa-chevron-left:hover, .fa-chevron-right:hover {
+    transform: scale(3);
+}
+
 .list {
     padding-top: 40px;
     margin: 50px auto;
@@ -150,7 +154,7 @@
     max-width: 33.3333333333%;
     max-height: 70%;
     background: rgba(255, 234, 234, 0.932);
-    border: 1px dashed #996633;
+    border: 2px dashed #996633;
     cursor: pointer;
 }
 
@@ -238,3 +242,4 @@
     top: 10px;
     right: 10px;
 }
+

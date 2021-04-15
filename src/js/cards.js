@@ -253,7 +253,7 @@ const ships = [
   let currentMinDurab = document.querySelector("#minstrength");
   let cards = lonelyBayField.childNodes;
   
- 
+
 //Filters 
   function filterInputs() {
     lonelyBayField.innerHTML = "";
