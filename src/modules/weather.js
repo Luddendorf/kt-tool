@@ -24,7 +24,7 @@ export default () => {
                 const date = timeStamp.startTime.match(reg);
                 const temp = timeStamp.values.temperature;
                 dates.push(date[1].split('-').reverse().join('.'));
-                temperatures.push(`${Math.ceil(temp)}°C`);
+                temperatures.push(`+${Math.ceil(temp)}°C`);
                 console.log(temperatures)
 
             }
