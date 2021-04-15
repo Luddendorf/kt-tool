@@ -8,13 +8,20 @@ const formPrice = form.elements.price;
 const sendBtn = document.querySelector("#button-form");
 
 function sendForm() {
-    let obj = {
-        name: formName.value,
-        quantity: formQuantity.value,
-        class: formClass.value,
-        price: formPrice.value,
-      };
+  let obj = {
+    name: formName.value,
+    quantity: formQuantity.value,
+    class: formClass.value,
+    price: formPrice.value,
+  };
+  input.forEach(item => {
+    if (item.value.length !== 0) {
+      
         console.log(obj);
-        form.reset();
+        
+    }
+    form.reset();
+  })
+  
 }
 sendBtn.addEventListener("click", sendForm);

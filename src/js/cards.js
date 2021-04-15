@@ -294,7 +294,7 @@ function createCards(item) {
  nextSlide.addEventListener('click', function() {
   lonelyBayField.scrollBy({
     top: 0,
-    left: 208,
+    left: 222,
     behavior: 'smooth'
   }); 
  }) 
@@ -302,7 +302,7 @@ function createCards(item) {
  prevSlide.addEventListener('click', function() {
   lonelyBayField.scrollBy({
     top: 0,
-    left: -208,
+    left: -222,
     behavior: 'smooth'
   }); 
  }) 
@@ -327,6 +327,7 @@ beforeFilter();
     item.addEventListener("click", function () {
       overlay.append(item);
       item.style.transform = "scale(1.1)";
+      item.style.opacity = "1";
       item.style.zIndex = "2";
       overlay.style.zIndex = "1";
     });
