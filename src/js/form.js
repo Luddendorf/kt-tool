@@ -1,6 +1,5 @@
 const form = document.querySelector('form');
-const input = document.querySelectorAll("input[type=text]")
-
+const inputText = document.querySelectorAll("input[type=text]");
 const sendBtn = document.querySelector("#button-form");
 
 function sendForm() {

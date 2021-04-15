@@ -254,7 +254,7 @@ const ships = [
   let cards = lonelyBayField.childNodes;
   
  
-  
+//Filters 
   function filterInputs() {
     lonelyBayField.innerHTML = "";
     let count = 0;
@@ -273,7 +273,8 @@ const inputs = document.querySelectorAll("input[type=text]");
   inputs.forEach((item) => {
     item.addEventListener("blur", filterInputs);
   });
-  
+
+//Сreate cards
 function createCards(item) {
     let card = document.createElement("div");
   
@@ -292,13 +293,23 @@ function createCards(item) {
     return card;
   };
 
- nextSlide.addEventListener('click', function() {
-  lonelyBayField.scrollBy({
-    top: 0,
-    left: 222,
-    behavior: 'smooth'
-  }); 
- }) 
+  //Slider
+  function slider() {
+    lonelyBayField.scrollBy({
+      top: 0,
+      left: 222,
+      behavior: 'smooth'
+    }); 
+  }
+
+  function sliderAutoplay() {
+    setInterval(slider, 2000);
+  };
+
+  sliderAutoplay();
+
+ nextSlide.addEventListener('click', slider);
+
 
  prevSlide.addEventListener('click', function() {
   lonelyBayField.scrollBy({
@@ -308,7 +319,7 @@ function createCards(item) {
   }); 
  }) 
  
-  
+//Reset filters  
   function beforeFilter() {
     ships.map((item) => {
       if (
@@ -323,7 +334,8 @@ function createCards(item) {
   }
   
 beforeFilter(); 
-  
+
+//Modal
  cards.forEach((item) => {
     item.addEventListener("click", function () {
       overlay.append(item);
