@@ -1,0 +1,106 @@
+body {font-family: Arial;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+
+  .my-ship {
+    width: 300px;
+    margin: 10px 10px;
+    border: 1px solid black;
+    background: cornflowerblue;
+    
+    img{
+      width: 100%;
+    }
+  }
+
+  &-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .cardsItem {
+      width: 300px;
+      margin: 10px 10px;
+      border: 1px solid black;
+      background: cornflowerblue;
+      
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.tab2-wrapper {
+  display: flex;
+
+  .my-captain {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    background: cornflowerblue;
+    width: 700px;
+    height: 200px;
+
+    img{
+      height: 100%;
+    }
+  }
+
+  
+}
+
+.shop-ship {
+  margin-top: 40px;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background: cornflowerblue;
+    width: 700px;
+    height: 200px;
+
+    .shop-ship-form{
+      display: flex;
+      justify-content: center;
+      
+
+      label{
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  }
+  
+}
