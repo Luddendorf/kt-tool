@@ -1,0 +1,15 @@
+footer {
+	position: sticky;
+	bottom: 0px;
+	display: flex;
+	justify-content: space-around;
+	align-self: center;
+	div {
+		margin: 0 20px;
+		margin-top: 10px;
+	}
+	img {
+		width: 80px;
+		margin: 0 10px;
+	}
+}

@@ -1,0 +1,18 @@
+.tempCol {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 40% 40%;
+	grid-template-areas: "date" "temp";
+}
+.date {
+	border: 1px solid black;
+	padding: 15px;
+	grid-area: date;
+	align-self: center;
+}
+.temp {
+	border: 1px solid black;
+	padding: 15px;
+	grid-area: temp;
+	align-self: center;
+}

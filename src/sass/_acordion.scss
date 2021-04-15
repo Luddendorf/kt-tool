@@ -1,0 +1,48 @@
+/* Acordion menu */
+.accordion {
+	background-color: #eee;
+	color: rgb(44, 43, 43);
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 1.4rem;
+	transition: 0.4s;
+	&:hover {
+		background-color: #ccc;
+	}
+	&:after {
+		content: '\002B';
+		color: rgb(170, 178, 224);
+		font-weight: bold;
+		float: right;
+		margin-left: 5px;
+	}
+}
+.submenu {
+	li {
+		border-bottom: 1px solid #4b4a5e;
+		text-decoration: none;
+		font-size: 1.2rem;
+		list-style-type: none;
+		a {
+			text-decoration: none;
+			color: #36689b;
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+.active {
+	background-color: #ccc;
+}
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}

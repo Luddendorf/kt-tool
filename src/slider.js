@@ -2,11 +2,12 @@ const prev = document.querySelector('#btn-prev')
 const next = document.querySelector('#btn-next')
 const slides = document.querySelectorAll('.slide')
 const dots = document.querySelectorAll('.dot')
+const startBtn = document.querySelector('.startBtn')
 
 let index = 0;
 
 const activeSlide = n => {
-  console.log(n)
+  // console.log(n)
   for(let slide of slides){
     slide.classList.remove('active')
   }
@@ -18,10 +19,10 @@ const activeDot = n => {
   }
   dots[n].classList.add('active')
 }
+
 const prepareSlide = ind => {
   activeSlide(ind)
-  activeDot(ind)
-  
+  activeDot(ind)  
 }
 
 const nextSlide = () => {
@@ -29,13 +30,9 @@ const nextSlide = () => {
   if(index === slides.length - 1){
     index = 0;
     prepareSlide(index)
-    
-
   } else {
     index++;
     prepareSlide(index)
-    
-
   }
 }
 
@@ -43,13 +40,10 @@ const prevSlide = () => {
   startBtn.classList.add('paused')
   if(index === 0){
     index = slides.length - 1
-    activeSlide(index)
-    
+    activeSlide(index)    
   } else {
     index--;
     activeSlide(index)
-    
-
   }
 }
 dots.forEach((item, indexDot) =>{
@@ -59,12 +53,11 @@ dots.forEach((item, indexDot) =>{
   } )
 })
 
-
 next.addEventListener('click', nextSlide)
 prev.addEventListener('click', prevSlide)
 
 let autoPlay = setInterval(nextSlide, 2000);
-const startBtn = document.querySelector('.startBtn')
+
 
 function autoPlayCheck () {
   if (startBtn.classList.contains('paused')) {

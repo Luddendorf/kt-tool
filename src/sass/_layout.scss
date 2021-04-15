@@ -1,0 +1,48 @@
+body {
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 60px 1fr 60px;
+	grid-template-areas: "header header" "aside main" "footer footer";
+}
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 50px;
+	width: 100%;
+	background: #36689b;
+	grid-area: header;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+aside {
+	left: 0;
+	top: 50px;
+	height: auto;
+	width: 300px;
+	background: #36689b;
+	grid-area: aside;
+	font-size: 0.8rem;
+}
+main {
+	background: rgb(239, 239, 243);
+	grid-area: main;
+	width: 100%;
+}
+footer {
+	background: #36689b;
+	color: white;
+	grid-area: footer;
+	height: 100px;
+	width: 100%;
+}
+* {
+	box-sizing: inherit;
+	&::before {
+		box-sizing: inherit;
+	}
+	&::after {
+		box-sizing: inherit;
+	}
+}
