@@ -3,6 +3,7 @@ import './main.css';
 import styles from './index.module.css';
 import "./sass/main-second.scss";
 import {} from './weather';
+import {} from './slider';
 // async function print() {
 //   // Here we are using dynamic import
 //   const { greet } = await import('./greet');
@@ -293,7 +294,7 @@ const ships = [
     }
     });
 
-    // Acordion menu
+// Acordion menu
 
 (function () {
   const acc = document.getElementsByClassName("accordion");
