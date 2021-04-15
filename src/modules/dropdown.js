@@ -5,15 +5,23 @@ const dropdown = ()=>{
   const ulItem = document.querySelectorAll('.main__ul-item');
   let flag = true;
 
+  const buttonInitialState = (button)=>{
+    button.classList.remove('list-open');
+    button.style.display = 'none';
+    button.textContent = 'Сокровища';
+    button.setAttribute('data-value', '');
+  }
+
   anchorImg.addEventListener('click', ()=>{
     if(flag){
       ul.style.display = 'block';
-      ulButton.style.display = 'block';
+      ulButton.style.display = 'flex';
       flag = false;
     } else{
       flag = true;
       ul.style.display = 'none';
-      ulButton.style.display = 'none';
+      ul.style.maxHeight = null;
+      buttonInitialState(ulButton);
     }
   });
 
@@ -21,8 +29,10 @@ const dropdown = ()=>{
     const content = ulButton.nextElementSibling;
     if(content.style.maxHeight){
       content.style.maxHeight = null;
+      ulButton.classList.remove('list-open');
     } else{
       content.style.maxHeight = content.scrollHeight + 'px';
+      ulButton.classList.add('list-open');
     }
 
     ulItem.forEach((item)=>{

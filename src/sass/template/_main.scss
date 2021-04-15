@@ -145,7 +145,13 @@
     height: 100%;
   }
   &__slider {
-    min-width: 1440px;
+    height: 100%;
+    &-wrapper{
+
+    }
+    &-img{
+      
+    }
   }
   &__dropdown {
     background: rgba(189, 186, 130, 0.8);
@@ -154,8 +160,6 @@
     right: 0;
     padding: 0 10px;
     min-width: 90px;
-    &-wrapper{
-    }
   }
   &__ul{
     font-size: 22px;
@@ -198,9 +202,24 @@
   border: none;
   border-radius: 10px;
   margin-bottom: 10px;
+  position: relative;
+  display: none;
+  align-items: center;
   &:hover{
     transition: all ease 0.3s;
     color:rgb(187, 101, 101);
   }
+  &:after{
+    content: '#';
+    position: absolute;
+    right: 20%;
+  }
 }
 
+.list-open{
+  &:after{
+    content: '';
+    position: absolute;
+    right: 20%;
+  }
+}

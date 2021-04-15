@@ -8,12 +8,14 @@ import filter from './modules/filter';
 import dropdown from './modules/dropdown';
 import validation from './modules/validation';
 import fetchTemperature from './modules/fetchTemperature';
+import slider from './modules/slider';
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
   filter();
   dropdown();
   accordeon();
+  slider();
   tabs();
   modal();
   validation();
