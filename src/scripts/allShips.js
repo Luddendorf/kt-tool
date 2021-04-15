@@ -1,9 +1,10 @@
 import { detailedInformation } from './detailedInformation';
 import { ships } from './ships';
 
-const createShip = ({shipName,className,team,price,shipHull}) => {
+export const createShip = ({shipName,className,team,price,shipHull}, card , index) => {
   const newShip = document.createElement('div');
-  newShip.className = 'card'
+  newShip.className = card;
+  newShip.dataset.id = index;
   newShip.innerHTML = `
       <img src="http://pngimg.com/uploads/ship/ship_PNG5403.png" alt="${shipName}">
       <div class="card__shipName">Name: ${shipName}</div>
@@ -18,8 +19,8 @@ const createShip = ({shipName,className,team,price,shipHull}) => {
 export const allShips = (newArr = ships) => {
   const pageAllShips = document.  querySelector('.all__ships');
   pageAllShips.innerHTML = ''
-  newArr.forEach(ship => {
-    pageAllShips.append(createShip(ship));
+  newArr.forEach((ship, index) => {
+    pageAllShips.append(createShip(ship, 'card', index));
   })
   detailedInformation();
 }
