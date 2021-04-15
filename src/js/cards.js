@@ -9,6 +9,7 @@ const ships = [
       beidewind: 8.2, // способность идти против ветра
       hold: 50, // трюм
       team: 10,
+      advanced: "chest",
       weapons: 2,
       price: 350,
       desc:
@@ -24,6 +25,7 @@ const ships = [
       beidewind: 7.5,
       hold: 200,
       team: 17,
+      advanced: "chest",
       weapons: 8,
       price: 2500,
       desc:
@@ -37,6 +39,7 @@ const ships = [
       speed: 14.5,
       maneuverability: 62,
       beidewind: 9.5,
+      advanced: "jewellery",
       hold: 550,
       team: 57,
       weapons: 12,
@@ -52,6 +55,7 @@ const ships = [
       speed: 13.5,
       maneuverability: 36,
       beidewind: 7.85,
+      advanced: "jewellery",
       hold: 750,
       team: 66,
       weapons: 16,
@@ -68,6 +72,7 @@ const ships = [
       maneuverability: 26,
       beidewind: 3.5,
       hold: 1900,
+      advanced: "jewellery",
       team: 80,
       weapons: 16,
       price: 30500,
@@ -81,6 +86,7 @@ const ships = [
       shipHull: 1400,
       speed: 12.5,
       maneuverability: 32,
+      advanced: "skull",
       beidewind: 7.5,
       hold: 1400,
       team: 105,
@@ -98,6 +104,7 @@ const ships = [
       maneuverability: 28,
       beidewind: 3.5,
       hold: 3000,
+      advanced: "chest",
       team: 57,
       weapons: 175,
       price: 38500,
@@ -113,6 +120,7 @@ const ships = [
       maneuverability: 38,
       beidewind: 9.5,
       hold: 2500,
+      advanced: "chest",
       team: 195,
       weapons: 16,
       price: 33500,
@@ -129,6 +137,7 @@ const ships = [
       beidewind: 8.5,
       hold: 1200,
       team: 105,
+      advanced: "chest",
       weapons: 20,
       price: 32500,
       desc:
@@ -155,6 +164,7 @@ const ships = [
       class: 4,
       shipHull: 2700,
       speed: 14.5,
+      advenced: "skull",
       maneuverability: 44,
       beidewind: 3.5,
       hold: 2000,
@@ -172,6 +182,7 @@ const ships = [
       speed: 10.5,
       maneuverability: 31,
       beidewind: 3.2,
+      advanced: "jewellery",
       hold: 3600,
       team: 366,
       weapons: 20,
@@ -188,6 +199,7 @@ const ships = [
       maneuverability: 58,
       beidewind: 4.6,
       hold: 2600,
+      advanced: "chest",
       team: 202,
       weapons: 32,
       price: 73500,
@@ -216,6 +228,7 @@ const ships = [
       shipHull: 3600,
       speed: 12.5,
       maneuverability: 32,
+      advanced: "chest",
       beidewind: 5.7,
       hold: 3600,
       team: 241,
@@ -232,6 +245,7 @@ const ships = [
       speed: 15.5,
       maneuverability: 37,
       beidewind: 3.9,
+      advanced: "jewellery",
       hold: 3200,
       team: 323,
       weapons: 46,
@@ -246,6 +260,8 @@ const ships = [
   const overlay = document.querySelector(".menu__overlay");
   const prevSlide = document.querySelector(".fa-chevron-left");
   const nextSlide = document.querySelector(".fa-chevron-right");
+  const picSelect = document.querySelector("input[type=image]");
+  const selectItems = document.querySelectorAll(".dropdown-items");
   
   let currentMaxPrice = document.querySelector("#maxprice");
   let currentMinPrice = document.querySelector("#minprice");
@@ -277,7 +293,6 @@ const inputs = document.querySelectorAll("input[type=text]");
 //Сreate cards
 function createCards(item) {
     let card = document.createElement("div");
-  
     lonelyBayField.append(card);
     card.classList.add("card");
     card.innerHTML = `
@@ -354,3 +369,31 @@ function close() {
     overlay.innerHTML = "";
     overlay.style.zIndex = "-1";
   }
+
+//Select
+picSelect.addEventListener('click', function(event) {
+  if (document.querySelector("#myDropdown").style.display === "none") {
+    document.querySelector("#myDropdown").style.display = "block";
+  } else {
+    document.querySelector("#myDropdown").style.display = "none";
+  } 
+});
+
+/* function selectCard() {
+  lonelyBayField.innerHTML = "";
+    let countA = 0;
+    ships.forEach(item => {
+
+    }
+
+  }
+}
+
+function filterCardsAfterSelect() {
+  selectItems.forEach(item => {
+    item.addEventListener('click', function() {
+      switch ()
+    })
+  })
+}
+ */
