@@ -252,6 +252,7 @@ const ships = [
   let currentMaxDurab = document.querySelector("#maxstrength");
   let currentMinDurab = document.querySelector("#minstrength");
   let cards = lonelyBayField.childNodes;
+  
  
   
   function filterInputs() {
@@ -326,6 +327,7 @@ beforeFilter();
  cards.forEach((item) => {
     item.addEventListener("click", function () {
       overlay.append(item);
+      let closeBtn = item.insertAdjacentHTML("afterbegin", `<i class="fas fa-times"></i>`); 
       item.style.transform = "scale(1.1)";
       item.style.opacity = "1";
       item.style.zIndex = "2";
