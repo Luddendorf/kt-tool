@@ -1,5 +1,6 @@
 .content-wrapper{
   display: flex;
+  position: relative;
   background: url('https://1rulon.ru/wp-content/uploads/46322.jpg') no-repeat 0 0 / cover;
   min-height: 75vh;
   @media screen and (max-width: 1000px){
@@ -12,7 +13,7 @@
   max-width: 1440px;
   &__cards-wrapper {
     margin: 32px 28px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     @media screen and (max-width: 1000px){
       justify-content: center;
@@ -133,4 +134,73 @@
   text-align: center;
 }
 
+
+.main {
+  &__gallery {
+    height: 100%;
+  }
+  &__gallery-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__slider {
+    min-width: 1440px;
+  }
+  &__dropdown {
+    background: rgba(189, 186, 130, 0.8);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 0 10px;
+    min-width: 90px;
+    &-wrapper{
+    }
+  }
+  &__ul{
+    font-size: 22px;
+    background: transparent;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    background:goldenrod;
+    &-item{
+      cursor: pointer;
+      background: gold;
+      padding: 0 10px;
+      margin: 10px 10px;
+      color:grey;
+      border: 1px solid goldenrod;
+      &:hover{
+        transition: all ease 0.3s;
+        color: grey;
+        background: $light;
+      }
+    }
+  }
+  &__anchor-img{
+    margin: 10px auto;
+    width: 80px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+}
+
+.dropdown-button{
+  font-size: 22px;
+  display: none;
+  cursor: pointer;
+  background: gold;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  &:hover{
+    transition: all ease 0.3s;
+    color:rgb(187, 101, 101);
+  }
+}
 

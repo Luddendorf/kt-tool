@@ -10,7 +10,7 @@
   <header class="header">
     <div class="header__logo">
       <a href="index.html">
-        <img src="https://www.flaticon.com/svg/vstatic/svg/1010/1010039.svg?token=exp=1618329554~hmac=ffa7595f6a7496ec20da897cf51e2e23" alt="parrot">
+        <img src="https://pngimg.com/uploads/pirate/pirate_PNG85.png" alt="parrot">
       </a>
     </div>
     <div class="header__wrapper">
@@ -19,6 +19,9 @@
       </div>
       <div class="header__ship header-tab">
         Мой Корабль!
+      </div>
+      <div class="header__gallery header-tab">
+        Галерея!
       </div>
     </div>
   </header>
@@ -94,6 +97,7 @@
     </aside>
     <main class="main">
       <div class="main__cards-wrapper tab-content">
+
       </div>
       <div class="main__ship tab-content">
         <div class="main__ship-wrapper">
@@ -129,16 +133,16 @@
             <form action="#" class="main__ship-form">
               <h2 class="main__ship-header">Закажи собственное судно!</h2>
               <label for="ship-form__name">Имя:
-                <input type="text" name="name" id="ship-form__name" required>
+                <input type="text" name="name" id="ship-form__name" required placeholder="Имя отважного пирата">
               </label>
               <label for="ship-form__class">Класс:
-                <input type="text" name="ship-class" id="ship-form__class" required>
+                <input type="text" name="ship-class" id="ship-form__class" required placeholder="от 1 до 9">
               </label>
               <label for="ship-form__quantity">Количество:
-                <input type="text" name="ship-quantity" id="ship-form__quantity" required>
+                <input type="text" name="ship-quantity" id="ship-form__quantity" required placeholder="любое число">
               </label>
               <label for="ship-form__price">Цена:
-                <input type="text" name="ship-price" id="ship-form__price" required>
+                <input type="text" name="ship-price" id="ship-form__price" required placeholder="любое число">
               </label>
               <button class="ship-form__submit" type="submit">Отправить!</button>
             </form>
@@ -158,11 +162,9 @@
                       <td class="date-cell"></td>
                       <td class="date-cell"></td>
                       <td class="date-cell"></td>
-                      <td class="date-cell"></td>
                     </tr>
                     <tr>
                       <th class="temp-cells">Температура, °C</th>
-                      <td class="temp-cell"></td>
                       <td class="temp-cell"></td>
                       <td class="temp-cell"></td>
                       <td class="temp-cell"></td>
@@ -171,6 +173,30 @@
                   </table>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__gallery tab-content">
+        <div class="main__gallery-wrapper">
+          <div class="main__slider">
+            <div class="main__slider-wrapper">
+
+            </div>
+          </div>
+          <div class="main__dropdown">
+            <div class="main__dropdown-wrapper">
+              <div class="main__anchor-img">
+                <img src="https://pngimg.com/uploads/anchor/anchor_PNG56.png" alt="anchor">
+              </div>
+              <button class="dropdown-button" data-value="">
+                Сокровища
+              </button>
+              <ul id="ul-dropdown" class="main__ul">
+                <li class="main__ul-item" data-value="chest">Сундук</li>
+                <li class="main__ul-item" data-value="skull">Хрустальный череп</li>
+                <li class="main__ul-item" data-value="necklet">Ожерелье</li>
+              </ul>
             </div>
           </div>
         </div>

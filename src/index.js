@@ -5,12 +5,14 @@ import accordeon from './modules/accordeon';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
 import filter from './modules/filter';
+import dropdown from './modules/dropdown';
 import validation from './modules/validation';
 import fetchTemperature from './modules/fetchTemperature';
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
   filter();
+  dropdown();
   accordeon();
   tabs();
   modal();

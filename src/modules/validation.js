@@ -45,7 +45,7 @@ const validation = ()=>{
 
   const isValidate = ()=>{
     if(errorOnChange(formName, regs.regName, null) &&
-        errorOnChange(formClass, regs.regDigits, null) &&
+        errorOnChange(formClass, regs.regShipClass, null) &&
         errorOnChange(formQuantity, regs.regDigits, null) &&
         errorOnChange(formPrice, regs.regDigits, null))
         {
@@ -59,7 +59,7 @@ const validation = ()=>{
     event.preventDefault();
     
     errorOnChange(formName, regs.regName, 'только буквы или цифры');
-    errorOnChange(formClass, regs.regDigits, 'только цифры');
+    errorOnChange(formClass, regs.regShipClass, 'цифра от 1 до 9');
     errorOnChange(formQuantity, regs.regDigits, 'только цифры');
     errorOnChange(formPrice, regs.regDigits, 'число формата 123 или 123.321');
     if(isValidate()){
@@ -71,7 +71,7 @@ const validation = ()=>{
       const successMsg = document.createElement('div');
       successMsg.textContent = 'Форма успешно отправлена';
       successMsg.style.cssText = `text-align: center;
-                                font-size: 18px;
+                                font-size: 24px;
                                 color: green;`;
       shipForm.insertAdjacentElement('beforeend', successMsg);
       removeElement(successMsg);
