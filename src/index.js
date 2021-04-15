@@ -240,9 +240,13 @@ const ships = [
 
 const horizontalMenuFirst = document.querySelector('#horizontal-menu-first');
 const horizontalMenuSecond = document.querySelector("#horizontal-menu-second");
+const horizontalMenuThird = document.querySelector("#horizontal-menu-third");
 
 const shipsMenu = document.getElementById("all-ships");
 const myShipMenu = document.getElementById("my-ship");
+const sliderShipMenu = document.getElementById("slider-ship");
+const sidebar = document.getElementById("sidebar");
+const galleryOfShips = document.getElementById("gallery-of-ships");
 
 const sail = document.getElementById("sail");
 const repairs = document.getElementById("repairs");
@@ -283,7 +287,7 @@ const maxShipHullDiv = document.getElementById("max-ship-hull-div");
 const minShipHullDiv = document.getElementById("min-ship-hull-div");
 
 const regularPriceMaxMin =/^[1-9][0-9]{3,5}$|^[4-9][0-9]{,2}$|^[3][5-9][0-9]$/;
-const regularShipHullMaxMin =/^[9][5-9]$|^[1-4][0-9]{2,4}$|^[5][0]{3}$/;
+const regularShipHullMaxMin =/^[9][5-9]$|^[1-9][0-9]{2,3}$|^[1-4][0-9]{2,4}$|^[5][0]{3}$/;
 
 const maxPrice = document.getElementById("max-price-input");
 const minPrice = document.getElementById("min-price-input");
@@ -293,17 +297,43 @@ const maxShipHull = document.getElementById("max-ship-hull-input");
 const tableTemperature = document.getElementById("my-ship-weather-table-temperature");
 const tableDate = document.getElementById("my-ship-weather-table-date");
 
+const leftArrow = document.getElementById("left-arrow");
+const rightArrow = document.getElementById("right-arrow");
+
+const slides = document.getElementById("slides");
+const navigationManual = document.getElementById("navigation-manual");
+const navigationAuto = document.getElementById("navigation-auto");
+const sliderButton = document.getElementById("slider-ship__button");
+const dropdowns = document.getElementById("myDropdown");
+const dropbtn = document.getElementById("dropbtn");
+const shipsAnchor = document.getElementById("ships-anchor");
+const dropdown = document.getElementById("dropdown");
+
 const url = 'https://api.tomorrow.io/v4/timelines?location=-12.561429,43.450748&fields=temperature&timesteps=1h&units=metric&apikey=HAfCfUqmVM33AznA9lhooAK162dvK2ke'
 
+let counter = 1;
+
+const arrPicture = [1,4,8,0,5,9];
+
+const arrTreasures = ["Сундук", "Кольцо","Ожерелье","Хрустальный череп","Золото"];
+
 let forTest = false;
+
+let sliderButtonBool = true;
+let forClearInterval;
 
 let lengthsMax = [];
 let lengthsMin = [];
 let lengthsMinHull = [];
 let lengthsMaxHull = [];
 
+createTreasures(arrTreasures);
+
+startShip();
+
 horizontalMenuFirst.addEventListener('click',handlerHeader1);
 horizontalMenuSecond.addEventListener('click',handlerHeader2);
+horizontalMenuThird.addEventListener('click',handlerHeader3);
 
 sail.addEventListener('click',sailHeader);
 repairs.addEventListener('click',repairsHeader);
@@ -318,6 +348,63 @@ layer.addEventListener('click', (e) => {
     layer.style.display = 'none';
   }
 });
+
+rightArrow.addEventListener('click',() => {
+  counter++;
+  if(counter === arrPicture.length + 2){
+    counter = 1;
+  }
+  document.getElementById('radio' + counter).checked = true;
+});
+
+leftArrow.addEventListener('click',() => {
+  counter--;
+  if(counter === 0){
+    counter = arrPicture.length + 1;
+  }
+  document.getElementById('radio' + counter).checked = true;
+});
+
+sliderButton.addEventListener('click', () => {
+  sliderButtonBool = !sliderButtonBool;
+  if(sliderButtonBool === true){
+    clearInterval(forClearInterval);
+    counter--;
+  }else {
+    forClearInterval = setInterval(function (){
+
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter === arrPicture.length + 2){
+        counter = 1;
+      }
+    },5000);
+  }
+});
+
+dropdowns.addEventListener('click',(e) =>{
+
+  const m = [...document.querySelector("#myDropdown").children];
+
+  for(let i = 0; i <m.length; i++) {
+    if (e.target === m[i]){
+      m[i].setAttribute("class","highlighted");
+    }else{
+      m[i].setAttribute("class","not-highlighted");
+    }
+  }
+});
+
+shipsAnchor.addEventListener('click',() => {
+
+  if(dropdown.classList.contains('show__menu')){
+    dropdown.classList.remove('show__menu');
+    dropdown.setAttribute("class","not-show__menu");
+  }else{
+    dropdown.classList.remove('not-show');
+    dropdown.setAttribute("class","show__menu");
+  }
+})
 
 nameUser.onblur = function() {
   testForm(nameUser,regularName);
@@ -334,7 +421,6 @@ sizeShip.onblur = function() {
 priceShip.onblur = function() {
   testForm(priceShip,regularPrice);
 };
-
 
 minPriceInput.onblur = function() {
   sortByMinPrice(ships);
@@ -404,14 +490,11 @@ maxShipHullInput.onblur = function() {
   }
 };
 
-
 function startShip() {
   for(let i = 0; i < ships.length; i++) {
     informationForShip(i);
   }
 }
-
-startShip();
 
 function Order(name, shipClass, size, price) {
   this.name = name;
@@ -545,15 +628,32 @@ function listenerPopUpWindow(number){
 function handlerHeader1() {
   horizontalMenuFirst.classList.add("new__horizontal__menu__for__items");
   horizontalMenuSecond.classList.remove("new__horizontal__menu__for__items");
+  horizontalMenuThird.classList.remove("new__horizontal__menu__for__items");
+  myShipMenu.style.display = "none";
+  galleryOfShips.style.display = "none";
+  sidebar.removeAttribute("style");
   shipsMenu.removeAttribute("style");
-  myShipMenu.style.display = "none"
 }
 
 function handlerHeader2() {
   horizontalMenuSecond.classList.add("new__horizontal__menu__for__items");
   horizontalMenuFirst.classList.remove("new__horizontal__menu__for__items");
+  horizontalMenuThird.classList.remove("new__horizontal__menu__for__items");
+  sidebar.removeAttribute("style");
   shipsMenu.style.display = "none";
+  galleryOfShips.style.display = "none";
   myShipMenu.removeAttribute("style");
+}
+
+function handlerHeader3() {
+  horizontalMenuThird.classList.add("new__horizontal__menu__for__items");
+  horizontalMenuFirst.classList.remove("new__horizontal__menu__for__items");
+  horizontalMenuSecond.classList.remove("new__horizontal__menu__for__items");
+  shipsMenu.style.display = "none";
+  myShipMenu.style.display = "none";
+  galleryOfShips.removeAttribute("style");
+  sidebar.style.display = "none";
+  // myShipMenu.removeAttribute("style");
 }
 
 function sailHeader() {
@@ -715,6 +815,66 @@ function sortByMaxShipHull(arr) {
   return lengthsMaxHull;
 }
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function createTreasures(arr){
+  for(let i = 0; i < arr.length; i++) {
+    const treasure = document.createElement('p');
+    treasure.innerText = `${arr[i]}`;
+    dropdowns.append(treasure);
+  }
+
+  for(let i = 2; i <= arrPicture.length + 1; i++) {
+
+    const radio = document.createElement('input');
+    radio.setAttribute('type', `radio`);
+    radio.setAttribute('id', `radio${i}`);
+    radio.setAttribute('name', `radio-btn`);
+
+    slides.prepend(radio);
+
+    const label = document.createElement('label');
+    label.setAttribute('for', `radio${i}`);
+    label.setAttribute("class","manual-btn")
+
+    navigationManual.append(label);
+
+    const navigation = document.createElement('div');
+    navigation.setAttribute("class",`auto-btn${i}`);
+    navigationAuto.append(navigation);
+
+    let style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = `#radio${i}:checked ~ .navigation-auto .auto-btn${i}{
+  background: white;
+}`;
+    document.getElementsByTagName('head')[0].appendChild(style);
+
+
+    style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = `  #radio${i}:checked ~ .first{
+    margin-left: ${(i - 1) * -20}%;
+  }`;
+    document.getElementsByTagName('head')[0].appendChild(style);
+
+
+  }
+
+  for(let i = 0; i < arrPicture.length; i++) {
+
+    const slidesShip = document.createElement('div');
+    slidesShip.setAttribute('class', `slide`);
+    const slidesShipImg = document.createElement('img');
+    slidesShipImg.setAttribute('src', `./images/${arrPicture[i]}.jpg`);
+    slidesShip.append(slidesShipImg);
+    slides.append(slidesShip);
+  }
+
+}
+
 async function asynchronousWeather(url){
   const response = await fetch(url);
   return response.json();
@@ -768,6 +928,4 @@ function addColumn(table,text){
 
   table.append(tableTemperatureColumn);
 }
-
-
 

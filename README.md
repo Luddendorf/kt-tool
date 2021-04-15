@@ -3,12 +3,16 @@ To start, you just need to open index.html in the tool and open it in the browse
 
 I get the weather information from southern Sudan.
 
-![alt text](first.png)
+![alt text](img/first.png)
 
-![alt text](Second.png)
+![alt text](img/second.png)
 
-![alt text](third.png)
+![alt text](img/third.png)
 
-![alt text](fourth.png)
+![alt text](img/fourth.png)
 
-![alt text](fifth.png)
+![alt text](img/fifth.png)
+
+![alt text](img/sixth.png)
+
+![alt text](img/seven.png)

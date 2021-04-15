@@ -364,3 +364,233 @@ body {
   padding: 20px;
   font-size: 25px;
 }
+
+
+
+
+.gallery-of-ships{
+  display: flex;
+}
+
+#ships-anchor{
+  cursor: pointer;
+}
+
+
+.slider-ship{
+  margin: 40px auto;
+  padding: 30px 70px 30px 70px;
+  border: 5px solid black;
+  /*height: 100vh;*/
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  background-color: rgba(3, 18, 129, 0.8);
+}
+
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  background-size: cover;
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: white;
+}
+
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: white;
+}
+
+.right-arrow{
+  position: absolute;
+  display: flex;
+  width: 50px;
+  height: 400px;
+  justify-content: center;
+  /*padding: 200px;*/
+  margin: 70px 0 0 810px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right-arrow img{
+  height: 50px;
+  width: 50px;
+}
+
+
+.left-arrow{
+  position: absolute;
+  display: flex;
+  width: 50px;
+  height: 400px;
+  justify-content: center;
+  margin: 70px 810px 0 -60px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-arrow img{
+  height: 50px;
+  width: 50px;
+}
+
+
+/*.ships-anchor__menu{*/
+/*  background-color: #ffcc00;*/
+/*}*/
+
+
+
+
+
+
+.dropbtn {
+  background-color: rgb(33, 18, 245);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #001098;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+  margin-left: 33%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0 0 0 -13px;
+  background-color: rgba(255, 255, 255, 0.6);
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+  /*list-style-type: none;*/
+  cursor: pointer;
+}
+
+/*.dropdown li:hover {background-color: #ddd;}*/
+
+/*.dropdown li:active {*/
+/*  background-color: #ffcc00;*/
+/*}*/
+
+.show{
+  display: block;
+}
+
+.show__menu {
+  position: relative;
+  display: block;
+  margin-left: 38%;
+}
+
+.not-show__menu {
+  display: none;
+}
+
+.highlighted {
+  background-color: rgba(255, 200, 3, 0.6);
+}
+
+.not-highlighted{
+  /*background-color: rgba(255, 255, 255, 0.6);*/
+}
+
+.slider-ship__and__button{
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-ship__button {
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(33, 18, 245);
+  font-size: 25px;
+  color: white;
+}
