@@ -1,5 +1,5 @@
 .main__wrapper {
-    height: 70vh;
+    height: 72vh;
     display: flex;
     justify-content: space-between;
     margin: 40px 25px;
@@ -77,6 +77,12 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     cursor: pointer;
+}
+
+.panel p {
+    color: black;
+    text-align: left;
+
 }
 
 .panel p:hover {
