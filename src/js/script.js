@@ -8,6 +8,7 @@ const accordion = () => {
 
     const open = (button, dropDown) => {
         closeAllDrops();
+        dropDown.style.height = `${dropDown.scrollHeight}px`;
         button.classList.add('active');
         dropDown.classList.add('active');
     };

@@ -55,10 +55,6 @@
     height: auto;
 }
 
-.left-menu-description.active li {
-    padding: 7px 5px;
-}
-
 .left-menu-description-link {
     text-decoration-line: none;
     color: #000000;
