@@ -25,22 +25,31 @@ const prepareSlide = ind => {
 }
 
 const nextSlide = () => {
+  startBtn.classList.add('paused')
   if(index === slides.length - 1){
     index = 0;
-    prepareSlide(index)    
+    prepareSlide(index)
+    
+
   } else {
     index++;
-    prepareSlide(index)    
+    prepareSlide(index)
+    
+
   }
 }
 
 const prevSlide = () => {
+  startBtn.classList.add('paused')
   if(index === 0){
     index = slides.length - 1
     activeSlide(index)
+    
   } else {
     index--;
     activeSlide(index)
+    
+
   }
 }
 dots.forEach((item, indexDot) =>{
@@ -54,7 +63,7 @@ dots.forEach((item, indexDot) =>{
 next.addEventListener('click', nextSlide)
 prev.addEventListener('click', prevSlide)
 
-let autoPlay = setInterval(nextSlide, 1500);
+let autoPlay = setInterval(nextSlide, 2000);
 const startBtn = document.querySelector('.startBtn')
 
 function autoPlayCheck () {
@@ -63,7 +72,7 @@ function autoPlayCheck () {
     clearInterval(autoPlay)
   } else {
   startBtn.classList.add('paused')
-  setInterval(nextSlide, 1500)
+  setInterval(nextSlide, 2000)
   }
 }
 
