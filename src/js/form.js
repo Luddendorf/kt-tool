@@ -1,27 +1,19 @@
 const form = document.querySelector('form');
 const input = document.querySelectorAll("input[type=text]")
-const formName = form.elements.name;
-const formQuantity = form.elements.quantity;
-const formClass = form.elements.class;
-const formPrice = form.elements.price;
 
 const sendBtn = document.querySelector("#button-form");
 
 function sendForm() {
-  let obj = {
-    name: formName.value,
-    quantity: formQuantity.value,
-    class: formClass.value,
-    price: formPrice.value,
-  };
+  let arr = [];
   input.forEach(item => {
-    if (item.value.length !== 0) {
-      
-        console.log(obj);
-        
+    if (item.value !== '') {
+       arr.push(item.value);
+    } else {
+      item.style.border = "2px solid red";
     }
-    form.reset();
-  })
-  
+  });
+  const obj = Object.assign({}, arr);
+  console.log(obj);
+  form.reset(); 
 }
 sendBtn.addEventListener("click", sendForm);
