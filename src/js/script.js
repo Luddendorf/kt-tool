@@ -166,21 +166,34 @@ const modal = () => {
 const transition = () => {
     const bayLink = document.querySelector('.bay-link');
     const shipLink = document.querySelector('.ship-link');
+    const galleryShipLink = document.querySelector('.gallery-ship-link');
     const cards = document.querySelector('.cards');
     const myShip = document.querySelector('.my-ship');
+    const gallery = document.querySelector('.gallery-ship');
 
-    const changePage = () => {
-        cards.classList.toggle('hidden');
-        myShip.classList.toggle('hidden');
+    const openMyShips = () => {
+        cards.classList.add('hidden');
+        gallery.classList.add('hidden');
+        myShip.classList.remove('hidden');
     };
 
-    shipLink.addEventListener('click', () => {
-        changePage();
-    })
+    const openBay = () => {
+        gallery.classList.add('hidden');
+        myShip.classList.add('hidden');
+        cards.classList.remove('hidden');
+    };
 
-    bayLink.addEventListener('click', () => {
-        changePage();
-    })
+    const openGallery = () => {
+        cards.classList.add('hidden');
+        myShip.classList.add('hidden');
+        gallery.classList.remove('hidden');
+    };
+
+    shipLink.addEventListener('click', openMyShips);
+
+    bayLink.addEventListener('click', openBay);
+
+    galleryShipLink.addEventListener('click', openGallery);
 };
 
 const filter = () => {
@@ -223,6 +236,7 @@ const onClickValidationForm = () => {
     const numberInput = document.querySelector('.input-number').value;
     const classInput = document.querySelector('.input-class').value;
     const priceInput = document.querySelector('.input-price').value;
+    const result = document.querySelector('.form-result');
 
     const buyFormObj = {
         name: nameInput,
@@ -231,7 +245,17 @@ const onClickValidationForm = () => {
         price: priceInput
     };
 
-    console.log(buyFormObj);
+    result.innerHTML = `Имя: ${buyFormObj.name} <br>
+                        Количество: ${buyFormObj.number} <br>
+                        Цена: ${buyFormObj.price} <br>
+                        Класс: ${buyFormObj.class}
+    `;
+};
+
+const getWeather = async () => {
+    const weather = await fetch('https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=D3jlyiBioq07H0kzVJ4JYODQwdJEi5Ok');
+    const content = await weather.json();
+    console.log(content);
 };
 
 accordion();
@@ -240,3 +264,4 @@ renderCards(ships);
 modal();
 transition();
 buyFormValidation();
+/* getWeather(); */
