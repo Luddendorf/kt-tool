@@ -1,6 +1,6 @@
 const configureTabsControls = () => {
 
-  const tabsIds = ['bight', 'my-ship']
+  const tabsIds = ['bight', 'my-ship', 'gallery']
   let currentTabId = 'bight'
 
   const handleTabClick = e => {
