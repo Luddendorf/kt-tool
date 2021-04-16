@@ -23,11 +23,13 @@ export default () => {
             if (reg.test(timeStamp.startTime)) {
                 const date = timeStamp.startTime.match(reg);
                 const temp = timeStamp.values.temperature;
+                // заполняем массивы через регулярку
                 dates.push(date[1].split('-').reverse().join('.'));
                 temperatures.push(`+${Math.ceil(temp)}°C`);
                 console.log(temperatures)
 
             }
+            // заполняем табличку
             fill(dateItems, dates);
             fill(tempItems, temperatures);
             return;
