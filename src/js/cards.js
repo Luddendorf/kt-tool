@@ -257,6 +257,7 @@ const ships = [
   
   const lonelyBayField = document.querySelector(".list-card");
   const overlay = document.querySelector(".menu__overlay");
+  const playBlock = document.querySelector(".manage_play");
   const prevSlide = document.querySelector(".fa-chevron-left");
   const nextSlide = document.querySelector(".fa-chevron-right");
   const picSelect = document.querySelector("input[type=image]");
