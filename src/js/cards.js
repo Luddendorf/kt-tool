@@ -259,7 +259,7 @@ const ships = [
   const overlay = document.querySelector(".menu__overlay");
   const prevSlide = document.querySelector(".fa-chevron-left");
   const nextSlide = document.querySelector(".fa-chevron-right");
-  const picSelect = document.querySelector("input[type=image]");
+  const picSelect = document.querySelector(".dropbtn");
   const skull = document.querySelector("#skull");
   const chest = document.querySelector("#chest");
   const jewellery = document.querySelector("#jewellery");
@@ -384,8 +384,7 @@ function close() {
   }
 
 //Select
-picSelect.addEventListener('click', function(event) {
-  event.preventDefault();
+picSelect.addEventListener('click', function() {
   if (document.querySelector("#myDropdown").style.display === "none") {
     document.querySelector("#myDropdown").style.display = "block";
   } else {
