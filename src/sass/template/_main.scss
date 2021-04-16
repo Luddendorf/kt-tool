@@ -10,10 +10,10 @@
 }
 
 .main {
-  max-width: 1440px;
+  width: 100%;
   &__cards-wrapper {
-    margin: 32px 28px;
     display: none;
+    margin: 32px 28px;
     flex-wrap: wrap;
     @media screen and (max-width: 1000px){
       justify-content: center;
@@ -137,20 +137,18 @@
 
 .main {
   &__gallery {
+    display: flex;
     height: 100%;
+    width: 100%;
   }
   &__gallery-wrapper {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
     height: 100%;
   }
   &__slider {
-    height: 100%;
-    &-wrapper{
-
-    }
     &-img{
-      
+      object-fit: cover;
     }
   }
   &__dropdown {
@@ -222,4 +220,94 @@
     position: absolute;
     right: 20%;
   }
+}
+
+#slider-btn-prev,
+#slider-btn-next{
+  font-size: 20px;
+  position: absolute;
+  background: transparent;
+  cursor: pointer;
+}
+
+#slider-btn-prev{
+  left: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent goldenrod transparent transparent;
+}
+
+#slider-btn-next{
+  right: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 30px;
+  border-color: transparent transparent transparent goldenrod;
+}
+
+.carousel-container{
+  margin: auto;
+  overflow: hidden;
+  width: 500px;
+  border: 5px solid black;
+  position: relative;
+}
+
+.carousel-slide{
+  display: flex;
+  height: 400px;
+}
+
+.transform-animation{
+  transition: all 0.8s ease-in-out;
+}
+
+.pagination{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+  color: gold;
+  cursor: pointer;
+}
+
+.pagination-item{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px solid goldenrod
+}
+
+.is-active{
+  background: gold;
+}
+
+.pagination-item:not(:last-child){
+  margin-right: 20px;
+}
+
+.btn-player{
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  background: goldenrod;
+  border-radius: 30%;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+#play{
+  left: 70px;
+}
+#stop{
+  left: 10px;
 }

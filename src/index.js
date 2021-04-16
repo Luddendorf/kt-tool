@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   filter();
   dropdown();
   accordeon();
-  slider();
   tabs();
   modal();
   validation();
   fetchTemperature();
+  slider();
 });
