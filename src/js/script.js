@@ -259,6 +259,28 @@ const getWeather = async () => {
     console.log(content);
 };
 
+const autoplaySlider = () => {
+    let counter = 1;
+    const timer = setInterval(() => {
+        document.getElementById('switch' + counter).checked = true;
+        counter ++;
+        if (counter > 5) {
+            counter = 1;
+        }
+    }, 4000);
+
+    const stopAutoplay = document.querySelector('.stop-button');
+    stopAutoplay.addEventListener('click', () => {
+        clearInterval(timer);
+    });
+};
+
+const onClickStartAutoplaySlider = () => {
+    const startAutoplay = document.querySelector('.start-button');
+    startAutoplay.addEventListener('click', autoplaySlider);
+};
+
+
 accordion();
 filter();
 renderCards(ships);
@@ -266,3 +288,5 @@ modal();
 transition();
 buyFormValidation();
 /* getWeather(); */
+autoplaySlider();
+onClickStartAutoplaySlider();
