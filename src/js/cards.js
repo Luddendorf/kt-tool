@@ -257,7 +257,6 @@ const ships = [
   
   const lonelyBayField = document.querySelector(".list-card");
   const overlay = document.querySelector(".menu__overlay");
-  const playBlock = document.querySelector(".manage_play");
   const prevSlide = document.querySelector(".fa-chevron-left");
   const nextSlide = document.querySelector(".fa-chevron-right");
   const picSelect = document.querySelector("input[type=image]");
@@ -265,6 +264,7 @@ const ships = [
   const chest = document.querySelector("#chest");
   const jewellery = document.querySelector("#jewellery");
   const showAll = document.querySelector("#showAll");
+  const playMenu = document.querySelector(".play__pause");
   
 
   
@@ -323,12 +323,18 @@ function createCards(item) {
       behavior: 'smooth'
     }); 
   }
-
+  let intervalID
   function sliderAutoplay() {
-    setInterval(slider, 2000);
+    intervalID = setInterval(slider, 1500);
   };
 
-  sliderAutoplay();
+ playMenu.addEventListener('click', function(event) {
+   if (event.target.classList.contains("fa-play")) {
+    sliderAutoplay();
+   } else if (event.target.classList.contains("fa-pause")) {
+    clearInterval(intervalID);
+   }
+ })
 
  nextSlide.addEventListener('click', slider);
 
