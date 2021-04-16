@@ -334,7 +334,7 @@ function createCards(item) {
    } else if (event.target.classList.contains("fa-pause")) {
     clearInterval(intervalID);
    }
- })
+ });
 
  nextSlide.addEventListener('click', slider);
 

@@ -4,7 +4,7 @@ const sendBtn = document.querySelector("#button-form");
 
 function sendForm() {
   let arr = [];
-  input.forEach(item => {
+  inputText.forEach(item => {
     if (item.value !== '') {
        arr.push(item.value);
     } else {
