@@ -3,8 +3,8 @@
   display: grid;
   width: $left_menu-width;
   grid-template-columns: 1fr 1fr;
+  background-color: #fff;
   &__item {
-    
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(0, 0, 0);

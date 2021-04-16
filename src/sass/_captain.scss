@@ -1,4 +1,31 @@
+.captain {
+  min-height: calc(100vh - 12em;
+  height: 100%;
+}
+
+.cards__boats {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-height: 46.5rem;
+  background: url("https://images.unsplash.com/photo-1569276163051-e5f349d09c18?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+    no-repeat fixed;
+  background-size: cover;
+
+  & h2 {
+    font-size: 1.5rem;
+    font-style: oblique;
+  }
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
 .captain__boat {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -6,7 +33,6 @@
   z-index: 2;
   height: fit-content;
   flex-wrap: wrap;
-  max-width: 18rem;
   div.captain__boat-boat {
     border-radius: 1rem;
   }
@@ -22,6 +48,8 @@
     & > img {
       text-align: center;
       height: 250px;
+      border-radius: 1rem;
+      margin: 0.5rem 0 0.5rem 0;
     }
     & p {
       font-size: 1.5rem;
@@ -31,6 +59,7 @@
     border-radius: 0.5rem;
     min-width: 5rem;
     height: auto;
+    margin: 1rem 0;
     max-width: 15rem;
     background-color: rgba(0, 0, 0, 0.575);
     font-size: 1.2rem;
@@ -59,6 +88,7 @@
   flex-direction: column;
 }
 .captain__profile {
+  position: relative;
   padding: 0.5rem 0.3rem;
   margin-top: 1rem;
   border-radius: 1rem;
@@ -71,8 +101,10 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
-  & > img {
-    padding-top: 0.5rem;
+  & img {
+    text-align: center;
+    margin: 0.5rem 0.5rem 1.5rem 0;
+    border-radius: 1rem;
   }
 }
 
@@ -81,12 +113,27 @@
   flex-direction: column;
 }
 .form {
+  position: relative;
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.623);
   padding: 0.5rem;
   border-radius: 0.7rem;
   height: fit-content;
   font-size: 1.2rem;
+  & div.res__window {
+    margin-top: 1rem;
+    font-size: 2rem;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    z-index: 999;
+    background-color: #fff;
+  }
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
   & div {
     margin-top: 1rem;
     display: flex;
@@ -100,48 +147,33 @@
     margin-bottom: 0.3rem;
   }
   & div input {
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     padding: 0.5rem;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: #000;
   }
   button[type="submit"] {
     margin-top: 1rem;
-    font-size: 2rem;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.2rem;
-  }
-}
-.cards__boats {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  min-height: 45.5rem;
-  background: url("https://images.unsplash.com/photo-1569276163051-e5f349d09c18?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
-    no-repeat fixed;
-  background-size: cover;
-  & h2 {
     font-size: 1.5rem;
-    font-style: oblique;
-  }
-
-  & h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.2rem;
+    &:hover {
+      transition: 0.5s;
+      background-color: green;
+    }
   }
 }
 
-// @media (max-width: 1300px) {
-//   .captain {
-//     flex-direction: column;
-//     text-align: center;
-//     align-items: center;
-//     & div,
-//     section {
-//       max-width: 60vw;
-//     }
-//     div.captain__boat {
-//       width: 100%;
-//     }
-//   }
-// }
+@media (max-width: 1120px) {
+  .form {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+  .captain__profile {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

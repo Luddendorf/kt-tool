@@ -18,7 +18,6 @@ export default function getWeatherData() {
 
       const resultArr = [];
 
-      fetch(path);
       resultArr.forEach((el) => {
         let temp = `<div>
         дата: <span>${el.startTime.slice(0, 11)} </span>
@@ -28,6 +27,7 @@ export default function getWeatherData() {
       });
     })
     .catch((error) => {
+      console.log(error);
       if (error) {
         let temp = `<div>
         date: <span> is unavailavble rigth now </span>

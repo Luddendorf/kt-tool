@@ -1,4 +1,6 @@
 import ships from "../state/shipsData";
+import captainImg from "../../assets/imgs/captain.jpg";
+import CaptainForm from './CaptainForm'
 
 export default function RenderCaptain() {
   const captainObj = {
@@ -29,7 +31,7 @@ export default function RenderCaptain() {
             `;
 
   const cpaObjProps = Object.entries(captainObj);
-  captain.innerHTML = `<img src="https://media-exp1.licdn.com/dms/image/C4D35AQGDg9j5q4u1pg/profile-framedphoto-shrink_200_200/0/1595661276984?e=1618423200&v=beta&t=iQVV9dHRRKgDOf03_fAgmzHrnfo3qyM7AP0zF2dwnqk" width="190px"/>`;
+  captain.innerHTML = `<img src=${captainImg} width="190px"/>`;
   cpaObjProps.forEach((arr) => {
     let key = arr[0];
     let val = arr[1];
@@ -39,4 +41,5 @@ export default function RenderCaptain() {
     captain.appendChild(prop);
   });
 
+  CaptainForm()
 }
