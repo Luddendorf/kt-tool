@@ -256,12 +256,16 @@ const ships = [
   ];
   
   const lonelyBayField = document.querySelector(".list-card");
-  const frame = document.querySelector(".frame-for-card");
+  const mainDescr = document.querySelector("#list");
   const overlay = document.querySelector(".menu__overlay");
   const prevSlide = document.querySelector(".fa-chevron-left");
   const nextSlide = document.querySelector(".fa-chevron-right");
   const picSelect = document.querySelector("input[type=image]");
   const selectItems = document.querySelectorAll(".dropdown-items");
+  const skull = document.querySelector("#skull");
+  const chest = document.querySelector("#chest");
+  const jewellery = document.querySelector("#jewellery");
+
   
   let currentMaxPrice = document.querySelector("#maxprice");
   let currentMinPrice = document.querySelector("#minprice");
@@ -372,6 +376,7 @@ function close() {
 
 //Select
 picSelect.addEventListener('click', function(event) {
+  event.preventDefault();
   if (document.querySelector("#myDropdown").style.display === "none") {
     document.querySelector("#myDropdown").style.display = "block";
   } else {
@@ -379,21 +384,21 @@ picSelect.addEventListener('click', function(event) {
   } 
 });
 
-/* function selectCard() {
-  lonelyBayField.innerHTML = "";
-    let countA = 0;
-    ships.forEach(item => {
+const skullVar = ships.filter(item => {
+  item.advanced == "skull";
+});
 
-    }
+skull.addEventListener('click', createCards(skullVar));
 
-  }
-}
+const chestVar = ships.filter(item => {
+  item.advanced == "chest";
+});
 
-function filterCardsAfterSelect() {
-  selectItems.forEach(item => {
-    item.addEventListener('click', function() {
-      switch ()
-    })
-  })
-}
- */
+chest.addEventListener('click', createCards(chestVar));
+
+const jewVar = ships.filter(item => {
+  item.advanced == "jewellery";
+});
+
+jewellery.addEventListener('click', createCards(jewVar));
+

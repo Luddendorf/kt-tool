@@ -49,6 +49,10 @@
     z-index: 1;
 }
 
+.dropbtn {
+    background-image: url(/src/assets/blackflag.png);
+}
+
 .dropdown-content div {
     color: black;
     padding: 12px 16px;
