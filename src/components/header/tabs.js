@@ -34,7 +34,7 @@ export default function menuTabsSwipe() {
       }
       if (curTargetClass === "header__btn-block gallery__btn") {
         changeMainScreen(gallery, boatsCards, buhtaCards);
-        Slider();
+        setTimeout(Slider(), 1000);
       }
     });
   });

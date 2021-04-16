@@ -39,7 +39,6 @@ const CaptainForm = () => {
       formClass,
       formPrice,
     };
-    console.log(props);
     formHandler(props);
   });
 
@@ -60,10 +59,6 @@ const CaptainForm = () => {
       regex.regClass.test(clasV) &&
       regex.regPrice.test(priceV)
     ) {
-      console.log(regex.regName.test(nameV));
-      console.log(regex.regQuan.test(quantityV));
-      console.log(regex.regClass.test(clasV));
-      console.log(regex.regPrice.test(priceV));
       passed = true;
     }
     if (passed === true) {
@@ -78,6 +73,13 @@ const CaptainForm = () => {
       console.log("error was found check the form info");
     }
   }
+
+  function resetForm() {
+    Array.from(document.querySelectorAll(".cp__input")).forEach(
+      (input) => (input.value = "")
+    );
+  }
+
   function setResBlock(check) {
     const resWindow = document.createElement("div");
     const resText = document.createElement("span");
@@ -91,6 +93,8 @@ const CaptainForm = () => {
       resWindow.append(resText);
       resWindow.setAttribute("class", "res__window");
       formWrap.append(resWindow);
+      resetForm();
+      console.log(formData);
     } else {
       resText.textContent = "Check if all info was mention correctly!";
       resText.style.color = "#000";
@@ -98,6 +102,7 @@ const CaptainForm = () => {
       resWindow.append(resText);
       resWindow.setAttribute("class", "res__window");
       formWrap.append(resWindow);
+      resetForm();
     }
     if (resWindow.classList.contains("res__window")) {
       setTimeout(function () {

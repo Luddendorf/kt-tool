@@ -15,7 +15,6 @@ const sideBarMenu = () => {
   }
 
   dropDownMenu.addEventListener("click", function (e) {
-    console.log(e.target.className);
     switch (e.target.className) {
       case "menu__item sail":
         if (dropD1.classList.contains("closed")) {

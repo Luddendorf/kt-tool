@@ -33,7 +33,6 @@ export default function RenderBoats() {
       }
       return true;
     });
-    console.log(filteredShips);
     CollectBoats(filteredShips, wrapElem);
   };
 

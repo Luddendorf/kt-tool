@@ -1,12 +1,13 @@
-import weathersAPI from "../api/API";
-
-const tempBlockDiv = document.querySelector(".temp-block-div");
+import { getWeather } from "../api/API";
 
 export default function getWeatherData() {
-  weathersAPI
-    .getWeather()
-    .then((data) => data.json())
+  const tempBlockDiv = document.querySelector(".temp-block-div");
+
+  const resultArr = [];
+
+  getWeather()
     .then((res) => {
+      console.log(res);
       const arr = res.data.timelines[0].intervals;
       console.log(arr);
       const regex = /[T][1][2]/;
@@ -16,12 +17,12 @@ export default function getWeatherData() {
         }
       });
 
-      const resultArr = [];
-
+      const toCelsius = (n) => Number.parseFloat(((n - 32) * 5) / 9).toFixed(2);
+      
       resultArr.forEach((el) => {
         let temp = `<div>
         дата: <span>${el.startTime.slice(0, 11)} </span>
-        температура: <span>${el.values.temperature}</span>
+        температура: <span>${toCelsius(el.values.temperature)}</span>
         </div>`;
         tempBlockDiv.innerHTML += temp;
       });
