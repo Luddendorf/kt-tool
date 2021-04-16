@@ -384,21 +384,27 @@ picSelect.addEventListener('click', function(event) {
   } 
 });
 
-const skullVar = ships.filter(item => {
-  item.advanced == "skull";
+const skullVar = ships.filter(item => item.advanced == "skull");
+skull.addEventListener('click', function() {
+  lonelyBayField.innerHTML = "";
+  skullVar.forEach(item => {
+    createCards(item);
+  })
 });
 
-skull.addEventListener('click', createCards(skullVar));
-
-const chestVar = ships.filter(item => {
-  item.advanced == "chest";
+const chestVar = ships.filter(item => item.advanced == "chest");
+chest.addEventListener('click', function() {
+  lonelyBayField.innerHTML = "";
+  chestVar.forEach(item => {
+    createCards(item);
+  })
 });
 
-chest.addEventListener('click', createCards(chestVar));
-
-const jewVar = ships.filter(item => {
-  item.advanced == "jewellery";
+const jewVar = ships.filter(item => item.advanced == "jewellery");
+jewellery.addEventListener('click', function() {
+  lonelyBayField.innerHTML = "";
+  jewVar.forEach(item => {
+    createCards(item);
+  })
 });
-
-jewellery.addEventListener('click', createCards(jewVar));
 
