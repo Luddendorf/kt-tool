@@ -10,6 +10,9 @@ import showCards from "./scripts/showCards";
 import filterCards from "./scripts/filterCards";
 import form from "./scripts/validateForm";
 import getWeather from "./scripts/getWeather";
+import createSlider from "./scripts/gallery";
+import createDropDownMenu from "./scripts/dropDown";
+import dropdownClick from "./scripts/dropdownClick";
 
 async function print() {
   // Here we are using dynamic import
@@ -38,5 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   showCards(ships);
-  getWeather();
+  // getWeather();
+  createSlider();
+  createDropDownMenu();
+  dropdownClick();
 });

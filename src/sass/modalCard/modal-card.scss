@@ -48,6 +48,7 @@
       }
       & img {
         max-width: 40%;
+        object-fit: cover;
       }
       &-list > p {
         font-size: 2rem;

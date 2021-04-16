@@ -2,25 +2,33 @@
 
 .content {
   position: relative;
-  width: 70%;
   margin-bottom: 70px;
-  @media (max-width: $small) {
-    width: 65%;
-  }
   @media (max-width: $extraSmall) {
     width: 100%;
   }
 }
 
-.ships {
+.pier {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0rem 1rem;
+  justify-content: flex-end;
   transition: all 0.3s ease;
   &-close {
     transform: translateX(-100%);
     opacity: 0;
+  }
+}
+
+.ships {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0rem 1rem;
+  @media (max-width: $large) {
+    width: 65%;
+  }
+  @media (max-width: $extraSmall) {
+    width: 100%;
   }
 }
 
@@ -36,7 +44,7 @@
   @media (max-width: $large) {
     width: calc(50% - 10px);
   }
-  @media (max-width: $small) {
+  @media (max-width: $medium) {
     width: calc(100% - 10px);
   }
   &:after {
@@ -56,7 +64,9 @@
     transition: 0.5s;
   }
   &__img {
-    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
   &__wrapper {
     color: #86868b;

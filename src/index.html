@@ -26,8 +26,9 @@
         </div>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__list-item active">Причал</li>
-            <li class="nav__list-item inactive">Мой корабль</li>
+            <li id="pier" class="nav__list-item active">Причал</li>
+            <li id="my-ship" class="nav__list-item inactive">Мой корабль</li>
+            <li id="gallery" class="nav__list-item inactive">Галерея</li>
           </ul>
         </nav>
       </header>
@@ -38,95 +39,100 @@
           </div>
         </div>
 
-        <div class="sidebar">
-          <form class="filters">
-            <div class="filters__card">
-              <div class="filters__card-min">
-                <span class="filters__card-title"
-                  >мин. <br />
-                  цена</span
-                >
-                <input
-                  class="filters__card-input"
-                  type="number"
-                  name=""
-                  id="min-price"
-                />
-              </div>
-              <div class="filters__card-max">
-                <span class="filters__card-title"
-                  >макс.<br />
-                  цена</span
-                >
-                <input
-                  class="filters__card-input"
-                  type="number"
-                  name=""
-                  id="max-price"
-                />
-              </div>
-            </div>
-            <div class="filters__card">
-              <div class="filters__card-min">
-                <span class="filters__card-title"
-                  >мин.<br />
-                  прочность</span
-                >
-                <input
-                  class="filters__card-input"
-                  type="number"
-                  name=""
-                  id="min-hull"
-                />
-              </div>
-              <div class="filters__card-max">
-                <span class="filters__card-title"
-                  >макс.<br />
-                  прочность</span
-                >
-                <input
-                  class="filters__card-input"
-                  type="number"
-                  name=""
-                  id="max-hull"
-                />
-              </div>
-            </div>
-            <div class="filters__btn-wrapper">
-              <button class="filters__reset btn" type="reset">
-                Сбросить фильтры
-              </button>
-              <button class="filters__apply btn" type="submit">Смотреть</button>
-            </div>
-          </form>
-          <ul class="menu">
-            <li class="menu__item">Паруса</li>
-            <ul class="submenu">
-              <li class="submenu__item">Шпринтовые</li>
-              <li class="submenu__item">Бермудские</li>
-              <li class="submenu__item">Гафельные</li>
-            </ul>
-            <li class="menu__item">Ремонт</li>
-            <ul class="submenu">
-              <li class="submenu__item">Обычный</li>
-              <li class="submenu__item">Быстрый</li>
-            </ul>
-            <li class="menu__item">Пушки</li>
-            <ul class="submenu">
-              <li class="submenu__item">Шпринтовые</li>
-              <li class="submenu__item">Бермудские</li>
-              <li class="submenu__item">Гафельные</li>
-            </ul>
-            <li class="menu__item">Команда</li>
-            <ul class="submenu">
-              <li class="submenu__item">Шпринтовые</li>
-              <li class="submenu__item">Бермудские</li>
-              <li class="submenu__item">Гафельные</li>
-            </ul>
-          </ul>
-        </div>
         <section class="content">
-          <div class="ships"></div>
+          <div class="pier">
+            <div class="sidebar">
+              <form class="filters">
+                <div class="filters__card">
+                  <div class="filters__card-min">
+                    <span class="filters__card-title"
+                      >мин. <br />
+                      цена</span
+                    >
+                    <input
+                      class="filters__card-input"
+                      type="number"
+                      name=""
+                      id="min-price"
+                    />
+                  </div>
+                  <div class="filters__card-max">
+                    <span class="filters__card-title"
+                      >макс.<br />
+                      цена</span
+                    >
+                    <input
+                      class="filters__card-input"
+                      type="number"
+                      name=""
+                      id="max-price"
+                    />
+                  </div>
+                </div>
+                <div class="filters__card">
+                  <div class="filters__card-min">
+                    <span class="filters__card-title"
+                      >мин.<br />
+                      прочность</span
+                    >
+                    <input
+                      class="filters__card-input"
+                      type="number"
+                      name=""
+                      id="min-hull"
+                    />
+                  </div>
+                  <div class="filters__card-max">
+                    <span class="filters__card-title"
+                      >макс.<br />
+                      прочность</span
+                    >
+                    <input
+                      class="filters__card-input"
+                      type="number"
+                      name=""
+                      id="max-hull"
+                    />
+                  </div>
+                </div>
+                <div class="filters__btn-wrapper">
+                  <button class="filters__reset btn" type="reset">
+                    Сбросить фильтры
+                  </button>
+                  <button class="filters__apply btn" type="submit">
+                    Смотреть
+                  </button>
+                </div>
+              </form>
+              <ul class="menu">
+                <li class="menu__item">Паруса</li>
+                <ul class="submenu">
+                  <li class="submenu__item">Шпринтовые</li>
+                  <li class="submenu__item">Бермудские</li>
+                  <li class="submenu__item">Гафельные</li>
+                </ul>
+                <li class="menu__item">Ремонт</li>
+                <ul class="submenu">
+                  <li class="submenu__item">Обычный</li>
+                  <li class="submenu__item">Быстрый</li>
+                </ul>
+                <li class="menu__item">Пушки</li>
+                <ul class="submenu">
+                  <li class="submenu__item">Шпринтовые</li>
+                  <li class="submenu__item">Бермудские</li>
+                  <li class="submenu__item">Гафельные</li>
+                </ul>
+                <li class="menu__item">Команда</li>
+                <ul class="submenu">
+                  <li class="submenu__item">Шпринтовые</li>
+                  <li class="submenu__item">Бермудские</li>
+                  <li class="submenu__item">Гафельные</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="ships"></div>
+          </div>
+
           <div class="about">
             <div class="about__my-ship">
               <h3 class="about-title">Мой корабль</h3>
@@ -212,6 +218,19 @@
                 <p class="form__message">Заполните форму!</p>
               </form>
             </div>
+          </div>
+          <div class="gallery">
+            <div class="slider">
+              <div class="slider__prev-btn">
+                <span>&#10094;</span>
+              </div>
+              <div class="slider__next-btn">
+                <span>&#10095;</span>
+              </div>
+            </div>
+            <div class="slider__dots"></div>
+            <input type="checkbox" id="switch" />
+            <div class="dropdown"></div>
           </div>
         </section>
       </main>

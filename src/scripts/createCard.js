@@ -1,5 +1,7 @@
 import showModalCard from "./showModalCard";
 import createModalCard from "./createModalCard";
+import getRandomPicture from "./getRandomPicture";
+import picturesData from "../src/picturesData";
 
 const createCard = (ship) => {
   const card = document.createElement("div");
@@ -7,7 +9,7 @@ const createCard = (ship) => {
   card.innerHTML = `
         <img
           class="card__img"
-          src="https://upload.wikimedia.org/wikipedia/commons/7/7b/BlackPearl.jpg"
+          src=${getRandomPicture(picturesData)}
         />
         <div class="card__wrapper">
           <h3>Фрегат "${ship.shipName}"</h3>
@@ -22,8 +24,8 @@ const createCard = (ship) => {
         </div>
         `;
 
-  card.addEventListener("click", function () {
-    showModalCard(createModalCard(ship));
+  card.addEventListener("click", function (event) {
+    showModalCard(createModalCard(ship, event));
   });
 
   return card;
