@@ -87,10 +87,10 @@
         </div>
       </div>
     </aside>
-
-    <article id='ships'>
-    </article>
-
+    <div id="container__sliderShips">
+      <article id='slider'></article>
+      <article id='ships'></article>
+    </div>
     <article id="captain">
       <div id="captain__ship__info"></div>
       <div id="captain__container">
@@ -98,14 +98,33 @@
           <div id="img-captain__info__foto">
           </div>
           <div>
-            <p>Имя: Алекс</p>
-            <p>Класс: 98</p>
-            <p>Урон саблей: 35</p>
+            <p id='captainName'></p>
+            <p id='captainClass'></p>
+            <p id='captainMelee'></p>
           </div>
           <div>
-            <p>Возраст: 31</p>
-            <p>Дублонов: 1 565 872 </p>
-            <p>Урон пистолетом: 80</p>
+            <p id='captainAge'></p>
+            <p id='captainDublons'></p>
+            <p id='captainRange'></p>
+          </div>
+          <div>
+            <table id='table'>
+              <tr>
+                <span id='tableName'></span>
+                <th>Дата</th>
+                <td class="dates"></td>
+                <td class="dates"></td>
+                <td class="dates"></td>
+                <td class="dates"></td>
+              </tr>
+              <tr>
+                <th>Температура °F</th>
+                <td class="temperatures"></td>
+                <td class="temperatures"></td>
+                <td class="temperatures"></td>
+                <td class="temperatures"></td>
+              </tr>
+            </table>
           </div>
         </div>
         <div>
@@ -113,16 +132,22 @@
             <p>Заявка на покупку судна</p>
             <div id="captain__container__form">
               <div>
-                <label for="form-name">Имя</label>
-                <input id="form-name" name='name' type="text" pattern="[A-Za-zА-Яа-яЁё]">
-                <label for="form-class">Класс</label>
-                <input id="form-class" name='class' type="number" pattern="^[ 0-9]+$">
+                <div>
+                  <label for="form-name">Имя</label>
+                  <input id="form-name" name='name' type="text" pattern="[A-Za-zА-Яа-яЁё]{2,15}">
+                </div>
+                <div>
+                  <label for="form-class">Класс</label>
+                  <input id="form-class" name='class' type="text" pattern="[0-9]{1,15}">
+                </div>
               </div>
               <div>
-                <label for="form-quantity">Кол-во</label>
-                <input id="form-quantity" name='quantity' type="number" pattern="^[ 0-9]+$">
-                <label for="form-price">Цена</label>
-                <input id="form-price" name='price' type="number" pattern="^[ 0-9]+$">
+                <div><label for="form-quantity">Кол-во</label>
+                  <input id="form-quantity" name='quantity' type="number" pattern="[0-9]{1,999}">
+                </div>
+                <div><label for="form-price">Цена</label>
+                  <input id="form-price" name='price' type="number" pattern="[0-9]{1,999999}">
+                </div>
               </div>
               <button type="submit">Отправить</button>
             </div>
@@ -136,7 +161,7 @@
     <div id="footer__div">
       <div class="footer__div__img-skull"></div>
       <div class="footer__div__img-tresure"></div>
-      <div id="footer__div__info">Капитан Алекс ,отчаянный пират, человек чести.Судно:Каравелла "Черная жемчужина"
+      <div id="footer__div__info">
       </div>
       <div class="footer__div__img-tresure"></div>
       <div class="footer__div__img-skull"></div>

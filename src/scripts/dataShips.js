@@ -183,7 +183,7 @@ export const shipsInfo = [
     },
     { 
       "shipName": 'Leviathan',
-      "className": 'Тяжелый галлеон',
+      "className": 'Тяж. галлеон',
       "class": 3,
       "shipHull": 5500,
       "speed": 7.5,
