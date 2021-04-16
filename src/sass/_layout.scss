@@ -6,7 +6,7 @@ body {
 	grid-template-areas: "header header" "aside main" "footer footer";
 }
 header {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	height: 50px;
@@ -30,13 +30,15 @@ main {
 	grid-area: main;
 	width: 100%;
 }
-footer {
-	background: #36689b;
-	color: white;
-	grid-area: footer;
-	height: 100px;
-	width: 100%;
-}
+// footer {
+// 	background: #36689b;
+// 	color: white;
+// 	grid-area: footer;
+// 	height: 100px;
+// 	width: 100%;
+// 	position: absolute;
+// 	bottom: 0;
+// }
 * {
 	box-sizing: inherit;
 	&::before {

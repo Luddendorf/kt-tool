@@ -40,10 +40,10 @@ const prevSlide = () => {
   startBtn.classList.add('paused')
   if(index === 0){
     index = slides.length - 1
-    activeSlide(index)    
+    prepareSlide(index)    
   } else {
     index--;
-    activeSlide(index)
+    prepareSlide(index)
   }
 }
 dots.forEach((item, indexDot) =>{

@@ -1,9 +1,18 @@
 footer {
-	position: sticky;
+
 	bottom: 0px;
 	display: flex;
 	justify-content: space-around;
 	align-self: center;
+
+	background: #36689b;
+	color: white;
+	grid-area: footer;
+	height: 100px;
+	width: 100%;
+
+	bottom: 0px;
+
 	div {
 		margin: 0 20px;
 		margin-top: 10px;

@@ -1,0 +1,23 @@
+.my_order {
+ 
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100px;
+    
+    .order-ship-form{
+      display: flex;    
+      justify-content: space-around;
+      position: absolute;
+      margin-top: 20px;
+      
+      label{
+        display: block;
+        margin: 5px 0;
+      }
+      
+    }
+  }
+  
+}

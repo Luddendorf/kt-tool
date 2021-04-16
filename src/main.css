@@ -30,8 +30,8 @@ html {
 }
 .ship_container {
   display: grid;
-  grid-template-columns: 1fr  2fr ;
-  grid-template-rows: 30% 30% 30%;
+  grid-template-columns: 1fr  3fr ;
+  grid-template-rows: 1fr 1.2fr 1.1fr;
   grid-template-areas:
     "my_ship my_captain"
     "my_ship my_order"
@@ -46,6 +46,11 @@ html {
   margin-top: 20px;
   margin-left: 20px;
   grid-area: my_ship;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 .my_captain{
   border: 4px solid crimson;
@@ -75,8 +80,10 @@ html {
   max-width: 80%;  
   text-align: left;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   grid-area: weather;
+  position: relative;
+
 }
 .card_container img {
   max-width: 80%;
@@ -133,4 +140,28 @@ html {
 .active {
   background-color: #34495e;
   color: #ffffff;
+}
+
+.my_captain{
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  font-size: 1.3rem;
+}
+.my_captain img {
+  position: relative;
+  max-width: 100px;
+}
+.my_ship div {
+  position: relative;
+  font-size: 1rem;
+  align-self: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.my_ship > div > img {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto; 
 }
