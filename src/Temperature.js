@@ -11,7 +11,7 @@ const tempPromise = fetch('https://api.tomorrow.io/v4/timelines?location=-50.631
 tempPromise
     .then(data => data.json())
     .then(temperature => {
-        console.log(temperature);
+        // console.log(temperature);
         // console.log(temperature.data.timelines[0].intervals[0].startTime);
         // console.log(temperature);
         let currentArray = temperature.data.timelines[0].intervals;
@@ -31,7 +31,7 @@ tempPromise
         })
 
 
-        console.log('result', result);
+        // console.log('result', result);
         renderTemp();
         result.forEach(element => {
             const tabMyShip = document.querySelector('#tempCol');
@@ -81,6 +81,6 @@ function toCelsius(graduses) {
     const temp = graduses;
     const cel = (temp - 32) * 5 / 9;
     const message = `${cel}`;
-    console.log(message);
+    // console.log(message);
     return message.substr(0, 5);
 };

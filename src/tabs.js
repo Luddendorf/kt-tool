@@ -248,12 +248,12 @@ export const ships = [{
 (function() {
     let memory = localStorage.getItem('a');
     if (memory) {
-        console.log(memory);
+        // console.log(memory);
         let actualeMemory = document.querySelector(`.tab[data-target="${memory}"]`);
         actualeMemory.classList.add('active');
         let actualBody = document.querySelector(`.tab-panel[data-target="${memory}"]`);
         actualBody.classList.add('active');
-        console.log('act', actualBody);
+        // console.log('act', actualBody);
     };
     document.querySelector('.tab');
     document.querySelector('.tab-panel');

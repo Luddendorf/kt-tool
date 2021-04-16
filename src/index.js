@@ -5,6 +5,7 @@ import { ships } from './tabs';
 import {} from './checkbox';
 import {} from './preloader';
 import {} from './temperature';
+import {} from './carousel';
 
 async function print() {
     // Here we are using dynamic import
