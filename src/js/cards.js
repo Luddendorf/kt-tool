@@ -263,6 +263,7 @@ const ships = [
   const skull = document.querySelector("#skull");
   const chest = document.querySelector("#chest");
   const jewellery = document.querySelector("#jewellery");
+  const showAll = document.querySelector("#showAll");
   
 
   
@@ -311,7 +312,6 @@ function createCards(item) {
                       
                         `;
     return card;
-    countCard.innerHTML = ships.length;
   };
 
   //Slider
@@ -410,6 +410,15 @@ jewellery.addEventListener('click', function() {
   jewVar.forEach(item => {
     createCards(item);
     countCard.innerHTML = jewVar.length;
+  })
+});
+
+const showAllVar = ships;
+showAll.addEventListener('click', function() {
+  lonelyBayField.innerHTML = "";
+  showAllVar.forEach(item => {
+    createCards(item);
+    countCard.innerHTML = showAllVar.length;
   })
 });
 
