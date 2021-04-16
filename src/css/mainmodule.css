@@ -147,6 +147,7 @@
 
 .card {
     padding-top: 20px;
+    margin: 0 auto;
     display: block;
     font-size: 14px;
     flex: 0 0 33.3333333333%;
@@ -161,6 +162,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-size: 14px;
 }
 
@@ -264,3 +266,12 @@
 
 .show {display: block;}
 
+.list__wrapper {
+    height: 100%;
+}
+
+.count__cards {
+    margin-top: -50px;
+    text-align: center;
+    font-size: 14px;
+}

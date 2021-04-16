@@ -256,15 +256,14 @@ const ships = [
   ];
   
   const lonelyBayField = document.querySelector(".list-card");
-  const mainDescr = document.querySelector("#list");
   const overlay = document.querySelector(".menu__overlay");
   const prevSlide = document.querySelector(".fa-chevron-left");
   const nextSlide = document.querySelector(".fa-chevron-right");
   const picSelect = document.querySelector("input[type=image]");
-  const selectItems = document.querySelectorAll(".dropdown-items");
   const skull = document.querySelector("#skull");
   const chest = document.querySelector("#chest");
   const jewellery = document.querySelector("#jewellery");
+  
 
   
   let currentMaxPrice = document.querySelector("#maxprice");
@@ -272,7 +271,9 @@ const ships = [
   let currentMaxDurab = document.querySelector("#maxstrength");
   let currentMinDurab = document.querySelector("#minstrength");
   let cards = lonelyBayField.childNodes;
-  
+  let countCard = document.querySelector(".count__cards span").textContent;
+  countCard = ships.length;
+  console.log(countCard);
 
 //Filters 
   function filterInputs() {
@@ -284,6 +285,7 @@ const ships = [
         item.hold <= currentMaxDurab.value &&
         item.hold >= currentMinDurab.value) {
           count++;
+          countCard = counter;
           createCards(count);
       };
   });
