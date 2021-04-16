@@ -1,0 +1,41 @@
+footer {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    border-top: 2px solid white;
+  }
+  
+  #footer__div {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .footer__div__img-skull {
+    width: 75px;
+    height: 75px;
+    background: url("https://www.nastol.com.ua/pic/201503/1280x1024/nastol.com.ua-131300.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 15px;
+  }
+  .footer__div__img-tresure {
+    width: 75px;
+    height: 75px;
+    background: url("https://static.magiquiz.com/wp-content/uploads/2016/11/the-office-4.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 15px;
+  }
+  #footer__div__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

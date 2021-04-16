@@ -1,15 +1,6 @@
-import { shipsInfo } from "./dataShips.js";
-import { dataSlider } from "./dataSlider";
-import { generateSlider } from "./generateSlider";
-import { eventSlider } from "./eventSlider";
-import { eventSliderBtns, eventSliderSideBtns } from "./eventSliderBtns";
-
-import { generateShips } from "./generateShip.js";
-import { switchToBuhta, switchToCaptain } from "./eventSwitchTab.js";
-import { dropDownBtn } from "./eventDropDownBtn";
-import { blurInput } from "./eventBlurInput";
-import { popupOnImg } from "./eventPopupOnImg";
-import { formSubmit } from "./eventFormSubmit";
+import { shipsInfo } from "./data/dataShips";
+import { dataSlider } from "./data/dataSlider";
+import { captainData } from "./data/dataCaptain";
 import {
   ships,
   buhtaBtn,
@@ -30,11 +21,20 @@ import {
   slider,
   sliderImgs,
   sliderRadioBtn,
-} from "./variables";
-import { setCaptainInfo } from "./setCaptainInfo";
-import { requestToWeatherApi } from "./fetchWeather";
-import { captainData } from "./dataCaptain";
-import { footerInfo } from "./footerInfo";
+} from "./data/variables";
+import { generateSlider } from "./components/generateSlider";
+import { footerInfo } from "./components/setFooterInfo";
+import { setCaptainInfo } from "./components/setCaptainInfo";
+import { requestToWeatherApi } from "./components/generatefetchWeather";
+import { generateShips } from "./components/generateShip";
+import { eventSlider } from "./events/eventSlider";
+import { eventSliderBtns, eventSliderSideBtns } from "./events/eventSliderBtns";
+import { switchToBuhta, switchToCaptain } from "./events/eventSwitchTab.js";
+import { dropDownBtn } from "./events/eventDropDownBtn";
+import { blurInput } from "./events/eventBlurInput";
+import { popupOnImg } from "./events/eventPopupOnImg";
+import { formSubmit } from "./events/eventFormSubmit";
+
 async function print() {
   // Here we are using dynamic import
   const { greet } = await import("../greet");
