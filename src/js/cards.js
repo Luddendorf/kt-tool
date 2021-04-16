@@ -271,9 +271,8 @@ const ships = [
   let currentMaxDurab = document.querySelector("#maxstrength");
   let currentMinDurab = document.querySelector("#minstrength");
   let cards = lonelyBayField.childNodes;
-  let countCard = document.querySelector(".count__cards span").textContent;
-  countCard = ships.length;
-  console.log(countCard);
+  let countCard = document.querySelector(".count__cards span");
+  
 
 //Filters 
   function filterInputs() {
@@ -285,8 +284,8 @@ const ships = [
         item.hold <= currentMaxDurab.value &&
         item.hold >= currentMinDurab.value) {
           count++;
-          countCard = counter;
           createCards(count);
+          countCard.innerHTML = counter;
       };
   });
 }
@@ -312,6 +311,7 @@ function createCards(item) {
                       
                         `;
     return card;
+    countCard.innerHTML = ships.length;
   };
 
   //Slider
@@ -391,6 +391,7 @@ skull.addEventListener('click', function() {
   lonelyBayField.innerHTML = "";
   skullVar.forEach(item => {
     createCards(item);
+    countCard.innerHTML = skullVar.length;
   })
 });
 
@@ -399,6 +400,7 @@ chest.addEventListener('click', function() {
   lonelyBayField.innerHTML = "";
   chestVar.forEach(item => {
     createCards(item);
+    countCard.innerHTML = chestVar.length;
   })
 });
 
@@ -407,6 +409,7 @@ jewellery.addEventListener('click', function() {
   lonelyBayField.innerHTML = "";
   jewVar.forEach(item => {
     createCards(item);
+    countCard.innerHTML = jewVar.length;
   })
 });
 
