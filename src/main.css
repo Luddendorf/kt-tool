@@ -766,4 +766,10 @@ input.switch:focus {
     .capitan p {
         font-size: 16px;
     }
+    .menu-left {
+        flex-basis: 55%;
+    }
+    .content-body {
+        flex-wrap: wrap;
+    }
 }

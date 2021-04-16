@@ -185,6 +185,7 @@ export function delFilter() {
         tabTwo = document.querySelector('.tab_two'),
         tabTree = document.querySelector('.tab_tree'),
         tabFour = document.querySelector('.tab_four'),
+        tabFive = document.querySelector('.tab_five'),
         filterDiv = document.querySelector('.min-max-flex')
 
     if (tabTwo.classList.contains('active')) {
@@ -192,6 +193,8 @@ export function delFilter() {
     } else if (tabTree.classList.contains('active')) {
         filterDiv.classList.add('hide')
     } else if (tabFour.classList.contains('active')) {
+        filterDiv.classList.add('hide')
+    } else if (tabFive.classList.contains('active')) {
         filterDiv.classList.add('hide')
     } else {
         filterDiv.classList.remove('hide')

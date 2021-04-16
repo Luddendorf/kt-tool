@@ -254,6 +254,7 @@ export const ships = [{
         let actualBody = document.querySelector(`.tab-panel[data-target="${memory}"]`);
         actualBody.classList.add('active');
         // console.log('act', actualBody);
+        delFilter();
     };
     document.querySelector('.tab');
     document.querySelector('.tab-panel');
