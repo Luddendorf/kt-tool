@@ -57,9 +57,9 @@
 
         <li>
           <button id="sails" class="menu-title">
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="sails-arrow-left" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
             <p>Паруса</p>
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="sails-arrow-right" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
           </button>
           <ul id="sails-menu" class="menu-options closed">
             <li>Шпринтовые</li>
@@ -70,9 +70,9 @@
 
         <li>
           <button id="repair" class="menu-title">
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="repair-arrow-left" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
             <p>Ремонт</p>
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="repair-arrow-right" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
           </button>
           <ul id="repair-menu" class="menu-options closed">
             <li>Обычный</li>
@@ -82,9 +82,9 @@
 
         <li>
           <button id="guns" class="menu-title">
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="guns-arrow-left" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
             <p>Пушки</p>
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="guns-arrow-right" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
           </button>
           <ul id="guns-menu" class="menu-options closed">
             <li>Пушки</li>
@@ -93,9 +93,9 @@
         </li>
         <li>
           <button id="team" class="menu-title">
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="team-arrow-left" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
             <p>Команда</p>
-            <img src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
+            <img id="team-arrow-right" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1617802897/pirates/imageedit_7_7233176416_ft73rc.png" alt="arrow" class="arrow">
           </button>
           <ul id="team-menu" class="menu-options closed">
             <li>Салаги</li>
@@ -105,27 +105,48 @@
       </ul>
     </aside>
 
-    <div id="gallery-tab" class="gallery-tab tab-opened">
-      <div id="fs" class="fs">
-      <div id="gallery-widget" class="gallery">
-        <div id="gallery__top-bar" class="gallery__top-bar">
-          <button id="gallery__autoplay-start" class="gallery__autoplay-start">Autoplay</button>
-          <button id="gallery__autoplay-stop" class="gallery__autoplay-stop">Stop</button>
-          <button id="gallery__fullscreen" class="gallery__fullscreen">Fullscreen</button>
-          <h3 class="gallery__title">Ship gallery</h3>
-        </div>
-        <div class="gallery__main-screen">
-          <img id="gallery__left-arrow" class="gallery__arrow" alt="arrow"
-            src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618398987/pirates/left_arrow_knowtv.png"></img>
-          <div id="gallery__display" class="gallery__display">
-            <div id="gallery__all-ships" class="gallery__all-ships"></div>
+    <div id="gallery-tab" class="gallery-tab tab-closed">
+
+      <div id="gallery__fs-container" class="gallery__fs-container">
+        <div class="gallery">
+          <div id="gallery__top-bar" class="gallery__top-bar">
+            <button id="gallery__autoplay-start" class="gallery__autoplay-start">
+              <img class="gallery__btn-img" alt="start" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618486471/pirates/imageedit_2_5009764968_ljeojs.png">
+            </button>
+            <button id="gallery__autoplay-stop" class="gallery__autoplay-stop gallery__btn-not-active">
+              <img class="gallery__btn-img" alt="stop" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618487171/pirates/imageedit_2_9015964238_by7uv0.png">
+            </button>
+            <button id="gallery__fullscreen" class="gallery__fullscreen">
+              <img class="gallery__btn-img" alt="fullscreen" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618483865/pirates/fs-icon_j6buly.png">
+            </button>
+            <h3 class="gallery__title">Ship gallery</h3>
           </div>
-          <img id="gallery__right-arrow" class="gallery__arrow" alt="arrow"
-            src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618398990/pirates/right_arrow_zwaqow.png"></img>
+          <div class="gallery__main-screen">
+            <img id="gallery__left-arrow" class="gallery__arrow" alt="arrow"
+              src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618398987/pirates/left_arrow_knowtv.png"></img>
+            <div id="gallery__display" class="gallery__display">
+              <div id="gallery__all-ships" class="gallery__all-ships"></div>
+            </div>
+            <img id="gallery__right-arrow" class="gallery__arrow" alt="arrow"
+              src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618398990/pirates/right_arrow_zwaqow.png"></img>
+          </div>
+          <div id="gallery__navigation" class="gallery__navigation"></div>
         </div>
-        <div id="gallery__navigation" class="gallery__navigation"></div>
       </div>
-    </div>
+
+      <div id="right-menu" class="right-menu right-menu-margin">
+        <button id="right-menu__toggle-btn" class="right-menu__toggle-btn">
+          <img class="right-menu__anchor" src="https://res.cloudinary.com/dvbkndvl0/image/upload/c_scale,h_65,w_60/v1618566755/pirates/anchor_o1cdla.png" alt="anchor">
+        </button>
+        <div id="right-menu__treasures" class="right-menu__treasures right-menu__hidden-item">
+          <div id="right-menu__title" class="right-menu__title">
+            <div id="current-option"></div>
+            <img id="right-menu__arrow" class="right-menu__arrow-closed" src="https://res.cloudinary.com/dvbkndvl0/image/upload/v1618398990/pirates/right_arrow_zwaqow.png" alt="arrow">
+          </div>
+          <ul id="right-menu__opt-list" class="right-menu__opt-list right-menu__hidden-item"></ul>
+        </div>
+      </div>
+
     </div>
 
   </main>

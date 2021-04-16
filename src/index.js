@@ -13,8 +13,8 @@ const setupApp = () => {
   const bightTab = BightTab()
   const shipTab = MyShipTab()
 
-  //main.append(bightTab)
-  //main.append(shipTab)
+  main.append(bightTab)
+  main.append(shipTab)
   configureGalleryTab()
 
   configureTabsControls()

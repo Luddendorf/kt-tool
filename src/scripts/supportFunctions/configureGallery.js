@@ -1,45 +1,34 @@
 import ships from '../data/shipsData.js'
 
-const createShipContent = ship => {
+const fillAllShipsBlock = () => {
 
   const shipImgPath = 'https://res.cloudinary.com/dvbkndvl0/image/upload/v1618397182/pirates/bigShip_i7npel.jpg'
 
-  const shipContent = document.createElement('div')
-  shipContent.classList.add('gallery__ship-content')
-
-  const shipImg = document.createElement('img')
-  shipImg.src = shipImgPath
-  shipImg.alt = "ship"
-  shipImg.classList.add('gallery__ship-image')
-
-  const shipDesc = document.createElement('p')
-  shipDesc.classList.add('gallery__ship-description')
-  shipDesc.innerHTML = ship.desc
-
-  shipContent.append(shipImg)
-  shipContent.append(shipDesc)
-
-  return shipContent
-
-}
-
-const fillAllShipsBlock = () => {
-
-
   const allShips = document.getElementById('gallery__all-ships')
 
-  // const lastShip = createShipContent(ships[ships.length -1])
-  // allShips.append(lastShip)
+  const fixedShipsArray = []
+  fixedShipsArray.push
 
   ships.forEach(ship => {
 
-    const shipContent = createShipContent(ship)
+    const shipContent = document.createElement('div')
+    shipContent.classList.add('gallery__ship-content')
+
+    const shipImg = document.createElement('img')
+    shipImg.src = shipImgPath
+    shipImg.alt = "ship"
+    shipImg.classList.add('gallery__ship-image')
+
+    const shipDesc = document.createElement('p')
+    shipDesc.classList.add('gallery__ship-description')
+    shipDesc.innerHTML = ship.desc
+
+    shipContent.append(shipImg)
+    shipContent.append(shipDesc)
 
     allShips.append(shipContent)
 
   })
-
-
 
 }
 
@@ -192,22 +181,41 @@ const handleNavItemClick = (e, state) => {
 
 const handleAutoplayStart = state => {
 
+  if(!state.isAutoPlayStoped){
+    return
+  }
+
   startAutoplay(state)
   state.isAutoPlayStoped = false
+
+  const startBtn = document.getElementById('gallery__autoplay-start')
+  startBtn.classList.remove('gallery__btn-not-active')
+
+  const stopBtn = document.getElementById('gallery__autoplay-stop')
+  stopBtn.classList.add('gallery__btn-not-active')
 
 }
 
 const handleAutoplayStop = state => {
 
+  if(state.isAutoPlayStoped){
+    return
+  }
+
   stopAutoplay(state)
   state.isAutoPlayStoped = true
+
+  const startBtn = document.getElementById('gallery__autoplay-start')
+  startBtn.classList.add('gallery__btn-not-active')
+
+  const stopBtn = document.getElementById('gallery__autoplay-stop')
+  stopBtn.classList.remove('gallery__btn-not-active')
 
 }
 
 const handleFullscreenClick = () => {
 
-  //const gallery = document.getElementById('gallery-widget')
-  const gallery = document.getElementById('fs')
+  const gallery = document.getElementById('gallery__fs-container')
 
   if(!document.fullscreenElement){
     gallery.requestFullscreen().catch(err => console.log(err))

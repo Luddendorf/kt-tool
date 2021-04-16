@@ -1,0 +1,112 @@
+@mixin border-mixin{
+  border: 2px solid saddlebrown;
+  border-radius: 5px;
+}
+
+.right-menu{
+  position: relative;
+  width: 60px;
+  height: 65px;
+
+  & * {
+    color: saddlebrown;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    user-select: none;
+  }
+}
+
+.right-menu-margin{
+  margin-right: 1%;
+}
+
+@mixin right-menu-btn{
+  @include border-mixin();
+
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  &:hover{
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+
+  &:active{
+    border: 3px solid saddlebrown;
+  }
+}
+
+.right-menu__toggle-btn{
+  @include right-menu-btn()
+}
+
+.right-menu__anchor{
+  width: 100%;
+  height: 100%;
+}
+
+.right-menu__treasures{
+  position: absolute;
+  left: -350%;
+  width: 350%;
+  top: 11px;
+  height: fit-content;
+  padding: 0px 1px;
+}
+
+.right-menu__opt-list{
+  margin: 0;
+  padding: 0px 4px;
+  list-style: none;
+}
+
+.right-menu__opt-list-item{
+  @include border-mixin();
+    padding: 7px 10px;
+    border-radius: 0;
+    background-color: rgb(173, 230, 230);
+
+    &:hover{
+      cursor: pointer;
+      filter: brightness(0.9);
+    }
+}
+
+.right-menu__hidden-item{
+  display: none;
+}
+
+.right-menu__title{
+  display: flex;
+  justify-content: space-between;
+  @include border-mixin();
+  padding: 10px;
+  margin: 0;
+  border-width: 2px;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  background-color: rgb(173, 230, 230);
+
+  &:hover{
+    cursor: pointer;
+    filter: brightness(0.9);
+  }
+}
+
+.right-menu__arrow-opened{
+  rotate: 90deg;
+  width: 15px ;
+}
+
+.right-menu__arrow-closed{
+  rotate: -90deg;
+  width: 15px ;
+}
+
+.right-menu__selected-option{
+  outline: 2px solid yellow;
+  filter: brightness(0.8);
+}

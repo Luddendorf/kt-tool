@@ -55,4 +55,14 @@
   .header-tab{
     width: 40%;
   }
+
+  #gallery{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px){
+  #gallery{
+    display: none;
+  }
 }

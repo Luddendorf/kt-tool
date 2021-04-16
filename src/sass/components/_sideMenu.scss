@@ -35,10 +35,19 @@
   }
 }
 
+.menu-selected-title{
+  border: 2px solid orange;
+}
+
 .arrow{
   width: 30px;
   height: 30px;
 }
+
+.arrow-opened{
+  rotate: 180deg;
+}
+
 
 .menu-options{
   width: 100%;
@@ -49,6 +58,7 @@
   li{
     text-align: center;
     background-color:aquamarine;
+    border: 1px solid orange;
     border-radius: 5px;
     margin: 2px 0px;
     font-size: larger;
