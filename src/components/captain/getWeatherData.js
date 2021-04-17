@@ -7,9 +7,7 @@ export default function getWeatherData() {
 
   getWeather()
     .then((res) => {
-      console.log(res);
       const arr = res.data.timelines[0].intervals;
-      console.log(arr);
       const regex = /[T][1][2]/;
       arr.forEach((el, id) => {
         if (el.startTime.match(regex)) {

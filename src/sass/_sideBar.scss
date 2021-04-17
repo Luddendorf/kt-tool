@@ -3,6 +3,7 @@
   margin-top: $filter_menu-width;
   width: $left_menu-width;
   background-color: #fff;
+  z-index: 999;
   &__item {
     display: block;
     padding: 1.5rem;
@@ -43,5 +44,8 @@
 
   .closed ul {
     display: none;
+  }
+  .burger__siderBar {
+    
   }
 }

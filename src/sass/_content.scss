@@ -6,6 +6,44 @@
     // border-left: 2px solid rgb(0, 0, 0);
     position: fixed;
     left: 0;
+    @media (max-width: 750px) {
+      & {
+        display: none;
+      }
+    }
+  }
+  .burger__menu {
+    display: none;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem 0 0 1rem;
+    cursor: pointer;
+    @media (max-width: 750px) {
+      & {
+        display: block;
+      }
+    }
+    .burger__active {
+      display: block;
+    }
+    & i {
+      font-size: 1.5rem;
+      color: #000;
+    }
+  }
+  .burger__close {
+    display: none;
+    position: fixed;
+    margin-left: $left_menu-width;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem 0.85rem;
+    cursor: pointer;
+    & i {
+      font-size: 1.5rem;
+      color: #000;
+    }
   }
   .left-menu {
     &:focus {
@@ -20,6 +58,11 @@
   .cards {
     margin-left: $left_menu-width;
     font-family: "Elpiratos", serif;
+    @media (max-width: 750px) {
+      & {
+        margin-left: 0;
+      }
+    }
     & div {
       padding: 0 2rem;
     }
