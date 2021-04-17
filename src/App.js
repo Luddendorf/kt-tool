@@ -21,9 +21,9 @@ function App() {
         </a>
       </header> */ }
       
-        <SimpleForm />
-        <Greetings firstName="Bob" lastName="Oldman"  />
-
+        { /* <SimpleForm />
+        <Greetings firstName="Bob" lastName="Oldman"  /> */}
+        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама</h1>
          
     </div>
   );
