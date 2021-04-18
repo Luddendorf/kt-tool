@@ -6,6 +6,7 @@ import {} from './checkbox';
 import {} from './preloader';
 import {} from './temperature';
 import {} from './carousel';
+import {} from './icon_menu';
 
 async function print() {
     // Here we are using dynamic import
