@@ -1,4 +1,6 @@
-class Square extends React.Component {
+import { Component } from 'react'
+
+export default class Square extends Component {
   constructor(props) {
     super(props);
     this.state = {
