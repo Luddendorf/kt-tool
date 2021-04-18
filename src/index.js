@@ -6,6 +6,7 @@ import filter from './modules/filter';
 import validateForm  from './modules/form';
 import popUp  from './modules/popUp';
 import weather from './modules/weather';
+import dropDownGallery from "./modules/dropDownGallery";
 
 async function print() {
   // Here we are using dynamic import
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   validateForm();
   popUp();
   weather();
- });
+  dropDownGallery();
+   });
 
 

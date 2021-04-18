@@ -1,0 +1,32 @@
+.dropdown {
+  color: white;
+  font-size: 3.6vh;
+  justify-content: space-evenly;
+  width: 20vw;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 1vh;
+    &-img {
+      width: 5vw;
+      height: 5vh;
+    }
+  }
+  &-content {
+    &-item {
+      border: 1px solid gray;
+      padding: 1vh;
+    }
+  }
+}
+.isOpen {
+  display: flex;
+}
+.isClosed {
+  display: none;
+}
+.chosen {
+  background-color: #666;
+}
