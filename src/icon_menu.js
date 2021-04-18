@@ -3,7 +3,7 @@ let imgChange = document.querySelector('.imgChange');
 let contentMenu = document.getElementById("myDropdown");
 
 let arrContent = ['Сокровища', 'Cундук', 'Хрустальный череп', 'Ожерелье']
-let menuContent = document.createElement("a");
+let menuContent = ''
 for (let index = 0; index < arrContent.length; index++) {
     menuContent += `
     <a href=''>${arrContent[index]}</a>
