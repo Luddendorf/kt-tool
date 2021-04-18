@@ -587,6 +587,17 @@ input.switch:focus {
     align-items: center;
 }
 
+.activeShow {
+    color: orange!important;
+    border: 2px solid orange;
+}
+
+form.formSwitched {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .arrow-1 {
     cursor: pointer;
     position: relative;
