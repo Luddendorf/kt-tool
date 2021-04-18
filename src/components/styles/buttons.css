@@ -1,0 +1,20 @@
+.button-plus {
+	margin: 1vh;
+	width: 4vh;
+	height: 4vh;
+	background-color: aquamarine;
+	border-radius: 20px;
+	font-size: 3vh;
+	color: black;
+	border: 2px dashed red;
+}
+.button-minus {
+	margin: 1vh;
+	width: 4vh;
+	height: 4vh;
+	background-color: black;
+	border-radius: 20px;
+	font-size: 3vh;
+	color: aquamarine;
+	border: 2px dashed red;
+}
