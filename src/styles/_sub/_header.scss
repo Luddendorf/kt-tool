@@ -1,0 +1,12 @@
+.header {
+  min-height: 10vh;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.774);
+  & h2 {
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.3rem 0;
+  }
+}
