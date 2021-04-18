@@ -1,4 +1,5 @@
 const HamburgerMenu = () => {
+  const main = document.querySelector(".main");
   const mainScreen = document.querySelector(".cards");
   const burgerMenuBtn = document.querySelector(".burger__menu");
   const leftMenu = document.querySelector(".left-menu");
@@ -19,8 +20,6 @@ const HamburgerMenu = () => {
     burgerMenuBtn.style.display = "block";
   });
 
-  mainScreen.addEventListener("click", function (e) {
-      
-  })
+  mainScreen.addEventListener("click", function (e) {});
 };
 export default HamburgerMenu;
