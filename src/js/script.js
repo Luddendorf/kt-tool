@@ -46,6 +46,7 @@ const accordion = () => {
         }
     });
 };
+
 const renderCards = (cards) => {
     const createCardItem = (card) => {
         const { shipName,
