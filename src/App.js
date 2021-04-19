@@ -1,32 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import Greetings from './components/Greetings';
-import SimpleForm from './components/simple-form/SimpleForm';
+import React, { useState } from 'react'
+import Form from './components/form/Form'
+import SendData from './components/send-data/sendData'
 
 function App() {
-  return (
-    <div className="App">
-     { /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Hello amigo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */ }
-      
-        { /* <SimpleForm />
-        <Greetings firstName="Bob" lastName="Oldman"  /> */}
-        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама</h1>
-         
-    </div>
-  );
+  const [state, setState] = useState(false)
+
+  const changeWindow = state ? (
+      <SendData onClick={openInformation} onClick2={openInformation2} />) : (
+      <Form state={state} setState={setState} />
+  )
+
+  function openInformation(event) {
+    setState(false)
+    // event.preventDefault();
+
+  }
+
+  function openInformation2(event) {
+    if ( event.target.id !== 'pop-up' && event.target.id === 'pop-up2') {
+      setState(false)
+    }
+  }
+
+  return <div>{changeWindow}</div>
 }
 
-export default App;
+export default App
