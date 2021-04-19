@@ -1,0 +1,106 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    &__container{
+        position: absolute;
+        top: 100px;
+        width: 500px;
+        padding: 20px;
+        border-radius: 5px;
+        left: calc(50% - 250px);
+        background-color: #fff;
+        & i{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            color: rgb(148, 81, 148);
+            cursor: pointer;
+        }
+    }
+    &__captain{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        & input {
+            @include forInput;
+        }
+        &--name{
+            margin-bottom: 20px ;
+        }
+    }  
+    &__visible{
+        color: rgb(165, 92, 165);
+        margin: 20px 0;
+        &--radio{
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            & input {
+                margin-top: 20px;
+            }
+        }
+    }
+    &__add{
+        display: flex;
+        color: rgb(165, 92, 165);
+        align-items: baseline;
+        & input{
+            @include forInput;
+            flex: 1;
+            margin-right: 20px;
+        }
+        &--one{
+            @include forInput;
+            padding: 0 10px;
+            height: 28px;
+            transition: 0.2s linear;
+            &:hover{
+                background-color: rgb(238, 192, 231);
+            }
+        }
+    }
+    &__list{
+        padding: 0;
+        color: rgb(165, 92, 165);
+        & li {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        &--name{
+            flex: 1;
+        }
+        &--minus{
+            @include forInput;
+            padding: 0 10px;
+            height: 28px;
+            transition: 0.2s linear;
+            &:hover{
+                background-color: rgb(238, 192, 231);
+            }
+        }  
+    }
+    &__btns{
+        margin: 20px 0;
+        & button {
+            @include forInput;
+            background-color: #fff;
+            color: rgb(165, 92, 165);
+            transition: 0.2s linear;
+            &:hover{
+                background-color: rgb(238, 192, 231);
+            }
+        }
+        &--close{
+            margin-right: 20px;
+        }
+    }
+}
+.captain__mates{
+    color: rgb(165, 92, 165);
+}

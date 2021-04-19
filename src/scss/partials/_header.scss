@@ -1,0 +1,11 @@
+.header{
+    background-color: rgb(148, 81, 148);
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__navList--item{
+        cursor: pointer;
+      }
+}

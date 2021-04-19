@@ -1,0 +1,10 @@
+.main{
+    flex: 1;
+    &__container{
+      text-align: center;
+      & img {
+        height: 500px;
+        cursor: pointer;
+      }
+    }
+}
