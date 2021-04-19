@@ -22,7 +22,6 @@ const resetShow = () => {
   dots.forEach((dot) => dot.classList.remove('current'));
 }
 
-
 const goBackASlide = () => {
   resetShow();
   if (currentSlide === 0) {
@@ -35,7 +34,6 @@ const goBackASlide = () => {
   slides[currentSlide].classList.add('show');
   dots[currentSlide].classList.add('current');
 }
-
 
 const goFwdASlide = () => {
   resetShow();

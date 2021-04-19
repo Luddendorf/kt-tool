@@ -6,29 +6,27 @@
 .slideshow {
   display: flex;
   flex-direction: column;
-
-}
-.slideshow-container {
+  &-container {
   display: flex;
   flex-direction: column;
   width: 30vw;
   position: relative;
   margin: 0 0 3vh 3vh;
+  }
 }
+
 
 .mySlides {
   display: none;
+  &-img {
+    width:100%;
+    box-shadow: 0 0 15px black;
+  }
 }
 
 .show {
   display: block;
 }
-
-.mySlides-img {
-  width:100%;
-  box-shadow: 0 0 15px black;
-}
-
 
 .prev, .next {
   cursor: pointer;
