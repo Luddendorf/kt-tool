@@ -1,32 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Greetings from './components/Greetings';
-import SimpleForm from './components/simple-form/SimpleForm';
+import React, { useState } from 'react'
+import Form from './components/form'
+import PopUp from './components/modal'
 
 function App() {
-  return (
-    <div className="App">
-     { /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Hello amigo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */ }
-      
-        { /* <SimpleForm />
-        <Greetings firstName="Bob" lastName="Oldman"  /> */}
-        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама</h1>
-         
-    </div>
-  );
+	let [state, setState] = useState(false)
+	function togglePopUp(e) {
+		e.preventDefault()
+		setState(false)
+	}
+	const View = state ? (
+		<PopUp onClick={togglePopUp} />
+	) : (
+		<Form state={state} setState={setState} />
+	)
+
+	return <div>{View}</div>
 }
 
-export default App;
+export default App
