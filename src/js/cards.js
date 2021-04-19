@@ -286,13 +286,13 @@ const ships = [
         item.hold <= currentMaxDurab.value &&
         item.hold >= currentMinDurab.value) {
           count++;
-          createCards(count);
-          countCard.innerHTML = counter;
+          createCards(item);
+          countCard.innerHTML = count;
       };
   });
 }
 
-const inputs = document.querySelectorAll("input[type=text]");
+const inputs = document.querySelectorAll("input[type=number]");
   inputs.forEach((item) => {
     item.addEventListener("blur", filterInputs);
   });
@@ -387,8 +387,14 @@ function close() {
 picSelect.addEventListener('click', function() {
   if (document.querySelector("#myDropdown").style.display === "none") {
     document.querySelector("#myDropdown").style.display = "block";
+    document.querySelector(".mine").style.display = "none";
+    document.querySelector(".list").style.display = "flex";
+    document.querySelector(".manage_play").style.display = "block";
   } else {
     document.querySelector("#myDropdown").style.display = "none";
+    document.querySelector(".mine").style.display = "flex";
+    document.querySelector(".list").style.display = "none";
+    document.querySelector(".manage_play").style.display = "none";
   } 
 });
 
