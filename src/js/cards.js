@@ -390,11 +390,10 @@ picSelect.addEventListener('click', function() {
     document.querySelector(".mine").style.display = "none";
     document.querySelector(".list").style.display = "flex";
     document.querySelector(".manage_play").style.display = "block";
+    document.querySelector(".chosen").classList.remove("chosen");
+    document.querySelector(".top__topbar-item").classList.toggle("chosen");
   } else {
     document.querySelector("#myDropdown").style.display = "none";
-    document.querySelector(".mine").style.display = "flex";
-    document.querySelector(".list").style.display = "none";
-    document.querySelector(".manage_play").style.display = "none";
   } 
 });
 
