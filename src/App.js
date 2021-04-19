@@ -1,30 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import Greetings from './components/Greetings';
-import SimpleForm from './components/simple-form/SimpleForm';
+import Modal from "./components/modal/Modal";
+import React, { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [modalActive, setModalActive] = useState(true);
   return (
     <div className="App">
-     { /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Hello amigo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */ }
-      
-        { /* <SimpleForm />
-        <Greetings firstName="Bob" lastName="Oldman"  /> */}
-        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама</h1>
-         
+        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама 1111</h1>
+        <main>
+          <button className='open-btn' onClick={() => setModalActive(true)}>Открыть модальное окно</button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae aliquid autem in ducimus perferendis, eos quasi officia explicabo provident, error quo possimus quam ea voluptate exercitationem ex dicta ut accusamus?</p>
+        </main>
+          <Modal active={modalActive} setActive={setModalActive}>
+            
+          </Modal>
     </div>
   );
 }
