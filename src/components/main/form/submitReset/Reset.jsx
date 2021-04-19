@@ -1,6 +1,6 @@
 import React from "react";
 
-const Submit = ({ onSubmitClick }) => {
+const Reset = ({ onResetClick }) => {
   return (
     <div
       style={{
@@ -9,18 +9,18 @@ const Submit = ({ onSubmitClick }) => {
       }}
     >
       <button
-        type="submit"
         style={{
           padding: ".8rem",
           fontSize: "1.5rem",
           borderRadius: ".6rem",
         }}
-        onClick={onSubmitClick}
+        type="reset"
+        onClick={onResetClick}
       >
-        submit
+        reset
       </button>
     </div>
   );
 };
 
-export default Submit;
+export default Reset;

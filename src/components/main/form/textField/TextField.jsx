@@ -1,19 +1,18 @@
 import React from "react";
 import style from "./textFieldStyle";
 
-const TextField = ({ name, type, onChange, onBlur, error, label }) => (
+const TextField = ({ value, name, type, onChange, onBlur, label, placeholder }) => (
   <div style={style.inputGroup}>
-    <label style={style.label}>
-      {label}
-    </label>
+    <label style={style.label}>{label}</label>
     <input
+      value={value}
       style={style.input}
       type={type}
       name={name}
       onChange={onChange}
       onBlur={onBlur}
+      placeholder={placeholder}
     />
-    {error && <div style={style.error}>{error}</div>}
   </div>
 );
 
