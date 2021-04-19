@@ -1,32 +1,57 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import Greetings from './components/Greetings';
-import SimpleForm from './components/simple-form/SimpleForm';
+import RaidForm from './components/raid-form/RaidForm'
+import Popup from './components/popup/Popup'
 
-function App() {
-  return (
-    <div className="App">
-     { /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Hello amigo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */ }
-      
-        { /* <SimpleForm />
-        <Greetings firstName="Bob" lastName="Oldman"  /> */}
-        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама</h1>
-         
-    </div>
-  );
+class App extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      goldenFleetRaiderForm: null,
+      showPopup: false
+    }
+  }
+
+  submitForm = formState => {
+    this.setState({ 
+      goldenFleetRaiderForm: formState
+    })
+
+    this.closePopup()
+  }
+
+  onTakePartClick = () => {
+    const body = document.getElementById('body')
+    body.classList.add('stopBody')
+
+    this.setState({showPopup: true})
+  }
+ 
+  closePopup = () => {
+    const body = document.getElementById('body')
+    body.classList.remove('stopBody')
+
+    this.setState({showPopup: false})
+  }
+
+  render(){
+    return(
+      <div className='App'>
+        <button className='btn' type="button" onClick={this.onTakePartClick}>
+          Take part
+        </button>
+
+        {this.state.showPopup &&
+          <Popup
+            closePopup={this.closePopup}
+          >
+            <RaidForm submitForm={this.submitForm}/>
+          </Popup>
+        }
+      </div>
+    )
+  }
+  
 }
 
 export default App;
