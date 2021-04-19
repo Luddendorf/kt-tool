@@ -26,8 +26,6 @@ export default () => {
                 // заполняем массивы через регулярку
                 dates.push(date[1].split('-').reverse().join('.'));
                 temperatures.push(`+${Math.ceil(temp)}°C`);
-                console.log(temperatures)
-
             }
             // заполняем табличку
             fill(dateItems, dates);

@@ -2,6 +2,13 @@ export default () => {
   const header = document.querySelector('.dropdown-header');
   const content = document.querySelector('.dropdown-content')
   const items = document.querySelectorAll('.dropdown-content-item')
+    const treasures = ["Сундук", "Хрустальный череп","Ожерелье" ];
+  const fill = (e, data) => {
+    e.forEach((item, index) => {
+        item.textContent = data[index];
+    })}
+    fill(items, treasures);
+
   header.addEventListener('click', (e) => {
       if (header.classList.contains('isOpen')) {
           header.classList.remove('isOpen');
