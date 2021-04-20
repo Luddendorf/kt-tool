@@ -707,3 +707,64 @@ pauseButton.addEventListener('click', () => {
     playSlideshow();
   }
 });
+
+//modal window
+
+const modal = document.getElementById('myModal');
+const modalContent = document.querySelector(".modal-content");
+const cardsItem = document.querySelectorAll(".cardsItem");
+const span = document.getElementsByClassName("close")[0];
+
+const dropdown = document.querySelector('.dropdown');
+const anchor = document.querySelector('.anchor');
+const dropbtn = document.querySelector('.dropbtn');
+
+span.onclick = function () {
+  dropdown.style.display = "none";
+  modal.style.display = "none";
+  document.getElementById("myDropdown").style.display = 'none';
+  const cloneNode = document.querySelector('.modal-content .cardsItem');
+  cloneNode.remove();
+}
+
+window.onclick = function (event) {
+
+  if (event.target == modal) {
+    dropdown.style.display = "none";
+    modal.style.display = "none";
+    document.getElementById("myDropdown").style.display = 'none';
+    const cloneNode = document.querySelector('.modal-content div');
+    cloneNode.remove();
+  }
+
+}
+
+function showModal(ev) {
+  ev.preventDefault();
+  const cloneNode = ev.path[1].cloneNode(true);
+  modalContent.append(cloneNode);
+  modal.style.display = "block";
+}
+
+for (let i = 0; i < cardsItem.length; i++) {
+  cardsItem[i].addEventListener('click', showModal);
+}
+
+//dropdown menu
+
+function showDropdown(ev) {
+  ev.preventDefault();
+
+  dropdown.style.display = "block";
+  modalContent.append(dropdown);
+  modal.style.display = "block";
+}
+
+anchor.addEventListener('click', showDropdown);
+dropbtn.addEventListener('click', myFunction);
+
+function myFunction(ev) {
+  ev.preventDefault();
+
+  document.getElementById("myDropdown").style.display = 'block';
+}

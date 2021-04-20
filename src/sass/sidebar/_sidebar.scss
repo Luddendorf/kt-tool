@@ -57,5 +57,11 @@ aside {
         }
     }
 
-    
+    .anchor {
+      width: 150px;
+    }
+
+    .anchor:hover {
+      cursor: pointer;
+    }
 }
