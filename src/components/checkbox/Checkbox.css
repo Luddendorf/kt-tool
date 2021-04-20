@@ -1,0 +1,3 @@
+input[type]:checked ~ .radio__wrapper {
+  display: block;
+}

@@ -1,0 +1,25 @@
+.team__block {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team__block li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 10px;
+}
+li input {
+  width: 60%;
+}
+
+.team__block__btns {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.team__block__btns button {
+  width: 50px;
+  margin: 10px;
+}

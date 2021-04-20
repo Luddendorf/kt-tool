@@ -1,0 +1,8 @@
+.btn__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.btn__wrapper button {
+  padding: 10px;
+}
