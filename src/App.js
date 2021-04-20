@@ -6,13 +6,6 @@ import React, { useState } from 'react';
 const App = () => {
   const [modalActive, setModalActive] = useState(false); 
   const [name, setName] = useState('Вова'); 
-  const [checked, setChecked] = useState(false);
-  let box= {};
-  if(checked) {
-    box = <input type="checkbox" name="yes" id="radio2"/>
-  } else {
-    box = ''
-  }
   const changeName = () => {
     setName('Новый Вова')
   }
@@ -26,11 +19,6 @@ const App = () => {
           <Modal active={modalActive} setActive={setModalActive} name={name}>
 
           </Modal>
-          <div>
-          <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} /> Выбрать
-	      	<div>{box}</div>
-          </div>
-
           <button onClick={changeName}>
             Изменить имя
           </button>
