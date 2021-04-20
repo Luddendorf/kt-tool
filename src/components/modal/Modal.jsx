@@ -5,9 +5,11 @@ const Modal = ({ active, setActive, name }) => {
     const [checked, setChecked] = useState(false);
     const [allState, setAllState] = useState({});
     const Check = () => {
-        return <div>
-        <input type="checkbox" name="yes" id="radio3"/><label htmlFor="radio3">Да</label>
-        <input type="checkbox" name="no" id="radio4"/><label htmlFor="radio4">Нет</label></div>
+        return <div className='offer'>
+            <h5 className='pOffer'>А полностью ли?</h5>
+        <div className='inputStyle'><input type="checkbox" name="yes" id="radio3"/><label htmlFor="radio3">Чту полностью</label></div>
+        <div className='inputStyle'><input type="checkbox" name="no" id="radio4"/><label htmlFor="radio4">Чту не полностью</label></div>
+         </div>
       }
     const click = () => {
         {/* Отлавливаю всё и записываю в переменные */}
@@ -32,6 +34,7 @@ const Modal = ({ active, setActive, name }) => {
           />
           <input type="text" className="name" placeholder="Имя корабля" />
           <div className="checkbox">
+            <h3 className='h3Text'>Чтит ли капитан пиратский кодекс чести?</h3>
             <div className="check1">
               <input type="checkbox" name="no" className="radio" id='radio'/>
               <label htmlFor="radio" className='mycheckbox'>Нет</label>
@@ -50,7 +53,7 @@ const Modal = ({ active, setActive, name }) => {
           </div>
           <div className="button__div">
             <button>Сбросить</button>
-            <button>Отправить в плавание</button> {/** onclick='submit' */}
+            <button onClick={(e) => e.preventDefault()}>Отправить в плавание</button> {/** onclick='submit' */}
           </div>
         </form>
       </div>

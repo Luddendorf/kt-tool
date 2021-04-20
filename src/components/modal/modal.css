@@ -128,3 +128,21 @@
 .radio:focus+label:before {
     box-shadow: 0 0 0 3px rgba(255, 255, 0, .5);
 }
+
+.offer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer .inputStyle {
+    flex-basis: 40%;
+}
+
+.pOffer {
+    flex-basis: 100%;
+}
+
+.h3Text {
+    margin: 0 auto;
+}
