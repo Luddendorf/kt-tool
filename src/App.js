@@ -12,8 +12,6 @@ function App() {
 
   function openInformation(event) {
     setState(false)
-    // event.preventDefault();
-
   }
 
   function openInformation2(event) {

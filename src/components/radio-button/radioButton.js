@@ -8,7 +8,7 @@ function RadioButton ({ onClick }) {
 				<input
 					type='radio'
 					name='codex'
-					value='Чту полностью'
+					value='ДА КАПИТАН!!!'
 					onClick={onClick}
 				/>ДА КАПИТАН!!!
 			</label>
@@ -19,7 +19,7 @@ function RadioButton ({ onClick }) {
 				<input
 					type='radio'
 					name="codex"
-					value='Чту частично'
+					value='да капитан'
 					onClick={onClick}
 				/>да капитан
 			</label>
