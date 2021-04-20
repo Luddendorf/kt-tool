@@ -6,7 +6,8 @@ const Modal = ({ active, setActive, name }) => {
     const [allState, setAllState] = useState({});
     const Check = () => {
         return <div>
-        <input type="checkbox" name="yes" id="radio2"/><label htmlFor="radio2">Да</label></div>
+        <input type="checkbox" name="yes" id="radio3"/><label htmlFor="radio3">Да</label>
+        <input type="checkbox" name="no" id="radio4"/><label htmlFor="radio4">Нет</label></div>
       }
     const click = () => {
         {/* Отлавливаю всё и записываю в переменные */}
