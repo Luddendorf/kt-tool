@@ -94,11 +94,8 @@ function Form({ state, setState }) {
 			<br />
 			<br />
 
-			<CheckBox />
+			<CheckBox onClick={handleChangeCodex} />
 
-			<div id='radio-btn'>
-				<RadioButton onClick={handleChangeCodex} />
-			</div>
 			<h1>Члены команды:</h1>
 
 			<div style={style.inOneLine}>
