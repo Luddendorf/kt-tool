@@ -5,15 +5,15 @@ import React, { useState } from 'react';
 
 const App = () => {
   const [modalActive, setModalActive] = useState(false); 
-  const [name, setName] = useState('Вова'); 
+  const [name, setName] = useState('Владимир'); 
   const changeName = () => {
-    setName('Новый Вова')
+    setName('Алексей')
   }
   return (
     <div className="App">
-        <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама 1111</h1>
+        {/* <h1 style={{color: "green"}}>Здесь могла быть Ваша реклама 1111</h1> */}
         <main>
-          <button className='open-btn' onClick={() => setModalActive(true)}>Открыть модальное окно</button>
+          <button className='open-btn' onClick={() => setModalActive(true)}>Заявка на участие в рейде на Испанский золотой флот</button>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae aliquid autem in ducimus perferendis, eos quasi officia explicabo provident, error quo possimus quam ea voluptate exercitationem ex dicta ut accusamus?</p>
         </main>
           <Modal active={modalActive} setActive={setModalActive} name={name}>
