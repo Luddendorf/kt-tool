@@ -257,7 +257,40 @@ const onClickValidationForm = () => {
 const getWeather = async () => {
     const weather = await fetch('https://api.tomorrow.io/v4/timelines?location=-73.98529171943665,40.75872069597532&fields=temperature&timesteps=1h&units=metric&apikey=D3jlyiBioq07H0kzVJ4JYODQwdJEi5Ok');
     const content = await weather.json();
-    console.log(content);
+    const filteredDates = content.data.timelines[0].intervals.filter(i => {
+        const date = new Date(i.startTime);
+        const hour = date.getHours();
+            return (hour === 12) ? true : false;
+    });
+    
+    const createTemperatureItem = (item) => {
+            const tdItem = document.createElement('td');
+            const celsius = (item.values.temperature - 32) * 5/9;
+            tdItem.innerHTML = `${celsius.toFixed(2)} °C`;            
+            return tdItem;
+    };
+
+    const createDateItem = (item) => {
+        const tdItem = document.createElement('td');
+        const date = new Date(item.startTime);
+        tdItem.innerHTML = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`;
+        return tdItem;
+    };
+
+    const docFrag = document.createDocumentFragment();
+    filteredDates.forEach(item => {
+        docFrag.appendChild(createTemperatureItem(item));
+    });
+
+    const docFragTwo = document.createDocumentFragment();
+    filteredDates.forEach(item => {
+        docFragTwo.appendChild(createDateItem(item));
+    });
+
+    const temperature = document.querySelector('.temperature');
+    const date = document.querySelector('.date');
+    temperature.appendChild(docFrag);
+    date.appendChild(docFragTwo);
 };
 
 const autoplaySlider = () => {
@@ -288,6 +321,6 @@ renderCards(ships);
 modal();
 transition();
 buyFormValidation();
-/* getWeather(); */
+getWeather();
 autoplaySlider();
 onClickStartAutoplaySlider();
