@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import CheckboxFiled from "./checkbox/CheckboxFiled";
 import RadioGroupField from "./radio/RadioGroup";
 import TextField from "./textField/TextField";
-import Submit from "./submitReset/Submit";
-import Reset from "./submitReset/Reset";
+import ResetSubmit from "./submitReset/ResetSubmit";
+import TeamMembers from "./teamMembers/TeamMembers";
 
-const Form = () => {
+const Form = ({ trigger }) => {
   const [goldenFleetRaiderForm, setGoldenFleetRaiderForm] = useState({
     capName: "",
     shipName: "",
@@ -17,6 +17,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(goldenFleetRaiderForm);
+    clearForm();
   };
 
   const onHandleSubmit = (e) => {
@@ -33,9 +34,10 @@ const Form = () => {
       ...prevState,
       [name]: checked,
     }));
+    console.log(e.currentTarget);
   };
 
-  const onHandleReset = (e) => {
+  function clearForm() {
     setGoldenFleetRaiderForm({
       capName: "",
       shipName: "",
@@ -43,13 +45,16 @@ const Form = () => {
       isFullHonor: "",
       marinerName: "",
     });
-  };
+  }
+
+  const onHandleReset = () => clearForm();
 
   const onHandleAddDeleteMember = (e) => {
     e.preventDefault();
+
     const { name } = e.target;
     if (name === "btnPlus") {
-      console.log("plus btn");
+      console.log("btn plus");
     }
     if (name === "btnMinus") {
       console.log("minus btn");
@@ -64,7 +69,7 @@ const Form = () => {
     }));
   };
 
-  return (
+  return trigger ? (
     <div className="formWrapper">
       <form className="form" onSubmit={handleSubmit}>
         <div className="formFields">
@@ -95,6 +100,7 @@ const Form = () => {
               onHandleCheckbox={onHandleCheckbox}
             />
           </label>
+          {/* Radio button group dependency */}
           {goldenFleetRaiderForm.honor && (
             <RadioGroupField
               value={goldenFleetRaiderForm.value}
@@ -102,44 +108,29 @@ const Form = () => {
             />
           )}
 
-          <div className="teamMembers">
-            <span>Team members:</span>
-            <div>
-              <TextField
-                value={goldenFleetRaiderForm.marinerName}
-                className="marinerName"
-                name={"marinerName"}
-                type={"text"}
-                onChange={onHandleSubmit}
-                // onBlur={""}
-                placeholder={"mariner's name"}
-              />
-              <div className="teamMembersBtns">
-                <button
-                  className="btnPlus"
-                  onClick={onHandleAddDeleteMember}
-                  name={"btnPlus"}
-                >
-                  +
-                </button>
-                <button
-                  className="btnMinus"
-                  onClick={onHandleAddDeleteMember}
-                  name={"btnMinus"}
-                >
-                  -
-                </button>
-              </div>
-            </div>
-          </div>
+          <TeamMembers
+            goldenFleetRaiderForm={goldenFleetRaiderForm}
+            onHandleSubmit={onHandleSubmit}
+            onHandleAddDeleteMember={onHandleAddDeleteMember}
+          />
 
           <div className="submitResetBlock">
-            <Submit onSubmitClick={onHandleSubmit} />
-            <Reset onResetClick={onHandleReset} />
+            <ResetSubmit
+              onClick={onHandleSubmit}
+              type={"submit"}
+              name={"submit"}
+            />
+            <ResetSubmit
+              onClick={onHandleReset}
+              type={"reset"}
+              name={"reset"}
+            />
           </div>
         </div>
       </form>
     </div>
+  ) : (
+    ""
   );
 };
 

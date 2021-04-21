@@ -1,0 +1,38 @@
+.pressBtnWrapper {
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 10rem;
+  border-radius: 2rem;
+}
+
+@keyframes goRight {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 2.5rem;
+  }
+  50% {
+    margin-left: 5rem;
+  }
+  75% {
+    margin-left: 2.5rem;
+  }
+  100% {
+    margin-right: 0rem;
+  }
+}
+
+.pressBtn {
+  border-radius: 50%;
+  padding: 1rem;
+  animation: goRight 2s linear infinite alternate;
+  animation-duration: 2s;
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    border: 1px solid black;
+  }
+}

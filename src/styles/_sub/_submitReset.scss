@@ -1,0 +1,15 @@
+.submitResetBlock {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  width: 100%;
+  & button:hover {
+    transition: 0.4s;
+    box-shadow: 0 1px 2px 5px #fff;
+    background-color: #000;
+    color: #fff;
+    & span {
+      text-shadow: 1px 0 1px white;
+    }
+  }
+}

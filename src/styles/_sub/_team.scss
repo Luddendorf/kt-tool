@@ -1,0 +1,41 @@
+.teamMembers {
+  & span {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+  }
+  & div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  & .marinerName {
+  }
+  .teamMembersBtns {
+    // margin: 2.3rem 0 0 1rem;
+    display: flex;
+    margin-left: 2rem;
+    .btnPlus,
+    .btnMinus {
+      border: 5px solid transparent;
+      border-radius: 0.35rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.8rem;
+    }
+    .btnPlus:hover {
+      transition: 0.5s;
+      border: 5px solid #008000;
+    }
+    .btnMinus:hover {
+      transition: 0.5s;
+      border: 5px solid #ff0000;
+    }
+    .btnMinus {
+      margin-left: 2rem;
+    }
+  }
+}
