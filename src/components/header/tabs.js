@@ -15,14 +15,6 @@ export default function menuTabsSwipe() {
     hide2.style.display = "none";
   }
 
-  // buhtaBtn.addEventListener("click", () => {
-  //   changeMainScreen(buhtaCards, boatsCards, gallery);
-  // });
-
-  // boatsBtn.addEventListener("click", () => {
-  //   changeMainScreen(boatsCards, buhtaCards, gallery);
-  // });
-
   Array.from(tabs).forEach((tab) => {
     tab.addEventListener("click", function (e) {
       const curTargetClass = e.currentTarget.className;

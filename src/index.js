@@ -6,11 +6,13 @@ import sideBarMenu from "./components/leftMenu/dropDown";
 import getWeatherData from "./components/captain/getWeatherData";
 import Preloader from "./assets/preloader/Preloader";
 import HamburgerMenu from "./components/leftMenu/hamburgerMenu";
+import DropDownAnchor from "./components/animation/DropDownAnchor";
 
 document.addEventListener("DOMContentLoaded", () => {
   //imitation of preloader, waiting while quries will be ready
   Preloader();
   HamburgerMenu();
+  DropDownAnchor();
   setTimeout(function () {
     RenderBoats();
     RenderCaptain();

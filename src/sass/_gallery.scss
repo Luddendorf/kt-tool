@@ -1,9 +1,8 @@
 .cards__gallery {
   display: none;
-  position: relative;
-  width: 100%;
   flex-direction: column;
-  min-height: calc(100vh - 12em);
+  width: calc(100vw - $left_menu-width);
+  min-height: calc(100vh - 12em + 6em);
   background: url("https://images.unsplash.com/photo-1466094899371-97b327dff551?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
     fixed;
   background-size: cover;
@@ -11,29 +10,32 @@
 
 .container {
   margin: 0 auto;
-  width: 50rem;
+  width: 80%;
   height: 20rem;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   @media (max-width: 1000px) {
     & {
-      width: 30rem;
+      width: 60%;
       height: 10rem;
     }
   }
 }
 .slides {
+  position: relative;
+  width: 100%;
   display: flex;
   height: 100%;
-  &__slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  &__slide img {
-    width: 100%;
-    height: 100%;
-  }
+  margin: 0;
+}
+
+.slides__slide {
+  min-width: 100%;
+  position: relative;
+}
+.slides .slide__img {
+  width: 100%;
+  height: 100%;
 }
 
 .slide__controls {
@@ -52,7 +54,7 @@
   background: transparent;
   font-size: 30px;
   border: none;
-  padding: 10px;
+  // padding: 10px;
   color: white;
 }
 #next-btn:focus,
@@ -62,30 +64,59 @@
 .slide-content {
   position: absolute;
   top: 50%;
-  left: 50px;
   transform: translateY(-50%);
   font-size: 60px;
   color: white;
+  @media (max-width: 1000px) {
+    & {
+      font-size: 30px;
+    }
+  }
 }
 
-.dropwon__anchor {
+.anchor__container {
   display: flex;
-  width: 100%;
-  & > a > img {
-    width: 100px;
+  margin-top: 1rem;
+  .anchor {
+    padding-right: 1rem;
+    & img {
+      width: 50px;
+    }
   }
-  font-size: 1.5rem;
-  color: #000;
-  & div {
+
+  .anchor__drop-down {
     display: none;
-    width: 10rem;
+    flex-direction: column;
+    border: 2px solid #000;
+    & a {
+      border-top: 1ps solid black;
+    }
+  }
+  .anchor__treasure {
+    display: none;
     border: 2px solid black;
-    & ul {
-      display: none;
-      border-bottom: 1px solid black;
+    min-width: 6rem;
+    text-align: center;
+  }
+  .anchor__drop-down_menu {
+    display: none;
+    border: 1px solid black;
+    & a li {
+      border: 1px solid black;
+      padding: 0.6rem;
+      width: 6rem;
     }
-    .active {
-      display: block;
+    & a li:hover {
+      background-color: #7aa350;
     }
+  }
+  .drop-down_li-active {
+    border: 2px solid rgb(0, 255, 0);
+  }
+  .anchor_active {
+    display: block;
+  }
+  .anchor_active_dd-menu {
+    display: block;
   }
 }
