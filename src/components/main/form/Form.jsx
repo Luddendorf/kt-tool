@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useDebugValue } from "react";
 import CheckboxFiled from "./checkbox/CheckboxFiled";
 import RadioGroupField from "./radio/RadioGroup";
 import TextField from "./textField/TextField";
 import ResetSubmit from "./submitReset/ResetSubmit";
 import TeamMembers from "./teamMembers/TeamMembers";
 
-const Form = ({ trigger }) => {
+const Form = ({ trigger, triggerHandler }) => {
   const [goldenFleetRaiderForm, setGoldenFleetRaiderForm] = useState({
     capName: "",
     shipName: "",
@@ -18,9 +18,10 @@ const Form = ({ trigger }) => {
     e.preventDefault();
     console.log(goldenFleetRaiderForm);
     clearForm();
+    setTimeout(() => triggerHandler(!trigger), 1500);
   };
 
-  const onHandleSubmit = (e) => {
+  const onHandleInputSubmit = (e) => {
     const { name, value } = e.target;
     setGoldenFleetRaiderForm((prevState) => ({
       ...prevState,
@@ -63,6 +64,7 @@ const Form = ({ trigger }) => {
 
   const onHandleRadioChange = (e) => {
     const { value } = e.target;
+    console.log(value);
     setGoldenFleetRaiderForm((prevState) => ({
       ...prevState,
       isFullHonor: value,
@@ -77,7 +79,7 @@ const Form = ({ trigger }) => {
             value={goldenFleetRaiderForm.capName}
             name={"capName"}
             type={"text"}
-            onChange={onHandleSubmit}
+            onChange={onHandleInputSubmit}
             // onBlur={""}
             label={"captain name"}
             placeholder={"...name"}
@@ -86,7 +88,7 @@ const Form = ({ trigger }) => {
             value={goldenFleetRaiderForm.shipName}
             name={"shipName"}
             type={"text"}
-            onChange={onHandleSubmit}
+            onChange={onHandleInputSubmit}
             // onBlur={""}
             label={"boat name"}
             placeholder={"...boat name"}
@@ -101,22 +103,21 @@ const Form = ({ trigger }) => {
             />
           </label>
           {/* Radio button group dependency */}
-          {goldenFleetRaiderForm.honor && (
-            <RadioGroupField
-              value={goldenFleetRaiderForm.value}
-              onHandleChange={onHandleRadioChange}
-            />
-          )}
+
+          <RadioGroupField
+            checked={goldenFleetRaiderForm.honor}
+            onHandleRadioChange={onHandleRadioChange}
+          />
 
           <TeamMembers
             goldenFleetRaiderForm={goldenFleetRaiderForm}
-            onHandleSubmit={onHandleSubmit}
+            onHandleInputSubmit={onHandleInputSubmit}
             onHandleAddDeleteMember={onHandleAddDeleteMember}
           />
 
           <div className="submitResetBlock">
             <ResetSubmit
-              onClick={onHandleSubmit}
+              onClick={onHandleInputSubmit}
               type={"submit"}
               name={"submit"}
             />

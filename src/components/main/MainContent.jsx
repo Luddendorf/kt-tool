@@ -19,7 +19,7 @@ const MainContent = () => {
       <PressButton handler={onPopUpHandler} />
 
       <Popup trigger={trigger} handler={onPopUpHandler}>
-        <Form trigger={trigger} />
+        <Form trigger={trigger} triggerHandler={setTrigger}/>
       </Popup>
     </main>
   );

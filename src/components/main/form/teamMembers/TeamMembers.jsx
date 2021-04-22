@@ -3,7 +3,7 @@ import TextField from "../textField/TextField";
 
 const TeamMembers = ({
   goldenFleetRaiderForm,
-  onHandleSubmit,
+  onHandleInputSubmit,
   onHandleAddDeleteMember,
 }) => {
   return (
@@ -15,7 +15,7 @@ const TeamMembers = ({
           className="marinerName"
           name={"marinerName"}
           type={"text"}
-          onChange={onHandleSubmit}
+          onChange={onHandleInputSubmit}
           // onBlur={""}
           placeholder={"mariner's name"}
         />
