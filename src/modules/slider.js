@@ -1,5 +1,3 @@
-import { ships } from "./data";
-
 const slider = () => {
   const carouselSlide = document.querySelector(".carousel-slide");
   const carouselImages = document.querySelectorAll(".carousel-slide img");
@@ -27,7 +25,8 @@ const slider = () => {
 
   const paginationBullets = document.querySelectorAll(".pagination-item");
   
-  const stepSize = carouselImages[0].clientWidth;
+  const stepSize = carouselImages[0].clientWidth || 640;
+  console.log(stepSize);
   carouselSlide.style.transform = `translateX(${-stepSize * counter}px)`;
 
   paginationBullets.forEach((dot, index) => {

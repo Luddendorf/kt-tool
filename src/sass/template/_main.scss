@@ -12,7 +12,7 @@
 .main {
   width: 100%;
   &__cards-wrapper {
-    display: none;
+    display: flex;
     margin: 32px 28px;
     flex-wrap: wrap;
     @media screen and (max-width: 1000px){
@@ -137,7 +137,7 @@
 
 .main {
   &__gallery {
-    display: flex;
+    display: none;
     height: 100%;
     width: 100%;
   }
