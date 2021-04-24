@@ -1,5 +1,5 @@
 .popupWrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,8 +9,10 @@
 }
 
 .popupCloseBtn {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   margin: 1rem 3rem 0 0;
-  background: rgb(51, 27, 27);
+  background: none;
   border-radius: 50% 50%;
 }

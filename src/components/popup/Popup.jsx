@@ -1,22 +1,13 @@
 import React from "react";
-import { RiCloseFill } from "react-icons/ri";
-import { IconContext } from "react-icons";
 
-const Popup = ({ trigger, handler, children }) => {
+const Popup = ({ trigger, triggerHandler, children }) => {
+  const onPopupClose = (e) => {
+    if (e.target.className === "popupContent") triggerHandler(!trigger);
+  };
+
   return trigger ? (
-    <div className="popupWrapper">
-      <div className="popupContent">
-        <button className="popupCloseBtn" onClick={handler}>
-          <IconContext.Provider
-            value={{
-              color: "white",
-            }}
-          >
-            <RiCloseFill size="40" style={{ background: "none" }} />
-          </IconContext.Provider>
-        </button>
-        {children}
-      </div>
+    <div className="popupWrapper" onClick={onPopupClose}>
+      <div className="popupContent">{children}</div>
     </div>
   ) : (
     ""

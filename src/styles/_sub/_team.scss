@@ -13,6 +13,7 @@
     align-items: center;
   }
   & .marinerName {
+    width: 100%;
   }
   .teamMembersBtns {
     // margin: 2.3rem 0 0 1rem;
@@ -28,14 +29,18 @@
     }
     .btnPlus:hover {
       transition: 0.5s;
-      border: 5px solid #008000;
+      border: 3px solid #008000;
     }
     .btnMinus:hover {
       transition: 0.5s;
-      border: 5px solid #ff0000;
+      border: 3px solid #ff0000;
     }
     .btnMinus {
       margin-left: 2rem;
     }
+  }
+  .teamMembersCount {
+    display: flex;
+    flex-direction: column;
   }
 }

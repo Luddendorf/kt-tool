@@ -1,22 +1,26 @@
-import React, { useState, useEffect, useDebugValue } from "react";
+import React, { useState, useEffect, memo } from "react";
 import CheckboxFiled from "./checkbox/CheckboxFiled";
 import RadioGroupField from "./radio/RadioGroup";
 import TextField from "./textField/TextField";
 import ResetSubmit from "./submitReset/ResetSubmit";
 import TeamMembers from "./teamMembers/TeamMembers";
+import { RiCloseFill } from "react-icons/ri";
+import { IconContext } from "react-icons";
 
-const Form = ({ trigger, triggerHandler }) => {
+const Form = memo(({ trigger, triggerHandler, handler, setFormData }) => {
   const [goldenFleetRaiderForm, setGoldenFleetRaiderForm] = useState({
     capName: "",
     shipName: "",
     honor: false,
     isFullHonor: "",
-    marinerName: "",
   });
+
+  const [marinersList, setMarinersList] = useState([{ marinerName: "" }]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(goldenFleetRaiderForm);
+    console.log(Object.assign(goldenFleetRaiderForm, marinersList));
+    setFormData(Object.assign(goldenFleetRaiderForm, marinersList));
     clearForm();
     setTimeout(() => triggerHandler(!trigger), 1500);
   };
@@ -50,18 +54,6 @@ const Form = ({ trigger, triggerHandler }) => {
 
   const onHandleReset = () => clearForm();
 
-  const onHandleAddDeleteMember = (e) => {
-    e.preventDefault();
-
-    const { name } = e.target;
-    if (name === "btnPlus") {
-      console.log("btn plus");
-    }
-    if (name === "btnMinus") {
-      console.log("minus btn");
-    }
-  };
-
   const onHandleRadioChange = (e) => {
     const { value } = e.target;
     console.log(value);
@@ -74,6 +66,15 @@ const Form = ({ trigger, triggerHandler }) => {
   return trigger ? (
     <div className="formWrapper">
       <form className="form" onSubmit={handleSubmit}>
+        <button className="popupCloseBtn" onClick={handler}>
+          <IconContext.Provider
+            value={{
+              color: "white",
+            }}
+          >
+            <RiCloseFill size="40" style={{ background: "none" }} />
+          </IconContext.Provider>
+        </button>
         <div className="formFields">
           <TextField
             value={goldenFleetRaiderForm.capName}
@@ -102,6 +103,7 @@ const Form = ({ trigger, triggerHandler }) => {
               onHandleCheckbox={onHandleCheckbox}
             />
           </label>
+
           {/* Radio button group dependency */}
 
           <RadioGroupField
@@ -110,9 +112,10 @@ const Form = ({ trigger, triggerHandler }) => {
           />
 
           <TeamMembers
-            goldenFleetRaiderForm={goldenFleetRaiderForm}
-            onHandleInputSubmit={onHandleInputSubmit}
-            onHandleAddDeleteMember={onHandleAddDeleteMember}
+            // goldenFleetRaiderForm={goldenFleetRaiderForm}
+            // onHandleInputSubmit={onHandleInputSubmit}
+            marinersList={marinersList}
+            setMarinersList={setMarinersList}
           />
 
           <div className="submitResetBlock">
@@ -133,6 +136,6 @@ const Form = ({ trigger, triggerHandler }) => {
   ) : (
     ""
   );
-};
+});
 
 export default Form;

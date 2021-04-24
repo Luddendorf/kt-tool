@@ -12,13 +12,13 @@
     margin-left: 0rem;
   }
   25% {
-    margin-left: 2.5rem;
+    margin-left: 2rem;
   }
   50% {
-    margin-left: 5rem;
+    margin-left: 4rem;
   }
   75% {
-    margin-left: 2.5rem;
+    margin-left: 2rem;
   }
   100% {
     margin-right: 0rem;
@@ -28,11 +28,19 @@
 .pressBtn {
   border-radius: 50%;
   padding: 1rem;
-  animation: goRight 2s linear infinite alternate;
-  animation-duration: 2s;
+  text-align: center;
+  background: transparent;
+  animation: goRight 2s linear infinite alternate 1s;
   &:hover {
-    transition: 0.5s;
-    transform: scale(1.2);
-    border: 1px solid black;
+    & span svg:hover {
+      transition: 0.5s;
+      transform: translateX(0.5rem);
+      color: white !important;
+    }
+    transition: 0.6s;
+    background-color: #221c1c;
   }
+}
+.stopAnimation {
+  animation: 0s;
 }
